@@ -22,7 +22,9 @@ export function questProgressStatement(
 ) {
   return db
     .update(schema.dailyQuests)
-    .set({ progress: sql`min(${schema.dailyQuests.target}, ${schema.dailyQuests.progress} + ${delta})` })
+    .set({
+      progress: sql`min(${schema.dailyQuests.target}, ${schema.dailyQuests.progress} + ${delta})`,
+    })
     .where(
       and(
         eq(schema.dailyQuests.userId, userId),

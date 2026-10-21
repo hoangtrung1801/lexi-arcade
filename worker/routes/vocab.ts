@@ -65,7 +65,10 @@ export const vocab = new Hono<AppEnv>()
               gt(schema.userWordProgress.lastSeenAt, 0),
               lte(schema.userWordProgress.dueAt, now),
             )
-          : and(eq(schema.userWordProgress.userId, user.id), gt(schema.userWordProgress.lastSeenAt, 0));
+          : and(
+              eq(schema.userWordProgress.userId, user.id),
+              gt(schema.userWordProgress.lastSeenAt, 0),
+            );
       rows = await db
         .select(wordCols)
         .from(schema.userWordProgress)
@@ -80,14 +83,21 @@ export const vocab = new Hono<AppEnv>()
       ? await db
           .select({ wordId: schema.userSavedWords.wordId })
           .from(schema.userSavedWords)
-          .where(and(eq(schema.userSavedWords.userId, user.id), inArray(schema.userSavedWords.wordId, ids)))
+          .where(
+            and(
+              eq(schema.userSavedWords.userId, user.id),
+              inArray(schema.userSavedWords.wordId, ids),
+            ),
+          )
       : [];
     const saved = new Set(savedRows.map((r) => r.wordId));
 
     const [learned] = await db
       .select({ n: count() })
       .from(schema.userWordProgress)
-      .where(and(eq(schema.userWordProgress.userId, user.id), gt(schema.userWordProgress.lastSeenAt, 0)));
+      .where(
+        and(eq(schema.userWordProgress.userId, user.id), gt(schema.userWordProgress.lastSeenAt, 0)),
+      );
     const [due] = await db
       .select({ n: count() })
       .from(schema.userWordProgress)
@@ -128,7 +138,11 @@ export const vocab = new Hono<AppEnv>()
     const wordId = Number(c.req.param("wordId"));
     if (!Number.isInteger(wordId)) return c.json({ error: "bad-request" }, 400);
     const db = getDb(c.env);
-    const w = await db.select({ id: schema.words.id }).from(schema.words).where(eq(schema.words.id, wordId)).get();
+    const w = await db
+      .select({ id: schema.words.id })
+      .from(schema.words)
+      .where(eq(schema.words.id, wordId))
+      .get();
     if (!w) return c.json({ error: "not-found" }, 404);
     await db
       .insert(schema.userSavedWords)
@@ -143,6 +157,8 @@ export const vocab = new Hono<AppEnv>()
     if (!Number.isInteger(wordId)) return c.json({ error: "bad-request" }, 400);
     await getDb(c.env)
       .delete(schema.userSavedWords)
-      .where(and(eq(schema.userSavedWords.userId, user.id), eq(schema.userSavedWords.wordId, wordId)));
+      .where(
+        and(eq(schema.userSavedWords.userId, user.id), eq(schema.userSavedWords.wordId, wordId)),
+      );
     return c.json({ ok: true });
   });

@@ -10,13 +10,13 @@ import { existsSync } from "node:fs";
 import { join } from "node:path";
 import { SETS, TOPICS } from "../../content/topics";
 import {
+  parseCsv,
   RAW_DIR,
   ROOT,
-  SETS_DIR,
-  SET_COLUMNS,
-  type SetRow,
-  parseCsv,
   readText,
+  SET_COLUMNS,
+  SETS_DIR,
+  type SetRow,
   toCsv,
   writeText,
 } from "./lib";
@@ -111,7 +111,9 @@ function main() {
   const force = process.argv.includes("--force");
   for (const s of SETS) {
     if (existsSync(join(SETS_DIR, `${s.slug}.csv`)) && !force) {
-      console.error(`content/sets/${s.slug}.csv already exists (may contain manual reviews). Use --force to overwrite.`);
+      console.error(
+        `content/sets/${s.slug}.csv already exists (may contain manual reviews). Use --force to overwrite.`,
+      );
       process.exit(1);
     }
   }

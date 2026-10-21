@@ -51,7 +51,9 @@ function main() {
           `INSERT INTO words (id, lemma, pos, ipa, meaning_vi, cefr, source, reviewed) VALUES (${id}, ${q(r.lemma)}, ${q(r.pos)}, ${q(r.ipa)}, ${q(r.meaning_vi)}, ${q(r.cefr)}, ${q(r.source)}, ${r.reviewed ? 1 : 0}) ` +
             "ON CONFLICT(id) DO UPDATE SET lemma=excluded.lemma, pos=excluded.pos, ipa=excluded.ipa, meaning_vi=excluded.meaning_vi, cefr=excluded.cefr, source=excluded.source, reviewed=excluded.reviewed;",
         );
-        unitWords.push(`INSERT INTO unit_words (unit_id, word_id, sort_order) VALUES (${unitId}, ${id}, ${i});`);
+        unitWords.push(
+          `INSERT INTO unit_words (unit_id, word_id, sort_order) VALUES (${unitId}, ${id}, ${i});`,
+        );
       });
     }
     unitsSql.push(`DELETE FROM units WHERE set_id = ${set.id} AND idx > ${unitNums.length};`);

@@ -20,7 +20,14 @@ export const dev = new Hono<AppEnv>()
     const now = new Date();
     await db
       .insert(schema.user)
-      .values({ id, name, email: `${id}@dev.local`, emailVerified: true, createdAt: now, updatedAt: now })
+      .values({
+        id,
+        name,
+        email: `${id}@dev.local`,
+        emailVerified: true,
+        createdAt: now,
+        updatedAt: now,
+      })
       .onConflictDoNothing();
     await ensureProfile(c.env, id, name);
     setCookie(c, DEV_COOKIE, id, { path: "/", httpOnly: true, sameSite: "Lax" });

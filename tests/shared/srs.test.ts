@@ -1,5 +1,5 @@
-import { describe, expect, it } from "vitest";
 import { levelFromXp, nextStreak, srsUpdate, vnDate, vnWeek } from "@shared/index";
+import { describe, expect, it } from "vitest";
 
 const NOW = Date.UTC(2026, 9, 20, 12, 0, 0);
 const DAY = 86400000;

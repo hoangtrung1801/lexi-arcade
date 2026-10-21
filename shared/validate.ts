@@ -23,7 +23,8 @@ export function validateEvents(
     if (!Number.isFinite(ev.t) || ev.t < 0) return { ok: false, reason: "bad-time" };
     if (ev.t < prevT) return { ok: false, reason: "time-not-monotonic" };
     prevT = ev.t;
-    if (ev.wordId !== undefined && !ids.has(ev.wordId)) return { ok: false, reason: "unknown-word" };
+    if (ev.wordId !== undefined && !ids.has(ev.wordId))
+      return { ok: false, reason: "unknown-word" };
     if (ev.type === "correct" || ev.type === "wrong") {
       if (ev.t - prevKeyT < MIN_KEY_INTERVAL_MS) return { ok: false, reason: "keys-too-fast" };
       prevKeyT = ev.t;
@@ -34,7 +35,8 @@ export function validateEvents(
     }
     if (ev.type === "hit") {
       const lemma = words.find((w) => w.id === ev.wordId)?.lemma ?? "";
-      if ((typedChars.get(ev.wordId) ?? 0) < lemma.length) return { ok: false, reason: "hit-without-typing" };
+      if ((typedChars.get(ev.wordId) ?? 0) < lemma.length)
+        return { ok: false, reason: "hit-without-typing" };
     }
   }
 

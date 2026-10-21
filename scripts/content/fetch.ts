@@ -6,7 +6,7 @@
  */
 import { existsSync } from "node:fs";
 import { join } from "node:path";
-import { RAW_DIR, ensureDir, parseCsv, readText, writeText } from "./lib";
+import { ensureDir, parseCsv, RAW_DIR, readText, writeText } from "./lib";
 
 const OXFORD_URL =
   "https://raw.githubusercontent.com/winterdl/oxford-5000-vocabulary-audio-definition/master/data/oxford_3000.csv";

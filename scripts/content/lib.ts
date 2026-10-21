@@ -45,7 +45,10 @@ export function parseCsv(text: string): Record<string, string>[] {
   return rows.map((r) => Object.fromEntries(header.map((h, i) => [h, r[i] ?? ""])));
 }
 
-export function toCsv(rows: Record<string, string | number | boolean>[], columns: string[]): string {
+export function toCsv(
+  rows: Record<string, string | number | boolean>[],
+  columns: string[],
+): string {
   const esc = (v: string | number | boolean) => {
     const s = String(v);
     return /[",\n\r]/.test(s) ? `"${s.replaceAll('"', '""')}"` : s;

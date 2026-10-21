@@ -31,6 +31,7 @@ export function srsUpdate(
     const b = nextBoxOnClean(box);
     return { box: b, dueAt: dueAtFor(b, now), correctDelta: 1, wrongDelta: 0 };
   }
-  if (outcome === "missed") return { box: 0, dueAt: dueAtFor(0, now), correctDelta: 0, wrongDelta: 1 };
+  if (outcome === "missed")
+    return { box: 0, dueAt: dueAtFor(0, now), correctDelta: 0, wrongDelta: 1 };
   return { box, dueAt: dueAtFor(box, now), correctDelta: 1, wrongDelta: 1 };
 }

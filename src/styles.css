@@ -26,26 +26,36 @@
   --font-body: "VT323", monospace;
 }
 
-html,
-body,
-#root {
-  height: 100%;
+@layer base {
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+
+  body {
+    margin: 0;
+    background: var(--color-ink);
+    color: var(--color-snow);
+    font-family: var(--font-body);
+    font-size: 22px;
+    -webkit-font-smoothing: none;
+  }
+
+  a {
+    color: var(--color-gold);
+  }
+  a:hover {
+    color: var(--color-snow);
+  }
 }
 
-body {
-  margin: 0;
-  background: var(--color-ink);
-  color: var(--color-snow);
+/* Press Start 2P has no Vietnamese diacritics, so Vietnamese headings use VT323 in caps instead. */
+@utility font-vi {
   font-family: var(--font-body);
-  font-size: 22px;
-  -webkit-font-smoothing: none;
-}
-
-a {
-  color: var(--color-gold);
-}
-a:hover {
-  color: var(--color-snow);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  line-height: 1.05;
 }
 
 /* Pixel "box": hard outline + drop shadow, no blur. */

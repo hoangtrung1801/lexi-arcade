@@ -13,11 +13,14 @@ import { parseTarget, wrangler } from "./target";
 const MODEL = "@cf/myshell-ai/melotts";
 
 async function synth(account: string, token: string, text: string): Promise<Buffer> {
-  const res = await fetch(`https://api.cloudflare.com/client/v4/accounts/${account}/ai/run/${MODEL}`, {
-    method: "POST",
-    headers: { authorization: `Bearer ${token}`, "content-type": "application/json" },
-    body: JSON.stringify({ prompt: text, lang: "en" }),
-  });
+  const res = await fetch(
+    `https://api.cloudflare.com/client/v4/accounts/${account}/ai/run/${MODEL}`,
+    {
+      method: "POST",
+      headers: { authorization: `Bearer ${token}`, "content-type": "application/json" },
+      body: JSON.stringify({ prompt: text, lang: "en" }),
+    },
+  );
   if (!res.ok) throw new Error(`Workers AI ${res.status}: ${await res.text()}`);
   const json = (await res.json()) as { result?: { audio?: string } };
   const b64 = json.result?.audio;
@@ -64,7 +67,15 @@ async function main() {
 
   const sqlFile = join(ROOT, ".tmp", "audio.sql");
   writeText(sqlFile, `${updates.join("\n")}\n`);
-  wrangler(["d1", "execute", t.dbName, "--file", sqlFile, t.remote ? "--remote" : "--local", ...(t.env ? ["--env", t.env] : [])]);
+  wrangler([
+    "d1",
+    "execute",
+    t.dbName,
+    "--file",
+    sqlFile,
+    t.remote ? "--remote" : "--local",
+    ...(t.env ? ["--env", t.env] : []),
+  ]);
 }
 
 main().catch((e) => {

@@ -14,7 +14,9 @@ import { vocab } from "./routes/vocab";
 
 const app = new Hono<AppEnv>();
 
-app.on(["GET", "POST"], "/api/auth/*", rateLimit("RL_AUTH"), (c) => createAuth(c.env).handler(c.req.raw));
+app.on(["GET", "POST"], "/api/auth/*", rateLimit("RL_AUTH"), (c) =>
+  createAuth(c.env).handler(c.req.raw),
+);
 
 const api = new Hono<AppEnv>()
   .use(loadUser)

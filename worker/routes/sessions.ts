@@ -121,7 +121,9 @@ export const sessions = new Hono<AppEnv>()
       await db
         .update(schema.gameSessions)
         .set({ status: "rejected", finishedAt: now, rejectReason: check.reason })
-        .where(and(eq(schema.gameSessions.id, sessionId), eq(schema.gameSessions.status, "started")));
+        .where(
+          and(eq(schema.gameSessions.id, sessionId), eq(schema.gameSessions.status, "started")),
+        );
       return c.json({ error: "rejected", reason: check.reason }, 422);
     }
 
@@ -265,7 +267,11 @@ export const sessions = new Hono<AppEnv>()
           .insert(schema.weeklyScores)
           .values({ week: vnWeek(now), userId: user.id, gameId: GAME_ID, score: result.score })
           .onConflictDoUpdate({
-            target: [schema.weeklyScores.week, schema.weeklyScores.userId, schema.weeklyScores.gameId],
+            target: [
+              schema.weeklyScores.week,
+              schema.weeklyScores.userId,
+              schema.weeklyScores.gameId,
+            ],
             set: { score: sql`${schema.weeklyScores.score} + ${result.score}` },
           }),
       );
@@ -274,7 +280,9 @@ export const sessions = new Hono<AppEnv>()
     statements.push(...ensureQuestStatements(db, user.id, today));
     statements.push(questProgressStatement(db, user.id, today, "play_3", 1));
     if (result.hitWordIds.length > 0) {
-      statements.push(questProgressStatement(db, user.id, today, "hit_30", result.hitWordIds.length));
+      statements.push(
+        questProgressStatement(db, user.id, today, "hit_30", result.hitWordIds.length),
+      );
     }
     if (result.status === "won" && result.accuracy >= 0.95) {
       statements.push(questProgressStatement(db, user.id, today, "accuracy_95", 1));

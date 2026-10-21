@@ -20,8 +20,10 @@ for (const set of SETS) {
   const units = new Map<number, number>();
   for (const r of rows) {
     const key = r.lemma.toLowerCase();
-    if (!/^[A-Za-z]+$/.test(r.lemma)) err(`${set.slug}: "${r.lemma}" has characters that are hard to type`);
-    if (r.lemma.length < 2 || r.lemma.length > 14) err(`${set.slug}: "${r.lemma}" length out of range`);
+    if (!/^[A-Za-z]+$/.test(r.lemma))
+      err(`${set.slug}: "${r.lemma}" has characters that are hard to type`);
+    if (r.lemma.length < 2 || r.lemma.length > 14)
+      err(`${set.slug}: "${r.lemma}" length out of range`);
     if (seen.has(key)) err(`duplicate lemma "${r.lemma}" (${seen.get(key)} and ${set.slug})`);
     seen.set(key, set.slug);
     if (!r.meaning_vi.trim()) err(`${set.slug}: "${r.lemma}" has no Vietnamese meaning`);
@@ -32,7 +34,9 @@ for (const set of SETS) {
   }
   for (const [u, n] of units) if (n < 8 || n > 16) warn(`${set.slug}: unit ${u} has ${n} words`);
   const unreviewed = rows.filter((r) => !r.reviewed).length;
-  console.log(`${set.slug}: ${rows.length} words, ${units.size} units, ${unreviewed} not reviewed yet`);
+  console.log(
+    `${set.slug}: ${rows.length} words, ${units.size} units, ${unreviewed} not reviewed yet`,
+  );
 }
 
 console.log(`${errors} errors, ${warnings} warnings`);

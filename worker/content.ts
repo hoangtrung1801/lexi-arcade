@@ -76,7 +76,9 @@ export async function isUnitUnlocked(
   const prog = await db
     .select({ stars: schema.userUnitProgress.bestStars })
     .from(schema.userUnitProgress)
-    .where(and(eq(schema.userUnitProgress.userId, userId), eq(schema.userUnitProgress.unitId, prev.id)))
+    .where(
+      and(eq(schema.userUnitProgress.userId, userId), eq(schema.userUnitProgress.unitId, prev.id)),
+    )
     .get();
   return (prog?.stars ?? 0) >= 1;
 }

@@ -1,14 +1,14 @@
-import { describe, expect, it } from "vitest";
 import {
-  type GameEvent,
-  type GameWord,
   calcStars,
   calcWpm,
   comboMultiplier,
   computeResult,
+  type GameEvent,
+  type GameWord,
   validateEvents,
   wordScore,
 } from "@shared/index";
+import { describe, expect, it } from "vitest";
 
 const words: GameWord[] = [
   { id: 1, lemma: "cat", meaningVi: "con mèo" },
@@ -97,7 +97,10 @@ describe("validateEvents", () => {
 
   it("rejects a hit with no typing", () => {
     const events: GameEvent[] = [{ t: 100, type: "hit", wordId: 1 }];
-    expect(validateEvents(events, words, 10000)).toEqual({ ok: false, reason: "hit-without-typing" });
+    expect(validateEvents(events, words, 10000)).toEqual({
+      ok: false,
+      reason: "hit-without-typing",
+    });
   });
 
   it("rejects superhuman typing speed", () => {
@@ -119,6 +122,9 @@ describe("validateEvents", () => {
       { t: 500, type: "correct", wordId: 1 },
       { t: 100, type: "correct", wordId: 1 },
     ];
-    expect(validateEvents(events, words, 10000)).toEqual({ ok: false, reason: "time-not-monotonic" });
+    expect(validateEvents(events, words, 10000)).toEqual({
+      ok: false,
+      reason: "time-not-monotonic",
+    });
   });
 });

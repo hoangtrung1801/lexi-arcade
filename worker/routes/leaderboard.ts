@@ -27,7 +27,9 @@ export const leaderboard = new Hono<AppEnv>().get("/", async (c) => {
     .innerJoin(schema.profiles, eq(schema.profiles.userId, schema.weeklyScores.userId));
 
   const rows = await (period === "week"
-    ? base.where(sql`${schema.weeklyScores.week} = ${vnWeek(Date.now())} and ${schema.weeklyScores.gameId} = ${game}`)
+    ? base.where(
+        sql`${schema.weeklyScores.week} = ${vnWeek(Date.now())} and ${schema.weeklyScores.gameId} = ${game}`,
+      )
     : base.where(eq(schema.weeklyScores.gameId, game))
   )
     .groupBy(schema.weeklyScores.userId, schema.profiles.displayName)

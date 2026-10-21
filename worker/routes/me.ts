@@ -13,12 +13,19 @@ const patchBody = z.object({
   settings: z.record(z.string(), z.unknown()).optional(),
 });
 
-async function buildMe(c: { env: AppEnv["Bindings"]; var: AppEnv["Variables"] }): Promise<MeResponse> {
+async function buildMe(c: {
+  env: AppEnv["Bindings"];
+  var: AppEnv["Variables"];
+}): Promise<MeResponse> {
   const user = c.var.user;
   if (!user) return { user: null };
   const db = getDb(c.env);
   await ensureProfile(c.env, user.id, user.name);
-  const p = await db.select().from(schema.profiles).where(eq(schema.profiles.userId, user.id)).get();
+  const p = await db
+    .select()
+    .from(schema.profiles)
+    .where(eq(schema.profiles.userId, user.id))
+    .get();
   if (!p) return { user: null };
   let settings: Record<string, unknown> = {};
   try {

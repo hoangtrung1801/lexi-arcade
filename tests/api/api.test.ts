@@ -3,7 +3,7 @@
  * Skipped automatically when the server is not reachable.
  * Needs DEV_LOGIN=true in .dev.vars and a seeded local D1 (pnpm db:migrate:local && pnpm content:seed).
  */
-import { describe, expect, it } from "vitest";
+
 import type {
   FinishSessionResponse,
   LeaderboardResponse,
@@ -14,6 +14,7 @@ import type {
   VocabResponse,
 } from "@shared/api";
 import type { GameEvent, GameWord } from "@shared/types";
+import { describe, expect, it } from "vitest";
 
 const BASE = process.env.API_BASE ?? "http://localhost:5173";
 const up = await fetch(`${BASE}/api/health`, { signal: AbortSignal.timeout(2000) })
@@ -23,18 +24,26 @@ const up = await fetch(`${BASE}/api/health`, { signal: AbortSignal.timeout(2000)
 class Client {
   cookie = "";
   async req<T>(method: string, path: string, body?: unknown): Promise<{ status: number; json: T }> {
-    const res = await fetch(BASE + path, {
-      method,
-      headers: { "content-type": "application/json", ...(this.cookie ? { cookie: this.cookie } : {}) },
-      body: body === undefined ? undefined : JSON.stringify(body),
-    });
-    const set = res.headers.get("set-cookie");
-    if (set) this.cookie = set.split(";")[0] ?? "";
-    const text = await res.text();
-    try {
-      return { status: res.status, json: JSON.parse(text) as T };
-    } catch {
-      throw new Error(`${method} ${path} -> ${res.status} non-JSON: ${text.slice(0, 200)}`);
+    // The local Vite/miniflare proxy occasionally drops a keep-alive connection ("fetch failed" -> HTML 500).
+    // That is a dev-server transport flake, not an app error, so retry those a couple of times.
+    for (let attempt = 0; ; attempt++) {
+      const res = await fetch(BASE + path, {
+        method,
+        headers: {
+          "content-type": "application/json",
+          ...(this.cookie ? { cookie: this.cookie } : {}),
+        },
+        body: body === undefined ? undefined : JSON.stringify(body),
+      });
+      const set = res.headers.get("set-cookie");
+      if (set) this.cookie = set.split(";")[0] ?? "";
+      const text = await res.text();
+      try {
+        return { status: res.status, json: JSON.parse(text) as T };
+      } catch {
+        if (attempt < 2) continue;
+        throw new Error(`${method} ${path} -> ${res.status} non-JSON: ${text.slice(0, 200)}`);
+      }
     }
   }
 }
@@ -74,7 +83,9 @@ describe("api", () => {
 
   it.skipIf(!up)("guests cannot start sessions or read vocab", async () => {
     const c = new Client();
-    expect((await c.req("POST", "/api/sessions", { unitId: 1001, difficulty: "easy" })).status).toBe(401);
+    expect(
+      (await c.req("POST", "/api/sessions", { unitId: 1001, difficulty: "easy" })).status,
+    ).toBe(401);
     expect((await c.req("GET", "/api/vocab")).status).toBe(401);
     const me = await c.req<MeResponse>("GET", "/api/me");
     expect(me.json.user).toBeNull();
@@ -114,82 +125,88 @@ describe("api", () => {
     expect(again.status).toBe(409);
   });
 
-  it.skipIf(!up)("accepts a valid round and applies SRS / quests / leaderboard", async () => {
-    const c = new Client();
-    const name = `Pro${Date.now() % 100000}`;
-    await c.req("POST", "/api/dev/login", { name });
+  it.skipIf(!up)(
+    "accepts a valid round and applies SRS / quests / leaderboard",
+    async () => {
+      const c = new Client();
+      const name = `Pro${Date.now() % 100000}`;
+      await c.req("POST", "/api/dev/login", { name });
 
-    const start = await c.req<StartSessionResponse>("POST", "/api/sessions", {
-      unitId: 1001,
-      difficulty: "easy",
-    });
-    const words = start.json.words;
-    // Compress timing so the log fits in the real elapsed time: ~60ms/key stays under 250 WPM? no:
-    // 60ms/key = 1000 keys/min = 200 wpm. Use 70ms (~171 wpm).
-    const events: GameEvent[] = [];
-    let t = 100;
-    for (const w of words) {
-      for (let i = 0; i < w.lemma.length; i++) {
-        events.push({ t, type: "correct", wordId: w.id });
-        t += 70;
+      const start = await c.req<StartSessionResponse>("POST", "/api/sessions", {
+        unitId: 1001,
+        difficulty: "easy",
+      });
+      const words = start.json.words;
+      // Compress timing so the log fits in the real elapsed time: ~60ms/key stays under 250 WPM? no:
+      // 60ms/key = 1000 keys/min = 200 wpm. Use 70ms (~171 wpm).
+      const events: GameEvent[] = [];
+      let t = 100;
+      for (const w of words) {
+        for (let i = 0; i < w.lemma.length; i++) {
+          events.push({ t, type: "correct", wordId: w.id });
+          t += 70;
+        }
+        events.push({ t, type: "hit", wordId: w.id });
+        t += 10;
       }
-      events.push({ t, type: "hit", wordId: w.id });
-      t += 10;
-    }
-    // Let a little real time pass so events fit inside the wall clock window.
-    await new Promise((r) => setTimeout(r, Math.min(t, 12000)));
-    const fin = await c.req<FinishSessionResponse>(
-      "POST",
-      `/api/sessions/${start.json.sessionId}/finish`,
-      { events },
-    );
-    if (fin.status !== 200) throw new Error(`finish failed: ${JSON.stringify(fin.json)}`);
-    expect(fin.json.result.status).toBe("won");
-    expect(fin.json.result.stars).toBe(3);
-    expect(fin.json.rewards.newStars).toBe(3);
-    expect(fin.json.rewards.coinsGained).toBe(15);
-    expect(fin.json.rewards.unlockedUnitId).toBe(1002);
-    expect(fin.json.rewards.streakDays).toBe(1);
+      // Let a little real time pass so events fit inside the wall clock window.
+      await new Promise((r) => setTimeout(r, Math.min(t, 12000)));
+      const fin = await c.req<FinishSessionResponse>(
+        "POST",
+        `/api/sessions/${start.json.sessionId}/finish`,
+        { events },
+      );
+      if (fin.status !== 200) throw new Error(`finish failed: ${JSON.stringify(fin.json)}`);
+      expect(fin.json.result.status).toBe("won");
+      expect(fin.json.result.stars).toBe(3);
+      expect(fin.json.rewards.newStars).toBe(3);
+      expect(fin.json.rewards.coinsGained).toBe(15);
+      expect(fin.json.rewards.unlockedUnitId).toBe(1002);
+      expect(fin.json.rewards.streakDays).toBe(1);
 
-    // replay is refused
-    expect((await c.req("POST", `/api/sessions/${start.json.sessionId}/finish`, { events })).status).toBe(409);
+      // replay is refused
+      expect(
+        (await c.req("POST", `/api/sessions/${start.json.sessionId}/finish`, { events })).status,
+      ).toBe(409);
 
-    // unit 2 is now open, unit 3 still locked
-    const units = await c.req<UnitsResponse>("GET", "/api/sets/a1/units");
-    expect(units.json.units[0]?.bestStars).toBe(3);
-    expect(units.json.units[1]?.state).toBe("open");
-    expect(units.json.units[2]?.state).toBe("locked");
+      // unit 2 is now open, unit 3 still locked
+      const units = await c.req<UnitsResponse>("GET", "/api/sets/a1/units");
+      expect(units.json.units[0]?.bestStars).toBe(3);
+      expect(units.json.units[1]?.state).toBe("open");
+      expect(units.json.units[2]?.state).toBe("locked");
 
-    // vocab: all hit cleanly => box 1, not due yet
-    const learned = await c.req<VocabResponse>("GET", "/api/vocab?filter=learned");
-    expect(learned.json.counts.learned).toBe(words.length);
-    expect(learned.json.counts.due).toBe(0);
+      // vocab: all hit cleanly => box 1, not due yet
+      const learned = await c.req<VocabResponse>("GET", "/api/vocab?filter=learned");
+      expect(learned.json.counts.learned).toBe(words.length);
+      expect(learned.json.counts.due).toBe(0);
 
-    // quests progressed
-    const quests = await c.req<QuestsResponse>("GET", "/api/quests/today");
-    expect(quests.json.quests.find((q) => q.key === "play_3")?.progress).toBe(1);
-    expect(quests.json.quests.find((q) => q.key === "accuracy_95")?.progress).toBe(1);
-    const claim = await c.req("POST", "/api/quests/accuracy_95/claim");
-    expect(claim.status).toBe(200);
-    expect((await c.req("POST", "/api/quests/accuracy_95/claim")).status).toBe(409);
-    expect((await c.req("POST", "/api/quests/play_3/claim")).status).toBe(409);
+      // quests progressed
+      const quests = await c.req<QuestsResponse>("GET", "/api/quests/today");
+      expect(quests.json.quests.find((q) => q.key === "play_3")?.progress).toBe(1);
+      expect(quests.json.quests.find((q) => q.key === "accuracy_95")?.progress).toBe(1);
+      const claim = await c.req("POST", "/api/quests/accuracy_95/claim");
+      expect(claim.status).toBe(200);
+      expect((await c.req("POST", "/api/quests/accuracy_95/claim")).status).toBe(409);
+      expect((await c.req("POST", "/api/quests/play_3/claim")).status).toBe(409);
 
-    // saving words
-    const wid = words[0]?.id;
-    expect((await c.req("POST", `/api/vocab/${wid}/save`)).status).toBe(200);
-    const saved = await c.req<VocabResponse>("GET", "/api/vocab?filter=saved");
-    expect(saved.json.items.map((i) => i.id)).toEqual([wid]);
-    expect((await c.req("DELETE", `/api/vocab/${wid}/save`)).status).toBe(200);
+      // saving words
+      const wid = words[0]?.id;
+      expect((await c.req("POST", `/api/vocab/${wid}/save`)).status).toBe(200);
+      const saved = await c.req<VocabResponse>("GET", "/api/vocab?filter=saved");
+      expect(saved.json.items.map((i) => i.id)).toEqual([wid]);
+      expect((await c.req("DELETE", `/api/vocab/${wid}/save`)).status).toBe(200);
 
-    // leaderboard shows the player
-    const lb = await c.req<LeaderboardResponse>("GET", "/api/leaderboard?period=week");
-    expect(lb.json.entries.some((e) => e.displayName === name)).toBe(true);
+      // leaderboard shows the player
+      const lb = await c.req<LeaderboardResponse>("GET", "/api/leaderboard?period=week");
+      expect(lb.json.entries.some((e) => e.displayName === name)).toBe(true);
 
-    // profile reflects XP, coins (15 star coins + 25 quest) and level
-    const me = await c.req<MeResponse>("GET", "/api/me");
-    expect(me.json.user?.coins).toBe(40);
-    expect(me.json.user?.xp).toBe(fin.json.rewards.xp);
-  }, 30000);
+      // profile reflects XP, coins (15 star coins + 25 quest) and level
+      const me = await c.req<MeResponse>("GET", "/api/me");
+      expect(me.json.user?.coins).toBe(40);
+      expect(me.json.user?.xp).toBe(fin.json.rewards.xp);
+    },
+    30000,
+  );
 
   it.skipIf(!up)("rejects forged logs", async () => {
     const c = new Client();
@@ -203,19 +220,31 @@ describe("api", () => {
       type: "hit" as const,
       wordId: w.id,
     }));
-    const res = await c.req<{ reason: string }>("POST", `/api/sessions/${start.json.sessionId}/finish`, {
-      events: forged,
-    });
+    const res = await c.req<{ reason: string }>(
+      "POST",
+      `/api/sessions/${start.json.sessionId}/finish`,
+      {
+        events: forged,
+      },
+    );
     expect(res.status).toBe(422);
     expect(res.json.reason).toBe("hit-without-typing");
 
     // someone else's session id is not found
     const other = new Client();
     await other.req("POST", "/api/dev/login", { name: `Other${Date.now() % 100000}` });
-    const s2 = await c.req<StartSessionResponse>("POST", "/api/sessions", { unitId: 1001, difficulty: "easy" });
-    expect((await other.req("POST", `/api/sessions/${s2.json.sessionId}/finish`, { events: forged })).status).toBe(404);
+    const s2 = await c.req<StartSessionResponse>("POST", "/api/sessions", {
+      unitId: 1001,
+      difficulty: "easy",
+    });
+    expect(
+      (await other.req("POST", `/api/sessions/${s2.json.sessionId}/finish`, { events: forged }))
+        .status,
+    ).toBe(404);
 
     // locked unit
-    expect((await c.req("POST", "/api/sessions", { unitId: 1005, difficulty: "easy" })).status).toBe(403);
+    expect(
+      (await c.req("POST", "/api/sessions", { unitId: 1005, difficulty: "easy" })).status,
+    ).toBe(403);
   });
 });

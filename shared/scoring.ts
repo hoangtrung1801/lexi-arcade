@@ -30,7 +30,10 @@ export function calcStars(
  * Rules: wrong key or a missed word resets the combo; hitting 0 lives ends the round
  * (events after that are ignored); the round is won when every word has been hit.
  */
-export function computeResult(events: readonly GameEvent[], words: readonly GameWord[]): RoundResult {
+export function computeResult(
+  events: readonly GameEvent[],
+  words: readonly GameWord[],
+): RoundResult {
   const lemmaLen = new Map(words.map((w) => [w.id, w.lemma.length]));
   const hit = new Set<number>();
   const missed = new Set<number>();

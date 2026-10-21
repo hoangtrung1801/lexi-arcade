@@ -4,8 +4,8 @@ import type {
   SetSummary,
   UnitState,
   UnitSummary,
-  UnitWordsResponse,
   UnitsResponse,
+  UnitWordsResponse,
 } from "../../shared/api";
 import { GUEST_UNIT_LIMIT } from "../../shared/rules";
 import { getUnit, getUnitWords, isUnitUnlocked } from "../content";
