@@ -38,9 +38,21 @@ export const DIFFICULTY: Record<Difficulty, DifficultyConfig> = {
   hard: { fallSpeed: 70, spawnMs: 1500, maxOnScreen: 6 },
 };
 
+/** Ghost Race: the pace car drives at this speed, and a stuck player gets a letter after `revealMs`. */
+export const RACE: Record<Difficulty, { parWpm: number; revealMs: number }> = {
+  easy: { parWpm: 16, revealMs: 3000 },
+  normal: { parWpm: 24, revealMs: 4000 },
+  hard: { parWpm: 34, revealMs: 6000 },
+};
+
+/** Sentence Express: coal (lives) per round, and the quickest a human can load one word. */
+export const TRAIN_LIVES = 3;
+export const TRAIN_MIN_MS_PER_WORD = 120;
+export const TRAIN_POINTS_PER_WORD = 20;
+
 export const DAILY_QUESTS = [
   { key: "play_3", title: "Chơi 3 ván", target: 3, reward: 15 },
-  { key: "hit_30", title: "Bắn hạ 30 từ", target: 30, reward: 20 },
+  { key: "hit_30", title: "Đúng 30 từ (mọi game)", target: 30, reward: 20 },
   { key: "accuracy_95", title: "Một ván chính xác ≥ 95%", target: 1, reward: 25 },
 ] as const;
 export type QuestKey = (typeof DAILY_QUESTS)[number]["key"];

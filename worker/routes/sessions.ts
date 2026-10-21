@@ -1,27 +1,37 @@
-import { and, asc, eq, inArray, lte, notInArray, sql } from "drizzle-orm";
+import { and, asc, eq, gte, inArray, isNotNull, lte, ne, notInArray, sql } from "drizzle-orm";
 import type { BatchItem } from "drizzle-orm/batch";
 import { Hono } from "hono";
 import { z } from "zod";
 import type { FinishSessionResponse, StartSessionResponse } from "../../shared/api";
+import { GAME_IDS, type GameId } from "../../shared/games";
 import { levelFromXp, nextStreak, roundRewards, vnDate, vnWeek } from "../../shared/progress";
+import { raceGhost } from "../../shared/race";
+import { type AnyEvent, scoreRound, validateRound } from "../../shared/rounds";
 import { GUEST_UNIT_LIMIT, MAX_DUE_RATIO } from "../../shared/rules";
-import { computeResult } from "../../shared/scoring";
 import { srsUpdate } from "../../shared/srs";
-import type { GameEvent } from "../../shared/types";
-import { validateEvents } from "../../shared/validate";
+import type { GameWord, Ghost, RaceEvent, Sentence } from "../../shared/types";
 import { ensureProfile } from "../auth";
-import { GAME_ID, getUnit, getUnitWords, getWordsByIds, isUnitUnlocked } from "../content";
+import {
+  getSentencesByIds,
+  getUnit,
+  getUnitSentences,
+  getUnitWords,
+  getWordsByIds,
+  isUnitUnlocked,
+} from "../content";
+import type { Db } from "../db";
 import { getDb, schema } from "../db";
 import type { AppEnv } from "../env";
 import { rateLimit, requireUser } from "../middleware";
 import { ensureQuestStatements, questProgressStatement } from "../quests";
 
 const startBody = z.object({
+  gameId: z.enum(GAME_IDS).default("word-blaster"),
   unitId: z.number().int().positive(),
-  difficulty: z.enum(["easy", "normal", "hard"]),
+  difficulty: z.enum(["easy", "normal", "hard"]).default("normal"),
 });
 
-const eventSchema = z.discriminatedUnion("type", [
+const blasterEvent = z.discriminatedUnion("type", [
   z.object({ t: z.number(), type: z.literal("correct"), wordId: z.number().int() }),
   z.object({ t: z.number(), type: z.literal("wrong"), wordId: z.number().int().optional() }),
   z.object({ t: z.number(), type: z.literal("hit"), wordId: z.number().int() }),
@@ -33,61 +43,197 @@ const eventSchema = z.discriminatedUnion("type", [
     choiceId: z.number().int(),
   }),
 ]);
-const finishBody = z.object({ events: z.array(eventSchema).max(20000) });
+const raceEvent = z.object({
+  t: z.number(),
+  type: z.enum(["correct", "wrong", "reveal", "done"]),
+  wordId: z.number().int(),
+});
+const trainEvent = z.discriminatedUnion("type", [
+  z.object({
+    t: z.number(),
+    type: z.literal("submit"),
+    sentenceId: z.number().int(),
+    answer: z.array(z.string().max(40)).max(30),
+  }),
+  z.object({ t: z.number(), type: z.literal("hint"), sentenceId: z.number().int() }),
+]);
+const finishBodies = {
+  "word-blaster": z.object({ events: z.array(blasterEvent).max(20000) }),
+  "ghost-race": z.object({ events: z.array(raceEvent).max(20000) }),
+  "sentence-express": z.object({ events: z.array(trainEvent).max(2000) }),
+} satisfies Record<GameId, z.ZodType>;
+
+/** How many review items may join a round of `n` unit items: at most MAX_DUE_RATIO of the round. */
+function maxDueFor(n: number): number {
+  return Math.floor((n * MAX_DUE_RATIO) / (1 - MAX_DUE_RATIO));
+}
+
+/** Words due for review that are not already in the round, most overdue first. */
+async function dueWordIds(db: Db, userId: string, exclude: number[], limit: number) {
+  if (limit <= 0) return [];
+  const rows = await db
+    .select({ wordId: schema.userWordProgress.wordId })
+    .from(schema.userWordProgress)
+    .where(
+      and(
+        eq(schema.userWordProgress.userId, userId),
+        lte(schema.userWordProgress.dueAt, Date.now()),
+        sql`${schema.userWordProgress.lastSeenAt} > 0`,
+        notInArray(schema.userWordProgress.wordId, exclude),
+      ),
+    )
+    .orderBy(asc(schema.userWordProgress.dueAt))
+    .limit(limit);
+  return rows.map((r) => r.wordId);
+}
+
+/** One sentence for each of the most overdue words that have one, outside this unit. */
+async function dueSentences(
+  db: Db,
+  userId: string,
+  unitId: number,
+  exclude: number[],
+  limit: number,
+) {
+  if (limit <= 0) return [];
+  const rows = await db
+    .select({
+      id: schema.sentences.id,
+      wordId: schema.sentences.wordId,
+      en: schema.sentences.en,
+      vi: schema.sentences.vi,
+    })
+    .from(schema.userWordProgress)
+    .innerJoin(schema.sentences, eq(schema.sentences.wordId, schema.userWordProgress.wordId))
+    .where(
+      and(
+        eq(schema.userWordProgress.userId, userId),
+        lte(schema.userWordProgress.dueAt, Date.now()),
+        sql`${schema.userWordProgress.lastSeenAt} > 0`,
+        ne(schema.sentences.unitId, unitId),
+        notInArray(schema.userWordProgress.wordId, exclude),
+      ),
+    )
+    .orderBy(asc(schema.userWordProgress.dueAt))
+    .limit(limit * 4);
+  const out: Sentence[] = [];
+  const seen = new Set<number>();
+  for (const r of rows) {
+    if (seen.has(r.wordId)) continue;
+    seen.add(r.wordId);
+    out.push(r);
+    if (out.length >= limit) break;
+  }
+  return out;
+}
+
+/** Ghost Race: the player's fastest finished run here, and the fastest one by anyone else. */
+async function findGhosts(db: Db, userId: string, unitId: number): Promise<Ghost[]> {
+  const gs = schema.gameSessions;
+  const base = and(
+    eq(gs.gameId, "ghost-race"),
+    eq(gs.unitId, unitId),
+    eq(gs.status, "finished"),
+    gte(gs.stars, 1),
+    isNotNull(gs.ghostJson),
+  );
+  const cols = {
+    durationMs: gs.durationMs,
+    ghostJson: gs.ghostJson,
+    name: schema.profiles.displayName,
+  };
+  const [mine, top] = await Promise.all([
+    db
+      .select(cols)
+      .from(gs)
+      .innerJoin(schema.profiles, eq(schema.profiles.userId, gs.userId))
+      .where(and(base, eq(gs.userId, userId)))
+      .orderBy(asc(gs.durationMs))
+      .limit(1)
+      .get(),
+    db
+      .select(cols)
+      .from(gs)
+      .innerJoin(schema.profiles, eq(schema.profiles.userId, gs.userId))
+      .where(and(base, ne(gs.userId, userId)))
+      .orderBy(asc(gs.durationMs))
+      .limit(1)
+      .get(),
+  ]);
+  const out: Ghost[] = [];
+  for (const [kind, row] of [
+    ["best", mine],
+    ["top", top],
+  ] as const) {
+    if (!row?.ghostJson || row.durationMs === null) continue;
+    out.push({
+      kind,
+      name: kind === "best" ? "Kỷ lục của bạn" : row.name,
+      durationMs: row.durationMs,
+      points: JSON.parse(row.ghostJson),
+    });
+  }
+  return out;
+}
 
 export const sessions = new Hono<AppEnv>()
   .use(requireUser, rateLimit("RL_SESSIONS"))
   .post("/", async (c) => {
     const parsed = startBody.safeParse(await c.req.json().catch(() => null));
     if (!parsed.success) return c.json({ error: "bad-request" }, 400);
-    const { unitId, difficulty } = parsed.data;
+    const { gameId, unitId, difficulty } = parsed.data;
     const user = c.var.user;
     if (!user) return c.json({ error: "unauthorized" }, 401);
     const db = getDb(c.env);
 
     const unit = await getUnit(db, unitId);
     if (!unit) return c.json({ error: "not-found" }, 404);
-    if (!(await isUnitUnlocked(db, user.id, unit, GUEST_UNIT_LIMIT))) {
+    if (!(await isUnitUnlocked(db, user.id, unit, GUEST_UNIT_LIMIT, gameId))) {
       return c.json({ error: "locked" }, 403);
     }
     await ensureProfile(c.env, user.id, user.name);
 
-    const unitWords = await getUnitWords(c.env, db, unitId);
-    if (unitWords.length === 0) return c.json({ error: "empty-unit" }, 409);
-
-    // Mix in due words from other units: at most 30% of the final round.
-    const maxDue = Math.floor((unitWords.length * MAX_DUE_RATIO) / (1 - MAX_DUE_RATIO));
-    let dueWordIds: number[] = [];
-    if (maxDue > 0) {
-      const unitIds = unitWords.map((w) => w.id);
-      const rows = await db
-        .select({ wordId: schema.userWordProgress.wordId })
-        .from(schema.userWordProgress)
-        .where(
-          and(
-            eq(schema.userWordProgress.userId, user.id),
-            lte(schema.userWordProgress.dueAt, Date.now()),
-            sql`${schema.userWordProgress.lastSeenAt} > 0`,
-            notInArray(schema.userWordProgress.wordId, unitIds),
-          ),
-        )
-        .orderBy(asc(schema.userWordProgress.dueAt))
-        .limit(maxDue);
-      dueWordIds = rows.map((r) => r.wordId);
+    // Review items from other units (shared word progress) join every game's round.
+    let words: GameWord[];
+    let sentences: Sentence[] = [];
+    let dueIds: number[];
+    if (gameId === "sentence-express") {
+      const own = await getUnitSentences(db, unitId);
+      if (own.length === 0) return c.json({ error: "empty-unit" }, 409);
+      const due = await dueSentences(
+        db,
+        user.id,
+        unitId,
+        own.map((s) => s.wordId),
+        maxDueFor(own.length),
+      );
+      sentences = [...own, ...due];
+      dueIds = due.map((s) => s.wordId);
+      words = await getWordsByIds(db, [...new Set(sentences.map((s) => s.wordId))]);
+    } else {
+      const unitWords = await getUnitWords(c.env, db, unitId);
+      if (unitWords.length === 0) return c.json({ error: "empty-unit" }, 409);
+      dueIds = await dueWordIds(
+        db,
+        user.id,
+        unitWords.map((w) => w.id),
+        maxDueFor(unitWords.length),
+      );
+      words = [...unitWords, ...(await getWordsByIds(db, dueIds))];
     }
-    const dueWords = await getWordsByIds(db, dueWordIds);
-    const words = [...unitWords, ...dueWords];
+    const ghosts = gameId === "ghost-race" ? await findGhosts(db, user.id, unitId) : [];
 
     const sessionId = crypto.randomUUID();
     const seed = crypto.getRandomValues(new Uint32Array(1))[0] ?? 1;
     await db.insert(schema.gameSessions).values({
       id: sessionId,
       userId: user.id,
-      gameId: GAME_ID,
+      gameId,
       unitId,
       difficulty,
       seed,
       wordIdsJson: JSON.stringify(words.map((w) => w.id)),
+      sentenceIdsJson: sentences.length ? JSON.stringify(sentences.map((s) => s.id)) : null,
       startedAt: Date.now(),
     });
 
@@ -96,17 +242,18 @@ export const sessions = new Hono<AppEnv>()
       seed,
       difficulty,
       unitId,
+      gameId,
       words,
-      dueWordIds: dueWords.map((w) => w.id),
+      dueWordIds: dueIds,
+      sentences,
+      ghosts,
     };
     return c.json(body);
   })
   .post("/:id/finish", async (c) => {
     const user = c.var.user;
     if (!user) return c.json({ error: "unauthorized" }, 401);
-    const parsed = finishBody.safeParse(await c.req.json().catch(() => null));
-    if (!parsed.success) return c.json({ error: "bad-request" }, 400);
-    const events = parsed.data.events as GameEvent[];
+    const raw = await c.req.json().catch(() => null);
     const db = getDb(c.env);
     const sessionId = c.req.param("id");
 
@@ -117,12 +264,24 @@ export const sessions = new Hono<AppEnv>()
       .get();
     if (!sess) return c.json({ error: "not-found" }, 404);
     if (sess.status !== "started") return c.json({ error: "already-finished" }, 409);
+    const gameId = (GAME_IDS as readonly string[]).includes(sess.gameId)
+      ? (sess.gameId as GameId)
+      : "word-blaster";
+    const parsed = finishBodies[gameId].safeParse(raw);
+    if (!parsed.success) return c.json({ error: "bad-request" }, 400);
+    const events = parsed.data.events as AnyEvent[];
 
     const now = Date.now();
     const wordIds: number[] = JSON.parse(sess.wordIdsJson);
     const words = await getWordsByIds(db, wordIds);
+    const sentences = await getSentencesByIds(db, JSON.parse(sess.sentenceIdsJson ?? "[]"));
+    const ctx = {
+      words,
+      sentences,
+      difficulty: sess.difficulty as "easy" | "normal" | "hard",
+    };
 
-    const check = validateEvents(events, words, now - sess.startedAt);
+    const check = validateRound(gameId, events, ctx, now - sess.startedAt);
     if (!check.ok) {
       await db
         .update(schema.gameSessions)
@@ -141,7 +300,7 @@ export const sessions = new Hono<AppEnv>()
       .returning({ id: schema.gameSessions.id });
     if (claimed.length === 0) return c.json({ error: "already-finished" }, 409);
 
-    const result = computeResult(events, words);
+    const result = scoreRound(gameId, events, ctx);
 
     const [profile, unitProg, wordProg, nextUnit] = await Promise.all([
       db.select().from(schema.profiles).where(eq(schema.profiles.userId, user.id)).get(),
@@ -152,6 +311,7 @@ export const sessions = new Hono<AppEnv>()
           and(
             eq(schema.userUnitProgress.userId, user.id),
             eq(schema.userUnitProgress.unitId, sess.unitId),
+            eq(schema.userUnitProgress.gameId, gameId),
           ),
         )
         .get(),
@@ -196,6 +356,11 @@ export const sessions = new Hono<AppEnv>()
           stars: result.stars,
           xpGained: reward.xp,
           coinsGained: reward.coins,
+          durationMs: result.durationMs,
+          ghostJson:
+            gameId === "ghost-race" && result.status === "won"
+              ? JSON.stringify(raceGhost(events as RaceEvent[], words))
+              : null,
         })
         .where(eq(schema.gameSessions.id, sessionId)),
       db
@@ -203,6 +368,7 @@ export const sessions = new Hono<AppEnv>()
         .values({
           userId: user.id,
           unitId: sess.unitId,
+          gameId,
           bestStars: result.stars,
           bestScore: result.score,
           bestWpm: result.wpm,
@@ -210,7 +376,11 @@ export const sessions = new Hono<AppEnv>()
           completedAt: result.stars >= 1 ? now : null,
         })
         .onConflictDoUpdate({
-          target: [schema.userUnitProgress.userId, schema.userUnitProgress.unitId],
+          target: [
+            schema.userUnitProgress.userId,
+            schema.userUnitProgress.unitId,
+            schema.userUnitProgress.gameId,
+          ],
           set: {
             bestStars: sql`max(${schema.userUnitProgress.bestStars}, ${result.stars})`,
             bestScore: sql`max(${schema.userUnitProgress.bestScore}, ${result.score})`,
@@ -271,7 +441,7 @@ export const sessions = new Hono<AppEnv>()
       statements.push(
         db
           .insert(schema.weeklyScores)
-          .values({ week: vnWeek(now), userId: user.id, gameId: GAME_ID, score: result.score })
+          .values({ week: vnWeek(now), userId: user.id, gameId, score: result.score })
           .onConflictDoUpdate({
             target: [
               schema.weeklyScores.week,
@@ -295,8 +465,8 @@ export const sessions = new Hono<AppEnv>()
     }
 
     await db.batch(statements as [BatchItem<"sqlite">, ...BatchItem<"sqlite">[]]);
-    await c.env.CACHE.delete(`leaderboard:${GAME_ID}:week`);
-    await c.env.CACHE.delete(`leaderboard:${GAME_ID}:all`);
+    await c.env.CACHE.delete(`leaderboard:${gameId}:week`);
+    await c.env.CACHE.delete(`leaderboard:${gameId}:all`);
 
     const body: FinishSessionResponse = {
       result,

@@ -1,16 +1,22 @@
-import { and, asc, count, eq, lte } from "drizzle-orm";
+import { and, asc, count, eq, gt, lte } from "drizzle-orm";
 import { Hono } from "hono";
 import type {
   SetSummary,
+  UnitSentencesResponse,
   UnitState,
   UnitSummary,
   UnitsResponse,
   UnitWordsResponse,
 } from "../../shared/api";
+import { type GameId, isGameId } from "../../shared/games";
 import { GUEST_UNIT_LIMIT } from "../../shared/rules";
-import { getUnit, getUnitWords, isUnitUnlocked } from "../content";
+import { getUnit, getUnitSentences, getUnitWords, getWordsByIds, isUnitUnlocked } from "../content";
 import { getDb, schema } from "../db";
 import type { AppEnv } from "../env";
+
+function gameOf(q: string | undefined): GameId {
+  return isGameId(q) ? q : "word-blaster";
+}
 
 export const content = new Hono<AppEnv>()
   .get("/sets", async (c) => {
@@ -33,6 +39,7 @@ export const content = new Hono<AppEnv>()
   .get("/sets/:slug/units", async (c) => {
     const db = getDb(c.env);
     const userId = c.var.user?.id ?? null;
+    const game = gameOf(c.req.query("game"));
     const set = await db
       .select()
       .from(schema.wordSets)
@@ -52,7 +59,9 @@ export const content = new Hono<AppEnv>()
       const rows = await db
         .select()
         .from(schema.userUnitProgress)
-        .where(eq(schema.userUnitProgress.userId, userId));
+        .where(
+          and(eq(schema.userUnitProgress.userId, userId), eq(schema.userUnitProgress.gameId, game)),
+        );
       for (const r of rows) progress.set(r.unitId, { stars: r.bestStars, score: r.bestScore });
       const [due] = await db
         .select({ n: count() })
@@ -61,6 +70,7 @@ export const content = new Hono<AppEnv>()
           and(
             eq(schema.userWordProgress.userId, userId),
             lte(schema.userWordProgress.dueAt, Date.now()),
+            gt(schema.userWordProgress.lastSeenAt, 0),
           ),
         );
       dueCount = due?.n ?? 0;
@@ -102,10 +112,26 @@ export const content = new Hono<AppEnv>()
     const unit = await getUnit(db, id);
     if (!unit) return c.json({ error: "not-found" }, 404);
     const userId = c.var.user?.id ?? null;
-    if (!(await isUnitUnlocked(db, userId, unit, GUEST_UNIT_LIMIT))) {
+    const game = gameOf(c.req.query("game"));
+    if (!(await isUnitUnlocked(db, userId, unit, GUEST_UNIT_LIMIT, game))) {
       return c.json({ error: userId ? "locked" : "login-required" }, userId ? 403 : 401);
     }
     const words = await getUnitWords(c.env, db, id);
     const body: UnitWordsResponse = { unitId: id, words };
+    return c.json(body);
+  })
+  .get("/units/:id/sentences", async (c) => {
+    const db = getDb(c.env);
+    const id = Number(c.req.param("id"));
+    if (!Number.isInteger(id)) return c.json({ error: "bad-request" }, 400);
+    const unit = await getUnit(db, id);
+    if (!unit) return c.json({ error: "not-found" }, 404);
+    const userId = c.var.user?.id ?? null;
+    if (!(await isUnitUnlocked(db, userId, unit, GUEST_UNIT_LIMIT, "sentence-express"))) {
+      return c.json({ error: userId ? "locked" : "login-required" }, userId ? 403 : 401);
+    }
+    const sentences = await getUnitSentences(db, id);
+    const words = await getWordsByIds(db, [...new Set(sentences.map((s) => s.wordId))]);
+    const body: UnitSentencesResponse = { unitId: id, sentences, words };
     return c.json(body);
   });

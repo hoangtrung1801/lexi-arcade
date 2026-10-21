@@ -1,14 +1,15 @@
 import { desc, eq, sql } from "drizzle-orm";
 import { Hono } from "hono";
 import type { LeaderboardEntry, LeaderboardResponse } from "../../shared/api";
+import { isGameId } from "../../shared/games";
 import { vnWeek } from "../../shared/progress";
-import { GAME_ID } from "../content";
 import { getDb, schema } from "../db";
 import type { AppEnv } from "../env";
 
 export const leaderboard = new Hono<AppEnv>().get("/", async (c) => {
-  const game = c.req.query("game") === GAME_ID || !c.req.query("game") ? GAME_ID : null;
-  if (!game) return c.json({ error: "unknown-game" }, 404);
+  const q = c.req.query("game") ?? "word-blaster";
+  if (!isGameId(q)) return c.json({ error: "unknown-game" }, 404);
+  const game = q;
   const period = c.req.query("period") === "all" ? "all" : "week";
   const key = `leaderboard:${game}:${period}`;
 

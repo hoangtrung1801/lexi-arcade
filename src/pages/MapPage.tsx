@@ -1,11 +1,12 @@
 import type { UnitSummary } from "@shared/api";
 import type { Difficulty } from "@shared/types";
 import { type MouseEvent, type PointerEvent, useEffect, useMemo, useRef, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, Navigate, useNavigate, useParams } from "react-router-dom";
 import { PixelButton, PixelLink } from "../components/ui/PixelButton";
 import { PixelIcon } from "../components/ui/PixelIcon";
 import { PixelPanel } from "../components/ui/PixelPanel";
 import { StarRow } from "../components/ui/StarRow";
+import { type GameEntry, gameById } from "../games/registry";
 import { orb, spriteUrl } from "../lib/pixelart";
 import { useMe, useSets, useUnits, useUnitWords } from "../lib/queries";
 import { useSettings } from "../store/settings";
@@ -161,11 +162,22 @@ function Brackets({ size }: { size: number }) {
 }
 
 export function MapPage() {
+  const game = gameById(useParams().gameId);
+  if (!game?.map) return <Navigate to="/" replace />;
+  return <UnitMap key={game.id} game={game} />;
+}
+
+function UnitMap({
+  game,
+}: {
+  game: GameEntry & { id: NonNullable<ReturnType<typeof gameById>>["id"] };
+}) {
+  const map = game.map as NonNullable<GameEntry["map"]>;
   const nav = useNavigate();
   const me = useMe().data?.user;
   const sets = useSets().data?.sets ?? [];
   const [slug, setSlug] = useState("a1");
-  const unitsQ = useUnits(slug);
+  const unitsQ = useUnits(slug, game.id);
   const units = unitsQ.data?.units ?? [];
   const difficulty = useSettings((s) => s.difficulty);
   const setSettings = useSettings((s) => s.set);
@@ -188,7 +200,10 @@ export function MapPage() {
   const selected: UnitSummary | undefined = units.find((u) => u.id === selectedId) ?? current;
   const pageUnits = units.slice(page * PAGE, page * PAGE + PAGE);
   const pageCount = Math.max(1, Math.ceil(units.length / PAGE));
-  const wordsQ = useUnitWords(selected && selected.state !== "locked" ? selected.id : null);
+  const wordsQ = useUnitWords(
+    selected && selected.state !== "locked" ? selected.id : null,
+    game.id,
+  );
 
   const totalStars = units.reduce((n, u) => n + u.bestStars, 0);
   const bestScore = units.reduce((n, u) => Math.max(n, u.bestScore), 0);
@@ -207,10 +222,8 @@ export function MapPage() {
           <PixelIcon name="back" size={14} color="#f4f4f4" />
         </Link>
         <div className="flex flex-col">
-          <span className="font-px t-lg t-gold tracking-[2px]">WORD BLASTER</span>
-          <span className="t-sm text-mist">
-            Đọc nghĩa tiếng Việt, gõ đúng đáp án tiếng Anh đang rơi
-          </span>
+          <span className="font-px t-lg t-gold tracking-[2px]">{game.title}</span>
+          <span className="t-sm text-mist">{map.subtitle}</span>
         </div>
         <div className="ml-auto flex items-center gap-3">
           {me && (
@@ -256,9 +269,7 @@ export function MapPage() {
             <span className="t-md">Từ của tôi</span>
             <span className="t-sm text-mist">Sổ từ vựng đã lưu</span>
           </Link>
-          <p className="t-sm mt-auto text-slate">
-            Mỗi mốc gồm khoảng 12 từ. Đạt 1 sao để mở mốc tiếp theo.
-          </p>
+          <p className="t-sm mt-auto text-slate">{map.note}</p>
         </PixelPanel>
 
         <section
@@ -395,35 +406,37 @@ export function MapPage() {
                   </div>
                 </div>
               </div>
-              <div className="flex shrink-0 flex-col gap-1">
-                <span className="t-sm text-mist">Độ khó</span>
-                <div className="grid grid-cols-3 gap-2">
-                  {LEVELS.map((l) => (
-                    <button
-                      key={l.id}
-                      type="button"
-                      onClick={() => setSettings({ difficulty: l.id })}
-                      aria-pressed={l.id === difficulty}
-                      className={`t-sm px-1 pt-0.5 pb-1.5 ${
-                        l.id === difficulty
-                          ? "hb-btn-green text-[#12302b] [text-shadow:2px_0_0_currentColor]"
-                          : "hb-btn-dark text-mist"
-                      }`}
-                    >
-                      {l.name}
-                    </button>
-                  ))}
+              {map.hasDifficulty && (
+                <div className="flex shrink-0 flex-col gap-1">
+                  <span className="t-sm text-mist">Độ khó</span>
+                  <div className="grid grid-cols-3 gap-2">
+                    {LEVELS.map((l) => (
+                      <button
+                        key={l.id}
+                        type="button"
+                        onClick={() => setSettings({ difficulty: l.id })}
+                        aria-pressed={l.id === difficulty}
+                        className={`t-sm px-1 pt-0.5 pb-1.5 ${
+                          l.id === difficulty
+                            ? "hb-btn-green text-[#12302b] [text-shadow:2px_0_0_currentColor]"
+                            : "hb-btn-dark text-mist"
+                        }`}
+                      >
+                        {l.name}
+                      </button>
+                    ))}
+                  </div>
                 </div>
-              </div>
+              )}
               {canPlay ? (
                 <PixelButton
                   tone="gold"
                   size="lg"
                   className="hb-glow shrink-0"
-                  onClick={() => nav(`/games/word-blaster/play/${selected.id}?set=${slug}`)}
+                  onClick={() => nav(`/games/${game.id}/play/${selected.id}?set=${slug}`)}
                 >
                   <PixelIcon name="play" size={18} color="#3a1a18" />
-                  Bắt đầu
+                  {map.startLabel}
                 </PixelButton>
               ) : selected.guestLocked ? (
                 <div className="flex shrink-0 flex-col gap-3">

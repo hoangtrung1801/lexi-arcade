@@ -1,4 +1,6 @@
-import type { Difficulty, FinishRewards, GameEvent, GameWord, RoundResult } from "./types";
+import type { GameId } from "./games";
+import type { AnyEvent } from "./rounds";
+import type { Difficulty, FinishRewards, GameWord, Ghost, RoundResult, Sentence } from "./types";
 
 export interface MeResponse {
   user: null | {
@@ -49,7 +51,14 @@ export interface UnitWordsResponse {
   words: GameWord[];
 }
 
+export interface UnitSentencesResponse {
+  unitId: number;
+  sentences: Sentence[];
+  words: GameWord[];
+}
+
 export interface StartSessionRequest {
+  gameId?: GameId;
   unitId: number;
   difficulty: Difficulty;
 }
@@ -58,12 +67,17 @@ export interface StartSessionResponse {
   seed: number;
   difficulty: Difficulty;
   unitId: number;
+  gameId: GameId;
   words: GameWord[];
   dueWordIds: number[];
+  /** Sentence Express only */
+  sentences: Sentence[];
+  /** Ghost Race only: your best run and the fastest run by anyone else on this unit */
+  ghosts: Ghost[];
 }
 
 export interface FinishSessionRequest {
-  events: GameEvent[];
+  events: AnyEvent[];
 }
 export interface FinishSessionResponse {
   result: RoundResult;

@@ -1,18 +1,37 @@
+import type { GameId } from "@shared/games";
 import { useState } from "react";
 import { PixelIcon } from "../components/ui/PixelIcon";
+import { GAMES } from "../games/registry";
 import { useLeaderboard, useMe } from "../lib/queries";
+
+const PLAYABLE = GAMES.filter((g) => g.path);
 
 const MEDAL = ["text-gold", "text-haze", "text-orange"];
 
 export function LeaderboardPage() {
   const [period, setPeriod] = useState<"week" | "all">("week");
-  const q = useLeaderboard(period);
+  const [game, setGame] = useState<GameId>("word-blaster");
+  const q = useLeaderboard(game, period);
   const me = useMe().data?.user;
   return (
     <main className="mx-auto flex h-full max-w-[840px] flex-col gap-5 px-8 pt-5 pb-3">
       <div className="flex shrink-0 flex-col">
         <h1 className="t-lg t-bold uppercase">Bảng xếp hạng</h1>
-        <span className="font-px t-md text-gold">WORD BLASTER</span>
+      </div>
+      <div className="flex shrink-0 flex-wrap gap-2">
+        {PLAYABLE.map((g) => (
+          <button
+            key={g.id}
+            type="button"
+            onClick={() => setGame(g.id as GameId)}
+            aria-pressed={game === g.id}
+            className={`font-px t-md px-3 pt-1 pb-1.5 ${
+              game === g.id ? "hb-btn-blue text-[#141b3d]" : "hb-btn-dark text-mist"
+            }`}
+          >
+            {g.title}
+          </button>
+        ))}
       </div>
       <div className="flex shrink-0 gap-2">
         {(

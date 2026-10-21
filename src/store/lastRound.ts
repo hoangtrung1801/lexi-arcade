@@ -1,7 +1,9 @@
+import type { GameId } from "@shared/games";
 import type { FinishRewards, GameWord, RoundResult } from "@shared/types";
 import { create } from "zustand";
 
 export interface LastRound {
+  gameId: GameId;
   unitId: number;
   unitIdx: number;
   unitTitle: string;

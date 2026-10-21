@@ -13,7 +13,8 @@ import type {
   UnitsResponse,
   VocabResponse,
 } from "@shared/api";
-import type { GameEvent, GameWord } from "@shared/types";
+import { sentenceParts } from "@shared/sentence";
+import type { GameEvent, GameWord, RaceEvent, TrainEvent } from "@shared/types";
 import { describe, expect, it } from "vitest";
 
 const BASE = process.env.API_BASE ?? "http://localhost:5173";
@@ -251,4 +252,108 @@ describe("api", () => {
       (await c.req("POST", "/api/sessions", { unitId: 1005, difficulty: "easy" })).status,
     ).toBe(403);
   });
+
+  it.skipIf(!up)(
+    "ghost race and sentence express save per-game progress and ghosts",
+    async () => {
+      const c = new Client();
+      await c.req("POST", "/api/dev/login", { name: `Multi${Date.now() % 100000}` });
+
+      // Ghost Race: type every word, ~90ms per key
+      const race = await c.req<StartSessionResponse>("POST", "/api/sessions", {
+        gameId: "ghost-race",
+        unitId: 1001,
+        difficulty: "easy",
+      });
+      expect(race.status).toBe(200);
+      expect(race.json.gameId).toBe("ghost-race");
+      expect(race.json.ghosts.some((g) => g.kind === "best")).toBe(false);
+      const raceEvents: RaceEvent[] = [];
+      let t = 100;
+      for (const w of race.json.words) {
+        for (let i = 0; i < w.lemma.length; i++) {
+          raceEvents.push({ t, type: "correct", wordId: w.id });
+          t += 90;
+        }
+        raceEvents.push({ t: t - 90, type: "done", wordId: w.id });
+      }
+      await new Promise((r) => setTimeout(r, Math.min(t, 15000)));
+      const raceFin = await c.req<FinishSessionResponse>(
+        "POST",
+        `/api/sessions/${race.json.sessionId}/finish`,
+        { events: raceEvents },
+      );
+      if (raceFin.status !== 200) throw new Error(`race: ${JSON.stringify(raceFin.json)}`);
+      expect(raceFin.json.result.status).toBe("won");
+      expect(raceFin.json.rewards.unlockedUnitId).toBe(1002);
+
+      // progress is per game: word blaster still has only the first units open
+      const raceUnits = await c.req<UnitsResponse>("GET", "/api/sets/a1/units?game=ghost-race");
+      expect(raceUnits.json.units[1]?.state).toBe("open");
+      const blasterUnits = await c.req<UnitsResponse>("GET", "/api/sets/a1/units");
+      expect(blasterUnits.json.units[1]?.state).toBe("locked");
+
+      // the next race brings your own ghost
+      const race2 = await c.req<StartSessionResponse>("POST", "/api/sessions", {
+        gameId: "ghost-race",
+        unitId: 1001,
+        difficulty: "easy",
+      });
+      const best = race2.json.ghosts.find((g) => g.kind === "best");
+      expect(best?.points.at(-1)?.[1]).toBe(1);
+
+      // Sentence Express: load every sentence in order
+      const train = await c.req<StartSessionResponse>("POST", "/api/sessions", {
+        gameId: "sentence-express",
+        unitId: 1001,
+      });
+      expect(train.status).toBe(200);
+      expect(train.json.sentences.length).toBeGreaterThanOrEqual(4);
+      const trainEvents: TrainEvent[] = train.json.sentences.map((s, i) => ({
+        t: 3000 * (i + 1),
+        type: "submit",
+        sentenceId: s.id,
+        answer: sentenceParts(s.en).words,
+      }));
+      // a wrong answer with different words is a forgery
+      const forged = await c.req<{ reason: string }>(
+        "POST",
+        `/api/sessions/${train.json.sessionId}/finish`,
+        { events: [{ ...trainEvents[0], answer: ["nope"] }] },
+      );
+      expect(forged.status).toBe(422);
+      expect(forged.json.reason).toBe("answer-not-the-sentence");
+
+      const train2 = await c.req<StartSessionResponse>("POST", "/api/sessions", {
+        gameId: "sentence-express",
+        unitId: 1001,
+      });
+      const events2: TrainEvent[] = train2.json.sentences.map((s, i) => ({
+        t: 1000 * (i + 1),
+        type: "submit",
+        sentenceId: s.id,
+        answer: sentenceParts(s.en).words,
+      }));
+      await new Promise((r) => setTimeout(r, (events2.at(-1)?.t ?? 0) + 200));
+      const trainFin = await c.req<FinishSessionResponse>(
+        "POST",
+        `/api/sessions/${train2.json.sessionId}/finish`,
+        { events: events2 },
+      );
+      if (trainFin.status !== 200) throw new Error(`train: ${JSON.stringify(trainFin.json)}`);
+      expect(trainFin.json.result.status).toBe("won");
+      expect(trainFin.json.result.stars).toBe(3);
+
+      // vocab is shared: keywords from both games are in the same notebook
+      const learned = await c.req<VocabResponse>("GET", "/api/vocab?filter=learned");
+      expect(learned.json.counts.learned).toBeGreaterThanOrEqual(race.json.words.length);
+
+      const lb = await c.req<LeaderboardResponse>(
+        "GET",
+        "/api/leaderboard?period=week&game=sentence-express",
+      );
+      expect(lb.status).toBe(200);
+    },
+    40000,
+  );
 });

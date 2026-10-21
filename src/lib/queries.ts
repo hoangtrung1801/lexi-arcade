@@ -7,10 +7,12 @@ import type {
   SetSummary,
   StartSessionRequest,
   StartSessionResponse,
+  UnitSentencesResponse,
   UnitsResponse,
   UnitWordsResponse,
   VocabResponse,
 } from "@shared/api";
+import type { GameId } from "@shared/games";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { api } from "./api";
 
@@ -24,13 +26,25 @@ export const useSets = () =>
     staleTime: 5 * 60_000,
   });
 
-export const useUnits = (slug: string) =>
-  useQuery({ queryKey: ["units", slug], queryFn: () => api<UnitsResponse>(`/sets/${slug}/units`) });
-
-export const useUnitWords = (unitId: number | null) =>
+export const useUnits = (slug: string, game: GameId = "word-blaster") =>
   useQuery({
-    queryKey: ["unit-words", unitId],
-    queryFn: () => api<UnitWordsResponse>(`/units/${unitId}/words`),
+    queryKey: ["units", slug, game],
+    queryFn: () => api<UnitsResponse>(`/sets/${slug}/units?game=${game}`),
+  });
+
+export const useUnitWords = (unitId: number | null, game: GameId = "word-blaster") =>
+  useQuery({
+    queryKey: ["unit-words", unitId, game],
+    queryFn: () => api<UnitWordsResponse>(`/units/${unitId}/words?game=${game}`),
+    enabled: unitId !== null,
+    staleTime: 5 * 60_000,
+    retry: false,
+  });
+
+export const useUnitSentences = (unitId: number | null) =>
+  useQuery({
+    queryKey: ["unit-sentences", unitId],
+    queryFn: () => api<UnitSentencesResponse>(`/units/${unitId}/sentences`),
     enabled: unitId !== null,
     staleTime: 5 * 60_000,
     retry: false,
@@ -43,10 +57,10 @@ export const useVocab = (filter: "learned" | "due" | "saved", enabled = true) =>
     enabled,
   });
 
-export const useLeaderboard = (period: "week" | "all") =>
+export const useLeaderboard = (game: GameId, period: "week" | "all") =>
   useQuery({
-    queryKey: ["leaderboard", period],
-    queryFn: () => api<LeaderboardResponse>(`/leaderboard?game=word-blaster&period=${period}`),
+    queryKey: ["leaderboard", game, period],
+    queryFn: () => api<LeaderboardResponse>(`/leaderboard?game=${game}&period=${period}`),
   });
 
 export const useQuests = (enabled: boolean) =>

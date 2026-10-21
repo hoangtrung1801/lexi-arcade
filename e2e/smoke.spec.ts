@@ -7,6 +7,14 @@ declare global {
       prompt: { lemma: string } | null;
       typed: string;
     };
+    __ghostRace?: { status: string; current?: { lemma: string }; typed: string };
+    __sentenceExpress?: {
+      status: string;
+      departing: boolean;
+      buffer: string;
+      placed: number[];
+      parts: { words: string[] };
+    };
   }
 }
 
@@ -40,7 +48,10 @@ async function playRound(page: Page) {
 test("guest can browse, play unit 1 and sees an unsaved result", async ({ page }) => {
   await page.goto("/");
   await expect(page.getByRole("heading", { name: "CHỌN TRÒ CHƠI" })).toBeVisible();
-  await page.getByRole("link", { name: /CHƠI NGAY/i }).click();
+  await page
+    .getByRole("link", { name: /CHƠI NGAY/i })
+    .first()
+    .click();
   await expect(page.getByText("BỘ TỪ VỰNG")).toBeVisible();
 
   // guests only get the first 3 units
@@ -94,4 +105,65 @@ test("small screens get the desktop-only screen", async ({ page }) => {
   await page.setViewportSize({ width: 600, height: 800 });
   await page.goto("/");
   await expect(page.getByRole("heading", { name: "HÃY MỞ TRÊN MÁY TÍNH" })).toBeVisible();
+});
+
+test("guest races Ghost Race unit 1 to the finish", async ({ page }) => {
+  await page.goto("/");
+  await page.getByRole("link", { name: /GHOST RACE/ }).click();
+  await expect(page.getByText("GHOST RACE").first()).toBeVisible();
+  await page.getByRole("button", { name: /Mốc 1:/ }).click();
+  await page.getByRole("button", { name: /XUẤT PHÁT/i }).click();
+  await page.waitForFunction(() => window.__ghostRace?.status === "playing", null, {
+    timeout: 20_000,
+  });
+  const deadline = Date.now() + 100_000;
+  while (Date.now() < deadline) {
+    const s = await page.evaluate(() => {
+      const g = window.__ghostRace;
+      return { status: g?.status, rest: g?.current?.lemma.slice(g.typed.length) ?? "" };
+    });
+    if (s.status === "over") break;
+    if (s.rest) await page.keyboard.type(s.rest, { delay: 70 });
+    else await page.waitForTimeout(80);
+  }
+  await expect(page.getByRole("heading", { name: "HOÀN THÀNH!" })).toBeVisible({ timeout: 10_000 });
+  await expect(page.getByText("Thời gian")).toBeVisible();
+});
+
+test("guest loads every Sentence Express train in order", async ({ page }) => {
+  await page.goto("/games/sentence-express");
+  await page.getByRole("button", { name: /Mốc 1:/ }).click();
+  await page.getByRole("button", { name: /LÊN TÀU/i }).click();
+  await page.waitForFunction(() => window.__sentenceExpress?.status === "playing", null, {
+    timeout: 20_000,
+  });
+  const deadline = Date.now() + 100_000;
+  while (Date.now() < deadline) {
+    const s = await page.evaluate(() => {
+      const g = window.__sentenceExpress;
+      return {
+        status: g?.status,
+        ready: !!g && !g.departing && g.placed.length === 0,
+        words: g?.parts.words ?? [],
+      };
+    });
+    if (s.status === "over") break;
+    if (!s.ready) {
+      await page.waitForTimeout(100);
+      continue;
+    }
+    for (const w of s.words) {
+      await page.keyboard.type(w.toLowerCase().replace(/[^a-z'-]/g, ""), { delay: 30 });
+      if (await page.evaluate(() => !!window.__sentenceExpress?.buffer))
+        await page.keyboard.press("Space");
+    }
+    await page.keyboard.press("Enter");
+    await page.waitForFunction(
+      () =>
+        window.__sentenceExpress?.departing !== false ||
+        window.__sentenceExpress?.status === "over",
+    );
+  }
+  await expect(page.getByRole("heading", { name: "HOÀN THÀNH!" })).toBeVisible({ timeout: 10_000 });
+  await expect(page.getByText("Câu đúng")).toBeVisible();
 });

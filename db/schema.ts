@@ -128,6 +128,7 @@ export const unitWords = sqliteTable(
   (t) => [primaryKey({ columns: [t.unitId, t.wordId] })],
 );
 
+/** Stars and records per game: every game has its own path through the same units. */
 export const userUnitProgress = sqliteTable(
   "user_unit_progress",
   {
@@ -137,15 +138,17 @@ export const userUnitProgress = sqliteTable(
     unitId: integer("unit_id")
       .notNull()
       .references(() => units.id),
+    gameId: text("game_id").notNull().default("word-blaster"),
     bestStars: integer("best_stars").notNull().default(0),
     bestScore: integer("best_score").notNull().default(0),
     bestWpm: real("best_wpm").notNull().default(0),
     plays: integer("plays").notNull().default(0),
     completedAt: integer("completed_at"),
   },
-  (t) => [primaryKey({ columns: [t.userId, t.unitId] })],
+  (t) => [primaryKey({ columns: [t.userId, t.unitId, t.gameId] })],
 );
 
+/** Word progress is shared by every game: a word learned in one game counts in all of them. */
 export const userWordProgress = sqliteTable(
   "user_word_progress",
   {
@@ -165,6 +168,24 @@ export const userWordProgress = sqliteTable(
     primaryKey({ columns: [t.userId, t.wordId] }),
     index("uwp_user_due_idx").on(t.userId, t.dueAt),
   ],
+);
+
+/** Example sentences for Sentence Express; each one practises one word of its unit. */
+export const sentences = sqliteTable(
+  "sentences",
+  {
+    id: integer("id").primaryKey(),
+    unitId: integer("unit_id")
+      .notNull()
+      .references(() => units.id),
+    wordId: integer("word_id")
+      .notNull()
+      .references(() => words.id),
+    en: text("en").notNull(),
+    vi: text("vi").notNull(),
+    sortOrder: integer("sort_order").notNull().default(0),
+  },
+  (t) => [index("sentences_unit_idx").on(t.unitId), index("sentences_word_idx").on(t.wordId)],
 );
 
 export const userSavedWords = sqliteTable(
@@ -195,6 +216,8 @@ export const gameSessions = sqliteTable(
     difficulty: text("difficulty").notNull(),
     seed: integer("seed").notNull(),
     wordIdsJson: text("word_ids_json").notNull(),
+    /** Sentence Express: the sentences of the round */
+    sentenceIdsJson: text("sentence_ids_json"),
     status: text("status").notNull().default("started"), // started | finished | rejected
     startedAt: integer("started_at").notNull(),
     finishedAt: integer("finished_at"),
@@ -206,8 +229,14 @@ export const gameSessions = sqliteTable(
     xpGained: integer("xp_gained"),
     coinsGained: integer("coins_gained"),
     rejectReason: text("reject_reason"),
+    durationMs: integer("duration_ms"),
+    /** Ghost Race: [ms, fraction of the track] at the end of every word */
+    ghostJson: text("ghost_json"),
   },
-  (t) => [index("gs_user_started_idx").on(t.userId, t.startedAt)],
+  (t) => [
+    index("gs_user_started_idx").on(t.userId, t.startedAt),
+    index("gs_game_unit_duration_idx").on(t.gameId, t.unitId, t.durationMs),
+  ],
 );
 
 export const dailyQuests = sqliteTable(

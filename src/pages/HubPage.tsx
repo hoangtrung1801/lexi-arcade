@@ -7,6 +7,23 @@ import { GAMES } from "../games/registry";
 import { BlasterPreview } from "../games/word-blaster/Preview";
 import { useClaimQuest, useMe, useQuests, useUnits, useVocab } from "../lib/queries";
 
+function GameGlyph({ glyph, accent }: { glyph: string; accent: string }) {
+  return (
+    <div className="hb-inset h-[60px] w-[60px] shrink-0 p-0">
+      <div
+        className="flex h-full w-full items-center justify-center bg-[#1a1c2c]"
+        style={{
+          backgroundImage: `radial-gradient(circle at 50% 45%, ${accent}66, transparent 70%)`,
+        }}
+      >
+        <span className="font-px t-md t-shadow" style={{ color: accent }}>
+          {glyph}
+        </span>
+      </div>
+    </div>
+  );
+}
+
 function ProfileCard() {
   const me = useMe().data?.user;
   const units = useUnits("a1").data;
@@ -173,8 +190,8 @@ function FeaturedGame() {
 }
 
 export function HubPage() {
-  const me = useMe().data?.user;
   const open = GAMES.filter((g) => g.path).length;
+  const soon = GAMES.filter((g) => !g.path);
   return (
     <main className="mx-auto flex h-full max-w-[1280px] gap-6 px-8 pt-5 pb-3">
       <aside className="flex min-h-0 w-[344px] shrink-0 flex-col gap-5">
@@ -193,37 +210,37 @@ export function HubPage() {
         </div>
         <FeaturedGame />
         <div className="grid shrink-0 grid-cols-3 gap-5">
-          {GAMES.filter((g) => !g.path).map((g) => (
-            <article
-              key={g.id}
-              title={g.desc}
-              className="hb-panel hb-lift flex min-w-0 items-center gap-3 p-3"
-            >
-              <div className="hb-inset h-[60px] w-[60px] shrink-0 p-0">
-                <div
-                  className="flex h-full w-full items-center justify-center"
-                  style={{
-                    background: `radial-gradient(circle at 50% 45%, ${g.accent}66, transparent 70%)`,
-                  }}
-                >
-                  <span className="font-px t-md t-shadow" style={{ color: g.accent }}>
-                    {g.glyph}
-                  </span>
+          {GAMES.slice(1)
+            .filter((g) => g.path)
+            .map((g) => (
+              <Link
+                key={g.id}
+                to={g.path ?? "/"}
+                title={g.desc}
+                className="hb-panel hb-lift flex min-w-0 items-center gap-3 p-3 text-snow no-underline transition-transform hover:-translate-y-1"
+              >
+                <GameGlyph glyph={g.glyph} accent={g.accent} />
+                <div className="flex min-w-0 flex-col">
+                  <h3 className="t-sm t-bold truncate">{g.title}</h3>
+                  <p className="t-sm truncate text-mist">{g.desc}</p>
+                  <span className="t-sm text-lime">Chơi ngay ▸</span>
                 </div>
+              </Link>
+            ))}
+          <article
+            title={soon.map((g) => `${g.title}: ${g.desc}`).join("\n")}
+            className="hb-panel hb-lift flex min-w-0 items-center gap-3 p-3 opacity-80"
+          >
+            <GameGlyph glyph={`+${soon.length}`} accent="#94b0c2" />
+            <div className="flex min-w-0 flex-col">
+              <h3 className="t-sm t-bold truncate">SẮP RA MẮT</h3>
+              <p className="t-sm truncate text-mist">{soon.map((g) => g.title).join(" · ")}</p>
+              <div className="t-sm flex items-center gap-2 text-slate">
+                <PixelIcon name="lock" size={16} dim />
+                <span className="truncate">Mở từ LV {soon[0]?.unlockLevel}</span>
               </div>
-              <div className="flex min-w-0 flex-col">
-                <h3 className="t-sm t-bold truncate">{g.title}</h3>
-                <p className="t-sm truncate text-mist">{g.desc}</p>
-                <div className="t-sm flex items-center gap-2 text-slate">
-                  <PixelIcon name="lock" size={16} dim />
-                  <span className="truncate">
-                    Sắp ra mắt · LV {g.unlockLevel}
-                    {me && me.level >= g.unlockLevel ? " (đã đủ cấp)" : ""}
-                  </span>
-                </div>
-              </div>
-            </article>
-          ))}
+            </div>
+          </article>
         </div>
       </div>
     </main>

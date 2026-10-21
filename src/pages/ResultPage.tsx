@@ -4,6 +4,7 @@ import { PixelIcon } from "../components/ui/PixelIcon";
 import { PixelPanel } from "../components/ui/PixelPanel";
 import { StarRow } from "../components/ui/StarRow";
 import { toast } from "../components/ui/Toast";
+import { formatTime } from "../games/ghost-race/Round";
 import { useSaveWord } from "../lib/queries";
 import { speak } from "../lib/sfx";
 import { useLastRound } from "../store/lastRound";
@@ -12,7 +13,8 @@ export function ResultPage() {
   const round = useLastRound((s) => s.round);
   const nav = useNavigate();
   const save = useSaveWord();
-  if (!round) return <Navigate to="/games/word-blaster" replace />;
+  if (!round) return <Navigate to="/" replace />;
+  const base = `/games/${round.gameId}`;
 
   const { result, rewards, words } = round;
   const byId = new Map(words.map((w) => [w.id, w]));
@@ -24,12 +26,32 @@ export function ResultPage() {
     ]),
   ].flatMap((id) => byId.get(id) ?? []);
   const won = result.status === "won";
-  const stats = [
-    { v: result.score.toLocaleString("vi-VN"), l: "Điểm", c: "text-gold" },
-    { v: String(Math.round(result.wpm)), l: "WPM", c: "text-cyan" },
-    { v: `${Math.round(result.accuracy * 100)}%`, l: "Chính xác", c: "text-lime" },
-    { v: `x${result.maxCombo}`, l: "Combo cao nhất", c: "text-orange" },
-  ];
+  const score = { v: result.score.toLocaleString("vi-VN"), l: "Điểm", c: "text-gold" };
+  const accuracy = { v: `${Math.round(result.accuracy * 100)}%`, l: "Chính xác", c: "text-lime" };
+  const combo = { v: `x${result.maxCombo}`, l: "Combo cao nhất", c: "text-orange" };
+  const wpm = { v: String(Math.round(result.wpm)), l: "WPM", c: "text-cyan" };
+  const stats =
+    round.gameId === "sentence-express"
+      ? [
+          score,
+          { v: `${result.hitWordIds.length}/${words.length}`, l: "Câu đúng", c: "text-cyan" },
+          accuracy,
+          combo,
+        ]
+      : round.gameId === "ghost-race"
+        ? [
+            score,
+            wpm,
+            accuracy,
+            { v: formatTime(result.durationMs), l: "Thời gian", c: "text-orange" },
+          ]
+        : [score, wpm, accuracy, combo];
+  const doneLabel =
+    round.gameId === "sentence-express"
+      ? "Từ khoá đã xếp"
+      : round.gameId === "ghost-race"
+        ? "Từ đã gõ"
+        : "Từ đã bắn hạ";
 
   const saveReview = async () => {
     try {
@@ -65,7 +87,9 @@ export function ResultPage() {
         <div className="flex gap-4">
           <div className="hb-inset flex min-w-0 flex-1 flex-col gap-2 px-4 py-3">
             <div className="flex items-center justify-between">
-              <h2 className="t-md t-bold text-lime uppercase">Từ đã bắn hạ ({learned.length})</h2>
+              <h2 className="t-md t-bold text-lime uppercase">
+                {doneLabel} ({learned.length})
+              </h2>
               <span className="t-sm text-slate">Nhấn loa để nghe</span>
             </div>
             <div className="grid grid-cols-2 gap-x-5 gap-y-1">
@@ -143,11 +167,11 @@ export function ResultPage() {
           )}
           <PixelButton
             tone="blue"
-            onClick={() => nav(`/games/word-blaster/play/${round.unitId}?set=${round.setSlug}`)}
+            onClick={() => nav(`${base}/play/${round.unitId}?set=${round.setSlug}`)}
           >
             Chơi lại
           </PixelButton>
-          <PixelButton tone="gold" className="hb-glow" onClick={() => nav("/games/word-blaster")}>
+          <PixelButton tone="gold" className="hb-glow" onClick={() => nav(base)}>
             Bản đồ ▸
           </PixelButton>
         </div>

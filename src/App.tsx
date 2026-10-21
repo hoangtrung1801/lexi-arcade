@@ -30,7 +30,7 @@ export function App() {
       <BrowserRouter>
         <Routes>
           <Route
-            path="/games/word-blaster/play/:unitId"
+            path="/games/:gameId/play/:unitId"
             element={
               <Suspense fallback={<p className="t-md p-8 text-mist">Đang tải game…</p>}>
                 <PlayPage />
@@ -39,8 +39,8 @@ export function App() {
           />
           <Route element={<AppShell />}>
             <Route index element={<HubPage />} />
-            <Route path="games/word-blaster" element={<MapPage />} />
-            <Route path="games/word-blaster/result/:sessionId" element={<ResultPage />} />
+            <Route path="games/:gameId" element={<MapPage />} />
+            <Route path="games/:gameId/result/:sessionId" element={<ResultPage />} />
             <Route path="leaderboard" element={<LeaderboardPage />} />
             <Route path="login" element={<LoginPage />} />
             <Route path="about" element={<AboutPage />} />

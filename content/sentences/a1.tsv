@@ -1,0 +1,301 @@
+unit	keyword	en	vi
+1	baby	The baby is sleeping in her bed.	Em bé đang ngủ trên giường của bé.
+1	uncle	My uncle has a small farm.	Chú tôi có một trang trại nhỏ.
+1	dad	My dad cooks dinner for us.	Bố tôi nấu bữa tối cho chúng tôi.
+1	child	Every child needs a warm coat.	Mỗi đứa trẻ đều cần một chiếc áo khoác ấm.
+2	friend	My best friend lives near my house.	Bạn thân nhất của tôi sống gần nhà tôi.
+2	sister	My sister is ten years old.	Em gái tôi mười tuổi.
+2	family	My family has a small car.	Gia đình tôi có một chiếc xe hơi nhỏ.
+2	woman	That woman sells fruit at the market.	Người phụ nữ đó bán trái cây ở chợ.
+3	grandmother	My grandmother makes very good cakes.	Bà tôi làm bánh ngọt rất ngon.
+3	married	Is your brother married?	Anh trai bạn đã kết hôn chưa?
+3	daughter	Their daughter is learning to swim.	Con gái họ đang học bơi.
+3	grandfather	My grandfather walks with a stick.	Ông tôi đi bộ bằng gậy.
+4	hair	My sister has very long hair.	Chị gái tôi có mái tóc rất dài.
+4	eye	The cat has green eyes.	Con mèo có đôi mắt màu xanh lá.
+4	leg	My left leg hurts a lot.	Chân trái của tôi đau lắm.
+4	back	I have a pain in my back.	Tôi bị đau lưng.
+5	hand	Wash your hands with soap.	Hãy rửa tay bằng xà phòng.
+5	sick	The little boy feels sick.	Cậu bé cảm thấy không khỏe.
+5	tooth	This tooth hurts a lot.	Cái răng này đau lắm.
+5	health	Fruit is good for your health.	Trái cây tốt cho sức khỏe của bạn.
+6	egg	How do you cook your eggs?	Bạn nấu trứng như thế nào?
+6	tea	Would you like a cup of tea?	Bạn có muốn một tách trà không?
+6	menu	What is on the menu tonight?	Tối nay thực đơn có gì?
+6	meat	My sister doesn't eat meat.	Chị tôi không ăn thịt.
+7	soup	This soup is too hot.	Món súp này nóng quá.
+7	rice	How much rice do you want?	Bạn muốn ăn bao nhiêu cơm?
+7	apple	She is eating a green apple.	Cô ấy đang ăn một quả táo xanh.
+7	bread	Don't forget to buy bread.	Đừng quên mua bánh mì nhé.
+8	coffee	I drink my coffee without sugar.	Tôi uống cà phê không đường.
+8	water	Can I have a glass of water?	Cho tôi xin một cốc nước được không?
+8	dinner	What time is dinner?	Mấy giờ thì ăn tối?
+8	banana	The monkey is eating a banana.	Con khỉ đang ăn một quả chuối.
+9	chocolate	Most children love chocolate.	Hầu hết trẻ em đều thích sô-cô-la.
+9	delicious	Your soup smells delicious.	Món súp của bạn thơm ngon quá.
+9	restaurant	Let's eat at the new restaurant.	Chúng ta hãy ăn ở nhà hàng mới nhé.
+9	breakfast	I never skip breakfast.	Tôi không bao giờ bỏ bữa sáng.
+10	key	I can't find my keys.	Tôi không tìm thấy chìa khóa của mình.
+10	door	Who is at the door?	Ai ở ngoài cửa vậy?
+10	bed	What time do you go to bed?	Bạn đi ngủ lúc mấy giờ?
+10	room	My room is very small.	Phòng của tôi rất nhỏ.
+11	garden	Their house has a beautiful garden.	Nhà họ có một khu vườn rất đẹp.
+11	phone	Where is my phone?	Điện thoại của tôi đâu rồi?
+11	shower	Our shower doesn't work.	Vòi hoa sen nhà chúng tôi bị hỏng.
+11	chair	This chair is broken.	Cái ghế này bị gãy rồi.
+12	kitchen	Mum is cooking in the kitchen.	Mẹ đang nấu ăn trong bếp.
+12	window	Can you open the window?	Bạn có thể mở cửa sổ không?
+12	computer	My computer is very slow.	Máy tính của tôi chạy rất chậm.
+12	apartment	They live in a small apartment.	Họ sống trong một căn hộ nhỏ.
+13	shoe	I need a new pair of shoes.	Tôi cần một đôi giày mới.
+13	money	I don't have much money.	Tôi không có nhiều tiền.
+13	wear	She always wears a hat.	Cô ấy luôn đội mũ.
+13	bag	This bag is very heavy.	Cái túi này rất nặng.
+14	umbrella	Take an umbrella with you.	Hãy mang theo ô nhé.
+14	clothes	Where do you buy your clothes?	Bạn mua quần áo ở đâu?
+14	shirt	He is wearing a white shirt.	Anh ấy đang mặc áo sơ mi trắng.
+14	price	What is the price of this jacket?	Giá của chiếc áo khoác này là bao nhiêu?
+15	cat	Our cat sleeps on the sofa.	Con mèo của chúng tôi ngủ trên ghế sofa.
+15	cow	The cows are eating grass.	Những con bò đang ăn cỏ.
+15	star	Look at the stars in the sky.	Hãy nhìn những ngôi sao trên bầu trời.
+15	bird	A small bird is singing.	Một chú chim nhỏ đang hót.
+16	elephant	Elephants have very big ears.	Voi có đôi tai rất to.
+16	beach	Let's go to the beach.	Chúng ta đi biển đi.
+16	flower	She gave me some flowers.	Cô ấy tặng tôi vài bông hoa.
+16	horse	Can you ride a horse?	Bạn có biết cưỡi ngựa không?
+17	cold	My hands are very cold.	Tay tôi lạnh quá.
+17	rain	Will it rain this afternoon?	Chiều nay trời có mưa không?
+17	snow	The children are playing in the snow.	Bọn trẻ đang chơi trong tuyết.
+17	red	I like your red bag.	Tôi thích chiếc túi màu đỏ của bạn.
+18	colour	What is your favourite colour?	Màu bạn yêu thích là gì?
+18	weather	What is the weather like?	Thời tiết thế nào?
+18	summer	Summer holidays are too short.	Kỳ nghỉ hè quá ngắn.
+18	winter	Do you like winter?	Bạn có thích mùa đông không?
+19	ago	I met him two years ago.	Tôi đã gặp anh ấy hai năm trước.
+19	half	I ate half the cake.	Tôi đã ăn một nửa cái bánh.
+19	date	What is your date of birth?	Ngày sinh của bạn là ngày nào?
+19	six	My son is six years old.	Con trai tôi sáu tuổi.
+20	time	What time is it?	Bây giờ là mấy giờ?
+20	hour	The film lasts two hours.	Bộ phim kéo dài hai tiếng.
+20	July	July is a hot month.	Tháng Bảy là một tháng nóng.
+20	first	She was the first person to arrive.	Cô ấy là người đầu tiên đến nơi.
+21	month	This month has been very busy.	Tháng này rất bận rộn.
+21	three	I have three brothers.	Tôi có ba người anh em trai.
+21	night	Did you sleep well last night?	Đêm qua bạn ngủ có ngon không?
+21	third	We live on the third floor.	Chúng tôi sống ở tầng ba.
+22	minute	I'll be ready in a minute.	Một phút nữa tôi sẽ sẵn sàng.
+22	Monday	I don't like Mondays.	Tôi không thích thứ Hai.
+22	number	What is your phone number?	Số điện thoại của bạn là gì?
+22	moment	Can you wait a moment?	Bạn có thể đợi một chút không?
+23	present	I bought a present for my mum.	Tôi đã mua một món quà cho mẹ.
+23	morning	Are you free tomorrow morning?	Sáng mai bạn có rảnh không?
+23	quarter	It's a quarter past ten.	Bây giờ là mười giờ mười lăm phút.
+23	routine	My morning routine is very simple.	Thói quen buổi sáng của tôi rất đơn giản.
+24	birthday	When is your birthday?	Sinh nhật của bạn là khi nào?
+24	weekend	What did you do last weekend?	Cuối tuần trước bạn đã làm gì?
+24	February	February has twenty-eight days.	Tháng Hai có hai mươi tám ngày.
+24	midnight	Is it midnight yet?	Đã nửa đêm chưa?
+25	Saturday	What are you doing on Saturday?	Bạn sẽ làm gì vào thứ Bảy?
+25	tomorrow	Tomorrow is a holiday.	Ngày mai là ngày nghỉ.
+25	thousand	This bike costs a thousand dollars.	Chiếc xe đạp này giá một nghìn đô la.
+25	beginning	Read the story from the beginning.	Hãy đọc câu chuyện từ đầu.
+26	gym	My father goes to the gym.	Bố tôi đi đến phòng tập thể dục.
+26	cinema	Let's go to the cinema.	Chúng ta đi xem phim đi.
+26	bank	Is there a bank near here?	Gần đây có ngân hàng nào không?
+26	city	This city is very big.	Thành phố này rất lớn.
+27	library	I borrow books from the library.	Tôi mượn sách từ thư viện.
+27	address	What is your address?	Địa chỉ của bạn là gì?
+27	hospital	My aunt works in a hospital.	Dì tôi làm việc ở một bệnh viện.
+27	village	My grandparents live in a small village.	Ông bà tôi sống ở một ngôi làng nhỏ.
+28	bus	I take the bus to work.	Tôi đi xe buýt đi làm.
+28	map	Do you have a map?	Bạn có bản đồ không?
+28	left	The bank is on the left.	Ngân hàng ở bên trái.
+28	taxi	Let's take a taxi.	Chúng ta đi taxi đi.
+29	ticket	How much is a train ticket?	Một vé tàu bao nhiêu tiền?
+29	hotel	Our hotel is near the beach.	Khách sạn của chúng tôi ở gần bãi biển.
+29	drive	Can your mother drive a car?	Mẹ bạn có biết lái xe hơi không?
+29	arrive	When does the plane arrive?	Khi nào máy bay đến?
+30	airport	How do I get to the airport?	Làm sao để tôi đến sân bay?
+30	passport	Don't forget your passport.	Đừng quên hộ chiếu của bạn.
+30	traffic	There is a lot of traffic.	Đường rất đông xe.
+30	station	Where is the train station?	Ga tàu ở đâu?
+31	job	I love my new job.	Tôi yêu công việc mới của mình.
+31	pen	Can I borrow your pen?	Tôi có thể mượn bút của bạn không?
+31	page	Open your books to page ten.	Hãy mở sách ra trang mười.
+31	word	What does this word mean?	Từ này có nghĩa là gì?
+32	doctor	You should see a doctor.	Bạn nên đi khám bác sĩ.
+32	answer	I don't know the answer.	Tôi không biết câu trả lời.
+32	lesson	What did you learn in the lesson?	Bạn đã học được gì trong bài học?
+32	farmer	The farmer has many cows.	Người nông dân có nhiều con bò.
+33	school	My son walks to school.	Con trai tôi đi bộ đến trường.
+33	waiter	The waiter brought us the menu.	Người bồi bàn mang thực đơn đến cho chúng tôi.
+33	example	Can you give me an example?	Bạn có thể cho tôi một ví dụ không?
+33	police	We must call the police.	Chúng ta phải gọi cảnh sát.
+34	homework	Have you finished your homework?	Con đã làm xong bài tập về nhà chưa?
+34	teacher	Our teacher is very kind.	Giáo viên của chúng tôi rất tốt bụng.
+34	subject	What is your favourite subject?	Môn học yêu thích của bạn là gì?
+34	language	How many languages do you speak?	Bạn nói được bao nhiêu ngôn ngữ?
+35	question	Can I ask you a question?	Tôi có thể hỏi bạn một câu không?
+35	dictionary	This dictionary is very useful.	Cuốn từ điển này rất hữu ích.
+35	classroom	Our classroom has big windows.	Lớp học của chúng tôi có cửa sổ lớn.
+35	university	My brother studies at university.	Anh trai tôi đang học đại học.
+36	game	Let's play a game.	Chúng ta chơi một trò chơi nhé.
+36	ball	Kick the ball to me!	Đá bóng cho tôi đi!
+36	news	Did you hear the news?	Bạn đã nghe tin đó chưa?
+36	club	She joined a tennis club.	Cô ấy đã tham gia một câu lạc bộ quần vợt.
+37	hobby	What is your hobby?	Sở thích của bạn là gì?
+37	music	What kind of music do you like?	Bạn thích loại nhạc nào?
+37	team	Which team do you support?	Bạn cổ vũ cho đội nào?
+37	song	This song is so beautiful.	Bài hát này hay quá.
+38	party	Are you coming to my party?	Bạn có đến bữa tiệc của tôi không?
+38	piano	My daughter plays the piano.	Con gái tôi chơi đàn piano.
+38	photo	Can you take a photo of us?	Bạn chụp giúp chúng tôi một tấm ảnh được không?
+38	story	My grandmother tells funny stories.	Bà tôi kể những câu chuyện rất vui.
+39	singer	My sister wants to be a singer.	Em gái tôi muốn trở thành ca sĩ.
+39	tennis	Do you like tennis?	Bạn có thích quần vợt không?
+39	message	I sent you a message.	Tôi đã gửi cho bạn một tin nhắn.
+39	picture	Look at this picture.	Hãy nhìn bức tranh này.
+40	football	Do you play football?	Bạn có chơi bóng đá không?
+40	newspaper	He reads the newspaper.	Anh ấy đọc báo.
+40	swimming	Swimming is good for you.	Bơi lội tốt cho bạn.
+40	magazine	She buys a fashion magazine.	Cô ấy mua một cuốn tạp chí thời trang.
+41	hungry	I am very hungry.	Tôi rất đói.
+41	tired	Why are you so tired?	Tại sao bạn mệt mỏi thế?
+41	afraid	She is afraid of dogs.	Cô ấy sợ chó.
+41	happy	The children look happy.	Bọn trẻ trông vui vẻ.
+42	fly	Most birds can fly.	Hầu hết các loài chim đều biết bay.
+42	buy	I want to buy a new bag.	Tôi muốn mua một chiếc túi mới.
+42	ask	Can I ask a question?	Tôi có thể hỏi một câu không?
+42	eat	Cats don't eat vegetables.	Mèo không ăn rau.
+43	sit	Can I sit next to you?	Tôi có thể ngồi cạnh bạn không?
+43	pay	How much did you pay?	Bạn đã trả bao nhiêu tiền?
+43	say	What did she say?	Cô ấy đã nói gì?
+43	win	Our team wants to win.	Đội của chúng tôi muốn chiến thắng.
+44	cook	My mother cooks dinner.	Mẹ tôi nấu bữa tối.
+44	call	I will call you.	Tôi sẽ gọi cho bạn.
+44	draw	She can draw horses.	Cô ấy có thể vẽ ngựa.
+44	hate	I hate cold weather.	Tôi ghét thời tiết lạnh.
+45	live	Where do you live?	Bạn sống ở đâu?
+45	know	I don't know his name.	Tôi không biết tên anh ấy.
+45	help	Can you help me?	Bạn có thể giúp tôi không?
+45	make	Let's make a cake.	Chúng ta hãy làm một chiếc bánh nhé.
+46	read	I can read this word.	Tôi có thể đọc từ này.
+46	sell	They sell fresh fruit.	Họ bán trái cây tươi.
+46	send	Can you send me the photo?	Bạn có thể gửi cho tôi bức ảnh không?
+46	ride	Can you ride a bike?	Bạn có biết đi xe đạp không?
+47	swim	My little brother can't swim.	Em trai tôi không biết bơi.
+47	wait	Can you wait for me?	Bạn có thể chờ tôi không?
+47	walk	Let's walk to the park.	Chúng ta hãy đi bộ đến công viên nhé.
+47	sing	She sings very well.	Cô ấy hát rất hay.
+48	wash	You should wash your hands.	Bạn nên rửa tay.
+48	carry	Can you carry this bag?	Bạn có thể xách chiếc túi này không?
+48	climb	Cats like to climb trees.	Mèo thích trèo cây.
+48	bring	Don't forget to bring your book.	Đừng quên mang theo sách của bạn.
+49	sleep	Babies sleep a lot.	Em bé ngủ rất nhiều.
+49	learn	She is learning to cook.	Cô ấy đang học nấu ăn.
+49	speak	Don't speak with your mouth full.	Đừng nói chuyện khi miệng đầy thức ăn.
+49	spell	How do you spell your name?	Tên của bạn đánh vần như thế nào?
+50	write	Write your name on the paper.	Hãy viết tên của bạn lên tờ giấy.
+50	teach	My aunt teaches young children.	Dì tôi dạy trẻ nhỏ.
+50	visit	Let's visit the museum.	Chúng ta hãy đi thăm bảo tàng nhé.
+50	watch	Do you watch cartoons?	Bạn có xem phim hoạt hình không?
+51	listen	Listen to your teacher.	Hãy lắng nghe giáo viên của bạn.
+51	forget	Don't forget your keys.	Đừng quên chìa khóa của bạn.
+51	travel	I love to travel by train.	Tôi thích đi du lịch bằng tàu hỏa.
+51	finish	Did you finish your homework?	Bạn đã làm xong bài tập về nhà chưa?
+52	understand	I don't understand this question.	Tôi không hiểu câu hỏi này.
+52	remember	Do you remember my name?	Bạn có nhớ tên tôi không?
+52	explain	Can you explain this word?	Bạn có thể giải thích từ này không?
+52	prepare	She is preparing the food.	Cô ấy đang chuẩn bị đồ ăn.
+53	old	My grandfather is very old.	Ông tôi đã rất già.
+53	busy	Is your father busy?	Bố bạn có bận không?
+53	easy	The test was easy.	Bài kiểm tra rất dễ.
+53	dark	The room is very dark.	Căn phòng rất tối.
+54	fast	He runs very fast.	Anh ấy chạy rất nhanh.
+54	late	Don't be late for school.	Đừng đi học muộn.
+54	long	She has long hair.	Cô ấy có mái tóc dài.
+54	hard	This question is very hard.	Câu hỏi này rất khó.
+55	cheap	These shoes are cheap.	Đôi giày này rẻ.
+55	tall	My brother is very tall.	Anh trai tôi rất cao.
+55	clean	You must clean your room.	Bạn phải dọn dẹp phòng của mình.
+55	slow	This bus is very slow.	Chiếc xe buýt này rất chậm.
+56	funny	That film was very funny.	Bộ phim đó rất buồn cười.
+56	dirty	Your shoes are dirty.	Giày của bạn bẩn.
+56	early	I get up early.	Tôi dậy sớm.
+56	quick	Let's have a quick lunch.	Chúng ta hãy ăn trưa nhanh nhé.
+57	quiet	The library is very quiet.	Thư viện rất yên tĩnh.
+57	ready	Are you ready for school?	Bạn đã sẵn sàng đi học chưa?
+57	small	Our house is small.	Nhà của chúng tôi nhỏ.
+57	young	His mother looks very young.	Mẹ anh ấy trông rất trẻ.
+58	healthy	Vegetables are very healthy.	Rau rất tốt cho sức khỏe.
+58	useful	This book is very useful.	Cuốn sách này rất hữu ích.
+58	strong	He is very strong.	Anh ấy rất khỏe.
+58	little	I have a little sister.	Tôi có một em gái.
+59	friendly	Our neighbours are friendly.	Hàng xóm của chúng tôi rất thân thiện.
+59	popular	This song is very popular.	Bài hát này rất phổ biến.
+59	special	It is a special day.	Đó là một ngày đặc biệt.
+59	exciting	The game was very exciting.	Trận đấu rất gay cấn.
+60	favourite	What is your favourite colour?	Màu yêu thích của bạn là gì?
+60	expensive	This dress is very expensive.	Chiếc váy này rất đắt.
+60	beautiful	The garden is beautiful.	Khu vườn rất đẹp.
+60	dangerous	That road is very dangerous.	Con đường đó rất nguy hiểm.
+61	in	She lives in a small flat.	Cô ấy sống trong một căn hộ nhỏ.
+61	if	I don't know if she likes cats.	Tôi không biết cô ấy có thích mèo không.
+61	of	She drinks a cup of tea.	Cô ấy uống một tách trà.
+61	me	Can you give me a pen?	Bạn có thể đưa cho tôi một cây bút không?
+62	on	Your phone is on the sofa.	Điện thoại của bạn ở trên ghế sofa.
+62	up	What time do you get up?	Bạn thức dậy lúc mấy giờ?
+62	we	We are best friends.	Chúng tôi là bạn thân.
+62	to	Do you want to come?	Bạn có muốn đến không?
+63	how	How old are you?	Bạn bao nhiêu tuổi?
+63	for	This present is for you.	Món quà này dành cho bạn.
+63	his	His car is very old.	Xe ô tô của anh ấy rất cũ.
+63	not	I am not hungry.	Tôi không đói.
+64	who	Who is your teacher?	Giáo viên của bạn là ai?
+64	why	Why are you crying?	Tại sao bạn khóc?
+64	our	Our school has a big library.	Trường của chúng tôi có một thư viện lớn.
+64	too	This coffee is too hot.	Cà phê này nóng quá.
+65	from	Where are you from?	Bạn đến từ đâu?
+65	many	How many brothers do you have?	Bạn có bao nhiêu anh em trai?
+65	here	Is there a bank near here?	Gần đây có ngân hàng nào không?
+65	much	How much is this shirt?	Chiếc áo sơ mi này giá bao nhiêu?
+66	next	See you next week.	Hẹn gặp bạn tuần sau.
+66	near	Is there a shop near your house?	Có cửa hàng nào gần nhà bạn không?
+66	some	Would you like some tea?	Bạn có muốn uống chút trà không?
+66	must	You must wear a helmet.	Bạn phải đội mũ bảo hiểm.
+67	what	What is your name?	Tên bạn là gì?
+67	with	I live with my grandparents.	Tôi sống với ông bà.
+67	very	The soup is very hot.	Món súp rất nóng.
+67	when	When is your birthday?	Sinh nhật của bạn là khi nào?
+68	never	I never drink coffee.	Tôi không bao giờ uống cà phê.
+68	often	How often do you exercise?	Bạn tập thể dục bao lâu một lần?
+68	again	Can you say that again?	Bạn có thể nói lại điều đó không?
+68	every	Every student has a book.	Mỗi học sinh đều có một cuốn sách.
+69	where	Where is the bathroom?	Phòng tắm ở đâu?
+69	sorry	I am sorry for being late.	Tôi xin lỗi vì đến muộn.
+69	under	The cat is under the bed.	Con mèo ở dưới gầm giường.
+69	which	Which bag is yours?	Chiếc túi nào là của bạn?
+70	should	You should drink more water.	Bạn nên uống nhiều nước hơn.
+70	enough	Do we have enough chairs?	Chúng ta có đủ ghế không?
+70	behind	The ball is behind the door.	Quả bóng ở phía sau cánh cửa.
+70	cannot	I cannot find my keys.	Tôi không thể tìm thấy chìa khóa của mình.
+71	thanks	Thanks for your help.	Cảm ơn sự giúp đỡ của bạn.
+71	someone	Someone is at the door.	Có ai đó đang ở ngoài cửa.
+71	outside	The children are playing outside.	Bọn trẻ đang chơi ở bên ngoài.
+71	nothing	There is nothing in the fridge.	Không có gì trong tủ lạnh.
+72	everyone	Everyone likes ice cream.	Mọi người đều thích kem.
+72	anything	Do you need anything?	Bạn có cần gì không?
+72	something	I want something to drink.	Tôi muốn uống thứ gì đó.
+72	welcome	Welcome to our home!	Chào mừng bạn đến nhà chúng tôi!
+73	idea	That is a great idea!	Đó là một ý tưởng tuyệt vời!
+73	name	What is your dog's name?	Con chó của bạn tên là gì?
+73	group	We work in a small group.	Chúng tôi làm việc trong một nhóm nhỏ.
+73	card	She sent me a birthday card.	Cô ấy đã gửi cho tôi một tấm thiệp sinh nhật.
+74	advice	Thank you for your advice.	Cảm ơn lời khuyên của bạn.
+74	reason	Tell me the reason.	Hãy cho tôi biết lý do.
+74	sound	I love the sound of rain.	Tôi yêu âm thanh của tiếng mưa.
+74	member	He is a member of our club.	Anh ấy là thành viên câu lạc bộ của chúng tôi.
+75	problem	There is a problem with my computer.	Máy tính của tôi có vấn đề.
+75	mistake	I made a mistake.	Tôi đã mắc lỗi.
+75	information	Where can I find more information?	Tôi có thể tìm thêm thông tin ở đâu?
+75	opinion	What is your opinion?	Ý kiến của bạn là gì?

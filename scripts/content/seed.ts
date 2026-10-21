@@ -1,6 +1,8 @@
 /**
  * Generates SQL from content/sets/*.csv and applies it with `wrangler d1 execute`.
  * Word ids come from content/ids.json (stable across re-seeds); unit id = setId * 1000 + unit.
+ * Sentence Express sentences come from content/sentences/<set>.tsv;
+ * sentence id = setId * 100000 + unit * 100 + its position in the unit.
  * Usage: pnpm content:seed [--remote] [--env staging] [--sql-only]
  */
 import { join } from "node:path";
@@ -23,6 +25,7 @@ function main() {
   }
 
   const unitsSql: string[] = [];
+  const sentencesSql: string[] = [];
   const wordsSql: string[] = [];
   for (const set of SETS) {
     const rows = readSet(set.slug);
@@ -57,6 +60,25 @@ function main() {
       });
     }
     unitsSql.push(`DELETE FROM units WHERE set_id = ${set.id} AND idx > ${unitNums.length};`);
+
+    const lines = readText(join(ROOT, "content", "sentences", `${set.slug}.tsv`))
+      .split("\n")
+      .slice(1)
+      .filter((l) => l.trim());
+    const perUnit = new Map<number, number>();
+    for (const line of lines) {
+      const [unitStr, keyword, en, vi] = line.split("\t");
+      const u = Number(unitStr);
+      const wordId = ids[(keyword ?? "").toLowerCase()];
+      if (!wordId || !en || !vi || !unitNums.includes(u))
+        throw new Error(`bad sentence line in ${set.slug}.tsv: ${line}`);
+      const i = perUnit.get(u) ?? 0;
+      perUnit.set(u, i + 1);
+      const id = set.id * 100000 + u * 100 + i;
+      sentencesSql.push(
+        `INSERT INTO sentences (id, unit_id, word_id, en, vi, sort_order) VALUES (${id}, ${set.id * 1000 + u}, ${wordId}, ${q(en)}, ${q(vi)}, ${i});`,
+      );
+    }
   }
 
   const all = [
@@ -65,6 +87,8 @@ function main() {
     ...unitsSql.filter((s) => s.startsWith("INSERT")),
     `DELETE FROM unit_words WHERE unit_id IN (SELECT id FROM units WHERE set_id IN (${SETS.map((s) => s.id).join(",")}));`,
     ...unitWords,
+    `DELETE FROM sentences WHERE unit_id IN (SELECT id FROM units WHERE set_id IN (${SETS.map((s) => s.id).join(",")}));`,
+    ...sentencesSql,
     ...unitsSql.filter((s) => s.startsWith("DELETE")),
   ];
   const file = join(ROOT, ".tmp", "seed.sql");

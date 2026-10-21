@@ -1,10 +1,9 @@
 import { and, asc, eq, inArray } from "drizzle-orm";
-import type { GameWord } from "../shared/types";
+import type { GameId } from "../shared/games";
+import type { GameWord, Sentence } from "../shared/types";
 import type { Db } from "./db";
 import { schema } from "./db";
 import type { Env } from "./env";
-
-export const GAME_ID = "word-blaster";
 
 export function toGameWord(w: {
   id: number;
@@ -58,12 +57,41 @@ export async function getUnit(db: Db, unitId: number) {
   return db.select().from(schema.units).where(eq(schema.units.id, unitId)).get();
 }
 
-/** Guests: first N units only. Users: unit 1 is open, then each needs >=1 star on the previous. */
+const sentenceCols = {
+  id: schema.sentences.id,
+  wordId: schema.sentences.wordId,
+  en: schema.sentences.en,
+  vi: schema.sentences.vi,
+};
+
+export async function getUnitSentences(db: Db, unitId: number): Promise<Sentence[]> {
+  return db
+    .select(sentenceCols)
+    .from(schema.sentences)
+    .where(eq(schema.sentences.unitId, unitId))
+    .orderBy(asc(schema.sentences.sortOrder));
+}
+
+export async function getSentencesByIds(db: Db, ids: number[]): Promise<Sentence[]> {
+  if (ids.length === 0) return [];
+  const rows = await db
+    .select(sentenceCols)
+    .from(schema.sentences)
+    .where(inArray(schema.sentences.id, ids));
+  const byId = new Map(rows.map((r) => [r.id, r]));
+  return ids.map((id) => byId.get(id)).filter((s): s is Sentence => !!s);
+}
+
+/**
+ * Guests: first N units only. Users: unit 1 is open, then each needs >=1 star on the previous
+ * unit in the same game.
+ */
 export async function isUnitUnlocked(
   db: Db,
   userId: string | null,
   unit: { id: number; setId: number; idx: number },
   guestLimit: number,
+  gameId: GameId,
 ): Promise<boolean> {
   if (!userId) return unit.idx <= guestLimit;
   if (unit.idx <= 1) return true;
@@ -77,7 +105,11 @@ export async function isUnitUnlocked(
     .select({ stars: schema.userUnitProgress.bestStars })
     .from(schema.userUnitProgress)
     .where(
-      and(eq(schema.userUnitProgress.userId, userId), eq(schema.userUnitProgress.unitId, prev.id)),
+      and(
+        eq(schema.userUnitProgress.userId, userId),
+        eq(schema.userUnitProgress.unitId, prev.id),
+        eq(schema.userUnitProgress.gameId, gameId),
+      ),
     )
     .get();
   return (prog?.stars ?? 0) >= 1;
