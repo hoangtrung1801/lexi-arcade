@@ -133,6 +133,45 @@ describe("WordBlasterEngine", () => {
     expect(lowest / asked).toBeLessThan(0.75);
   });
 
+  it("keys typed before a question is up are kept and applied when it is asked", () => {
+    const g = make("normal");
+    g.engine.start();
+    g.advance(500);
+    expect(g.engine.prompt).toBeNull();
+    // the player guesses the first word is coming and types ahead
+    const first = g.engine.active[0]?.word.lemma ?? "";
+    expect(g.engine.type(first[0] ?? "")).toBe("buffered");
+    expect(g.engine.pending).toBe(first[0]);
+    g.engine.erase();
+    expect(g.engine.pending).toBe("");
+    g.engine.type(first[0] ?? "");
+    g.advance(16);
+    for (let i = 0; i < 300 && !g.engine.prompt; i++) g.advance(16);
+    expect(g.engine.pending).toBe("");
+    // applied to the field once the question appeared: either it starts a word, or it was wrong
+    const last = g.engine.events.at(-1);
+    expect(last?.type === "correct" ? g.engine.typed : "").toBe(
+      last?.type === "correct" ? first[0] : "",
+    );
+    expect(g.engine.events.length).toBe(1);
+    expect(last?.t).toBeLessThan(g.engine.elapsed());
+  });
+
+  it("after a hit the next meaning comes straight away when a word is in view", () => {
+    for (let seed = 1; seed <= 10; seed++) {
+      const g = make("normal", seed);
+      g.engine.start();
+      ready(g);
+      g.advance(2500);
+      if (!g.engine.prompt) continue;
+      const roomy = g.engine.active.filter(
+        (w) => !w.correct && w.y >= 70 && w.y < GROUND_Y - 50 * 3.5,
+      ).length;
+      answer(g.engine, g.advance);
+      if (roomy > 0) expect(g.engine.prompt).not.toBeNull();
+    }
+  });
+
   it("a key that matches no plate is a wrong key: logged, combo reset, nothing typed", () => {
     const g = make();
     g.engine.start();

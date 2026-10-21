@@ -33,6 +33,7 @@ export type Notice =
   | { kind: "prompt"; word: GameWord }
   | { kind: "key" }
   | { kind: "erase" }
+  | { kind: "buffer" }
   | { kind: "target"; uid: number | null }
   | { kind: "wrong" }
   | { kind: "hit"; word: ActiveWord; points: number; combo: number }
@@ -41,7 +42,7 @@ export type Notice =
   | { kind: "clear"; words: ActiveWord[] }
   | { kind: "end"; status: "won" | "lost" };
 
-export type TypeOutcome = "ignored" | "correct" | "wrong" | "hit" | "bad";
+export type TypeOutcome = "ignored" | "buffered" | "correct" | "wrong" | "hit" | "bad";
 
 /** True when one word starts with the other, so typing the shorter one would be ambiguous. */
 function overlaps(a: string, b: string) {
@@ -51,8 +52,13 @@ function overlaps(a: string, b: string) {
 /** Words fall one after another; until a few are on screen they follow each other this fast. */
 const FIRST_GAP_MS = 700;
 const FAST_UNTIL = 3;
-/** Wait up to this long for a second candidate so the question isn't simply the next word in. */
+/**
+ * At the start of a round, wait up to this long for a second candidate so the first question
+ * isn't simply the first word in. Later questions are asked at once.
+ */
 const CHOICE_WAIT_MS = 1500;
+/** Letters typed while no question is up are kept (up to this many) and applied when one is. */
+const MAX_PENDING = 24;
 /** A plate can be asked about once it is clear of the top HUD... */
 const ASK_BELOW = 70;
 /** ...and while it still has this long to fall, so there is time to type it. */
@@ -81,6 +87,8 @@ export class WordBlasterEngine {
   target: ActiveWord | null = null;
   /** letters typed for the current question */
   typed = "";
+  /** letters typed while waiting for a question, applied once it is asked */
+  pending = "";
   status: Status = "ready";
   lives = MAX_LIVES;
   score = 0;
@@ -95,7 +103,8 @@ export class WordBlasterEngine {
   private uid = 0;
   private spawnedAt = -Infinity;
   /** when the field started waiting for a question to be asked */
-  private askWaitFrom = 0;
+  private asked = false;
+  private pendingT: number[] = [];
   private lastT = 0;
   private startedAt = 0;
   private pausedAt = 0;
@@ -239,12 +248,21 @@ export class WordBlasterEngine {
     // with a single candidate the question would just follow the drop order, so give the next
     // word a moment to come into view first
     const more = this.queue.length > 0 || this.active.some((a) => !a.filler && a.y < ASK_BELOW);
-    if (pool.length < 2 && more && t - this.askWaitFrom < CHOICE_WAIT_MS) return;
+    if (!this.asked && pool.length < 2 && more && t < CHOICE_WAIT_MS) return;
     const pick = pool[Math.floor(this.rng() * pool.length)];
     if (!pick) return;
     pick.correct = true;
+    this.asked = true;
     this.prompt = pick.word;
     this.emit({ kind: "prompt", word: pick.word });
+    // replay what was typed ahead, at the times it was typed
+    const keys = [...this.pending];
+    const times = this.pendingT;
+    this.pending = "";
+    this.pendingT = [];
+    keys.forEach((ch, i) => {
+      if (this.status === "playing" && this.prompt) this.key(ch, times[i] ?? t);
+    });
   }
 
   /** Takes a plate off the field; an unanswered word goes back to the queue. */
@@ -263,7 +281,6 @@ export class WordBlasterEngine {
     this.lives--;
     this.combo = 0;
     this.prompt = null;
-    this.askWaitFrom = t;
     this.typed = "";
     this.retarget();
     this.emit({ kind: "miss", word: w });
@@ -286,11 +303,23 @@ export class WordBlasterEngine {
 
   /** Feed one typed character. */
   type(raw: string): TypeOutcome {
-    if (this.status !== "playing" || !this.prompt) return "ignored";
+    if (this.status !== "playing") return "ignored";
     const ch = raw.toLowerCase();
     if (!/^[a-z]$/.test(ch)) return "ignored";
-    const t = this.elapsed();
+    if (!this.prompt) {
+      // typing ahead between questions: keep the keys rather than dropping them
+      if (this.pending.length >= MAX_PENDING) return "ignored";
+      this.pending += ch;
+      this.pendingT.push(this.elapsed());
+      this.emit({ kind: "buffer" });
+      return "buffered";
+    }
+    return this.key(ch, this.elapsed());
+  }
+
+  private key(ch: string, t: number): TypeOutcome {
     const asked = this.prompt;
+    if (!asked) return "ignored";
     const next = this.typed + ch;
 
     if (!this.active.some((w) => w.word.lemma.toLowerCase().startsWith(next))) {
@@ -328,10 +357,7 @@ export class WordBlasterEngine {
         this.emit({ kind: "clear", words: this.active });
         this.active = [];
         this.finish("won");
-      } else {
-        this.askWaitFrom = t;
-        this.ask(t);
-      }
+      } else this.ask(t);
       return "hit";
     }
 
@@ -347,7 +373,14 @@ export class WordBlasterEngine {
 
   /** Backspace: take back the last typed letter (free, it only changes the aim). */
   erase() {
-    if (this.status !== "playing" || !this.typed) return;
+    if (this.status !== "playing") return;
+    if (this.pending) {
+      this.pending = this.pending.slice(0, -1);
+      this.pendingT.pop();
+      this.emit({ kind: "buffer" });
+      return;
+    }
+    if (!this.typed) return;
     this.typed = this.typed.slice(0, -1);
     this.retarget();
     this.emit({ kind: "erase" });

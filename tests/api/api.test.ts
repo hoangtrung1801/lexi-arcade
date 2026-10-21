@@ -196,9 +196,13 @@ describe("api", () => {
       expect(saved.json.items.map((i) => i.id)).toEqual([wid]);
       expect((await c.req("DELETE", `/api/vocab/${wid}/save`)).status).toBe(200);
 
-      // leaderboard shows the player
+      // leaderboard shows the player, unless earlier runs against the same local database already
+      // filled the top 20 with scores at least as high (ties are cut arbitrarily)
       const lb = await c.req<LeaderboardResponse>("GET", "/api/leaderboard?period=week");
-      expect(lb.json.entries.some((e) => e.displayName === name)).toBe(true);
+      const entries = lb.json.entries;
+      const listed = entries.some((e) => e.displayName === name);
+      const full = entries.length >= 20 && (entries.at(-1)?.score ?? 0) >= fin.json.result.score;
+      expect(listed || full).toBe(true);
 
       // profile reflects XP, coins (15 star coins + 25 quest) and level
       const me = await c.req<MeResponse>("GET", "/api/me");

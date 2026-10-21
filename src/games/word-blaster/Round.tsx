@@ -260,9 +260,11 @@ export function Round({ config, unitIdx, unitCount, setName, onFinish, onExit }:
           className="hb-inset font-px t-md flex h-[60px] w-[280px] items-center px-3"
           aria-live="off"
         >
-          {engine.typed ? (
+          {engine.typed || engine.pending ? (
             <>
               <span className="text-gold [text-shadow:0_2px_0_#7a3a12]">{engine.typed}</span>
+              {/* typed ahead, waiting for the next meaning */}
+              <span className="text-mist">{engine.pending}</span>
               <span className="anim-pulse ml-0.5 inline-block h-6 w-3 bg-ice" />
             </>
           ) : (
