@@ -43,47 +43,61 @@ function answer(engine: WordBlasterEngine, advance: (ms: number) => void) {
 /** A plate that is not the answer. */
 const distractor = (engine: WordBlasterEngine) => engine.active.find((w) => !w.correct);
 
+/** Lets words fall until a question is asked and at least one other word is on screen. */
+function ready(g: ReturnType<typeof make>) {
+  for (let i = 0; i < 400 && !(g.engine.prompt && distractor(g.engine)); i++) g.advance(16);
+}
+
 describe("WordBlasterEngine", () => {
-  it("asks one word at a time with the right answer among the falling plates", () => {
+  it("drops words one after another and asks for one of them", () => {
     const g = make("normal");
     g.engine.start();
-    g.advance(700);
+    g.advance(16);
+    expect(g.engine.active).toHaveLength(1);
+    g.advance(800);
+    expect(g.engine.active).toHaveLength(2);
+    expect(g.engine.active[0]?.y).toBeGreaterThan(g.engine.active[1]?.y ?? 0);
+    // nothing is asked until a word has come out from under the top HUD
+    expect(g.engine.prompt).toBeNull();
+    g.advance(1300);
+    expect(g.engine.active).toHaveLength(2);
     const prompt = g.engine.prompt;
     expect(prompt).not.toBeNull();
-    expect(g.engine.active).toHaveLength(4);
     expect(g.engine.active.filter((w) => w.correct).map((w) => w.word.id)).toEqual([prompt?.id]);
-    expect(new Set(g.engine.active.map((w) => w.word.id)).size).toBe(4);
-    expect(new Set(g.engine.active.map((w) => w.x)).size).toBe(4);
+    g.advance(1000);
+    expect(g.engine.active).toHaveLength(3);
+    g.advance(20000);
+    // never more than the cap at once
+    expect(g.engine.active.length).toBeLessThanOrEqual(5);
   });
 
-  it("shooting the right answer scores, clears the wave and moves on", () => {
+  it("shooting the asked word scores, leaves the others falling and asks the next at once", () => {
     const g = make();
     g.engine.start();
-    g.advance(700);
+    ready(g);
+    g.advance(1000); // let the second word enter the field so it can be asked next
     const first = g.engine.prompt;
+    const others = g.engine.active.filter((w) => !w.correct).map((w) => w.uid);
     const lemma = first?.lemma ?? "";
     expect(g.engine.type(lemma[0] ?? "")).toBe("correct");
     expect(g.engine.target?.correct).toBe(true);
-    g.advance(100);
-    g.engine.type(lemma[1] ?? "");
-    g.advance(100);
-    expect(g.engine.type(lemma[2] ?? "")).toBe("hit");
+    for (const ch of lemma.slice(1, -1)) g.engine.type(ch);
+    expect(g.engine.type(lemma.at(-1) ?? "")).toBe("hit");
     expect(g.engine.hitCount).toBe(1);
     expect(g.engine.score).toBe(30);
-    expect(g.engine.prompt).toBeNull();
-    expect(g.engine.active).toHaveLength(0);
-    g.advance(700);
+    expect(g.engine.active.map((w) => w.uid)).toEqual(others);
     expect(g.engine.prompt).not.toBeNull();
     expect(g.engine.prompt?.id).not.toBe(first?.id);
+    expect(g.engine.typed).toBe("");
   });
 
   it("a key that matches no plate is a wrong key: logged, combo reset, nothing typed", () => {
     const g = make();
     g.engine.start();
-    g.advance(700);
+    ready(g);
     answer(g.engine, g.advance);
     expect(g.engine.combo).toBe(1);
-    g.advance(700);
+    ready(g);
     expect(g.engine.type("#")).toBe("ignored");
     expect(g.engine.type("q")).toBe("wrong");
     expect(g.engine.typed).toBe("");
@@ -94,7 +108,7 @@ describe("WordBlasterEngine", () => {
   it("typing a whole wrong answer costs a life but keeps the question", () => {
     const g = make();
     g.engine.start();
-    g.advance(700);
+    ready(g);
     const asked = g.engine.prompt;
     const bad = distractor(g.engine);
     expect(bad).toBeDefined();
@@ -111,7 +125,7 @@ describe("WordBlasterEngine", () => {
   it("backspace takes back a letter for free", () => {
     const g = make();
     g.engine.start();
-    g.advance(700);
+    ready(g);
     const lemma = g.engine.prompt?.lemma ?? "";
     g.engine.type(lemma[0] ?? "");
     const logged = g.engine.events.length;
@@ -124,7 +138,7 @@ describe("WordBlasterEngine", () => {
   it("loses a life when the right answer reaches the ground and asks it again later", () => {
     const g = make("hard");
     g.engine.start();
-    g.advance(700);
+    ready(g);
     const asked = g.engine.prompt;
     g.advance(15000);
     expect(g.engine.lives).toBeLessThan(4);
@@ -145,7 +159,7 @@ describe("WordBlasterEngine", () => {
     g.engine.start();
     let guard = 0;
     while (g.engine.status === "playing" && guard++ < 50) {
-      g.advance(700);
+      ready(g);
       const bad = distractor(g.engine);
       for (const ch of bad?.word.lemma ?? "") g.engine.type(ch);
     }
@@ -175,10 +189,17 @@ describe("WordBlasterEngine", () => {
     for (let seed = 1; seed < 40; seed++) {
       const engine = new WordBlasterEngine(
         { unitId: 1, words: tricky, seed, difficulty: "hard" },
-        () => 1000 * seed,
+        () => now,
       );
+      let now = 0;
       engine.start();
-      engine.tick();
+      for (let i = 0; i < 1500; i++) {
+        now += 16;
+        engine.tick();
+        const lemmas = engine.active.map((w) => w.word.lemma);
+        for (const a of lemmas)
+          for (const b of lemmas) if (a !== b) expect(a.startsWith(b)).toBe(false);
+      }
       const lemmas = engine.active.map((w) => w.word.lemma);
       for (const a of lemmas)
         for (const b of lemmas) if (a !== b) expect(a.startsWith(b)).toBe(false);

@@ -1,5 +1,5 @@
 import { createRng, shuffle } from "@shared/rng";
-import { DIFFICULTY, MAX_LIVES, WAVE_GAP_MS } from "@shared/rules";
+import { DIFFICULTY, MAX_LIVES } from "@shared/rules";
 import { computeResult, wordScore } from "@shared/scoring";
 import type { GameConfig, GameEvent, GameWord, RoundResult } from "@shared/types";
 
@@ -11,12 +11,14 @@ export const LANES = 6;
 /** Words stay clear of the control column on the right-hand side. */
 export const PLAY_W = FIELD_W - 110;
 
-/** One falling answer plate. */
+/** One falling word plate. */
 export interface ActiveWord {
   uid: number;
   word: GameWord;
   /** true for the plate that answers the current question */
   correct: boolean;
+  /** an already answered word sent back down only to keep enough choices on screen */
+  filler: boolean;
   /** horizontal centre, 0..FIELD_W */
   x: number;
   /** top of the word box */
@@ -46,13 +48,21 @@ function overlaps(a: string, b: string) {
   return a.startsWith(b) || b.startsWith(a);
 }
 
+/** Words fall one after another; the first one waits this long before the next joins it. */
+const FIRST_GAP_MS = 700;
+/** A plate is asked about once it is clear of the top HUD and still in the upper part of the field. */
+const ASK_BELOW = 70;
+const ASK_ABOVE = GROUND_Y * 0.6;
+
 /**
  * Pure game logic. No DOM, no Phaser: it reads time from an injected clock, so tests can drive it.
  *
- * Each question shows a Vietnamese meaning (`prompt`) while a wave of English answer plates
- * falls: the right word plus distractors from the same round. Typing narrows the plates that
- * still match; completing the right word shoots it down, completing a wrong one costs a life,
- * and letting the right one reach the ground costs a life and re-asks the question later.
+ * English words fall one after another. The Vietnamese meaning of one of them is on screen
+ * (`prompt`); the others are the distractors, and get asked about later. Typing narrows the plates
+ * that still match; completing the asked word shoots it down and the next meaning is shown at
+ * once, completing another word costs a life, and letting the asked word reach the ground costs
+ * a life and sends it back to the queue. Other words that reach the ground just fall back into
+ * the queue.
  *
  * Everything that matters for scoring is recorded in `events`; the final result is always
  * `computeResult(events, words)` — the same function the server runs.
@@ -60,7 +70,7 @@ function overlaps(a: string, b: string) {
 export class WordBlasterEngine {
   readonly words: GameWord[];
   readonly events: GameEvent[] = [];
-  /** the word being asked (its Vietnamese meaning is on screen), null between waves */
+  /** the word being asked (its Vietnamese meaning is on screen), null while none can be */
   prompt: GameWord | null = null;
   active: ActiveWord[] = [];
   /** the lowest plate that still matches what has been typed */
@@ -79,7 +89,7 @@ export class WordBlasterEngine {
   private hit = new Set<number>();
   private rng: () => number;
   private uid = 0;
-  private settledAt = -Infinity;
+  private spawnedAt = -Infinity;
   private lastT = 0;
   private startedAt = 0;
   private pausedAt = 0;
@@ -156,68 +166,91 @@ export class WordBlasterEngine {
         this.handleMiss(w, t);
         if (this.status !== "playing") return;
       } else {
-        // a distractor that nobody picked just burns up in the shield
-        this.active = this.active.filter((a) => a !== w);
-        this.retarget();
+        // a word nobody was asked about burns up in the shield and comes round again later
+        this.drop(w);
+        this.emit({ kind: "clear", words: [w] });
       }
     }
 
-    if (!this.prompt && this.queue.length > 0 && t - this.settledAt >= WAVE_GAP_MS) {
-      this.spawnWave();
-    }
+    const gap = this.active.length < 2 ? FIRST_GAP_MS : cfg.spawnMs;
+    if (this.active.length < cfg.maxOnScreen && t - this.spawnedAt >= gap) this.spawn(t);
+    if (!this.prompt) this.ask();
   }
 
-  /** Asks the next word: one plate per answer, in distinct lanes, slightly staggered. */
-  private spawnWave() {
-    const id = this.queue.shift();
-    const word = id === undefined ? undefined : this.byId.get(id);
-    if (!word) return;
-    const picked = [word];
-    for (const w of shuffle(this.words, this.rng)) {
-      if (picked.length >= DIFFICULTY[this.config.difficulty].options) break;
-      if (w.meaningVi === word.meaningVi) continue;
-      if (picked.some((p) => overlaps(p.lemma, w.lemma))) continue;
-      picked.push(w);
-    }
-    const laneW = PLAY_W / LANES;
-    const lanes = shuffle(
-      Array.from({ length: LANES }, (_, i) => i),
-      this.rng,
+  /** Can `w` fall now without making a typed answer or a meaning ambiguous? */
+  private fits(w: GameWord) {
+    return this.active.every(
+      (a) =>
+        a.word.id !== w.id && a.word.meaningVi !== w.meaningVi && !overlaps(a.word.lemma, w.lemma),
     );
-    this.active = shuffle(picked, this.rng).map((w, i) => ({
-      uid: ++this.uid,
-      word: w,
-      correct: w.id === word.id,
-      x: ((lanes[i] ?? i) + 0.5) * laneW,
-      y: -28 - Math.floor(this.rng() * 70),
-      typed: 0,
-    }));
-    this.prompt = word;
-    this.typed = "";
-    this.emit({ kind: "prompt", word });
   }
 
-  /** Ends the current question and clears its remaining plates. */
-  private settle(t: number) {
-    const rest = this.active;
-    this.active = [];
-    this.prompt = null;
-    this.typed = "";
-    this.settledAt = t;
+  /** Drops the next queued word in a free lane, or an answered word as an extra choice. */
+  private spawn(t: number) {
+    let word: GameWord | undefined;
+    let filler = false;
+    const i = this.queue.findIndex((id) => {
+      const w = this.byId.get(id);
+      return !!w && this.fits(w);
+    });
+    if (i >= 0) {
+      word = this.byId.get(this.queue.splice(i, 1)[0] as number);
+    } else if (this.hit.size < this.total) {
+      word = shuffle(
+        this.words.filter((w) => this.hit.has(w.id) && this.fits(w)),
+        this.rng,
+      )[0];
+      filler = true;
+    }
+    if (!word) return;
+    const laneW = PLAY_W / LANES;
+    // keep clear of lanes whose word has only just entered
+    const busy = new Set(this.active.filter((a) => a.y < 90).map((a) => Math.floor(a.x / laneW)));
+    const free = Array.from({ length: LANES }, (_, k) => k).filter((k) => !busy.has(k));
+    const lanes = free.length ? free : Array.from({ length: LANES }, (_, k) => k);
+    const lane = lanes[Math.floor(this.rng() * lanes.length)] ?? 0;
+    this.active.push({
+      uid: ++this.uid,
+      word,
+      correct: false,
+      filler,
+      x: (lane + 0.5) * laneW,
+      y: -28,
+      typed: 0,
+    });
+    this.spawnedAt = t;
     this.retarget();
-    if (rest.length) this.emit({ kind: "clear", words: rest });
+  }
+
+  /** Shows the meaning of one of the falling words that has not been answered yet. */
+  private ask() {
+    const open = this.active.filter((a) => !a.filler && a.y >= ASK_BELOW);
+    const high = open.filter((a) => a.y < ASK_ABOVE);
+    const pool = high.length ? high : open;
+    const pick = pool[Math.floor(this.rng() * pool.length)];
+    if (!pick) return;
+    pick.correct = true;
+    this.prompt = pick.word;
+    this.emit({ kind: "prompt", word: pick.word });
+  }
+
+  /** Takes a plate off the field; an unanswered word goes back to the queue. */
+  private drop(w: ActiveWord) {
+    this.active = this.active.filter((a) => a !== w);
+    if (!w.filler && !this.hit.has(w.word.id)) this.queue.push(w.word.id);
+    this.retarget();
   }
 
   private handleMiss(w: ActiveWord, t: number) {
-    const asked = this.prompt;
-    this.active = this.active.filter((a) => a !== w);
+    this.drop(w);
     this.events.push({ t, type: "miss", wordId: w.word.id });
     this.lives--;
     this.combo = 0;
+    this.prompt = null;
+    this.typed = "";
+    this.retarget();
     this.emit({ kind: "miss", word: w });
-    this.settle(t);
     if (this.lives <= 0) this.finish("lost");
-    else if (asked) this.queue.push(asked.id);
   }
 
   /** Recomputes which plates match the typed letters and which one the ship aims at. */
@@ -254,7 +287,7 @@ export class WordBlasterEngine {
     this.events.push({ t, type: "correct", wordId: asked.id });
     this.retarget();
 
-    // distractors never share a prefix with another answer, so a full match is unambiguous
+    // words on screen never share a prefix, so a full match is unambiguous
     const done = this.active.find((w) => w.word.lemma.toLowerCase() === next);
     if (!done) {
       this.emit({ kind: "key" });
@@ -270,23 +303,25 @@ export class WordBlasterEngine {
       this.hit.add(asked.id);
       this.hitCount = this.hit.size;
       this.active = this.active.filter((a) => a !== done);
+      this.prompt = null;
+      this.typed = "";
+      this.retarget();
       this.emit({ kind: "hit", word: done, points, combo: this.combo });
-      this.settle(t);
-      if (this.hitCount >= this.total) this.finish("won");
+      if (this.hitCount >= this.total) {
+        this.emit({ kind: "clear", words: this.active });
+        this.active = [];
+        this.finish("won");
+      } else this.ask();
       return "hit";
     }
 
     this.events.push({ t, type: "bad", wordId: asked.id, choiceId: done.word.id });
     this.lives--;
     this.combo = 0;
-    this.active = this.active.filter((a) => a !== done);
     this.typed = "";
-    this.retarget();
+    this.drop(done);
     this.emit({ kind: "bad", word: done });
-    if (this.lives <= 0) {
-      this.settle(t);
-      this.finish("lost");
-    }
+    if (this.lives <= 0) this.finish("lost");
     return "bad";
   }
 

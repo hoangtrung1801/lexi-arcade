@@ -21,18 +21,17 @@ export const COINS_PER_STAR = 5;
 export interface DifficultyConfig {
   /** fall speed, px per second in a 540px tall playfield */
   fallSpeed: number;
-  /** answer plates per question: the right word plus distractors */
-  options: number;
+  /** time between two words entering the field */
+  spawnMs: number;
+  /** most words falling at once */
+  maxOnScreen: number;
 }
 
 export const DIFFICULTY: Record<Difficulty, DifficultyConfig> = {
-  easy: { fallSpeed: 36, options: 3 },
-  normal: { fallSpeed: 50, options: 4 },
-  hard: { fallSpeed: 70, options: 5 },
+  easy: { fallSpeed: 36, spawnMs: 2600, maxOnScreen: 4 },
+  normal: { fallSpeed: 50, spawnMs: 2000, maxOnScreen: 5 },
+  hard: { fallSpeed: 70, spawnMs: 1500, maxOnScreen: 6 },
 };
-
-/** Pause between one question being settled and the next wave of answers. */
-export const WAVE_GAP_MS = 600;
 
 export const DAILY_QUESTS = [
   { key: "play_3", title: "Chơi 3 ván", target: 3, reward: 15 },

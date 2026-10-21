@@ -195,21 +195,35 @@ export function Round({ config, unitIdx, unitCount, setName, onFinish, onExit }:
             {engine.score.toLocaleString("vi-VN")}
           </span>
         </div>
-        <div className="hb-hud flex items-center gap-3 px-3 py-0.5">
-          <span className="t-sm text-mist">{setName}</span>
-          <span className="t-sm t-bold uppercase">
-            Mốc {unitIdx}/{unitCount}
-          </span>
-          <PixelBar
-            value={engine.hitCount}
-            max={Math.max(1, engine.total)}
-            label="Tiến độ mốc"
-            className="w-44"
-            height={8}
-          />
-          <span className="t-sm text-mist">
-            <span className="text-snow">{engine.hitCount}</span>/{engine.total} từ
-          </span>
+        <div className="flex flex-col items-center gap-1">
+          <div
+            className="hb-panel flex h-[64px] min-w-[300px] max-w-[460px] items-center justify-center gap-3 px-3"
+            data-testid="prompt"
+          >
+            <span className="hb-chip-gold t-sm shrink-0 px-1 text-[#3a1a18] uppercase">Nghĩa</span>
+            <span
+              key={prompt?.id ?? "none"}
+              className={`t-xl t-bold truncate ${prompt ? "anim-pop text-gold" : "text-slate"}`}
+            >
+              {prompt?.meaningVi ?? "…"}
+            </span>
+          </div>
+          <div className="hb-hud flex items-center gap-3 px-3 py-0.5">
+            <span className="t-sm text-mist">{setName}</span>
+            <span className="t-sm t-bold uppercase">
+              Mốc {unitIdx}/{unitCount}
+            </span>
+            <PixelBar
+              value={engine.hitCount}
+              max={Math.max(1, engine.total)}
+              label="Tiến độ mốc"
+              className="w-32"
+              height={8}
+            />
+            <span className="t-sm text-mist">
+              <span className="text-snow">{engine.hitCount}</span>/{engine.total} từ
+            </span>
+          </div>
         </div>
         <div className="hb-hud px-2 py-1">
           <HeartRow lives={engine.lives} max={MAX_LIVES} />
@@ -242,18 +256,6 @@ export function Round({ config, unitIdx, unitCount, setName, onFinish, onExit }:
       </div>
 
       <div className="pointer-events-none absolute right-0 bottom-[1.5%] left-0 flex items-center justify-center gap-3">
-        <div
-          className="hb-panel flex h-[60px] min-w-[240px] max-w-[400px] items-center gap-3 px-2"
-          data-testid="prompt"
-        >
-          <span className="hb-chip-gold t-sm shrink-0 px-1 text-[#3a1a18] uppercase">Nghĩa</span>
-          <span
-            key={prompt?.id ?? "none"}
-            className={`t-lg t-bold truncate ${prompt ? "anim-pop text-gold" : "text-slate"}`}
-          >
-            {prompt?.meaningVi ?? "…"}
-          </span>
-        </div>
         <div
           className="hb-inset font-px t-md flex h-[60px] w-[280px] items-center px-3"
           aria-live="off"

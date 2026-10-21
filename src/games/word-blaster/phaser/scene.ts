@@ -397,7 +397,7 @@ export class WordBlasterScene extends Phaser.Scene {
     this.fire(word.uid, final);
   }
 
-  /** The other answers of a settled question break up quietly. */
+  /** Words that leave the field unanswered break up quietly. */
   private fizzle(words: ActiveWord[]) {
     for (const w of words) {
       const v = this.views.get(w.uid);
