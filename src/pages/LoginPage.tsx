@@ -15,7 +15,9 @@ export function LoginPage() {
   const google = async () => {
     setBusy(true);
     try {
-      await signInWithGoogle(from);
+      const res = await signInWithGoogle(from);
+      if (res.error) throw new Error(res.error.message);
+      // on success the browser is redirected to Google, so there is nothing more to do here
     } catch {
       toast("Không đăng nhập được với Google. Thử lại nhé.", "bad");
       setBusy(false);
