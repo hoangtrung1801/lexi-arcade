@@ -98,12 +98,12 @@ export const FRAMES: Record<string, FrameSpec> = {
   hud: {
     c: 4,
     cut: 2,
-    outline: "#0c0a1acc",
+    outline: "#0d0e18cc",
     rings: [
-      ["#5a4d92cc", "#241e44cc"],
-      ["#120e26b3", "#120e26b3"],
+      ["#566c86cc", "#29366fcc"],
+      ["#11131fb3", "#11131fb3"],
     ],
-    bands: ["#1b1636b3", "#191433b3", "#171230b3", "#15102db3"],
+    bands: ["#1f2337b3", "#1d2033b3", "#1b1e30b3", "#191b2cb3"],
   },
 };
 
