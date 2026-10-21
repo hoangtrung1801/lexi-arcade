@@ -251,6 +251,9 @@ export class WordBlasterEngine {
   private drop(w: ActiveWord) {
     this.active = this.active.filter((a) => a !== w);
     if (!w.filler && !this.hit.has(w.word.id)) this.queue.push(w.word.id);
+    // letters typed towards the word that just left would otherwise block every next key
+    if (!this.active.some((a) => a.word.lemma.toLowerCase().startsWith(this.typed)))
+      this.typed = "";
     this.retarget();
   }
 
