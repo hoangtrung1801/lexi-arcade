@@ -1,0 +1,6 @@
+# Copy to .dev.vars for local dev (never commit .dev.vars)
+BETTER_AUTH_SECRET=dev-secret-change-me-at-least-32-characters
+GOOGLE_CLIENT_ID=
+GOOGLE_CLIENT_SECRET=
+# Local only: enables POST /api/dev/login (fake user) so you can test without Google. Never set in staging/prod.
+DEV_LOGIN=true

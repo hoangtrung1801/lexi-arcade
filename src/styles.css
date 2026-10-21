@@ -1,0 +1,90 @@
+@import "tailwindcss";
+@import "@fontsource/press-start-2p/400.css";
+@import "@fontsource/vt323/400.css";
+
+@theme {
+  /* Sweetie-16 */
+  --color-ink: #1a1c2c;
+  --color-plum: #5d275d;
+  --color-berry: #b13e53;
+  --color-orange: #ef7d57;
+  --color-gold: #ffcd75;
+  --color-lime: #a7f070;
+  --color-green: #38b764;
+  --color-teal: #257179;
+  --color-navy: #29366f;
+  --color-blue: #3b5dc9;
+  --color-sky: #41a6f6;
+  --color-cyan: #73eff7;
+  --color-snow: #f4f4f4;
+  --color-mist: #94b0c2;
+  --color-slate: #566c86;
+  --color-steel: #333c57;
+  --color-abyss: #0d0e18;
+
+  --font-px: "Press Start 2P", monospace;
+  --font-body: "VT323", monospace;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--color-ink);
+  color: var(--color-snow);
+  font-family: var(--font-body);
+  font-size: 22px;
+  -webkit-font-smoothing: none;
+}
+
+a {
+  color: var(--color-gold);
+}
+a:hover {
+  color: var(--color-snow);
+}
+
+/* Pixel "box": hard outline + drop shadow, no blur. */
+.px-box {
+  box-shadow:
+    0 -4px 0 0 var(--color-abyss),
+    0 4px 0 0 var(--color-abyss),
+    -4px 0 0 0 var(--color-abyss),
+    4px 0 0 0 var(--color-abyss),
+    6px 8px 0 0 var(--color-abyss);
+}
+.px-btn {
+  box-shadow:
+    0 -4px 0 0 var(--color-abyss),
+    0 4px 0 0 var(--color-abyss),
+    -4px 0 0 0 var(--color-abyss),
+    4px 0 0 0 var(--color-abyss),
+    inset -4px -6px 0 0 rgba(0, 0, 0, 0.28),
+    inset 4px 4px 0 0 rgba(255, 255, 255, 0.35);
+}
+.px-btn:active:not(:disabled) {
+  transform: translateY(2px);
+}
+.px-inset {
+  box-shadow: 0 0 0 3px var(--color-abyss);
+}
+.pixelated {
+  image-rendering: pixelated;
+  shape-rendering: crispEdges;
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-cyan);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}

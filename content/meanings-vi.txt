@@ -1,0 +1,1678 @@
+# lemma|nghĩa tiếng Việt|chủ đề   (dịch tự động, cần duyệt: reviewed=false)
+ability|khả năng|misc
+able|có thể, có khả năng|adj
+about|khoảng; về|func
+above|ở trên|func
+abroad|ở nước ngoài|trav
+accept|chấp nhận|verb
+accident|tai nạn|misc
+achieve|đạt được|verb
+across|băng qua, ngang qua|func
+act|hành động; diễn|verb
+action|hành động|misc
+active|năng động|adj
+activity|hoạt động|fun
+actor|nam diễn viên|fun
+actress|nữ diễn viên|fun
+actually|thực ra|func
+add|thêm vào|verb
+address|địa chỉ|place
+adult|người lớn|fam
+advantage|lợi thế|misc
+adventure|cuộc phiêu lưu|fun
+advertise|quảng cáo|verb
+advertisement|mẩu quảng cáo|fun
+advertising|ngành quảng cáo|work
+advice|lời khuyên|misc
+affect|ảnh hưởng đến|verb
+afraid|sợ hãi|feel
+after|sau, sau khi|func
+afternoon|buổi chiều|time
+again|lại, một lần nữa|func
+against|chống lại|func
+age|tuổi|time
+ago|trước đây|time
+agree|đồng ý|verb
+ah|à, ồ|func
+air|không khí|nat
+airline|hãng hàng không|trav
+airport|sân bay|trav
+alive|còn sống|adj
+all|tất cả|func
+allow|cho phép|verb
+almost|gần như|func
+alone|một mình|adj
+along|dọc theo|func
+already|đã, rồi|func
+also|cũng|func
+alternative|lựa chọn khác|misc
+although|mặc dù|func
+always|luôn luôn|func
+amazing|tuyệt vời, đáng kinh ngạc|adj
+among|giữa, trong số|func
+amount|số lượng|misc
+ancient|cổ xưa|adj
+and|và|func
+angry|tức giận|feel
+animal|động vật|nat
+ankle|mắt cá chân|body
+another|một cái khác|func
+answer|câu trả lời; trả lời|work
+any|bất kỳ|func
+anybody|bất cứ ai|func
+anyone|bất cứ ai|func
+anything|bất cứ thứ gì|func
+anyway|dù sao đi nữa|func
+anywhere|bất cứ nơi đâu|func
+apartment|căn hộ|home
+app|ứng dụng|fun
+appear|xuất hiện|verb
+appearance|vẻ bề ngoài|body
+apple|quả táo|food
+apply|nộp đơn; áp dụng|verb
+April|tháng Tư|time
+architect|kiến trúc sư|work
+architecture|kiến trúc|work
+area|khu vực|place
+argue|tranh cãi|verb
+argument|cuộc tranh cãi|misc
+arm|cánh tay|body
+army|quân đội|misc
+around|xung quanh|func
+arrange|sắp xếp|verb
+arrangement|sự sắp xếp|misc
+arrive|đến nơi|trav
+art|nghệ thuật|fun
+article|bài báo|fun
+artist|nghệ sĩ|fun
+as|như, khi|func
+ask|hỏi|verb
+asleep|đang ngủ|adj
+assistant|trợ lý|work
+at|tại, ở|func
+athlete|vận động viên|fun
+attack|cuộc tấn công; tấn công|misc
+attend|tham dự|verb
+attention|sự chú ý|misc
+attractive|hấp dẫn|adj
+audience|khán giả|fun
+August|tháng Tám|time
+aunt|dì, cô|fam
+author|tác giả|work
+autumn|mùa thu|wthr
+available|có sẵn|adj
+average|trung bình|adj
+avoid|tránh|verb
+award|giải thưởng|fun
+away|xa, đi khỏi|func
+awful|tệ hại, kinh khủng|adj
+baby|em bé|fam
+back|lưng; phía sau|body
+background|bối cảnh, nền|misc
+bad|xấu, tệ|adj
+badly|tệ, dở|func
+bag|cái túi|cloth
+ball|quả bóng|fun
+banana|quả chuối|food
+band|ban nhạc|fun
+bank|ngân hàng|place
+bar|quán bar|place
+baseball|bóng chày|fun
+based|dựa trên|adj
+basketball|bóng rổ|fun
+bath|bồn tắm|home
+bathroom|phòng tắm|home
+be|thì, là, ở|verb
+beach|bãi biển|nat
+bean|hạt đậu|food
+bear|con gấu|nat
+beat|đánh bại; nhịp|verb
+beautiful|đẹp|adj
+because|bởi vì|func
+become|trở nên, trở thành|verb
+bed|cái giường|home
+bedroom|phòng ngủ|home
+beef|thịt bò|food
+beer|bia|food
+before|trước, trước khi|func
+begin|bắt đầu|verb
+beginning|sự bắt đầu|time
+behave|cư xử|verb
+behaviour|hành vi|misc
+behind|phía sau|func
+believe|tin tưởng|verb
+belong|thuộc về|verb
+below|bên dưới|func
+belt|thắt lưng|cloth
+benefit|lợi ích|misc
+best|tốt nhất|adj
+better|tốt hơn|adj
+between|giữa (hai thứ)|func
+bicycle|xe đạp|trav
+big|to, lớn|adj
+bike|xe đạp|trav
+bill|hóa đơn|cloth
+billion|tỷ|time
+bin|thùng rác|home
+biology|sinh học|work
+bird|con chim|nat
+birth|sự ra đời|fam
+birthday|sinh nhật|time
+biscuit|bánh quy|food
+bit|một chút|misc
+black|màu đen|wthr
+blank|trống, để trống|adj
+blog|nhật ký mạng|fun
+blonde|tóc vàng hoe|body
+blood|máu|body
+blow|thổi|verb
+blue|màu xanh dương|wthr
+board|cái bảng|work
+boat|con thuyền|trav
+body|cơ thể|body
+boil|đun sôi|verb
+bone|xương|body
+book|quyển sách|work
+boot|giày ống|cloth
+bored|chán|feel
+boring|nhàm chán|adj
+born|được sinh ra|verb
+borrow|mượn|verb
+boss|ông chủ, sếp|work
+both|cả hai|func
+bottle|cái chai|home
+bottom|đáy, phần dưới cùng|misc
+bowl|cái bát|home
+box|cái hộp|home
+boy|cậu bé|fam
+boyfriend|bạn trai|fam
+brain|bộ não|body
+bread|bánh mì|food
+break|nghỉ giải lao; làm vỡ|verb
+breakfast|bữa sáng|food
+bridge|cây cầu|place
+bright|sáng, tươi|adj
+brilliant|rực rỡ, xuất sắc|adj
+bring|mang đến|verb
+broken|bị vỡ, hỏng|adj
+brother|anh/em trai|fam
+brown|màu nâu|wthr
+brush|cái bàn chải; chải|home
+build|xây dựng|verb
+building|tòa nhà|place
+burn|đốt cháy|verb
+bus|xe buýt|trav
+business|việc kinh doanh|work
+busy|bận rộn|adj
+but|nhưng|func
+butter|bơ|food
+button|cái nút|misc
+buy|mua|verb
+by|bởi, bằng, gần|func
+bye|tạm biệt|func
+cafe|quán cà phê|place
+cake|bánh ngọt|food
+call|cuộc gọi; gọi|verb
+camera|máy ảnh|fun
+camp|trại; cắm trại|fun
+camping|việc cắm trại|fun
+can|có thể; cái lon|func
+cannot|không thể|func
+capital|thủ đô|place
+car|xe hơi|trav
+card|tấm thẻ|misc
+care|sự chăm sóc|misc
+career|sự nghiệp|work
+careful|cẩn thận|adj
+carefully|một cách cẩn thận|func
+carpet|tấm thảm|home
+carrot|củ cà rốt|food
+carry|mang, xách|verb
+cartoon|phim hoạt hình|fun
+case|trường hợp; vỏ hộp|misc
+cash|tiền mặt|cloth
+castle|lâu đài|place
+cat|con mèo|nat
+catch|bắt, đón|verb
+cause|nguyên nhân; gây ra|misc
+CD|đĩa CD|fun
+celebrate|ăn mừng|verb
+celebrity|người nổi tiếng|fun
+cent|xu (đồng tiền)|cloth
+centre|trung tâm|place
+century|thế kỷ|time
+certain|chắc chắn|adj
+certainly|chắc chắn rồi|func
+chair|cái ghế|home
+chance|cơ hội|misc
+change|sự thay đổi; thay đổi|verb
+character|nhân vật; tính cách|fun
+charity|tổ chức từ thiện|misc
+chart|biểu đồ|work
+chat|trò chuyện|verb
+cheap|rẻ|adj
+check|kiểm tra|verb
+cheese|phô mai|food
+chef|đầu bếp|work
+chemistry|hóa học|work
+chicken|thịt gà; con gà|food
+child|đứa trẻ|fam
+chip|khoai tây chiên|food
+chocolate|sô-cô-la|food
+choice|sự lựa chọn|misc
+choose|chọn|verb
+church|nhà thờ|place
+cigarette|điếu thuốc lá|misc
+cinema|rạp chiếu phim|place
+circle|hình tròn|misc
+city|thành phố|place
+class|lớp học|work
+classical|cổ điển|adj
+classroom|phòng học|work
+clean|sạch; lau dọn|adj
+clear|rõ ràng|adj
+clearly|rõ ràng|func
+clever|thông minh|adj
+climate|khí hậu|wthr
+climb|leo trèo|verb
+clock|đồng hồ treo tường|home
+close|gần; đóng lại|adj
+closed|đã đóng cửa|adj
+clothes|quần áo|cloth
+clothing|trang phục|cloth
+cloud|đám mây|wthr
+club|câu lạc bộ|fun
+coach|huấn luyện viên; xe khách|work
+coast|bờ biển|nat
+coat|áo khoác|cloth
+code|mã|misc
+coffee|cà phê|food
+cold|lạnh|wthr
+colleague|đồng nghiệp|work
+collect|thu thập, sưu tầm|verb
+college|trường cao đẳng|work
+colour|màu sắc|wthr
+column|cột|misc
+come|đến|verb
+comedy|phim hài|fun
+comfortable|thoải mái|adj
+comment|lời bình luận|misc
+common|phổ biến|adj
+communicate|giao tiếp|verb
+community|cộng đồng|misc
+company|công ty|work
+compare|so sánh|verb
+compete|thi đấu|verb
+competition|cuộc thi|fun
+complain|phàn nàn|verb
+complete|hoàn chỉnh; hoàn thành|adj
+completely|hoàn toàn|func
+computer|máy tính|home
+concert|buổi hòa nhạc|fun
+condition|điều kiện, tình trạng|misc
+conference|hội nghị|work
+connect|kết nối|verb
+connected|được kết nối|adj
+consider|cân nhắc|verb
+contain|chứa đựng|verb
+context|ngữ cảnh|misc
+continent|châu lục|nat
+continue|tiếp tục|verb
+control|sự kiểm soát; kiểm soát|verb
+conversation|cuộc trò chuyện|misc
+cook|đầu bếp; nấu ăn|verb
+cooker|bếp nấu|home
+cooking|việc nấu ăn|food
+cool|mát mẻ, ngầu|adj
+copy|bản sao; sao chép|verb
+corner|góc|place
+correct|đúng; sửa lỗi|adj
+correctly|một cách chính xác|func
+cost|chi phí; có giá|verb
+could|có thể (quá khứ)|func
+count|đếm|verb
+country|đất nước|place
+couple|cặp đôi|fam
+course|khóa học|work
+cousin|anh/chị/em họ|fam
+cover|che phủ|verb
+cow|con bò cái|nat
+crazy|điên rồ|adj
+cream|kem tươi|food
+create|tạo ra|verb
+creative|sáng tạo|adj
+credit|tín dụng|cloth
+crime|tội phạm|misc
+criminal|tên tội phạm|misc
+cross|chữ thập; băng qua|verb
+crowd|đám đông|misc
+crowded|đông đúc|adj
+cry|khóc|verb
+culture|văn hóa|misc
+cup|cái tách|home
+cupboard|tủ chén|home
+curly|xoăn|body
+customer|khách hàng|cloth
+cut|cắt|verb
+cycle|chu kỳ; đạp xe|verb
+dad|bố|fam
+daily|hằng ngày|adj
+dance|điệu nhảy; nhảy múa|fun
+dancer|vũ công|fun
+dancing|việc khiêu vũ|fun
+danger|mối nguy hiểm|misc
+dangerous|nguy hiểm|adj
+dark|tối|adj
+data|dữ liệu|work
+date|ngày tháng; buổi hẹn|time
+daughter|con gái|fam
+day|ngày|time
+dead|đã chết|adj
+deal|giao dịch; xử lý|verb
+dear|thân mến|adj
+death|cái chết|misc
+December|tháng Mười Hai|time
+decide|quyết định|verb
+decision|quyết định|misc
+deep|sâu|adj
+definitely|chắc chắn|func
+degree|bằng cấp; độ|work
+delicious|ngon|food
+dentist|nha sĩ|work
+department|phòng ban|work
+depend|phụ thuộc|verb
+describe|miêu tả|verb
+description|sự miêu tả|misc
+desert|sa mạc|nat
+design|thiết kế|verb
+designer|nhà thiết kế|work
+desk|bàn làm việc|work
+destroy|phá hủy|verb
+detail|chi tiết|misc
+detective|thám tử|work
+develop|phát triển|verb
+device|thiết bị|home
+dialogue|đoạn hội thoại|work
+diary|nhật ký|work
+dictionary|từ điển|work
+die|chết|verb
+diet|chế độ ăn|food
+difference|sự khác biệt|misc
+different|khác nhau|adj
+differently|một cách khác|func
+difficult|khó|adj
+digital|kỹ thuật số|adj
+direct|trực tiếp|adj
+direction|phương hướng|trav
+director|giám đốc; đạo diễn|work
+dirty|bẩn|adj
+disagree|không đồng ý|verb
+disappear|biến mất|verb
+disaster|thảm họa|misc
+discover|khám phá|verb
+discovery|sự khám phá|misc
+discuss|thảo luận|verb
+discussion|cuộc thảo luận|misc
+disease|bệnh tật|body
+dish|món ăn; cái đĩa|food
+distance|khoảng cách|trav
+divorced|đã ly hôn|fam
+do|làm|verb
+doctor|bác sĩ|work
+document|tài liệu|work
+dog|con chó|nat
+dollar|đô la|cloth
+door|cánh cửa|home
+double|gấp đôi|adj
+down|xuống|func
+download|tải xuống|verb
+downstairs|ở tầng dưới|home
+drama|kịch, phim chính kịch|fun
+draw|vẽ|verb
+drawing|bức vẽ|fun
+dream|giấc mơ; mơ|verb
+dress|chiếc váy; mặc đồ|cloth
+drink|đồ uống; uống|food
+drive|lái xe|trav
+driver|tài xế|trav
+driving|việc lái xe|trav
+drop|làm rơi; giọt|verb
+drug|thuốc; ma túy|body
+dry|khô; làm khô|adj
+during|trong suốt|func
+DVD|đĩa DVD|fun
+each|mỗi|func
+ear|cái tai|body
+early|sớm|adj
+earn|kiếm được|verb
+earth|trái đất|nat
+easily|một cách dễ dàng|func
+east|hướng đông|trav
+easy|dễ|adj
+eat|ăn|verb
+education|giáo dục|work
+effect|ảnh hưởng, hiệu quả|misc
+egg|quả trứng|food
+eight|số tám|time
+eighteen|số mười tám|time
+eighty|số tám mươi|time
+either|một trong hai; cũng không|func
+electric|chạy bằng điện|adj
+electrical|thuộc về điện|adj
+electricity|điện|home
+electronic|điện tử|adj
+elephant|con voi|nat
+eleven|số mười một|time
+else|khác, nữa|func
+email|thư điện tử|fun
+employ|thuê, tuyển dụng|verb
+employee|nhân viên|work
+employer|người sử dụng lao động|work
+empty|trống rỗng|adj
+end|kết thúc; phần cuối|verb
+ending|phần kết|misc
+energy|năng lượng|misc
+engine|động cơ|trav
+engineer|kỹ sư|work
+enjoy|thích thú, tận hưởng|verb
+enormous|khổng lồ|adj
+enough|đủ|func
+enter|đi vào|verb
+environment|môi trường|nat
+equipment|thiết bị|work
+error|lỗi|misc
+especially|đặc biệt là|func
+essay|bài luận|work
+euro|đồng euro|cloth
+even|thậm chí|func
+evening|buổi tối|time
+event|sự kiện|fun
+ever|từng, bao giờ|func
+every|mọi, mỗi|func
+everybody|mọi người|func
+everyday|hằng ngày|adj
+everyone|mọi người|func
+everything|mọi thứ|func
+everywhere|mọi nơi|func
+evidence|bằng chứng|misc
+exact|chính xác|adj
+exactly|chính xác|func
+exam|kỳ thi|work
+example|ví dụ|work
+excellent|xuất sắc|adj
+except|ngoại trừ|func
+excited|hào hứng|feel
+exciting|thú vị, gay cấn|adj
+exercise|bài tập; tập thể dục|fun
+exist|tồn tại|verb
+expect|mong đợi|verb
+expensive|đắt|adj
+experience|kinh nghiệm|misc
+experiment|thí nghiệm|work
+expert|chuyên gia|work
+explain|giải thích|verb
+explanation|lời giải thích|misc
+express|bày tỏ|verb
+expression|biểu cảm; cách diễn đạt|misc
+extra|thêm|adj
+extreme|cực độ|adj
+extremely|cực kỳ|func
+eye|con mắt|body
+face|khuôn mặt|body
+fact|sự thật|misc
+factor|yếu tố|misc
+factory|nhà máy|place
+fail|thất bại, trượt|verb
+fair|công bằng|adj
+fall|ngã; mùa thu (Mỹ)|verb
+false|sai|adj
+family|gia đình|fam
+famous|nổi tiếng|adj
+fan|người hâm mộ; cái quạt|fun
+fantastic|tuyệt diệu|adj
+far|xa|func
+farm|nông trại|nat
+farmer|nông dân|work
+farming|nghề nông|work
+fashion|thời trang|cloth
+fast|nhanh|adj
+fat|béo; mỡ|adj
+father|bố, cha|fam
+favourite|yêu thích|adj
+fear|nỗi sợ|feel
+feature|đặc điểm|misc
+February|tháng Hai|time
+feed|cho ăn|verb
+feel|cảm thấy|verb
+feeling|cảm giác|feel
+female|giống cái, nữ|adj
+festival|lễ hội|fun
+few|vài, một ít|func
+fiction|tiểu thuyết hư cấu|fun
+field|cánh đồng|nat
+fifteen|số mười lăm|time
+fifth|thứ năm|time
+fifty|số năm mươi|time
+fight|cuộc chiến; đánh nhau|verb
+figure|con số; hình dáng|misc
+fill|lấp đầy|verb
+film|bộ phim|fun
+final|cuối cùng|adj
+finally|cuối cùng thì|func
+find|tìm thấy|verb
+fine|tốt, ổn|adj
+finger|ngón tay|body
+finish|kết thúc|verb
+fire|lửa|nat
+first|đầu tiên|time
+firstly|trước hết|func
+fish|con cá; câu cá|nat
+fishing|việc câu cá|fun
+fit|vừa vặn; khỏe mạnh|adj
+five|số năm|time
+fix|sửa chữa|verb
+flat|căn hộ; phẳng|home
+flight|chuyến bay|trav
+floor|sàn nhà; tầng|home
+flower|bông hoa|nat
+flu|bệnh cúm|body
+fly|con ruồi; bay|verb
+flying|việc bay|trav
+focus|sự tập trung|verb
+follow|đi theo|verb
+following|tiếp theo|adj
+food|thức ăn|food
+foot|bàn chân|body
+football|bóng đá|fun
+for|cho, để|func
+foreign|nước ngoài|adj
+forest|khu rừng|nat
+forget|quên|verb
+fork|cái nĩa|home
+form|mẫu đơn; hình thành|misc
+formal|trang trọng|adj
+fortunately|may mắn là|func
+forty|số bốn mươi|time
+forward|về phía trước|func
+four|số bốn|time
+fourteen|số mười bốn|time
+fourth|thứ tư|time
+free|miễn phí; tự do|adj
+fresh|tươi|adj
+Friday|thứ Sáu|time
+fridge|tủ lạnh|home
+friend|bạn bè|fam
+friendly|thân thiện|adj
+frog|con ếch|nat
+from|từ|func
+front|phía trước|func
+fruit|trái cây|food
+full|đầy; no|adj
+fun|niềm vui|fun
+funny|buồn cười|adj
+furniture|đồ nội thất|home
+further|xa hơn|adj
+future|tương lai|time
+gallery|phòng trưng bày|place
+game|trò chơi|fun
+gap|khoảng trống|misc
+garden|khu vườn|home
+gas|khí ga|home
+gate|cổng|home
+general|chung, tổng quát|adj
+geography|địa lý|work
+get|lấy, nhận được|verb
+gift|món quà|fun
+girl|cô bé|fam
+girlfriend|bạn gái|fam
+give|cho, tặng|verb
+glass|cái ly; thủy tinh|home
+go|đi|verb
+goal|bàn thắng; mục tiêu|fun
+god|vị thần, Chúa|misc
+gold|vàng|wthr
+golf|môn gôn|fun
+good|tốt|adj
+goodbye|tạm biệt|func
+government|chính phủ|misc
+grandfather|ông|fam
+grandmother|bà|fam
+grandparent|ông hoặc bà|fam
+grass|cỏ|nat
+great|tuyệt vời|adj
+green|màu xanh lá|wthr
+greet|chào hỏi|verb
+grey|màu xám|wthr
+ground|mặt đất|nat
+group|nhóm|misc
+grow|lớn lên; trồng|verb
+guess|đoán|verb
+guest|khách mời|misc
+guide|người hướng dẫn; hướng dẫn|trav
+guitar|đàn ghi-ta|fun
+gun|khẩu súng|misc
+guy|chàng trai|fam
+gym|phòng tập thể dục|place
+habit|thói quen|misc
+hair|tóc|body
+half|một nửa|time
+hall|hội trường; sảnh|home
+hand|bàn tay|body
+happen|xảy ra|verb
+happily|một cách hạnh phúc|func
+happy|vui vẻ, hạnh phúc|feel
+hard|cứng; khó; chăm chỉ|adj
+hat|cái mũ|cloth
+hate|ghét|verb
+have|có|verb
+he|anh ấy, ông ấy|func
+head|cái đầu|body
+headache|chứng đau đầu|body
+health|sức khỏe|body
+healthy|khỏe mạnh|adj
+hear|nghe thấy|verb
+heart|trái tim|body
+heat|sức nóng|wthr
+heavy|nặng|adj
+height|chiều cao|body
+hello|xin chào|func
+help|giúp đỡ|verb
+helpful|hữu ích|adj
+her|cô ấy; của cô ấy|func
+here|ở đây|func
+hero|anh hùng|fun
+hers|của cô ấy|func
+herself|chính cô ấy|func
+hey|này, ê|func
+hi|chào|func
+hide|ẩn nấp|verb
+high|cao|adj
+hill|ngọn đồi|nat
+him|anh ấy (tân ngữ)|func
+himself|chính anh ấy|func
+his|của anh ấy|func
+history|lịch sử|work
+hit|đánh, va vào|verb
+hobby|sở thích|fun
+hockey|môn khúc côn cầu|fun
+hold|cầm, giữ|verb
+hole|cái lỗ|misc
+holiday|kỳ nghỉ|trav
+home|nhà|home
+homework|bài tập về nhà|work
+hope|hy vọng|verb
+horse|con ngựa|nat
+hospital|bệnh viện|place
+hot|nóng|wthr
+hotel|khách sạn|trav
+hour|giờ|time
+house|ngôi nhà|home
+how|như thế nào|func
+however|tuy nhiên|func
+huge|rất lớn|adj
+human|con người|fam
+hundred|một trăm|time
+hungry|đói|feel
+hurt|đau; làm đau|verb
+husband|chồng|fam
+ice|đá, băng|wthr
+idea|ý tưởng|misc
+ideal|lý tưởng|adj
+identify|nhận ra, xác định|verb
+if|nếu|func
+ill|ốm|body
+illness|bệnh tật|body
+image|hình ảnh|fun
+imagine|tưởng tượng|verb
+immediately|ngay lập tức|func
+important|quan trọng|adj
+impossible|không thể|adj
+improve|cải thiện|verb
+in|trong|func
+include|bao gồm|verb
+included|được bao gồm|adj
+including|bao gồm cả|func
+increase|sự tăng; tăng lên|verb
+incredible|không thể tin được|adj
+independent|độc lập|adj
+individual|cá nhân|adj
+industry|ngành công nghiệp|work
+informal|thân mật|adj
+information|thông tin|misc
+injury|vết thương|body
+insect|côn trùng|nat
+inside|bên trong|func
+instead|thay vào đó|func
+instruction|hướng dẫn|work
+instructor|người hướng dẫn|work
+instrument|nhạc cụ; dụng cụ|fun
+intelligent|thông minh|adj
+interest|sự quan tâm|misc
+interested|quan tâm, thích thú|feel
+interesting|thú vị|adj
+international|quốc tế|adj
+internet|mạng internet|fun
+interview|buổi phỏng vấn|work
+into|vào trong|func
+introduce|giới thiệu|verb
+introduction|lời giới thiệu|misc
+invent|phát minh|verb
+invention|phát minh|misc
+invitation|lời mời|misc
+invite|mời|verb
+involve|liên quan đến|verb
+island|hòn đảo|nat
+it|nó|func
+item|món đồ|misc
+its|của nó|func
+itself|chính nó|func
+jacket|áo khoác ngắn|cloth
+jam|mứt|food
+January|tháng Một|time
+jazz|nhạc jazz|fun
+jeans|quần jean|cloth
+jewellery|đồ trang sức|cloth
+job|công việc|work
+join|tham gia|verb
+joke|câu chuyện cười|fun
+journalist|nhà báo|work
+journey|chuyến đi|trav
+juice|nước ép|food
+July|tháng Bảy|time
+jump|nhảy|verb
+June|tháng Sáu|time
+just|chỉ, vừa mới|func
+keep|giữ|verb
+key|chìa khóa; chủ chốt|home
+kid|đứa trẻ|fam
+kill|giết|verb
+kilometre|ki-lô-mét|trav
+kind|loại; tử tế|adj
+king|vua|misc
+kitchen|nhà bếp|home
+knee|đầu gối|body
+knife|con dao|home
+knock|gõ cửa|verb
+know|biết|verb
+knowledge|kiến thức|work
+lab|phòng thí nghiệm|work
+lady|quý bà|fam
+lake|cái hồ|nat
+lamp|cái đèn|home
+land|đất liền; hạ cánh|nat
+language|ngôn ngữ|work
+laptop|máy tính xách tay|home
+large|rộng lớn|adj
+last|cuối cùng; kéo dài|adj
+late|muộn|adj
+later|sau đó|func
+laugh|cười|verb
+laughter|tiếng cười|feel
+law|luật|misc
+lawyer|luật sư|work
+lazy|lười biếng|adj
+lead|dẫn dắt|verb
+leader|người lãnh đạo|work
+learn|học|verb
+learning|việc học|work
+least|ít nhất|func
+leave|rời đi; để lại|verb
+lecture|bài giảng|work
+left|bên trái|trav
+leg|cái chân|body
+lemon|quả chanh vàng|food
+lend|cho mượn|verb
+less|ít hơn|func
+lesson|bài học|work
+let|để cho, cho phép|verb
+letter|lá thư; chữ cái|work
+level|cấp độ|misc
+library|thư viện|place
+lie|nói dối; nằm|verb
+life|cuộc sống|misc
+lifestyle|lối sống|misc
+lift|thang máy; nâng lên|verb
+light|ánh sáng; nhẹ|adj
+like|thích; giống như|verb
+likely|có khả năng|adj
+line|đường kẻ; hàng|misc
+link|liên kết|misc
+lion|con sư tử|nat
+list|danh sách|work
+listen|lắng nghe|verb
+listener|người nghe|fun
+little|nhỏ, một chút|adj
+live|sống|verb
+local|địa phương|adj
+lock|ổ khóa; khóa lại|home
+long|dài|adj
+look|nhìn|verb
+lorry|xe tải|trav
+lose|mất; thua|verb
+lost|bị lạc|adj
+lot|nhiều|func
+loud|ồn ào, to|adj
+loudly|ầm ĩ, to tiếng|func
+love|tình yêu; yêu|feel
+lovely|đáng yêu|adj
+low|thấp|adj
+luck|vận may|misc
+lucky|may mắn|adj
+lunch|bữa trưa|food
+machine|cái máy|home
+magazine|tạp chí|fun
+mail|thư; gửi thư|fun
+main|chính|adj
+major|chính, lớn|adj
+make|làm, tạo ra|verb
+male|giống đực, nam|adj
+man|người đàn ông|fam
+manage|quản lý|verb
+manager|quản lý|work
+manner|cách thức|misc
+many|nhiều|func
+map|bản đồ|trav
+March|tháng Ba|time
+mark|dấu; điểm số|work
+market|chợ|place
+married|đã kết hôn|fam
+marry|kết hôn|verb
+match|trận đấu; que diêm|fun
+material|vật liệu|misc
+mathematics|toán học|work
+maths|môn toán|work
+matter|vấn đề|misc
+May|tháng Năm|time
+maybe|có lẽ|func
+me|tôi (tân ngữ)|func
+meal|bữa ăn|food
+mean|có nghĩa là|verb
+meaning|ý nghĩa|work
+meat|thịt|food
+media|truyền thông|fun
+medical|thuộc y tế|adj
+medicine|thuốc; y học|body
+meet|gặp gỡ|verb
+meeting|cuộc họp|work
+member|thành viên|misc
+memory|trí nhớ; kỷ niệm|misc
+mention|đề cập|verb
+menu|thực đơn|food
+message|tin nhắn|fun
+metal|kim loại|misc
+method|phương pháp|misc
+metre|mét|misc
+middle|ở giữa|place
+midnight|nửa đêm|time
+might|có thể (khả năng thấp)|func
+mile|dặm|trav
+milk|sữa|food
+million|một triệu|time
+mind|tâm trí; phiền|misc
+mine|của tôi; mỏ|func
+minute|phút|time
+mirror|cái gương|home
+miss|nhớ; lỡ|verb
+missing|bị mất, thiếu|adj
+mistake|lỗi sai|misc
+mobile|di động|adj
+model|người mẫu; mô hình|work
+modern|hiện đại|adj
+moment|khoảnh khắc|time
+Monday|thứ Hai|time
+money|tiền|cloth
+monkey|con khỉ|nat
+month|tháng|time
+moon|mặt trăng|nat
+more|nhiều hơn|func
+morning|buổi sáng|time
+most|nhiều nhất, hầu hết|func
+mostly|chủ yếu|func
+mother|mẹ|fam
+motorcycle|xe máy|trav
+mountain|ngọn núi|nat
+mouse|con chuột|nat
+mouth|cái miệng|body
+move|di chuyển|verb
+movement|sự chuyển động|misc
+movie|bộ phim|fun
+much|nhiều|func
+mum|mẹ|fam
+museum|bảo tàng|place
+music|âm nhạc|fun
+musical|thuộc âm nhạc|adj
+musician|nhạc sĩ|fun
+must|phải|func
+my|của tôi|func
+myself|chính tôi|func
+name|tên; đặt tên|misc
+narrow|hẹp|adj
+national|thuộc quốc gia|adj
+natural|tự nhiên|adj
+nature|thiên nhiên|nat
+near|gần|func
+nearly|gần như|func
+necessary|cần thiết|adj
+neck|cái cổ|body
+need|cần|verb
+negative|tiêu cực|adj
+neighbour|hàng xóm|fam
+neither|không cái nào|func
+nervous|lo lắng|feel
+network|mạng lưới|fun
+never|không bao giờ|func
+new|mới|adj
+news|tin tức|fun
+newspaper|tờ báo|fun
+next|tiếp theo|func
+nice|tốt đẹp, dễ chịu|adj
+night|ban đêm|time
+nine|số chín|time
+nineteen|số mười chín|time
+ninety|số chín mươi|time
+no|không|func
+nobody|không ai|func
+noise|tiếng ồn|misc
+noisy|ồn ào|adj
+none|không cái nào|func
+normal|bình thường|adj
+normally|thông thường|func
+north|hướng bắc|trav
+nose|cái mũi|body
+not|không|func
+note|ghi chú|work
+nothing|không có gì|func
+notice|để ý|verb
+novel|tiểu thuyết|fun
+November|tháng Mười Một|time
+now|bây giờ|time
+nowhere|không nơi nào|func
+number|con số|time
+nurse|y tá|work
+nut|hạt (quả hạch)|food
+object|đồ vật|misc
+ocean|đại dương|nat
+October|tháng Mười|time
+of|của|func
+off|tắt; rời khỏi|func
+offer|đề nghị|verb
+office|văn phòng|work
+officer|sĩ quan; viên chức|work
+often|thường xuyên|func
+oh|ồ|func
+oil|dầu|food
+OK|được rồi|func
+old|già, cũ|adj
+on|trên|func
+once|một lần|func
+one|số một|time
+onion|củ hành|food
+online|trực tuyến|adj
+only|chỉ|func
+onto|lên trên|func
+open|mở|adj
+opinion|ý kiến|misc
+opportunity|cơ hội|misc
+opposite|đối diện; trái ngược|adj
+option|lựa chọn|misc
+or|hoặc|func
+orange|quả cam; màu cam|wthr
+order|đơn hàng; gọi món|verb
+ordinary|bình thường|adj
+organization|tổ chức|work
+organize|tổ chức, sắp xếp|verb
+original|nguyên bản|adj
+other|khác|func
+our|của chúng tôi|func
+ourselves|chính chúng tôi|func
+out|ra ngoài|func
+outside|bên ngoài|func
+oven|lò nướng|home
+over|phía trên; kết thúc|func
+own|của riêng; sở hữu|adj
+owner|chủ sở hữu|work
+pack|đóng gói|verb
+page|trang giấy|work
+pain|cơn đau|body
+paint|sơn; vẽ tranh|verb
+painter|họa sĩ|fun
+painting|bức tranh|fun
+pair|một cặp|cloth
+palace|cung điện|place
+pants|quần dài|cloth
+paper|giấy|work
+paragraph|đoạn văn|work
+parent|cha hoặc mẹ|fam
+park|công viên; đậu xe|place
+parking|việc đỗ xe|trav
+part|bộ phận|misc
+particular|cụ thể|adj
+partner|bạn đời; đối tác|fam
+party|bữa tiệc|fun
+pass|vượt qua; đưa|verb
+passenger|hành khách|trav
+passport|hộ chiếu|trav
+past|quá khứ|time
+patient|bệnh nhân; kiên nhẫn|body
+pattern|hoa văn; mẫu|misc
+pay|trả tiền|verb
+peace|hòa bình|misc
+pen|cây bút mực|work
+pencil|bút chì|work
+penny|đồng xu nhỏ|cloth
+people|mọi người|fam
+pepper|hạt tiêu; ớt chuông|food
+per|mỗi|func
+perfect|hoàn hảo|adj
+perform|biểu diễn|verb
+perhaps|có lẽ|func
+period|khoảng thời gian|time
+permission|sự cho phép|misc
+person|người|fam
+personal|cá nhân|adj
+personality|tính cách|feel
+pet|thú cưng|nat
+petrol|xăng|trav
+phone|điện thoại|home
+photo|bức ảnh|fun
+photograph|bức ảnh; chụp ảnh|fun
+phrase|cụm từ|work
+physical|thuộc thể chất|adj
+physics|vật lý|work
+piano|đàn piano|fun
+pick|chọn; hái|verb
+picture|bức tranh|fun
+piece|mảnh, miếng|misc
+pig|con lợn|nat
+pilot|phi công|work
+pink|màu hồng|wthr
+place|nơi chốn|place
+plan|kế hoạch|verb
+plane|máy bay|trav
+planet|hành tinh|nat
+plant|cây trồng|nat
+plastic|nhựa|misc
+plate|cái đĩa|home
+platform|sân ga|trav
+play|chơi|verb
+player|người chơi|fun
+please|làm ơn|func
+pleased|hài lòng|feel
+pocket|cái túi áo|cloth
+point|điểm; chỉ vào|misc
+police|cảnh sát|work
+policeman|cảnh sát nam|work
+polite|lịch sự|adj
+pollution|ô nhiễm|nat
+pool|hồ bơi|place
+poor|nghèo|adj
+pop|nhạc pop|fun
+popular|phổ biến|adj
+population|dân số|place
+position|vị trí|misc
+positive|tích cực|adj
+possession|tài sản|misc
+possibility|khả năng|misc
+possible|có thể xảy ra|adj
+post|bưu điện; đăng bài|fun
+poster|áp phích|home
+potato|khoai tây|food
+pound|đồng bảng Anh|cloth
+power|sức mạnh; điện|misc
+practice|sự luyện tập|work
+practise|luyện tập|verb
+predict|dự đoán|verb
+prefer|thích hơn|verb
+prepare|chuẩn bị|verb
+present|món quà; hiện tại|time
+president|tổng thống; chủ tịch|work
+pretty|xinh xắn|adj
+prevent|ngăn chặn|verb
+price|giá cả|cloth
+print|in ấn|verb
+printer|máy in|home
+prison|nhà tù|place
+prize|giải thưởng|fun
+probably|có lẽ là|func
+problem|vấn đề|misc
+process|quá trình|misc
+produce|sản xuất|verb
+product|sản phẩm|cloth
+professional|chuyên nghiệp|adj
+professor|giáo sư|work
+profile|hồ sơ cá nhân|fun
+program|chương trình|fun
+programme|chương trình|fun
+progress|tiến bộ|misc
+project|dự án|work
+promise|lời hứa; hứa|verb
+pronounce|phát âm|verb
+protect|bảo vệ|verb
+provide|cung cấp|verb
+pub|quán rượu|place
+public|công cộng|adj
+publish|xuất bản|verb
+pull|kéo|verb
+purple|màu tím|wthr
+purpose|mục đích|misc
+push|đẩy|verb
+put|đặt, để|verb
+quality|chất lượng|misc
+quantity|số lượng|misc
+quarter|một phần tư|time
+queen|nữ hoàng|misc
+question|câu hỏi|work
+quick|nhanh|adj
+quickly|một cách nhanh chóng|func
+quiet|yên tĩnh|adj
+quietly|một cách yên lặng|func
+quite|khá|func
+race|cuộc đua|fun
+radio|đài phát thanh|fun
+railway|đường sắt|trav
+rain|mưa|wthr
+raise|nâng lên|verb
+rate|tỷ lệ|misc
+rather|khá là|func
+reach|với tới; đến|verb
+react|phản ứng|verb
+read|đọc|verb
+reader|người đọc|fun
+reading|việc đọc|work
+ready|sẵn sàng|adj
+real|thật|adj
+realize|nhận ra|verb
+really|thật sự|func
+reason|lý do|misc
+receive|nhận được|verb
+recent|gần đây|adj
+recently|gần đây|func
+reception|lễ tân|trav
+recipe|công thức nấu ăn|food
+recognize|nhận ra|verb
+recommend|giới thiệu, khuyên|verb
+record|bản ghi; ghi lại|verb
+recording|bản ghi âm|fun
+recycle|tái chế|verb
+red|màu đỏ|wthr
+reduce|giảm bớt|verb
+refer|tham khảo|verb
+refuse|từ chối|verb
+region|vùng|place
+regular|đều đặn|adj
+relationship|mối quan hệ|fam
+relax|thư giãn|verb
+remember|nhớ|verb
+remove|loại bỏ|verb
+repair|sửa chữa|verb
+repeat|lặp lại|verb
+replace|thay thế|verb
+reply|trả lời|verb
+report|bản báo cáo|work
+reporter|phóng viên|work
+request|lời yêu cầu|misc
+research|nghiên cứu|work
+researcher|nhà nghiên cứu|work
+respond|phản hồi|verb
+response|sự phản hồi|misc
+rest|nghỉ ngơi; phần còn lại|verb
+restaurant|nhà hàng|food
+result|kết quả|misc
+return|trở về|verb
+review|bài đánh giá; ôn lại|work
+rice|gạo, cơm|food
+rich|giàu|adj
+ride|cưỡi, đi (xe)|verb
+right|đúng; bên phải|adj
+ring|chiếc nhẫn; reo|cloth
+rise|tăng lên; mọc|verb
+river|dòng sông|nat
+road|con đường|trav
+rock|tảng đá; nhạc rock|nat
+role|vai trò|misc
+roof|mái nhà|home
+room|căn phòng|home
+round|tròn|adj
+route|tuyến đường|trav
+routine|thói quen hằng ngày|time
+rubbish|rác|home
+rude|thô lỗ|adj
+rule|quy tắc|misc
+run|chạy|verb
+runner|người chạy bộ|fun
+running|môn chạy bộ|fun
+sad|buồn|feel
+sadly|đáng buồn là|func
+safe|an toàn|adj
+sail|đi thuyền|verb
+sailing|môn chèo thuyền|fun
+salad|món salad|food
+salary|tiền lương|work
+sale|sự giảm giá; bán hàng|cloth
+salt|muối|food
+same|giống nhau|adj
+sandwich|bánh mì kẹp|food
+Saturday|thứ Bảy|time
+sauce|nước sốt|food
+save|tiết kiệm; cứu|verb
+say|nói|verb
+scared|sợ hãi|feel
+scary|đáng sợ|adj
+scene|cảnh|fun
+schedule|lịch trình|time
+school|trường học|work
+science|khoa học|work
+scientist|nhà khoa học|work
+score|điểm số|fun
+screen|màn hình|home
+sea|biển|nat
+search|tìm kiếm|verb
+season|mùa|wthr
+seat|chỗ ngồi|trav
+second|thứ hai; giây|time
+secondly|thứ hai là|func
+secret|bí mật|misc
+secretary|thư ký|work
+section|phần|misc
+see|nhìn thấy|verb
+seem|có vẻ|verb
+sell|bán|verb
+send|gửi|verb
+sense|giác quan; ý nghĩa|misc
+sentence|câu; bản án|work
+separate|riêng biệt|adj
+September|tháng Chín|time
+series|loạt phim|fun
+serious|nghiêm túc|adj
+serve|phục vụ|verb
+service|dịch vụ|misc
+seven|số bảy|time
+seventeen|số mười bảy|time
+seventy|số bảy mươi|time
+several|một vài|func
+shake|lắc|verb
+shall|sẽ (xin phép/đề nghị)|func
+shape|hình dạng|misc
+share|chia sẻ|verb
+she|cô ấy, bà ấy|func
+sheep|con cừu|nat
+sheet|tờ giấy; ga giường|home
+ship|con tàu|trav
+shirt|áo sơ mi|cloth
+shoe|chiếc giày|cloth
+shop|cửa hàng|place
+shopping|việc mua sắm|cloth
+short|ngắn, thấp|adj
+should|nên|func
+shoulder|bờ vai|body
+shout|la hét|verb
+show|chương trình; cho xem|verb
+shower|vòi hoa sen|home
+shut|đóng lại|verb
+sick|ốm, bệnh|body
+side|bên, phía|misc
+sign|biển báo; ký tên|verb
+silver|bạc|wthr
+similar|tương tự|adj
+simple|đơn giản|adj
+since|kể từ khi|func
+sing|hát|verb
+singer|ca sĩ|fun
+singing|việc ca hát|fun
+single|độc thân; đơn|adj
+sir|ngài, thưa ông|fam
+sister|chị/em gái|fam
+sit|ngồi|verb
+site|địa điểm; trang web|place
+situation|tình huống|misc
+six|số sáu|time
+sixteen|số mười sáu|time
+sixty|số sáu mươi|time
+size|kích cỡ|cloth
+ski|trượt tuyết|fun
+skiing|môn trượt tuyết|fun
+skill|kỹ năng|work
+skin|làn da|body
+skirt|chân váy|cloth
+sky|bầu trời|nat
+sleep|ngủ|verb
+slow|chậm|adj
+slowly|một cách chậm rãi|func
+small|nhỏ|adj
+smartphone|điện thoại thông minh|home
+smell|mùi; ngửi|verb
+smile|nụ cười; mỉm cười|verb
+smoke|khói; hút thuốc|verb
+smoking|việc hút thuốc|misc
+snake|con rắn|nat
+snow|tuyết|wthr
+so|vì vậy; rất|func
+soap|xà phòng|home
+soccer|bóng đá|fun
+social|thuộc xã hội|adj
+society|xã hội|misc
+sock|chiếc tất|cloth
+soft|mềm|adj
+soldier|người lính|work
+solution|giải pháp|misc
+solve|giải quyết|verb
+some|một vài|func
+somebody|một ai đó|func
+someone|một người nào đó|func
+something|một thứ gì đó|func
+sometimes|đôi khi|func
+somewhere|một nơi nào đó|func
+son|con trai|fam
+song|bài hát|fun
+soon|sớm, chẳng bao lâu|func
+sorry|xin lỗi|func
+sort|loại; sắp xếp|misc
+sound|âm thanh|misc
+soup|món súp|food
+source|nguồn|misc
+south|hướng nam|trav
+space|không gian|nat
+speak|nói|verb
+speaker|người nói; cái loa|home
+special|đặc biệt|adj
+specific|cụ thể|adj
+speech|bài phát biểu|work
+speed|tốc độ|trav
+spell|đánh vần|verb
+spelling|chính tả|work
+spend|tiêu tiền; dành thời gian|verb
+spider|con nhện|nat
+spoon|cái thìa|home
+sport|thể thao|fun
+spring|mùa xuân|wthr
+square|hình vuông; quảng trường|place
+stage|sân khấu; giai đoạn|fun
+stair|bậc thang|home
+stamp|con tem|misc
+stand|đứng|verb
+star|ngôi sao|nat
+start|bắt đầu|verb
+state|bang, tiểu bang|place
+statement|lời tuyên bố|misc
+station|nhà ga|trav
+stay|ở lại|verb
+steal|ăn cắp|verb
+step|bước chân|misc
+still|vẫn|func
+stomach|dạ dày, bụng|body
+stone|hòn đá|nat
+stop|dừng lại|verb
+store|cửa hàng; lưu trữ|place
+storm|cơn bão|wthr
+story|câu chuyện|fun
+straight|thẳng|adj
+strange|lạ lùng|adj
+strategy|chiến lược|misc
+street|đường phố|place
+stress|căng thẳng|feel
+strong|mạnh mẽ|adj
+structure|cấu trúc|misc
+student|học sinh, sinh viên|work
+study|học tập|verb
+stupid|ngu ngốc|adj
+style|phong cách|cloth
+subject|môn học; chủ đề|work
+succeed|thành công|verb
+success|sự thành công|misc
+successful|thành công|adj
+such|như vậy|func
+suddenly|đột nhiên|func
+sugar|đường|food
+suggest|đề nghị|verb
+suggestion|lời đề nghị|misc
+suit|bộ com-lê|cloth
+summer|mùa hè|wthr
+sun|mặt trời|nat
+Sunday|Chủ nhật|time
+supermarket|siêu thị|place
+support|sự ủng hộ|verb
+suppose|cho rằng|verb
+sure|chắc chắn|adj
+surprise|điều bất ngờ|feel
+surprised|ngạc nhiên|feel
+surprising|đáng ngạc nhiên|adj
+survey|cuộc khảo sát|work
+sweater|áo len|cloth
+sweet|ngọt|food
+swim|bơi|verb
+swimming|môn bơi lội|fun
+symbol|biểu tượng|misc
+system|hệ thống|misc
+table|cái bàn|home
+tablet|máy tính bảng; viên thuốc|home
+take|lấy, mang đi|verb
+talk|nói chuyện|verb
+tall|cao|adj
+target|mục tiêu|misc
+task|nhiệm vụ|work
+taste|vị; nếm|food
+taxi|xe taxi|trav
+tea|trà|food
+teach|dạy|verb
+teacher|giáo viên|work
+teaching|nghề dạy học|work
+team|đội|fun
+technology|công nghệ|work
+teenage|thuộc tuổi thiếu niên|adj
+teenager|thiếu niên|fam
+telephone|điện thoại|home
+television|tivi|home
+tell|kể, bảo|verb
+temperature|nhiệt độ|wthr
+ten|số mười|time
+tennis|môn quần vợt|fun
+term|học kỳ; thuật ngữ|work
+terrible|khủng khiếp|adj
+test|bài kiểm tra|work
+text|văn bản; nhắn tin|fun
+than|hơn (so sánh)|func
+thank|cảm ơn|verb
+thanks|cảm ơn|func
+that|đó, kia; rằng|func
+the|(mạo từ xác định)|func
+theatre|nhà hát|place
+their|của họ|func
+them|họ (tân ngữ)|func
+themselves|chính họ|func
+then|sau đó|func
+there|ở đó|func
+they|họ, chúng nó|func
+thick|dày|adj
+thief|tên trộm|misc
+thin|mỏng, gầy|adj
+thing|đồ vật, việc|misc
+think|nghĩ|verb
+thinking|suy nghĩ|misc
+third|thứ ba|time
+thirsty|khát|feel
+thirteen|số mười ba|time
+thirty|số ba mươi|time
+this|này|func
+thought|ý nghĩ|misc
+thousand|một nghìn|time
+three|số ba|time
+through|xuyên qua|func
+throw|ném|verb
+Thursday|thứ Năm|time
+ticket|vé|trav
+tidy|gọn gàng|adj
+tie|cà vạt; buộc|cloth
+time|thời gian|time
+tip|mẹo; tiền boa|misc
+tired|mệt mỏi|feel
+title|tiêu đề|work
+to|đến, để|func
+today|hôm nay|time
+together|cùng nhau|func
+toilet|nhà vệ sinh|home
+tomato|quả cà chua|food
+tomorrow|ngày mai|time
+tonight|tối nay|time
+too|cũng; quá|func
+tool|dụng cụ|work
+tooth|cái răng|body
+top|đỉnh, trên cùng|misc
+topic|chủ đề|work
+touch|chạm vào|verb
+tour|chuyến tham quan|trav
+tourism|ngành du lịch|trav
+tourist|khách du lịch|trav
+towards|về phía|func
+towel|khăn tắm|home
+tower|tòa tháp|place
+town|thị trấn|place
+toy|đồ chơi|fun
+track|đường ray; theo dõi|trav
+tradition|truyền thống|misc
+traditional|truyền thống|adj
+traffic|giao thông|trav
+train|tàu hỏa; huấn luyện|trav
+trainer|huấn luyện viên; giày thể thao|work
+training|sự huấn luyện|work
+transport|giao thông vận tải|trav
+travel|du lịch|verb
+traveller|du khách|trav
+tree|cái cây|nat
+trip|chuyến đi|trav
+trouble|rắc rối|misc
+trousers|quần dài|cloth
+truck|xe tải|trav
+true|đúng sự thật|adj
+try|thử, cố gắng|verb
+Tuesday|thứ Ba|time
+turn|rẽ; lượt|verb
+TV|tivi|home
+twelve|số mười hai|time
+twenty|số hai mươi|time
+twice|hai lần|func
+twin|sinh đôi|fam
+two|số hai|time
+type|loại|misc
+typical|điển hình|adj
+umbrella|cái ô|cloth
+uncle|chú, bác, cậu|fam
+under|dưới|func
+underground|dưới lòng đất|adj
+understand|hiểu|verb
+understanding|sự thấu hiểu|misc
+unfortunately|không may là|func
+unhappy|không vui|feel
+uniform|đồng phục|cloth
+unit|đơn vị; bài học|work
+united|thống nhất|adj
+university|trường đại học|work
+until|cho đến khi|func
+unusual|khác thường|adj
+up|lên|func
+upstairs|ở tầng trên|home
+us|chúng tôi (tân ngữ)|func
+use|sử dụng|verb
+useful|hữu ích|adj
+user|người dùng|fun
+usual|thường lệ|adj
+usually|thường thường|func
+vacation|kỳ nghỉ|trav
+valley|thung lũng|nat
+van|xe tải nhỏ|trav
+variety|sự đa dạng|misc
+vegetable|rau củ|food
+vehicle|phương tiện|trav
+very|rất|func
+video|đoạn phim|fun
+view|quang cảnh; quan điểm|misc
+village|ngôi làng|place
+virus|vi-rút|body
+visit|thăm viếng|verb
+visitor|khách tham quan|trav
+voice|giọng nói|body
+wait|chờ đợi|verb
+waiter|bồi bàn|work
+wake|thức dậy|verb
+walk|đi bộ|verb
+wall|bức tường|home
+want|muốn|verb
+war|chiến tranh|misc
+warm|ấm áp|wthr
+wash|rửa|verb
+washing|đồ giặt|home
+watch|đồng hồ đeo tay; xem|verb
+water|nước|food
+wave|con sóng; vẫy tay|nat
+way|con đường; cách|misc
+we|chúng tôi|func
+weak|yếu|adj
+wear|mặc|cloth
+weather|thời tiết|wthr
+web|mạng; mạng nhện|fun
+website|trang web|fun
+wedding|đám cưới|fam
+Wednesday|thứ Tư|time
+week|tuần|time
+weekend|cuối tuần|time
+weight|cân nặng|body
+welcome|chào mừng|func
+well|tốt; giỏi|func
+west|hướng tây|trav
+wet|ướt|wthr
+what|cái gì|func
+wheel|bánh xe|trav
+when|khi nào|func
+where|ở đâu|func
+which|cái nào|func
+while|trong khi|func
+white|màu trắng|wthr
+who|ai|func
+whole|toàn bộ|adj
+whose|của ai|func
+why|tại sao|func
+wide|rộng|adj
+wife|vợ|fam
+wild|hoang dã|adj
+will|sẽ|func
+win|chiến thắng|verb
+wind|gió|wthr
+window|cửa sổ|home
+wine|rượu vang|food
+winner|người thắng cuộc|fun
+winter|mùa đông|wthr
+wish|điều ước; ước|verb
+with|cùng với|func
+without|không có|func
+woman|người phụ nữ|fam
+wonderful|tuyệt diệu|adj
+wood|gỗ|nat
+wooden|bằng gỗ|adj
+word|từ|work
+work|công việc; làm việc|verb
+worker|công nhân|work
+working|đang làm việc|adj
+world|thế giới|place
+worried|lo lắng|feel
+worry|lo lắng|verb
+worse|tệ hơn|adj
+worst|tệ nhất|adj
+would|sẽ (giả định)|func
+wow|ôi chao|func
+write|viết|verb
+writer|nhà văn|work
+writing|việc viết|work
+wrong|sai|adj
+yeah|ừ|func
+year|năm|time
+yellow|màu vàng|wthr
+yes|vâng, có|func
+yesterday|hôm qua|time
+yet|vẫn chưa|func
+you|bạn|func
+young|trẻ|adj
+your|của bạn|func
+yours|của bạn|func
+yourself|chính bạn|func
+zero|số không|time
+businessman|doanh nhân|work
+dinner|bữa tối|food

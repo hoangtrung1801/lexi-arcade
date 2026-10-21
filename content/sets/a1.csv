@@ -1,0 +1,891 @@
+unit,lemma,pos,cefr,meaning_vi,ipa,topic,source,reviewed
+1,boy,n,a1,cậu bé,/bɔɪ/,fam,llm,false
+1,dad,n,a1,bố,/dæd/,fam,llm,false
+1,man,n,a1,người đàn ông,/ˈmæn/,fam,llm,false
+1,mum,n,a1,mẹ,/mʌm/,fam,llm,false
+1,son,n,a1,con trai,/sʌn/,fam,llm,false
+1,aunt,n,a1,"dì, cô",/ɑːnt/,fam,llm,false
+1,baby,n,a1,em bé,/ˈbeɪ.bi/,fam,llm,false
+1,girl,n,a1,cô bé,/ˈɡɜɹl/,fam,llm,false
+1,wife,n,a1,vợ,/waɪf/,fam,llm,false
+1,adult,adj/n,a1,người lớn,/əˈdʌlt/,fam,llm,false
+1,child,n,a1,đứa trẻ,/tʃaɪld/,fam,llm,false
+1,uncle,n,a1,"chú, bác, cậu",/ˈʌŋ.kl̩/,fam,llm,false
+2,woman,n,a1,người phụ nữ,/ˈwʊmən/,fam,llm,false
+2,cousin,n,a1,anh/chị/em họ,/ˈkʌz(ə)n/,fam,llm,false
+2,family,adj/n,a1,gia đình,/ˈfaməlɪj/,fam,llm,false
+2,father,n,a1,"bố, cha",/ˈfɑ.ðəɹ/,fam,llm,false
+2,friend,n,a1,bạn bè,/fɹɛnd/,fam,llm,false
+2,mother,n,a1,mẹ,/ˈmʌðɚ/,fam,llm,false
+2,parent,n,a1,cha hoặc mẹ,/ˈpɛəɹənt/,fam,llm,false
+2,people,n,a1,mọi người,/ˈpi.pəl/,fam,llm,false
+2,person,n,a1,người,/ˈpɜɹ.sən/,fam,llm,false
+2,sister,n,a1,chị/em gái,/ˈsɪs.tɚ/,fam,llm,false
+2,brother,n,a1,anh/em trai,/ˈbɹʌðɚ/,fam,llm,false
+3,husband,n,a1,chồng,/ˈhʌzbənd/,fam,llm,false
+3,married,adj,a1,đã kết hôn,/ˈmæɹ.id/,fam,llm,false
+3,partner,n,a1,bạn đời; đối tác,/ˈpɑɹt.nɚ/,fam,llm,false
+3,daughter,n,a1,con gái,/ˈdɔ.tɚ/,fam,llm,false
+3,teenager,n,a1,thiếu niên,/ˈtinˌeɪdʒɚ/,fam,llm,false
+3,boyfriend,n,a1,bạn trai,/ˈbɔɪˌfɹɛnd/,fam,llm,false
+3,neighbour,n,a1,hàng xóm,/ˈneɪbɚ/,fam,llm,false
+3,girlfriend,n,a1,bạn gái,/ˈɡɝlfɹɛnd/,fam,llm,false
+3,grandfather,n,a1,ông,/ˈɡɹæn(d)ˌfɑðɚ/,fam,llm,false
+3,grandmother,n,a1,bà,/ˈɡɹæn(d)ˌmʌðɚ/,fam,llm,false
+3,grandparent,n,a1,ông hoặc bà,/ˈɡɹæn(d)pɛəɹənt/,fam,llm,false
+4,arm,n,a1,cánh tay,/ɑɹm/,body,llm,false
+4,ear,n,a1,cái tai,/ˈɪɚ/,body,llm,false
+4,eye,n,a1,con mắt,/ˈaɪ̯/,body,llm,false
+4,leg,n,a1,cái chân,/lɛɡ/,body,llm,false
+4,back,adj/adv/n,a1,lưng; phía sau,/bæk/,body,llm,false
+4,body,n,a1,cơ thể,/ˈbɑdi/,body,llm,false
+4,face,n,a1,khuôn mặt,/ˈfeɪ̯s/,body,llm,false
+4,foot,n,a1,bàn chân,/fʊt/,body,llm,false
+4,hair,n,a1,tóc,/ˈheə/,body,llm,false
+5,hand,n,a1,bàn tay,/hænd/,body,llm,false
+5,head,n,a1,cái đầu,/hɛd/,body,llm,false
+5,nose,n,a1,cái mũi,,body,llm,false
+5,sick,adj,a1,"ốm, bệnh",/ˈsɪk/,body,llm,false
+5,mouth,n,a1,cái miệng,/maʊθ/,body,llm,false
+5,tooth,n,a1,cái răng,/tuθ/,body,llm,false
+5,blonde,adj,a1,tóc vàng hoe,/blɒnd/,body,llm,false
+5,health,n,a1,sức khỏe,/ˈhɛlθ/,body,llm,false
+6,egg,n,a1,quả trứng,/ɛɡ/,food,llm,false
+6,tea,n,a1,trà,/ti/,food,llm,false
+6,beer,n,a1,bia,/ˈbɪɚ/,food,llm,false
+6,cake,n,a1,bánh ngọt,/keɪk/,food,llm,false
+6,diet,n,a1,chế độ ăn,/ˈdaɪət/,food,llm,false
+6,dish,n,a1,món ăn; cái đĩa,/dɪʃ/,food,llm,false
+6,food,n,a1,thức ăn,/fuːd/,food,llm,false
+6,meal,n,a1,bữa ăn,/ˈmiːl/,food,llm,false
+6,meat,n,a1,thịt,/mit/,food,llm,false
+6,menu,n,a1,thực đơn,/ˈmɛn.ju/,food,llm,false
+6,milk,n,a1,sữa,/mɪlk/,food,llm,false
+7,rice,n,a1,"gạo, cơm",/ɹaɪs/,food,llm,false
+7,salt,n,a1,muối,/sɔlt/,food,llm,false
+7,soup,n,a1,món súp,/suːp/,food,llm,false
+7,wine,n,a1,rượu vang,/ˈwaɪ̯n/,food,llm,false
+7,apple,n,a1,quả táo,/ˈæpəl/,food,llm,false
+7,bread,n,a1,bánh mì,/bɹɛd/,food,llm,false
+7,cream,n,a1,kem tươi,/kɹim/,food,llm,false
+7,drink,n/v,a1,đồ uống; uống,/ˈdɹɪŋk/,food,llm,false
+7,fruit,n,a1,trái cây,/fɹut/,food,llm,false
+7,juice,n,a1,nước ép,/ˈd͡ʒʉs/,food,llm,false
+7,lunch,n,a1,bữa trưa,/lʌnt͡ʃ/,food,llm,false
+8,onion,n,a1,củ hành,/ˈʌnj(ə)n/,food,llm,false
+8,salad,n,a1,món salad,/ˈsæl.əd/,food,llm,false
+8,sugar,n,a1,đường,/ˈʃʊɡɚ/,food,llm,false
+8,water,n,a1,nước,/ˈwɔ.tɚ/,food,llm,false
+8,banana,n,a1,quả chuối,/bəˈnænə/,food,llm,false
+8,butter,n,a1,bơ,/ˈbʌtɚ/,food,llm,false
+8,carrot,n,a1,củ cà rốt,/ˈkæɹət/,food,llm,false
+8,cheese,n,a1,phô mai,/t͡ʃiz/,food,llm,false
+8,coffee,n,a1,cà phê,/ˈkɑfi/,food,llm,false
+8,dinner,n,a1,bữa tối,/ˈdɪnə/,food,llm,false
+8,pepper,n,a1,hạt tiêu; ớt chuông,/ˈpɛp.ɚ/,food,llm,false
+9,potato,n,a1,khoai tây,/pəˈteɪ.təʊ/,food,llm,false
+9,tomato,n,a1,quả cà chua,/təˈmɑː.təʊ/,food,llm,false
+9,chicken,n,a1,thịt gà; con gà,/ˈt͡ʃɪkɪn/,food,llm,false
+9,cooking,n,a1,việc nấu ăn,/ˈkuːkɪŋ/,food,llm,false
+9,sandwich,n,a1,bánh mì kẹp,/ˈsænˌ(d)wɪt͡ʃ/,food,llm,false
+9,breakfast,n,a1,bữa sáng,/ˈbɹeɪkˌfæst/,food,llm,false
+9,chocolate,n,a1,sô-cô-la,/ˈtʃɔk.(ə.)lɪt/,food,llm,false
+9,delicious,adj,a1,ngon,/dɪˈlɪ.ʃəs/,food,llm,false
+9,vegetable,n,a1,rau củ,/ˈvɛd͡ʒ.tə.bəl/,food,llm,false
+9,restaurant,n,a1,nhà hàng,/ˈɹɛst(ə)ɹɒnt/,food,llm,false
+10,TV,n,a1,tivi,/tivi/,home,llm,false
+10,bed,n,a1,cái giường,/bɛd/,home,llm,false
+10,box,n,a1,cái hộp,/bɑks/,home,llm,false
+10,cup,n,a1,cái tách,/ˈkʌp/,home,llm,false
+10,key,adj/n,a1,chìa khóa; chủ chốt,/ki/,home,llm,false
+10,bath,n,a1,bồn tắm,/bɑːθ/,home,llm,false
+10,door,n,a1,cánh cửa,/doɹ/,home,llm,false
+10,flat,adj/n,a1,căn hộ; phẳng,/ˈflæt/,home,llm,false
+10,home,adj/adv/n,a1,nhà,/həʊm/,home,llm,false
+10,room,n,a1,căn phòng,/ɹum/,home,llm,false
+10,wall,n,a1,bức tường,/wɔl/,home,llm,false
+11,chair,n,a1,cái ghế,/t͡ʃɛɚ/,home,llm,false
+11,clock,n,a1,đồng hồ treo tường,/klɑk/,home,llm,false
+11,floor,n,a1,sàn nhà; tầng,/floɹ/,home,llm,false
+11,glass,n,a1,cái ly; thủy tinh,/ɡlɑːs/,home,llm,false
+11,house,n,a1,ngôi nhà,/haʊ̯s/,home,llm,false
+11,phone,n/v,a1,điện thoại,/ˈfoʊ̯n/,home,llm,false
+11,table,n,a1,cái bàn,/ˈteɪbl̩/,home,llm,false
+11,bottle,n,a1,cái chai,/ˈbɑtəl/,home,llm,false
+11,garden,n,a1,khu vườn,/ˈɡɑɹ.d(ə)n/,home,llm,false
+11,shower,n,a1,vòi hoa sen,/ˈʃoʊ.ɚ/,home,llm,false
+11,toilet,n,a1,nhà vệ sinh,/ˈtɔɪ.lət/,home,llm,false
+12,window,n,a1,cửa sổ,/ˈwɪndə/,home,llm,false
+12,bedroom,n,a1,phòng ngủ,/ˈbɛdˌɹum/,home,llm,false
+12,kitchen,n,a1,nhà bếp,/ˈkɪt͡ʃ(ə)n/,home,llm,false
+12,machine,n,a1,cái máy,/məˈʃin/,home,llm,false
+12,bathroom,n,a1,phòng tắm,/ˈbæθˌɹum/,home,llm,false
+12,computer,n,a1,máy tính,/kəmˈpju.tɚ/,home,llm,false
+12,upstairs,adj/adv,a1,ở tầng trên,/ˌʌpˈstɛɹz/,home,llm,false
+12,apartment,n,a1,căn hộ,/əˈpɑɹt.mənt/,home,llm,false
+12,telephone,n/v,a1,điện thoại,/ˈtɛləˌfoʊn/,home,llm,false
+12,downstairs,adj/adv,a1,ở tầng dưới,/daʊnˈstɛɹz/,home,llm,false
+12,television,n,a1,tivi,/ˈtɛlɪˌvɪʒən/,home,llm,false
+13,bag,n,a1,cái túi,/bæɡ/,cloth,llm,false
+13,hat,n,a1,cái mũ,/hæt/,cloth,llm,false
+13,bill,n,a1,hóa đơn,/ˈbɪl/,cloth,llm,false
+13,boot,n,a1,giày ống,/but/,cloth,llm,false
+13,cent,n,a1,xu (đồng tiền),/sɛnt/,cloth,llm,false
+13,coat,n,a1,áo khoác,/ˈkoʊ̯t/,cloth,llm,false
+13,euro,n,a1,đồng euro,/ˈjʊəɹəʊ/,cloth,llm,false
+13,pair,n,a1,một cặp,/pɛɹ/,cloth,llm,false
+13,shoe,n,a1,chiếc giày,/ˈʃu/,cloth,llm,false
+13,wear,v,a1,mặc,/wɛ(ə)ɹ/,cloth,llm,false
+13,dress,n/v,a1,chiếc váy; mặc đồ,/dɹɛs/,cloth,llm,false
+13,jeans,n,a1,quần jean,/d͡ʒiːnz/,cloth,llm,false
+13,money,n,a1,tiền,/ˈmʌn.i/,cloth,llm,false
+13,pound,n,a1,đồng bảng Anh,/ˈpaʊ̯nd/,cloth,llm,false
+14,price,n,a1,giá cả,/ˈpɹaɪ̯s/,cloth,llm,false
+14,shirt,n,a1,áo sơ mi,/ʃɜɹt/,cloth,llm,false
+14,skirt,n,a1,chân váy,/skeːt/,cloth,llm,false
+14,style,n,a1,phong cách,/staɪl/,cloth,llm,false
+14,dollar,n,a1,đô la,/ˈdɑ.lɚ/,cloth,llm,false
+14,jacket,n,a1,áo khoác ngắn,/ˈd͡ʒæk.ɪt/,cloth,llm,false
+14,clothes,n,a1,quần áo,/kləʊ(ð)z/,cloth,llm,false
+14,product,n,a1,sản phẩm,/ˈpɹɑ.dəkt/,cloth,llm,false
+14,sweater,n,a1,áo len,/ˈswɛtɚ/,cloth,llm,false
+14,customer,n,a1,khách hàng,/ˈkʌs.tə.mɚ/,cloth,llm,false
+14,shopping,n,a1,việc mua sắm,/ˈʃɑpɪŋ/,cloth,llm,false
+14,trousers,n,a1,quần dài,/ˈtɹaʊzɚz/,cloth,llm,false
+14,umbrella,n,a1,cái ô,/ʌmˈbɹɛl.ə/,cloth,llm,false
+15,air,n,a1,không khí,/ˈɛɚ/,nat,llm,false
+15,cat,n,a1,con mèo,/ˈkæt/,nat,llm,false
+15,cow,n,a1,con bò cái,/kaʊ/,nat,llm,false
+15,dog,n,a1,con chó,/dɔɡ/,nat,llm,false
+15,pig,n,a1,con lợn,/ˈpɪɡ/,nat,llm,false
+15,sea,n,a1,biển,/siː/,nat,llm,false
+15,sun,n,a1,mặt trời,/sʌn/,nat,llm,false
+15,bird,n,a1,con chim,/ˈbɝd/,nat,llm,false
+15,farm,n/v,a1,nông trại,/ˈfɑɹm/,nat,llm,false
+15,fire,n,a1,lửa,/ˈfaɪ.ɚ/,nat,llm,false
+15,fish,n/v,a1,con cá; câu cá,/fɪʃ/,nat,llm,false
+15,land,n/v,a1,đất liền; hạ cánh,/lænd/,nat,llm,false
+15,lion,n,a1,con sư tử,/ˈlaɪən/,nat,llm,false
+15,star,n/v,a1,ngôi sao,/stɑː(ɹ)/,nat,llm,false
+16,tree,n,a1,cái cây,/tɹiː/,nat,llm,false
+16,beach,n,a1,bãi biển,/biːt͡ʃ/,nat,llm,false
+16,horse,n,a1,con ngựa,/hoɹs/,nat,llm,false
+16,mouse,n,a1,con chuột,/maʊs/,nat,llm,false
+16,plant,n/v,a1,cây trồng,/plæːnt/,nat,llm,false
+16,river,n,a1,dòng sông,/ˈɹɪvɚ/,nat,llm,false
+16,sheep,n,a1,con cừu,/ˈʃiːp/,nat,llm,false
+16,snake,n,a1,con rắn,/sneɪk/,nat,llm,false
+16,space,n,a1,không gian,/speɪs/,nat,llm,false
+16,animal,n,a1,động vật,/ˈænəməl/,nat,llm,false
+16,flower,n,a1,bông hoa,/ˈflaʊ̯.ɚ/,nat,llm,false
+16,island,n,a1,hòn đảo,/ˈaɪlənd/,nat,llm,false
+16,elephant,n,a1,con voi,/ˈɛləfənt/,nat,llm,false
+16,mountain,n,a1,ngọn núi,/ˈmaʊn.t(ə)n/,nat,llm,false
+17,hot,adj,a1,nóng,/hɑt/,wthr,llm,false
+17,ice,n,a1,"đá, băng",/aɪs/,wthr,llm,false
+17,red,adj/n,a1,màu đỏ,/ɹɛd/,wthr,llm,false
+17,blue,adj/n,a1,màu xanh dương,/bluː/,wthr,llm,false
+17,cold,adj/n,a1,lạnh,/koʊld/,wthr,llm,false
+17,grey,adj/n,a1,màu xám,/ɡɹeɪ/,wthr,llm,false
+17,pink,adj/n,a1,màu hồng,/ˈpɪŋk/,wthr,llm,false
+17,rain,n/v,a1,mưa,/ɹeɪn/,wthr,llm,false
+17,snow,n/v,a1,tuyết,/snoʊ̯/,wthr,llm,false
+17,warm,adj,a1,ấm áp,/wɔɹm/,wthr,llm,false
+17,black,adj/n,a1,màu đen,/blæk/,wthr,llm,false
+17,brown,adj/n,a1,màu nâu,/ˈbɹaʊ̯n/,wthr,llm,false
+18,green,adj/n,a1,màu xanh lá,/ˈɡɹiːn/,wthr,llm,false
+18,white,adj/n,a1,màu trắng,/ˈwaɪt/,wthr,llm,false
+18,autumn,n,a1,mùa thu,/ˈɔtəm/,wthr,llm,false
+18,colour,n,a1,màu sắc,,wthr,llm,false
+18,orange,adj/n,a1,quả cam; màu cam,/ˈɔɹənd͡ʒ/,wthr,llm,false
+18,purple,adj/n,a1,màu tím,/ˈpɝ.pl̩/,wthr,llm,false
+18,spring,n,a1,mùa xuân,/ˈspɹɪŋ/,wthr,llm,false
+18,summer,n,a1,mùa hè,/ˈsʌmɚ/,wthr,llm,false
+18,winter,n,a1,mùa đông,/ˈwɪntɚ/,wthr,llm,false
+18,yellow,adj/n,a1,màu vàng,/ˈjɛloʊ/,wthr,llm,false
+18,weather,n,a1,thời tiết,/ˈwɛðɚ/,wthr,llm,false
+19,age,n,a1,tuổi,/eɪd͡ʒ/,time,llm,false
+19,ago,adv,a1,trước đây,/əˈɡoʊ/,time,llm,false
+19,day,n,a1,ngày,/deɪ̯/,time,llm,false
+19,May,n/modal,a1,tháng Năm,/meɪ/,time,llm,false
+19,now,adv,a1,bây giờ,/naʊ/,time,llm,false
+19,one,det/num/pron,a1,số một,/wʌn/,time,llm,false
+19,six,num,a1,số sáu,/sɪks/,time,llm,false
+19,ten,num,a1,số mười,/tɛn/,time,llm,false
+19,two,num,a1,số hai,/tu/,time,llm,false
+19,date,n,a1,ngày tháng; buổi hẹn,/deɪt/,time,llm,false
+19,five,num,a1,số năm,/ˈfaɪ̯v/,time,llm,false
+19,four,num,a1,số bốn,/foɹ/,time,llm,false
+19,half,adv/det/n/pron,a1,một nửa,/ˈhæf/,time,llm,false
+20,hour,n,a1,giờ,/aː(ɹ)/,time,llm,false
+20,July,n,a1,tháng Bảy,,time,llm,false
+20,June,n,a1,tháng Sáu,,time,llm,false
+20,nine,num,a1,số chín,/naɪn/,time,llm,false
+20,past,adj/adv/n/prep,a1,quá khứ,/pɑːst/,time,llm,false
+20,time,n,a1,thời gian,/taɪm/,time,llm,false
+20,week,n,a1,tuần,/wiːk/,time,llm,false
+20,year,n,a1,năm,/ˈjɪɚ/,time,llm,false
+20,April,n,a1,tháng Tư,,time,llm,false
+20,eight,num,a1,số tám,/eɪt/,time,llm,false
+20,fifth,ord,a1,thứ năm,/fɪfθ/,time,llm,false
+20,fifty,num,a1,số năm mươi,/ˈfɪfti/,time,llm,false
+20,first,adv/det/n/ord,a1,đầu tiên,/fɚst/,time,llm,false
+21,forty,num,a1,số bốn mươi,/ˈfoɹti/,time,llm,false
+21,March,n,a1,tháng Ba,/mɑːtʃ/,time,llm,false
+21,month,n,a1,tháng,/mʌnθ/,time,llm,false
+21,night,n,a1,ban đêm,/ˈnaɪ̯t/,time,llm,false
+21,seven,num,a1,số bảy,/ˈsɛvən/,time,llm,false
+21,sixty,num,a1,số sáu mươi,/ˈsɪksti/,time,llm,false
+21,third,n/ord,a1,thứ ba,/θeːd/,time,llm,false
+21,three,num,a1,số ba,/θɹiː/,time,llm,false
+21,today,adv/n,a1,hôm nay,/təˈdeɪ/,time,llm,false
+21,August,n,a1,tháng Tám,/ɔˈɡʌst/,time,llm,false
+21,eighty,num,a1,số tám mươi,/ˈeɪ.ti/,time,llm,false
+21,eleven,num,a1,số mười một,/əˈlɛv.ən/,time,llm,false
+21,fourth,ord,a1,thứ tư,/fɔɹθ/,time,llm,false
+22,Friday,n,a1,thứ Sáu,,time,llm,false
+22,future,adj/n,a1,tương lai,/ˈfju.t͡ʃɚ/,time,llm,false
+22,minute,n,a1,phút,/ˈmɪnɪt/,time,llm,false
+22,moment,n,a1,khoảnh khắc,/ˈmoʊmənt/,time,llm,false
+22,Monday,n,a1,thứ Hai,,time,llm,false
+22,ninety,num,a1,số chín mươi,/ˈnaɪn.di/,time,llm,false
+22,number,n/v,a1,con số,/ˈnʌmbər/,time,llm,false
+22,period,n,a1,khoảng thời gian,/ˈpɪɚ.i.əd/,time,llm,false
+22,second,adv/det/n/ord,a1,thứ hai; giây,/ˈsɛk.ənd/,time,llm,false
+22,Sunday,n,a1,Chủ nhật,,time,llm,false
+22,thirty,num,a1,số ba mươi,/ˈθɝti/,time,llm,false
+22,twelve,num,a1,số mười hai,/twɛv/,time,llm,false
+23,twenty,num,a1,số hai mươi,/ˈtwɛnti/ [-ɛɾ̃i],time,llm,false
+23,century,n,a1,thế kỷ,/ˈsɛn.(t)ʃ(ə.)ɹi/,time,llm,false
+23,evening,n,a1,buổi tối,/ˈiv.nɪŋ/,time,llm,false
+23,fifteen,num,a1,số mười lăm,/ˈfɪf.tiːn/,time,llm,false
+23,hundred,num,a1,một trăm,/ˈhʌn.dɹəd/,time,llm,false
+23,January,n,a1,tháng Một,,time,llm,false
+23,million,num,a1,một triệu,/ˈmɪl.jən/,time,llm,false
+23,morning,n,a1,buổi sáng,/ˈmoɹnɪŋ/,time,llm,false
+23,October,n,a1,tháng Mười,,time,llm,false
+23,present,adj/n/v,a1,món quà; hiện tại,/ˈpɹɛz.ənt/,time,llm,false
+23,quarter,n,a1,một phần tư,/ˈk(w)ɔɹ.tɚ/,time,llm,false
+23,routine,n,a1,thói quen hằng ngày,/ɹuˈtin/,time,llm,false
+24,seventy,num,a1,số bảy mươi,/ˈsɛv.ən.ti/,time,llm,false
+24,sixteen,num,a1,số mười sáu,/ˈsɪks.tiːn/,time,llm,false
+24,tonight,adv/n,a1,tối nay,/təˈnaɪt/,time,llm,false
+24,Tuesday,n,a1,thứ Ba,,time,llm,false
+24,weekend,n,a1,cuối tuần,/wiːˈkɛnd/,time,llm,false
+24,birthday,n,a1,sinh nhật,/ˈbɜːθ.dei/,time,llm,false
+24,December,n,a1,tháng Mười Hai,,time,llm,false
+24,eighteen,num,a1,số mười tám,/ˈeɪ(t).tin/,time,llm,false
+24,February,n,a1,tháng Hai,,time,llm,false
+24,fourteen,num,a1,số mười bốn,/ˈfɔː.tiːn/,time,llm,false
+24,midnight,n,a1,nửa đêm,/ˈmɪd(ˌ)naɪt/,time,llm,false
+24,nineteen,num,a1,số mười chín,/ˈnaɪnˌtin/,time,llm,false
+25,November,n,a1,tháng Mười Một,,time,llm,false
+25,Saturday,n,a1,thứ Bảy,,time,llm,false
+25,thirteen,num,a1,số mười ba,/ˌθɝtˈtin/,time,llm,false
+25,thousand,num,a1,một nghìn,/ˈθaʊz(ə)n(d)/,time,llm,false
+25,Thursday,n,a1,thứ Năm,,time,llm,false
+25,tomorrow,adv/n,a1,ngày mai,/təˈmɑɹoʊ/,time,llm,false
+25,afternoon,n,a1,buổi chiều,/ˌæf.tɚˈnun/,time,llm,false
+25,beginning,n,a1,sự bắt đầu,/bɪˈɡɪn.ɪŋ/,time,llm,false
+25,September,n,a1,tháng Chín,,time,llm,false
+25,seventeen,num,a1,số mười bảy,/ˈsɛv.ən.tiːn/,time,llm,false
+25,Wednesday,n,a1,thứ Tư,,time,llm,false
+25,yesterday,adv/n,a1,hôm qua,/ˈjɛstɹdeɪ/,time,llm,false
+26,gym,n,a1,phòng tập thể dục,/d͡ʒɪm/,place,llm,false
+26,area,n,a1,khu vực,/ˈeɹi.ə/,place,llm,false
+26,bank,n,a1,ngân hàng,/ˈbæŋk/,place,llm,false
+26,cafe,n,a1,quán cà phê,/ˌkæˈfeɪ/,place,llm,false
+26,city,n,a1,thành phố,/ˈsɪti/,place,llm,false
+26,park,n/v,a1,công viên; đậu xe,/pɑɹk/,place,llm,false
+26,pool,n,a1,hồ bơi,/poːl/,place,llm,false
+26,shop,n/v,a1,cửa hàng,/ʃɑp/,place,llm,false
+26,town,n,a1,thị trấn,/ˈtaʊ̯n/,place,llm,false
+26,place,n,a1,nơi chốn,/ˈpleɪ̯s/,place,llm,false
+26,world,n,a1,thế giới,/wɝld/,place,llm,false
+26,centre,n,a1,trung tâm,/ˈsɛntɚ/,place,llm,false
+26,cinema,n,a1,rạp chiếu phim,/ˈsɪn.ə.mə/,place,llm,false
+27,market,n,a1,chợ,/ˈmɑːkɪt/,place,llm,false
+27,museum,n,a1,bảo tàng,/mjuˈziəm/,place,llm,false
+27,street,n,a1,đường phố,/stɹiːt/,place,llm,false
+27,address,n,a1,địa chỉ,/əˈdɹɛs/,place,llm,false
+27,capital,adj/n,a1,thủ đô,/ˈkæpɪtəl/,place,llm,false
+27,country,n,a1,đất nước,/ˈkʌntɹi/,place,llm,false
+27,library,n,a1,thư viện,/ˈlaɪˌbɹɛɹ.i/,place,llm,false
+27,theatre,n,a1,nhà hát,,place,llm,false
+27,village,n,a1,ngôi làng,/ˈvɪlɪd͡ʒ/,place,llm,false
+27,building,n,a1,tòa nhà,/ˈbɪl.dɪŋ/,place,llm,false
+27,hospital,n,a1,bệnh viện,/ˈhɑs.pɪ.tl̩/,place,llm,false
+27,supermarket,n,a1,siêu thị,/ˌsupɚˈmɑɹkət/,place,llm,false
+28,bus,n,a1,xe buýt,/bʌs/,trav,llm,false
+28,car,n,a1,xe hơi,/kɑɹ/,trav,llm,false
+28,map,n,a1,bản đồ,/mæp/,trav,llm,false
+28,bike,n,a1,xe đạp,/baɪk/,trav,llm,false
+28,boat,n,a1,con thuyền,/boʊ̯t/,trav,llm,false
+28,east,adj/adv/n,a1,hướng đông,/iːst/,trav,llm,false
+28,left,adj/adv/n,a1,bên trái,/ˈɫɛft/,trav,llm,false
+28,mile,n,a1,dặm,/maɪ.əl/,trav,llm,false
+28,road,n,a1,con đường,/ɹod/,trav,llm,false
+28,taxi,n,a1,xe taxi,/ˈtæksi/,trav,llm,false
+28,trip,n,a1,chuyến đi,/tɹɪp/,trav,llm,false
+29,west,adj/adv/n,a1,hướng tây,/wɛst/,trav,llm,false
+29,drive,n/v,a1,lái xe,/dɹaɪv/,trav,llm,false
+29,hotel,n,a1,khách sạn,/həʊˈtɛl/,trav,llm,false
+29,north,adj/adv/n,a1,hướng bắc,/noɹθ/,trav,llm,false
+29,plane,n,a1,máy bay,/pleɪn/,trav,llm,false
+29,south,adj/adv/n,a1,hướng nam,/ˈsaʊ̯θ/,trav,llm,false
+29,train,n/v,a1,tàu hỏa; huấn luyện,/ˈtɹeɪn/,trav,llm,false
+29,arrive,v,a1,đến nơi,/əˈɹaɪv/,trav,llm,false
+29,driver,n,a1,tài xế,/ˈdɹaɪ.və/,trav,llm,false
+29,flight,n,a1,chuyến bay,/ˈflaɪ̯t/,trav,llm,false
+29,ticket,n,a1,vé,/ˈtɪk.ɪt/,trav,llm,false
+30,airport,n,a1,sân bay,/ˈɛɹ.pɔɹt/,trav,llm,false
+30,bicycle,n,a1,xe đạp,/ˈbaɪsɪk(ə)l/,trav,llm,false
+30,holiday,n,a1,kỳ nghỉ,/ˈhɑləˌdeɪ/,trav,llm,false
+30,journey,n,a1,chuyến đi,/ˈd͡ʒɝni/,trav,llm,false
+30,station,n,a1,nhà ga,/ˈsteɪʃən/,trav,llm,false
+30,tourist,n,a1,khách du lịch,/ˈtʊəɹɪst/,trav,llm,false
+30,traffic,n,a1,giao thông,/ˈtɹæfɪk/,trav,llm,false
+30,visitor,n,a1,khách tham quan,/ˈvɪzɪtɚ/,trav,llm,false
+30,passport,n,a1,hộ chiếu,/ˈpɑːspɔːt/,trav,llm,false
+30,vacation,n,a1,kỳ nghỉ,/veɪˈkeɪ.ʃən/,trav,llm,false
+30,kilometre,n,a1,ki-lô-mét,/kɪˈlɑmɪtəɹ/,trav,llm,false
+31,job,n,a1,công việc,/dʒɑb/,work,llm,false
+31,pen,n,a1,cây bút mực,/pɛn/,work,llm,false
+31,book,n/v,a1,quyển sách,/bʊk/,work,llm,false
+31,desk,n,a1,bàn làm việc,/dɛsk/,work,llm,false
+31,exam,n,a1,kỳ thi,/ɪɡˈzæm/,work,llm,false
+31,list,n/v,a1,danh sách,/lɪst/,work,llm,false
+31,note,n,a1,ghi chú,/noʊ̯t/,work,llm,false
+31,page,n,a1,trang giấy,/peɪd͡ʒ/,work,llm,false
+31,test,n/v,a1,bài kiểm tra,/tɛst/,work,llm,false
+31,word,n,a1,từ,/wɜɹd/,work,llm,false
+31,chart,n,a1,biểu đồ,/t͡ʃɑɹt/,work,llm,false
+31,class,n,a1,lớp học,/klæs/,work,llm,false
+31,model,n,a1,người mẫu; mô hình,/ˈmɑ.dl̩/,work,llm,false
+32,nurse,n,a1,y tá,/nɝs/,work,llm,false
+32,paper,n,a1,giấy,/ˈpeɪ̯.pəɹ/,work,llm,false
+32,skill,n,a1,kỹ năng,/skɪl/,work,llm,false
+32,title,n,a1,tiêu đề,/ˈtaɪ̯.təl/,work,llm,false
+32,topic,n,a1,chủ đề,/ˈtɑpɪk/,work,llm,false
+32,answer,n/v,a1,câu trả lời; trả lời,/ˈæn.sɚ/,work,llm,false
+32,career,n,a1,sự nghiệp,/kəˈɹɪɹ/,work,llm,false
+32,course,n,a1,khóa học,/kɔɹs/,work,llm,false
+32,doctor,n,a1,bác sĩ,/ˈdɑktɚ/,work,llm,false
+32,farmer,n,a1,nông dân,/ˈfɑɹ.mɚ/,work,llm,false
+32,lesson,n,a1,bài học,/ˈlɛs.ən/,work,llm,false
+32,letter,n,a1,lá thư; chữ cái,/ˈlɛtɚ/,work,llm,false
+32,office,n,a1,văn phòng,/ˈɔ.fɪs/,work,llm,false
+33,pencil,n,a1,bút chì,/ˈpɛnsəl/,work,llm,false
+33,phrase,n,a1,cụm từ,/ˈfɹeɪ̯z/,work,llm,false
+33,police,n,a1,cảnh sát,/pəˈliːs/,work,llm,false
+33,report,n/v,a1,bản báo cáo,/ɹɪˈpoɹt/,work,llm,false
+33,school,n,a1,trường học,/skul/,work,llm,false
+33,waiter,n,a1,bồi bàn,/ˈwæɪ̯təː/,work,llm,false
+33,worker,n,a1,công nhân,/ˈwɜː.kə/,work,llm,false
+33,writer,n,a1,nhà văn,/ˈɹaɪ.təɹ/,work,llm,false
+33,college,n,a1,trường cao đẳng,/ˈkɑ.lɪdʒ/,work,llm,false
+33,company,n,a1,công ty,/ˈkʌmp(ə)ni/,work,llm,false
+33,example,n,a1,ví dụ,/əɡˈzæm.pəl/,work,llm,false
+33,history,n,a1,lịch sử,/ˈhɪs.tə.ɹi/,work,llm,false
+33,meaning,n,a1,ý nghĩa,/ˈmi.nɪŋ/,work,llm,false
+34,meeting,n,a1,cuộc họp,/ˈmiːtɪŋ/,work,llm,false
+34,project,n,a1,dự án,/ˈpɹɑˌd͡ʒɛkt/,work,llm,false
+34,reading,n,a1,việc đọc,/ˈɹiːdɪŋ/,work,llm,false
+34,science,n,a1,khoa học,/ˈsaɪ.əns/,work,llm,false
+34,student,n,a1,"học sinh, sinh viên",/ˈstjuː.dn̩t/,work,llm,false
+34,subject,n,a1,môn học; chủ đề,/ˈsʌb.d͡ʒɛkt/,work,llm,false
+34,teacher,n,a1,giáo viên,/ˈti.t͡ʃɚ/,work,llm,false
+34,writing,n,a1,việc viết,/ˈɹaɪtɪŋ/,work,llm,false
+34,business,n,a1,việc kinh doanh,/ˈbɪz.nɪs/,work,llm,false
+34,dialogue,n,a1,đoạn hội thoại,/ˈdaɪəˌlɑɡ/,work,llm,false
+34,homework,n,a1,bài tập về nhà,/ˈhoʊmˌwɝk/,work,llm,false
+34,language,n,a1,ngôn ngữ,/ˈlæŋ.ɡwɪd͡ʒ/,work,llm,false
+35,practice,n,a1,sự luyện tập,/ˈpɹæktɪs/,work,llm,false
+35,question,n/v,a1,câu hỏi,/ˈkwɛs.tʃən/,work,llm,false
+35,sentence,n,a1,câu; bản án,/ˈsɛn.təns/,work,llm,false
+35,spelling,n,a1,chính tả,/ˈspɛl.ɪŋ/,work,llm,false
+35,classroom,n,a1,phòng học,/ˈklɑːsɹʊm/,work,llm,false
+35,geography,n,a1,địa lý,/dʒiˈɒɡɹəfi/,work,llm,false
+35,interview,n/v,a1,buổi phỏng vấn,/ˈɪn.(t)ɚ.vju/,work,llm,false
+35,paragraph,n,a1,đoạn văn,/ˈpɛɹəɡɹæf/,work,llm,false
+35,policeman,n,a1,cảnh sát nam,/pəˈliːsmən/,work,llm,false
+35,scientist,n,a1,nhà khoa học,/ˈsaɪəntəst/,work,llm,false
+35,dictionary,n,a1,từ điển,/ˈdɪk.ʃə.nə.ɹi/,work,llm,false
+35,university,n,a1,trường đại học,/ˌjunəˈvərsədi/,work,llm,false
+36,CD,n,a1,đĩa CD,,fun,llm,false
+36,art,n,a1,nghệ thuật,/ɑɹt/,fun,llm,false
+36,DVD,n,a1,đĩa DVD,,fun,llm,false
+36,fun,adj/n,a1,niềm vui,/fʌn/,fun,llm,false
+36,ball,n,a1,quả bóng,/bɔl/,fun,llm,false
+36,band,n,a1,ban nhạc,/bænd/,fun,llm,false
+36,blog,n,a1,nhật ký mạng,/blɑɡ/,fun,llm,false
+36,club,n,a1,câu lạc bộ,/klʌb/,fun,llm,false
+36,film,n/v,a1,bộ phim,/fɪlm/,fun,llm,false
+36,game,n,a1,trò chơi,/ɡeɪm/,fun,llm,false
+36,news,n,a1,tin tức,/nuːz/,fun,llm,false
+36,post,n/v,a1,bưu điện; đăng bài,/poʊst/,fun,llm,false
+37,song,n,a1,bài hát,/sɔŋ/,fun,llm,false
+37,team,n,a1,đội,/ˈtiːm/,fun,llm,false
+37,text,n/v,a1,văn bản; nhắn tin,/tɛkst/,fun,llm,false
+37,actor,n,a1,nam diễn viên,/ˈæk.tɚ/,fun,llm,false
+37,dance,n/v,a1,điệu nhảy; nhảy múa,/dæns/,fun,llm,false
+37,email,n/v,a1,thư điện tử,/ˈiˌmeɪl/,fun,llm,false
+37,event,n,a1,sự kiện,/ɪˈvɛnt/,fun,llm,false
+37,hobby,n,a1,sở thích,/ˈhɒ.bi/,fun,llm,false
+37,match,n/v,a1,trận đấu; que diêm,/mæt͡ʃ/,fun,llm,false
+37,movie,n,a1,bộ phim,/ˈmuːvi/,fun,llm,false
+37,music,n,a1,âm nhạc,/ˈmju.zɪk/,fun,llm,false
+38,party,n,a1,bữa tiệc,/ˈpɑɹti/,fun,llm,false
+38,photo,n,a1,bức ảnh,/ˈfoʊ̯.toʊ̯/,fun,llm,false
+38,piano,n,a1,đàn piano,/piˈænoʊ/,fun,llm,false
+38,radio,n,a1,đài phát thanh,/ˈɹeɪ.diˌoʊ/,fun,llm,false
+38,sport,n,a1,thể thao,/spoɹt/,fun,llm,false
+38,story,n,a1,câu chuyện,/ˈstɔ.ɹi/,fun,llm,false
+38,video,n,a1,đoạn phim,/ˈvɪd.i.oʊ/,fun,llm,false
+38,artist,n,a1,nghệ sĩ,/ˈɑɹ.tɪst/,fun,llm,false
+38,camera,n,a1,máy ảnh,/ˈkæməɹə/,fun,llm,false
+38,dancer,n,a1,vũ công,/ˈdænsəɹ/,fun,llm,false
+38,guitar,n,a1,đàn ghi-ta,/ɡɪˈtɑɹ/,fun,llm,false
+39,player,n,a1,người chơi,/ˈpleɪ.ɚ/,fun,llm,false
+39,reader,n,a1,người đọc,/ˈɹi.dɚ/,fun,llm,false
+39,singer,n,a1,ca sĩ,/ˈsɪŋ.ɚ/,fun,llm,false
+39,tennis,n,a1,môn quần vợt,/ˈtɛnɪs/,fun,llm,false
+39,actress,n,a1,nữ diễn viên,/ˈæk.tɹɪs/,fun,llm,false
+39,article,n,a1,bài báo,/ˈɑɹtɪkəl/,fun,llm,false
+39,concert,n,a1,buổi hòa nhạc,/kənˈsɜːt/,fun,llm,false
+39,dancing,n,a1,việc khiêu vũ,/ˈdɑːns.ɪŋ/,fun,llm,false
+39,message,n,a1,tin nhắn,/ˈmɛs.ɪdʒ/,fun,llm,false
+39,picture,n,a1,bức tranh,/ˈpɪk.t͡ʃɚ/,fun,llm,false
+39,website,n,a1,trang web,/ˈwɛb(ˌ)saɪt/,fun,llm,false
+40,activity,n,a1,hoạt động,/ækˈtɪv.ə.ti/,fun,llm,false
+40,exercise,n/v,a1,bài tập; tập thể dục,/ˈɛk.sɚ.saɪz/,fun,llm,false
+40,festival,n,a1,lễ hội,/ˈfɛstəvəl/,fun,llm,false
+40,football,n,a1,bóng đá,/ˈfʊt.bɔl/,fun,llm,false
+40,internet,n,a1,mạng internet,/ˈɪntɚˌnɛt/,fun,llm,false
+40,magazine,n,a1,tạp chí,/ˌmæɡəˈziːn/,fun,llm,false
+40,painting,n,a1,bức tranh,/ˈpeɪn.tɪŋ/,fun,llm,false
+40,swimming,n,a1,môn bơi lội,/ˈswɪmɪŋ/,fun,llm,false
+40,newspaper,n,a1,tờ báo,/ˈn(j)usˌpeɪpɚ/,fun,llm,false
+40,programme,n,a1,chương trình,/ˈpɹoʊˌɡɹæm/,fun,llm,false
+40,photograph,n/v,a1,bức ảnh; chụp ảnh,/ˈfoʊ.təˌɡɹæf/,fun,llm,false
+41,sad,adj,a1,buồn,/ˈsæd/,feel,llm,false
+41,love,n/v,a1,tình yêu; yêu,/ˈlʌv/,feel,llm,false
+41,angry,adj,a1,tức giận,/ˈæŋ.ɡɹi/,feel,llm,false
+41,bored,adj,a1,chán,/bɔɹd/,feel,llm,false
+41,happy,adj,a1,"vui vẻ, hạnh phúc",/ˈhæpi/,feel,llm,false
+41,tired,adj,a1,mệt mỏi,,feel,llm,false
+41,afraid,adj,a1,sợ hãi,/əˈfɹeɪd/,feel,llm,false
+41,hungry,adj,a1,đói,/ˈhʌŋ.ɡɹi/,feel,llm,false
+41,excited,adj,a1,hào hứng,/ɪkˈsaɪ.tɪd/,feel,llm,false
+41,feeling,n,a1,cảm giác,/ˈfiː.lɪŋ/,feel,llm,false
+41,thirsty,adj,a1,khát,/ˈθɝs.ti/,feel,llm,false
+41,interested,adj,a1,"quan tâm, thích thú",/ˈɪnt.əˌɹɛs.tɪd/,feel,llm,false
+42,be,v/aux,a1,"thì, là, ở",/ˈbiː/,verb,llm,false
+42,do,v/aux,a1,làm,/də/,verb,llm,false
+42,go,v,a1,đi,/ɡoʊ/,verb,llm,false
+42,add,v,a1,thêm vào,/æd/,verb,llm,false
+42,ask,v,a1,hỏi,/æsk/,verb,llm,false
+42,buy,v,a1,mua,/baɪ/,verb,llm,false
+42,cut,v,a1,cắt,/kʌt/,verb,llm,false
+42,die,v,a1,chết,/daɪ/,verb,llm,false
+42,eat,v,a1,ăn,/it/,verb,llm,false
+42,end,n/v,a1,kết thúc; phần cuối,/ɛnd/,verb,llm,false
+42,fly,n/v,a1,con ruồi; bay,/flaɪ/,verb,llm,false
+42,get,v,a1,"lấy, nhận được",/ɡɛt/,verb,llm,false
+43,let,v,a1,"để cho, cho phép",/lɛt/,verb,llm,false
+43,lie,v,a1,nói dối; nằm,/laɪ̯/,verb,llm,false
+43,pay,n/v,a1,trả tiền,/peɪ/,verb,llm,false
+43,put,v,a1,"đặt, để",/pʊt/,verb,llm,false
+43,run,n/v,a1,chạy,/ɹʌn/,verb,llm,false
+43,say,v,a1,nói,/seɪ/,verb,llm,false
+43,see,v,a1,nhìn thấy,/si/,verb,llm,false
+43,sit,v,a1,ngồi,/sɪt/,verb,llm,false
+43,try,v,a1,"thử, cố gắng",/tɹaɪ/,verb,llm,false
+43,use,n/v,a1,sử dụng,/jus/,verb,llm,false
+43,win,v,a1,chiến thắng,/ˈwɪn/,verb,llm,false
+43,born,v,a1,được sinh ra,/boɹn/,verb,llm,false
+44,call,n/v,a1,cuộc gọi; gọi,/kɔl/,verb,llm,false
+44,come,v,a1,đến,/kʌm/,verb,llm,false
+44,cook,n/v,a1,đầu bếp; nấu ăn,/kʊk/,verb,llm,false
+44,cost,n/v,a1,chi phí; có giá,/kɔst/,verb,llm,false
+44,draw,v,a1,vẽ,/dɹɔ/,verb,llm,false
+44,fall,n/v,a1,ngã; mùa thu (Mỹ),/fɔl/,verb,llm,false
+44,feel,v,a1,cảm thấy,/ˈfiːl/,verb,llm,false
+44,fill,v,a1,lấp đầy,/fɪl/,verb,llm,false
+44,find,v,a1,tìm thấy,/ˈfaɪ̯nd/,verb,llm,false
+44,give,v,a1,"cho, tặng",/ˈɡɪv/,verb,llm,false
+44,grow,v,a1,lớn lên; trồng,/ˈɡɹoʊ/,verb,llm,false
+44,hate,v,a1,ghét,/heɪt/,verb,llm,false
+45,have,v/aux,a1,có,/ˈhæv/,verb,llm,false
+45,hear,v,a1,nghe thấy,/ˈhɪɚ/,verb,llm,false
+45,help,n/v,a1,giúp đỡ,/hɛlp/,verb,llm,false
+45,hope,n/v,a1,hy vọng,/ˈhoʊp/,verb,llm,false
+45,join,v,a1,tham gia,/ˈd͡ʒɔɪn/,verb,llm,false
+45,keep,v,a1,giữ,/kiːp/,verb,llm,false
+45,know,v,a1,biết,/noʊ/,verb,llm,false
+45,like,prep/v,a1,thích; giống như,/laɪ̯k/,verb,llm,false
+45,live,v,a1,sống,/ˈlɪv/,verb,llm,false
+45,look,n/v,a1,nhìn,/lʊk/,verb,llm,false
+45,lose,v,a1,mất; thua,/luz/,verb,llm,false
+45,make,v,a1,"làm, tạo ra",/meɪk/,verb,llm,false
+46,mean,v,a1,có nghĩa là,/min/,verb,llm,false
+46,meet,v,a1,gặp gỡ,/mit/,verb,llm,false
+46,miss,v,a1,nhớ; lỡ,/mɪs/,verb,llm,false
+46,move,v,a1,di chuyển,/muːv/,verb,llm,false
+46,need,n/v,a1,cần,/nid/,verb,llm,false
+46,plan,n/v,a1,kế hoạch,/plæn/,verb,llm,false
+46,play,n/v,a1,chơi,/pleɪ̯/ [pɫ̥eɪ̯ ~ pʰɫeɪ̯],verb,llm,false
+46,read,v,a1,đọc,/ɹid/,verb,llm,false
+46,ride,n/v,a1,"cưỡi, đi (xe)",/ɹaɪd/,verb,llm,false
+46,sell,v,a1,bán,/sɛl/,verb,llm,false
+46,send,v,a1,gửi,/sɛnd/,verb,llm,false
+46,show,n/v,a1,chương trình; cho xem,/ʃoʊ/,verb,llm,false
+47,sing,v,a1,hát,/ˈsɪŋ/,verb,llm,false
+47,stay,n/v,a1,ở lại,/steɪ/,verb,llm,false
+47,stop,n/v,a1,dừng lại,/stɑp/,verb,llm,false
+47,swim,v,a1,bơi,/swɪm/,verb,llm,false
+47,take,v,a1,"lấy, mang đi",/ˈteɪ̯k/,verb,llm,false
+47,talk,n/v,a1,nói chuyện,/tɔk/,verb,llm,false
+47,tell,v,a1,"kể, bảo",/tɛl/,verb,llm,false
+47,turn,n/v,a1,rẽ; lượt,/tɜɹn/,verb,llm,false
+47,wait,n/v,a1,chờ đợi,/weɪt/,verb,llm,false
+47,wake,v,a1,thức dậy,/ˈweɪ̯k/,verb,llm,false
+47,walk,n/v,a1,đi bộ,/wɔk/,verb,llm,false
+47,want,v,a1,muốn,/wɑnt/,verb,llm,false
+48,wash,n/v,a1,rửa,/wɑʃ/,verb,llm,false
+48,work,n/v,a1,công việc; làm việc,/wɝk/,verb,llm,false
+48,agree,v,a1,đồng ý,/əˈɡɹi/,verb,llm,false
+48,begin,v,a1,bắt đầu,/bɪˈɡɪn/,verb,llm,false
+48,break,n/v,a1,nghỉ giải lao; làm vỡ,/bɹeɪk/,verb,llm,false
+48,bring,v,a1,mang đến,/ˈbɹɪŋ/,verb,llm,false
+48,build,v,a1,xây dựng,/bɪld/,verb,llm,false
+48,carry,v,a1,"mang, xách",/ˈkæɹ.i/,verb,llm,false
+48,check,n/v,a1,kiểm tra,/t͡ʃɛk/,verb,llm,false
+48,climb,v,a1,leo trèo,/ˈklaɪ̯m/,verb,llm,false
+48,enjoy,v,a1,"thích thú, tận hưởng",/ɛnˈd͡ʒɔɪ/,verb,llm,false
+48,guess,n/v,a1,đoán,/ɡɛs/,verb,llm,false
+49,laugh,n/v,a1,cười,/læf/,verb,llm,false
+49,learn,v,a1,học,/lɝn/,verb,llm,false
+49,leave,v,a1,rời đi; để lại,/ˈliːv/,verb,llm,false
+49,order,n/v,a1,đơn hàng; gọi món,/ˈoɹ.dɚ/,verb,llm,false
+49,paint,n/v,a1,sơn; vẽ tranh,/peɪnt/,verb,llm,false
+49,relax,v,a1,thư giãn,/ɹɪˈlæks/,verb,llm,false
+49,share,v,a1,chia sẻ,/ʃɛɚ/,verb,llm,false
+49,sleep,n/v,a1,ngủ,/sliːp/,verb,llm,false
+49,speak,v,a1,nói,/spik/,verb,llm,false
+49,spell,v,a1,đánh vần,/spɛl/,verb,llm,false
+49,spend,v,a1,tiêu tiền; dành thời gian,/spɛnd/,verb,llm,false
+49,stand,v,a1,đứng,/ˈstænd/,verb,llm,false
+50,start,n/v,a1,bắt đầu,/stɑɹt/,verb,llm,false
+50,study,n/v,a1,học tập,/ˈstʌd.i/,verb,llm,false
+50,teach,v,a1,dạy,/ˈtiːt͡ʃ/,verb,llm,false
+50,thank,v,a1,cảm ơn,/ˈfaŋk/,verb,llm,false
+50,think,v,a1,nghĩ,/ˈθɪŋk/,verb,llm,false
+50,visit,n/v,a1,thăm viếng,/ˈvɪzɪt/,verb,llm,false
+50,watch,n/v,a1,đồng hồ đeo tay; xem,/ˈwɑt͡ʃ/,verb,llm,false
+50,write,v,a1,viết,/ɹaɪt/,verb,llm,false
+50,become,v,a1,"trở nên, trở thành",/bɪˈkʌm/,verb,llm,false
+50,change,n/v,a1,sự thay đổi; thay đổi,/ˈt͡ʃeɪnd͡ʒ/,verb,llm,false
+50,choose,v,a1,chọn,/t͡ʃuz/,verb,llm,false
+50,create,v,a1,tạo ra,/kɹiːˈeɪt/,verb,llm,false
+51,decide,v,a1,quyết định,/dɪˈsaɪd/,verb,llm,false
+51,design,n/v,a1,thiết kế,/dɪˈzaɪn/,verb,llm,false
+51,finish,n/v,a1,kết thúc,/ˈfɪnɪʃ/,verb,llm,false
+51,follow,v,a1,đi theo,/ˈfɑloʊ/,verb,llm,false
+51,forget,v,a1,quên,/fɚˈɡɛt/,verb,llm,false
+51,happen,v,a1,xảy ra,/ˈhæpən/,verb,llm,false
+51,listen,v,a1,lắng nghe,/ˈlɪsən/,verb,llm,false
+51,prefer,v,a1,thích hơn,,verb,llm,false
+51,repeat,v,a1,lặp lại,/ɹɪˈpit/,verb,llm,false
+51,return,n/v,a1,trở về,/ɹɪˈtɝn/,verb,llm,false
+51,travel,n/v,a1,du lịch,/ˈtɹævəl/,verb,llm,false
+51,believe,v,a1,tin tưởng,/bɪˈliv/,verb,llm,false
+52,compare,v,a1,so sánh,/kəmˈpɛɚ/,verb,llm,false
+52,discuss,v,a1,thảo luận,/dɪˈskʌs/,verb,llm,false
+52,explain,v,a1,giải thích,/ɪkˈspleɪn/,verb,llm,false
+52,imagine,v,a1,tưởng tượng,/ɪˈmæd͡ʒ.ɪn/,verb,llm,false
+52,improve,v,a1,cải thiện,/ɪmˈpɹuːv/,verb,llm,false
+52,include,v,a1,bao gồm,/ɪnˈkluːd/,verb,llm,false
+52,prepare,v,a1,chuẩn bị,/pɹɪˈpɛ(ə)ɹ/,verb,llm,false
+52,describe,v,a1,miêu tả,/dɪˈskɹaɪb/,verb,llm,false
+52,practise,v,a1,luyện tập,/ˈpɹæktɪs/,verb,llm,false
+52,remember,v,a1,nhớ,/ɹɪˈmɛm.bɚ/,verb,llm,false
+52,introduce,v,a1,giới thiệu,/ˌɪntɹəˈdus/,verb,llm,false
+52,understand,v,a1,hiểu,/ˌʌndəˈstænd/,verb,llm,false
+53,bad,adj,a1,"xấu, tệ",/bæd/,adj,llm,false
+53,big,adj,a1,"to, lớn",/bɪɡ/,adj,llm,false
+53,fat,adj/n,a1,béo; mỡ,/ˈfæt/,adj,llm,false
+53,new,adj,a1,mới,/nu/,adj,llm,false
+53,old,adj,a1,"già, cũ",/əʊld/,adj,llm,false
+53,own,adj/pron/v,a1,của riêng; sở hữu,/oʊn/,adj,llm,false
+53,best,adj/adv/n,a1,tốt nhất,/bɛst/,adj,llm,false
+53,busy,adj,a1,bận rộn,/ˈbɪz.i/,adj,llm,false
+53,cool,adj,a1,"mát mẻ, ngầu",/kʲɪul/,adj,llm,false
+53,dark,adj/n,a1,tối,/dɑɹk/,adj,llm,false
+53,dear,adj/excl,a1,thân mến,/dɪɹ/,adj,llm,false
+53,easy,adj,a1,dễ,/ˈiːzi/,adj,llm,false
+54,fast,adj/adv,a1,nhanh,/fæst/,adj,llm,false
+54,fine,adj,a1,"tốt, ổn",/ˈfaɪ̯n/,adj,llm,false
+54,free,adj/adv,a1,miễn phí; tự do,/fɹi/,adj,llm,false
+54,full,adj,a1,đầy; no,/fʊl/,adj,llm,false
+54,good,adj/n,a1,tốt,/ɡʊd/,adj,llm,false
+54,hard,adj/adv,a1,cứng; khó; chăm chỉ,/hɑɹd/,adj,llm,false
+54,high,adj/adv,a1,cao,/haɪ/,adj,llm,false
+54,kind,n,a1,loại; tử tế,/kaɪnd/,adj,llm,false
+54,last,adv/det/n/v,a1,cuối cùng; kéo dài,/læst/,adj,llm,false
+54,late,adj/adv,a1,muộn,/leɪt/,adj,llm,false
+54,long,adj/adv,a1,dài,/lɑŋ/,adj,llm,false
+54,main,adj,a1,chính,/meɪn/,adj,llm,false
+55,nice,adj,a1,"tốt đẹp, dễ chịu",/naɪ̯s/,adj,llm,false
+55,open,adj/v,a1,mở,/ˈoʊ.pən/,adj,llm,false
+55,poor,adj,a1,nghèo,/pʊɚ/,adj,llm,false
+55,real,adj,a1,thật,/ɹiːl/,adj,llm,false
+55,rich,adj,a1,giàu,/ˈɹɪt͡ʃ/,adj,llm,false
+55,same,adj/adv/pron,a1,giống nhau,/seɪm/,adj,llm,false
+55,slow,adj,a1,chậm,/sləʊ/,adj,llm,false
+55,sure,adj/adv,a1,chắc chắn,/ʃʊɹ/,adj,llm,false
+55,tall,adj,a1,cao,/tɔl/,adj,llm,false
+55,true,adj,a1,đúng sự thật,/tɹuː/,adj,llm,false
+55,cheap,adj,a1,rẻ,/ˈt͡ʃiːp/,adj,llm,false
+55,clean,adj/v,a1,sạch; lau dọn,/kliːn/,adj,llm,false
+56,close,adj/v,a1,gần; đóng lại,/ˈkloʊ̯z/,adj,llm,false
+56,dirty,adj,a1,bẩn,/ˈdɝti/,adj,llm,false
+56,early,adj/adv,a1,sớm,/ˈɝli/,adj,llm,false
+56,extra,adj,a1,thêm,/ˈɛkstɹə/,adj,llm,false
+56,false,adj,a1,sai,/fɔls/,adj,llm,false
+56,final,adj/n,a1,cuối cùng,/ˈfaɪn(ə)l/,adj,llm,false
+56,funny,adj,a1,buồn cười,/ˈfʌni/,adj,llm,false
+56,great,adj,a1,tuyệt vời,/ˈɡɹeɪt/,adj,llm,false
+56,large,adj,a1,rộng lớn,/lɑɹd͡ʒ/,adj,llm,false
+56,light,adj/n/v,a1,ánh sáng; nhẹ,/laɪt/,adj,llm,false
+56,local,adj,a1,địa phương,/ˈloʊ.kl̩/,adj,llm,false
+56,quick,adj,a1,nhanh,/kwɪk/,adj,llm,false
+57,quiet,adj,a1,yên tĩnh,/ˈkwaɪ̯.ət/,adj,llm,false
+57,ready,adj,a1,sẵn sàng,/ˈɹɛd.i/,adj,llm,false
+57,right,adj/adv/n,a1,đúng; bên phải,/ɹaɪt/,adj,llm,false
+57,short,adj,a1,"ngắn, thấp",/ʃoɹt/,adj,llm,false
+57,small,adj,a1,nhỏ,/smɔl/,adj,llm,false
+57,wrong,adj,a1,sai,/ˈɹɔŋ/,adj,llm,false
+57,young,adj,a1,trẻ,/jʌŋ/,adj,llm,false
+57,better,adj/adv,a1,tốt hơn,/ˈbɛt.ə/,adj,llm,false
+57,boring,adj,a1,nhàm chán,/ˈboɹ.ɪŋ/,adj,llm,false
+57,common,adj,a1,phổ biến,/ˈkɑmən/,adj,llm,false
+57,famous,adj,a1,nổi tiếng,/ˈfeɪ.məs/,adj,llm,false
+58,little,adj/adv/det/pron,a1,"nhỏ, một chút",/ˈlɪ.tl̩/,adj,llm,false
+58,modern,adj,a1,hiện đại,/ˈmɑ.dɚn/,adj,llm,false
+58,online,adj/adv,a1,trực tuyến,/ˈɑnlaɪn/,adj,llm,false
+58,pretty,adj/adv,a1,xinh xắn,/ˈpɹɪt.i/,adj,llm,false
+58,strong,adj,a1,mạnh mẽ,/stɹɒŋ/,adj,llm,false
+58,useful,adj,a1,hữu ích,/ˈjusfəl/,adj,llm,false
+58,amazing,adj,a1,"tuyệt vời, đáng kinh ngạc",/əˈmeɪ.zɪŋ/,adj,llm,false
+58,correct,adj/v,a1,đúng; sửa lỗi,/kəˈɹɛkt/,adj,llm,false
+58,healthy,adj,a1,khỏe mạnh,/ˈhɛl.θi/,adj,llm,false
+58,natural,adj,a1,tự nhiên,/ˈnæt͡ʃ.(ə.)ɹəl/,adj,llm,false
+58,perfect,adj,a1,hoàn hảo,/ˈpɝ.fɪkt/,adj,llm,false
+59,popular,adj,a1,phổ biến,/ˈpɑ.pjə.lɚ/,adj,llm,false
+59,similar,adj,a1,tương tự,/ˈsɪm.ə.lɚ/,adj,llm,false
+59,special,adj,a1,đặc biệt,/ˈspɛʃ.əl/,adj,llm,false
+59,complete,adj/v,a1,hoàn chỉnh; hoàn thành,/kəmˈpliːt/,adj,llm,false
+59,exciting,adj,a1,"thú vị, gay cấn",/ɪkˈsʌɪtɪŋ/,adj,llm,false
+59,friendly,adj,a1,thân thiện,/ˈfɹɛnd.li/,adj,llm,false
+59,negative,adj,a1,tiêu cực,/ˈnɛɡ.ə.tɪv/,adj,llm,false
+59,opposite,adj/adv/n/prep,a1,đối diện; trái ngược,/ˈɑ.pə.sɪt/,adj,llm,false
+59,personal,adj,a1,cá nhân,/ˈpɜɹ.sə.nəl/,adj,llm,false
+59,positive,adj,a1,tích cực,/ˈpɑzɪtɪv/,adj,llm,false
+59,possible,adj,a1,có thể xảy ra,/ˈpɑ.sə.bəl/,adj,llm,false
+60,terrible,adj,a1,khủng khiếp,/ˈtɛɹəbəl/,adj,llm,false
+60,beautiful,adj,a1,đẹp,/ˈbjuːtɪ.fəl/,adj,llm,false
+60,dangerous,adj,a1,nguy hiểm,/ˈdeɪn.d͡ʒ(ə.)ɹəs/,adj,llm,false
+60,different,adj,a1,khác nhau,/ˈdɪf.ə.ɹənt/,adj,llm,false
+60,difficult,adj,a1,khó,/ˈdɪfɪkəlt/,adj,llm,false
+60,expensive,adj,a1,đắt,/ɪkˈspɛn.sɪv/,adj,llm,false
+60,fantastic,adj,a1,tuyệt diệu,/fænˈtæs.tɪk/,adj,llm,false
+60,favourite,adj/n,a1,yêu thích,/ˈfeɪv.ɹɪt/,adj,llm,false
+60,important,adj,a1,quan trọng,/ɪmˈpɔɹ.tənt/,adj,llm,false
+60,wonderful,adj,a1,tuyệt diệu,/ˈwʌndɚfl̩/,adj,llm,false
+60,interesting,adj,a1,thú vị,/ˈɪntɹəstɪŋ/,adj,llm,false
+61,as,adv/conj/prep,a1,"như, khi",/əz/,func,llm,false
+61,at,prep,a1,"tại, ở",/æt/,func,llm,false
+61,by,prep,a1,"bởi, bằng, gần",/baɪ/,func,llm,false
+61,he,pron,a1,"anh ấy, ông ấy",/ˈhiː/,func,llm,false
+61,hi,excl,a1,chào,/haɪ/,func,llm,false
+61,if,conj,a1,nếu,/ɪf/,func,llm,false
+61,in,adv/prep,a1,trong,/ən/,func,llm,false
+61,it,pron,a1,nó,/ɪt/,func,llm,false
+61,me,pron,a1,tôi (tân ngữ),/mɪ/,func,llm,false
+61,my,det,a1,của tôi,/mɪ/,func,llm,false
+61,no,det/excl,a1,không,/noʊ/,func,llm,false
+61,of,prep,a1,của,/ɒv/,func,llm,false
+61,oh,excl,a1,ồ,/əʊ/,func,llm,false
+62,OK,adj/adv/excl,a1,được rồi,/ˌəʊˈkeɪ/,func,llm,false
+62,on,adv/prep,a1,trên,/än/,func,llm,false
+62,or,conj,a1,hoặc,/ə(ɹ)/,func,llm,false
+62,so,adv/conj,a1,vì vậy; rất,/sʌo/,func,llm,false
+62,to,to/prep,a1,"đến, để",/t̪oː/,func,llm,false
+62,up,adv/prep,a1,lên,/ʌp/,func,llm,false
+62,us,pron,a1,chúng tôi (tân ngữ),/əs/,func,llm,false
+62,we,pron,a1,chúng tôi,/wi/,func,llm,false
+62,all,adv/det/pron,a1,tất cả,/ɔl/,func,llm,false
+62,and,conj,a1,và,/ˈænd/,func,llm,false
+62,any,adv/det/pron,a1,bất kỳ,/ɛni/,func,llm,false
+62,but,conj,a1,nhưng,/ˈbʌt/,func,llm,false
+62,bye,excl,a1,tạm biệt,/baɪ/,func,llm,false
+63,can,n/modal,a1,có thể; cái lon,/kæn/,func,llm,false
+63,far,adv,a1,xa,/fɑɹ/,func,llm,false
+63,few,adj/det/pron,a1,"vài, một ít",/fjuː/,func,llm,false
+63,for,prep,a1,"cho, để",/fɔɹ/,func,llm,false
+63,her,det/pron,a1,cô ấy; của cô ấy,/ˈhɝ/,func,llm,false
+63,hey,excl,a1,"này, ê",/heɪ/,func,llm,false
+63,him,pron,a1,anh ấy (tân ngữ),/ˈhɪm/,func,llm,false
+63,his,det/pron,a1,của anh ấy,/ɪz/ [ɪ̈z],func,llm,false
+63,how,adv,a1,như thế nào,/haʊ/,func,llm,false
+63,its,det,a1,của nó,/ɪts/,func,llm,false
+63,lot,adv/det/pron,a1,nhiều,/lɑt/,func,llm,false
+63,not,adv,a1,không,/nɑt/,func,llm,false
+63,off,adv/prep,a1,tắt; rời khỏi,/ɔf/,func,llm,false
+64,our,det,a1,của chúng tôi,/ˈaʊə(ɹ)/,func,llm,false
+64,out,adv/prep,a1,ra ngoài,/ˈaʊ̯t/,func,llm,false
+64,she,pron,a1,"cô ấy, bà ấy",/ʃiː/,func,llm,false
+64,the,art,a1,(mạo từ xác định),/ðə/,func,llm,false
+64,too,adv,a1,cũng; quá,/tuː/,func,llm,false
+64,who,pron,a1,ai,/hu/,func,llm,false
+64,why,adv,a1,tại sao,/waɪ̯/,func,llm,false
+64,yes,excl,a1,"vâng, có",/jɛs/,func,llm,false
+64,you,pron,a1,bạn,/jə/,func,llm,false
+64,also,adv,a1,cũng,/ˈɑlt.soʊ/,func,llm,false
+64,away,adv,a1,"xa, đi khỏi",/əˈweɪ/,func,llm,false
+64,both,det/pron,a1,cả hai,/boʊθ/,func,llm,false
+64,down,adv/prep,a1,xuống,/ˈdaʊ̯n/,func,llm,false
+65,each,adv/det/pron,a1,mỗi,/iːt͡ʃ/,func,llm,false
+65,else,adv,a1,"khác, nữa",/ɛls/,func,llm,false
+65,even,adv,a1,thậm chí,/ˈiːvən/,func,llm,false
+65,ever,adv,a1,"từng, bao giờ",/ˈɛvə(ɹ)/,func,llm,false
+65,from,prep,a1,từ,/ˈfɹʌm/,func,llm,false
+65,here,adv,a1,ở đây,/ˈhɪɚ̯/,func,llm,false
+65,into,prep,a1,vào trong,/ˈɪn.tʊv/,func,llm,false
+65,just,adv,a1,"chỉ, vừa mới",/d͡ʒʌst/,func,llm,false
+65,many,det/pron,a1,nhiều,/ˈmɛni/,func,llm,false
+65,more,adv/det/pron,a1,nhiều hơn,/moɹ/,func,llm,false
+65,most,adv/det/pron,a1,"nhiều nhất, hầu hết",/ˈmoʊst/,func,llm,false
+65,much,adv/det/pron,a1,nhiều,/mʌt͡ʃ/,func,llm,false
+66,must,modal,a1,phải,/məst/,func,llm,false
+66,near,adj/adv/prep,a1,gần,/nɪɹ/,func,llm,false
+66,next,adj/adv,a1,tiếp theo,/nɛkst/,func,llm,false
+66,once,adv,a1,một lần,/wʌn(t)s/,func,llm,false
+66,only,adj/adv,a1,chỉ,/ˈoʊn.li/,func,llm,false
+66,over,adv/prep,a1,phía trên; kết thúc,/ˈoʊ̯.vɚ/,func,llm,false
+66,some,det/pron,a1,một vài,/sʌm/,func,llm,false
+66,soon,adv,a1,"sớm, chẳng bao lâu",/sun/,func,llm,false
+66,than,conj/prep,a1,hơn (so sánh),/ðæn/,func,llm,false
+66,that,conj/det/pron,a1,"đó, kia; rằng",/ðət/,func,llm,false
+66,them,pron,a1,họ (tân ngữ),/ˈðɛm/,func,llm,false
+66,then,adv,a1,sau đó,/ðɛn/,func,llm,false
+67,they,pron,a1,"họ, chúng nó",/ˈðeɪ̯/,func,llm,false
+67,this,det/pron,a1,này,/ðɪs/,func,llm,false
+67,very,adv,a1,rất,/ˈvɛɹi/,func,llm,false
+67,well,adj/adv/excl,a1,tốt; giỏi,/ˈwɛl/,func,llm,false
+67,what,det/pron,a1,cái gì,/ʍɒt/,func,llm,false
+67,when,adv/conj/pron,a1,khi nào,/ˈwɛn/,func,llm,false
+67,will,modal,a1,sẽ,/wɪl/,func,llm,false
+67,with,prep,a1,cùng với,/wɪθ/,func,llm,false
+67,yeah,excl,a1,ừ,/jɛ(ə)/,func,llm,false
+67,your,det,a1,của bạn,/jɔɹ/,func,llm,false
+67,about,adv/prep,a1,khoảng; về,/əˈbaʊ̯t/,func,llm,false
+67,above,adv/prep,a1,ở trên,/əˈbʌv/,func,llm,false
+68,after,adv/conj/prep,a1,"sau, sau khi",/ˈæftəɹ/,func,llm,false
+68,again,adv,a1,"lại, một lần nữa",/əˈɡɛn/,func,llm,false
+68,below,adv/prep,a1,bên dưới,/bɪˈloʊ/,func,llm,false
+68,could,modal,a1,có thể (quá khứ),/kəd/,func,llm,false
+68,every,det,a1,"mọi, mỗi",/ˈɛv.(ə.)ɹi/,func,llm,false
+68,front,adj/n,a1,phía trước,/fɹʌnt/,func,llm,false
+68,hello,excl/n,a1,xin chào,/hɛˈloʊ/,func,llm,false
+68,later,adj/adv,a1,sau đó,/ˈleɪ.tə/,func,llm,false
+68,maybe,adv,a1,có lẽ,/ˈmeɪ.bi/,func,llm,false
+68,never,adv,a1,không bao giờ,/ˈnɛv.ɚ/,func,llm,false
+68,often,adv,a1,thường xuyên,/ˈɔfən/,func,llm,false
+68,other,adj/pron,a1,khác,/ˈʌðɚ/,func,llm,false
+69,quite,adv,a1,khá,/kwaɪ̯t/,func,llm,false
+69,sorry,adj/excl,a1,xin lỗi,/ˈsɑɹi/,func,llm,false
+69,still,adv,a1,vẫn,/ˈstɪl/,func,llm,false
+69,their,det,a1,của họ,/ðɜː(ɹ)/,func,llm,false
+69,there,adv,a1,ở đó,/ðə(ɹ)/,func,llm,false
+69,twice,adv,a1,hai lần,/twaɪs/,func,llm,false
+69,under,adv/prep,a1,dưới,/ˈʌndɚ/,func,llm,false
+69,until,conj/prep,a1,cho đến khi,/ˈʌntəl/,func,llm,false
+69,where,adv/conj,a1,ở đâu,/ˈwɛə/,func,llm,false
+69,which,det/pron,a1,cái nào,/wɪt͡ʃ/,func,llm,false
+69,would,modal,a1,sẽ (giả định),/wəd/,func,llm,false
+69,across,adv/prep,a1,"băng qua, ngang qua",/əˈkɹɔs/,func,llm,false
+70,always,adv,a1,luôn luôn,/ˈɔl.weɪz/,func,llm,false
+70,anyone,pron,a1,bất cứ ai,/ˈɛ.niˌwʌn/,func,llm,false
+70,around,adv/prep,a1,xung quanh,/əˈɹaʊnd/,func,llm,false
+70,before,adv/conj/prep,a1,"trước, trước khi",/bɪˈfoɹ/,func,llm,false
+70,behind,adv/prep,a1,phía sau,/ˈbiˌhaɪnd/,func,llm,false
+70,cannot,modal,a1,không thể,/ˈkænɑt/,func,llm,false
+70,during,prep,a1,trong suốt,/ˈdjʊə.ɹɪŋ/,func,llm,false
+70,enough,adv/det/pron,a1,đủ,/ɪˈnʌf/,func,llm,false
+70,nobody,pron,a1,không ai,/ˈnəʊ.bɒd.i/,func,llm,false
+70,please,excl/v,a1,làm ơn,/pliz/,func,llm,false
+70,really,adv,a1,thật sự,/ˈɹɪə.li/,func,llm,false
+70,should,modal,a1,nên,/ʃəd/,func,llm,false
+71,thanks,excl/n,a1,cảm ơn,/ˈθæŋks/,func,llm,false
+71,another,det/pron,a1,một cái khác,/əˈnʌð.ə(ɹ)/,func,llm,false
+71,because,conj,a1,bởi vì,/bɪkəz/,func,llm,false
+71,between,adv/prep,a1,giữa (hai thứ),/bəˈtwin/,func,llm,false
+71,goodbye,excl/n,a1,tạm biệt,/ɡʊdˈbaɪ/,func,llm,false
+71,however,adv,a1,tuy nhiên,/haʊˈɛvɚ/,func,llm,false
+71,nothing,pron,a1,không có gì,/ˈnʌθɪŋ/,func,llm,false
+71,outside,adj/adv/n/prep,a1,bên ngoài,/aʊtˈsaɪd/,func,llm,false
+71,quickly,adv,a1,một cách nhanh chóng,/ˈkwɪk.li/,func,llm,false
+71,someone,pron,a1,một người nào đó,/ˈsʌmwʌn/,func,llm,false
+71,through,adv/prep,a1,xuyên qua,/θɹu/,func,llm,false
+71,usually,adv,a1,thường thường,/ˈjuːʒʊəli/,func,llm,false
+72,welcome,adj/excl/n/v,a1,chào mừng,/ˈwɛl.kəm/,func,llm,false
+72,without,prep,a1,không có,/wɪðˈaʊt/,func,llm,false
+72,anything,pron,a1,bất cứ thứ gì,/ˈɛn.i.θɪŋ/,func,llm,false
+72,everyone,pron,a1,mọi người,/ˈɛv.ɹiː.wʌn/,func,llm,false
+72,probably,adv,a1,có lẽ là,/ˈpɹɑ.bə.bli/,func,llm,false
+72,somebody,pron,a1,một ai đó,/ˈsʌmbˌʌdi/,func,llm,false
+72,together,adv,a1,cùng nhau,/tʊˈɡɛðɚ/,func,llm,false
+72,yourself,pron,a1,chính bạn,/jəˈsɛlf/,func,llm,false
+72,everybody,pron,a1,mọi người,/ˈɛv.ɹiˌbɑdi/,func,llm,false
+72,something,pron,a1,một thứ gì đó,/ˈsʌm.θɪŋ/,func,llm,false
+72,sometimes,adv,a1,đôi khi,/ˈsʌm.taɪmz/,func,llm,false
+72,everything,pron,a1,mọi thứ,/ˈɛv(ə)ɹiˌθɪŋ/,func,llm,false
+73,way,n,a1,con đường; cách,/weɪ/,misc,llm,false
+73,card,n,a1,tấm thẻ,/kɑːd/,misc,llm,false
+73,fact,n,a1,sự thật,/fækt/,misc,llm,false
+73,form,n/v,a1,mẫu đơn; hình thành,/fɔɹm/,misc,llm,false
+73,idea,n,a1,ý tưởng,/aɪ̯ˈdi.ə/,misc,llm,false
+73,life,n,a1,cuộc sống,/ˈlaɪ̯f/,misc,llm,false
+73,line,n,a1,đường kẻ; hàng,/laɪn/,misc,llm,false
+73,name,n/v,a1,tên; đặt tên,/neɪm/,misc,llm,false
+73,part,n,a1,bộ phận,/pɑɹt/,misc,llm,false
+73,rule,n,a1,quy tắc,/ɹul/,misc,llm,false
+73,type,n,a1,loại,/taɪp/,misc,llm,false
+73,group,n,a1,nhóm,/ɡɹup/,misc,llm,false
+73,metre,n,a1,mét,/ˈmiːtəɹ/,misc,llm,false
+74,piece,n,a1,"mảnh, miếng",/piːs/,misc,llm,false
+74,point,n,a1,điểm; chỉ vào,/pɔɪnt/,misc,llm,false
+74,sound,n/v,a1,âm thanh,/ˈsaʊ̯nd/,misc,llm,false
+74,thing,n,a1,"đồ vật, việc",/θɪŋ/,misc,llm,false
+74,action,n,a1,hành động,/ˈækʃən/,misc,llm,false
+74,advice,n,a1,lời khuyên,/ədˈvaɪs/,misc,llm,false
+74,detail,n,a1,chi tiết,/ˈdiː.teɪl/,misc,llm,false
+74,member,n,a1,thành viên,/ˈmɛm.bɚ/,misc,llm,false
+74,object,n,a1,đồ vật,/ˈɑb.d͡ʒɛkt/,misc,llm,false
+74,reason,n,a1,lý do,/ˈɹiːzən/,misc,llm,false
+74,result,n,a1,kết quả,/ɹɪˈzʌlt/,misc,llm,false
+74,culture,n,a1,văn hóa,/ˈkʌlt͡ʃɚ/,misc,llm,false
+75,mistake,n,a1,lỗi sai,/mɪˈsteɪk/,misc,llm,false
+75,opinion,n,a1,ý kiến,/əˈpɪn.jən/,misc,llm,false
+75,problem,n,a1,vấn đề,/ˈpɹɑbləm/,misc,llm,false
+75,section,n,a1,phần,/ˈsɛkʃən/,misc,llm,false
+75,success,n,a1,sự thành công,/səkˈsɛs/,misc,llm,false
+75,interest,n/v,a1,sự quan tâm,/ˈɪn.tɹɛst/,misc,llm,false
+75,situation,n,a1,tình huống,/ˌsɪt.juːˈeɪ.ʃən/,misc,llm,false
+75,statement,n,a1,lời tuyên bố,/ˈsteɪtmənt/,misc,llm,false
+75,difference,n,a1,sự khác biệt,/ˈdɪf.(ə.)ɹəns/,misc,llm,false
+75,description,n,a1,sự miêu tả,/dɪˈskɹɪpʃən/,misc,llm,false
+75,information,n,a1,thông tin,/ˌɪn.fɚˈmeɪ.ʃn̩/,misc,llm,false
+75,conversation,n,a1,cuộc trò chuyện,/ˌkɑn.vəɹˈseɪ.ʃən/,misc,llm,false
