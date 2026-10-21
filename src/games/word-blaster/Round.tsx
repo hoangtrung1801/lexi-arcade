@@ -203,13 +203,13 @@ export function Round({ config, unitIdx, unitCount, setName, onFinish, onExit }:
             setOverlay("paused");
           }}
         >
-          <PixelIcon name="close" size={14} color="#f6f1ff" />
+          <PixelIcon name="close" size={14} color="#f4f4f4" />
         </SideButton>
         <SideButton label="Tạm dừng" onClick={() => pause("paused")}>
-          <PixelIcon name="pause" size={14} color="#f6f1ff" />
+          <PixelIcon name="pause" size={14} color="#f4f4f4" />
         </SideButton>
         <SideButton label="Phát âm từ" onClick={speakWord}>
-          <PixelIcon name="speaker" size={18} color="#f6f1ff" />
+          <PixelIcon name="speaker" size={18} color="#f4f4f4" />
         </SideButton>
         <SideButton
           label={showMeaning ? "Ẩn nghĩa tiếng Việt" : "Hiện nghĩa tiếng Việt"}
@@ -223,7 +223,7 @@ export function Round({ config, unitIdx, unitCount, setName, onFinish, onExit }:
           pressed={sound}
           onClick={() => setSettings({ sound: !sound })}
         >
-          <PixelIcon name="note" size={14} color={sound ? "#0f2d2c" : "#a39bd2"} />
+          <PixelIcon name="note" size={14} color={sound ? "#12302b" : "#94b0c2"} />
         </SideButton>
       </div>
 
@@ -338,7 +338,7 @@ function SideButton({
         pressed === undefined
           ? "hb-btn-grey"
           : pressed
-            ? "hb-btn-green text-[#0f2d2c]"
+            ? "hb-btn-green text-[#12302b]"
             : "hb-btn-dark text-mist"
       }`}
     >

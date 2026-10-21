@@ -38,7 +38,7 @@ export function LoginPage() {
   };
 
   return (
-    <main className="mx-auto flex max-w-[600px] flex-col gap-6 p-8 pt-16">
+    <main className="mx-auto flex h-full max-w-[600px] flex-col justify-center gap-6 overflow-y-auto px-8 py-4">
       <PixelPanel variant="ornate" className="flex flex-col gap-5 px-7 py-6">
         <div className="flex items-center gap-4">
           <PixelIcon name="logo" size={52} />

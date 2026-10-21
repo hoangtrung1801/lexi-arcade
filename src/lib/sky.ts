@@ -8,37 +8,37 @@ import { bayer, hex } from "./pixelart";
 type RGB = [number, number, number];
 
 const SKY = [
-  "#05040f",
-  "#080617",
-  "#0b0920",
-  "#0f0c29",
-  "#140f33",
-  "#1a123c",
-  "#211544",
-  "#2a184c",
-  "#341b53",
-  "#3f1e58",
-  "#4b215b",
-  "#58255c",
+  "#0b0c15",
+  "#0f101c",
+  "#131523",
+  "#17192a",
+  "#1a1c2c",
+  "#1c2034",
+  "#1e243d",
+  "#212947",
+  "#232d52",
+  "#262f5c",
+  "#283365",
+  "#29366f",
 ].map(hex);
 const NEBULA: [RGB, number][] = [
-  [hex("#2a2a7a"), 0.22],
-  [hex("#4a2a86"), 0.32],
-  [hex("#8a3a8c"), 0.38],
-  [hex("#3fb0c8"), 0.3],
+  [hex("#29366f"), 0.22],
+  [hex("#3b5dc9"), 0.28],
+  [hex("#5d275d"), 0.38],
+  [hex("#257179"), 0.3],
 ];
 const PLANET = [
-  "#1a0d2e",
-  "#2e1240",
-  "#4a1a52",
-  "#6e2460",
-  "#9a3566",
-  "#c95368",
-  "#ec7f6a",
-  "#ffb487",
-  "#ffe0b0",
+  "#121420",
+  "#1f1a33",
+  "#3d1f45",
+  "#5d275d",
+  "#85304f",
+  "#b13e53",
+  "#ef7d57",
+  "#f7a466",
+  "#ffcd75",
 ].map(hex);
-const RING = ["#3a2f6e", "#6a5c9e", "#9a8fd0", "#cfc6f2"].map(hex);
+const RING = ["#384165", "#566c86", "#98abc7", "#ccdeec"].map(hex);
 
 function rand(seed: number) {
   let s = seed >>> 0;
@@ -210,8 +210,8 @@ export function paintHills(w: number, h: number, seed = 11) {
   const ctx = cv.getContext("2d");
   if (!ctx) return cv;
   const layers = [
-    { base: h * 0.42, amp: h * 0.3, freq: 1 / 90, body: "#140e2e", rim: "#3a2a68" },
-    { base: h * 0.7, amp: h * 0.22, freq: 1 / 60, body: "#0a0819", rim: "#251b4a" },
+    { base: h * 0.42, amp: h * 0.3, freq: 1 / 90, body: "#12172a", rim: "#333c5f" },
+    { base: h * 0.7, amp: h * 0.22, freq: 1 / 60, body: "#0a0d17", rim: "#222843" },
   ];
   layers.forEach((l, li) => {
     for (let x = 0; x < w; x++) {
@@ -249,8 +249,8 @@ export function makeStars(w: number, h: number, count: number, seed = 5): Star[]
   });
 }
 
-const STAR_RAMP = ["#3a3170", "#6a5c9e", "#a99fe0", "#e6e0ff", "#ffffff"];
-const SPARK = ["#6fd0ff", "#c2f4ff"];
+const STAR_RAMP = ["#3a4367", "#566c86", "#a8bfd7", "#e6e0ff", "#ffffff"];
+const SPARK = ["#73eff7", "#c6fbff"];
 
 /** Draws stars at time `t` (seconds); `drift` is horizontal art pixels per second for depth 0. */
 export function drawStars(

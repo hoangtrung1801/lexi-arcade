@@ -34,11 +34,11 @@ export function ProfilePage() {
   };
 
   return (
-    <main className="mx-auto flex max-w-[640px] flex-col gap-5 p-8">
+    <main className="mx-auto flex h-full max-w-[640px] flex-col justify-center gap-5 overflow-y-auto px-8 py-4">
       <PixelPanel variant="ornate" className="flex flex-col gap-4 px-6">
         <div className="flex items-center gap-4">
           <div className="hb-inset h-[88px] w-[88px] p-0">
-            <div className="flex h-full w-full items-center justify-center bg-[radial-gradient(circle_at_40%_35%,#2f5bd0,transparent_75%)]">
+            <div className="flex h-full w-full items-center justify-center bg-[radial-gradient(circle_at_40%_35%,#3b5dc9,transparent_75%)]">
               <PixelIcon name="avatar" size={52} />
             </div>
           </div>
@@ -46,7 +46,7 @@ export function ProfilePage() {
             <div className="t-lg t-bold truncate">{me.displayName}</div>
             <div className="t-sm truncate text-mist">{me.email}</div>
           </div>
-          <span className="hb-chip-green font-px t-md ml-auto self-start px-2 text-[#0f2d2c]">
+          <span className="hb-chip-green font-px t-md ml-auto self-start px-2 text-[#12302b]">
             LV {me.level}
           </span>
         </div>

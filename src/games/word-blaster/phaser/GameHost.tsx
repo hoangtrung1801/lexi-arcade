@@ -39,7 +39,7 @@ export function GameHost({ engine, bus, showMeaning }: Props) {
         height: FIELD_H,
         pixelArt: true,
         roundPixels: true,
-        backgroundColor: "#06050d",
+        backgroundColor: "#0a0b14",
         scale: { mode: Phaser.Scale.FIT, autoCenter: Phaser.Scale.CENTER_BOTH },
         scene: [],
         audio: { noAudio: true },

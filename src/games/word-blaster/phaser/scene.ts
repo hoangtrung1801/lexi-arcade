@@ -22,9 +22,9 @@ const BOOM_SIZE = 44;
 /** The ship hovers just above the shield line, clear of the HUD on the deck. */
 const SHIP_Y = GROUND_Y - 34;
 
-const FIRE = [0xfff6c4, 0xffd866, 0xff9d4f, 0xf05d6c, 0xc43356, 0x6fd0ff];
-const STAR_COLORS = [0x3a3170, 0x6a5c9e, 0xa99fe0, 0xe6e0ff];
-const BOLT = { w: "#ffffff", C: "#6fd0ff", c: "#3f8ff0" };
+const FIRE = [0xfff3cf, 0xffcd75, 0xef7d57, 0xf05d6c, 0xb13e53, 0x73eff7];
+const STAR_COLORS = [0x3a4367, 0x566c86, 0xa8bfd7, 0xe6e0ff];
+const BOLT = { w: "#ffffff", C: "#73eff7", c: "#41a6f6" };
 
 interface WordView {
   img: Phaser.GameObjects.Image;
@@ -62,27 +62,27 @@ function paintGround(w: number, h: number) {
   cv.height = h;
   const ctx = cv.getContext("2d");
   if (!ctx) return cv;
-  const rows = ["#2f5bd0", "#6fd0ff", "#c2f4ff", "#3f8ff0", "#1d3383", "#4a3f7a", "#2b2550"];
+  const rows = ["#3b5dc9", "#73eff7", "#c6fbff", "#41a6f6", "#29366f", "#4a5878", "#333c57"];
   rows.forEach((c, y) => {
     ctx.fillStyle = c;
     ctx.fillRect(0, y, w, 1);
   });
-  ctx.fillStyle = "#1a1533";
+  ctx.fillStyle = "#1f2238";
   ctx.fillRect(0, rows.length, w, h - rows.length);
   for (let y = rows.length; y < h; y++) {
-    ctx.fillStyle = y % 2 ? "#17122e" : "#1a1533";
+    ctx.fillStyle = y % 2 ? "#161a2a" : "#1f2238";
     ctx.fillRect(0, y, w, 1);
   }
   for (let x = 0; x < w; x += 40) {
-    ctx.fillStyle = "#0c0a1a";
+    ctx.fillStyle = "#0d0e18";
     ctx.fillRect(x, rows.length, 1, h);
-    ctx.fillStyle = "#3a3170";
+    ctx.fillStyle = "#3a4367";
     ctx.fillRect(x + 1, rows.length, 1, h);
-    ctx.fillStyle = "#6a5c9e";
+    ctx.fillStyle = "#566c86";
     ctx.fillRect(x + 4, rows.length + 3, 1, 1);
     ctx.fillRect(x + 35, rows.length + 3, 1, 1);
     for (let k = 0; k < 3; k++) {
-      ctx.fillStyle = (x / 40 + k) % 3 === 0 ? "#ffd866" : "#2f5bd0";
+      ctx.fillStyle = (x / 40 + k) % 3 === 0 ? "#ffcd75" : "#3b5dc9";
       ctx.fillRect(x + 12 + k * 6, rows.length + 9, 3, 2);
     }
   }
@@ -123,7 +123,7 @@ export class WordBlasterScene extends Phaser.Scene {
 
   create() {
     this.makeTextures();
-    this.cameras.main.setBackgroundColor("#06050d");
+    this.cameras.main.setBackgroundColor("#0a0b14");
     this.add.image(0, 0, "wb-sky").setOrigin(0).setScale(S).setDepth(-10);
     this.add
       .image(FIELD_W - 250, 30, "wb-planet")
@@ -138,7 +138,7 @@ export class WordBlasterScene extends Phaser.Scene {
       .setScale(S)
       .setDepth(2);
     this.shield = this.add
-      .rectangle(0, GROUND_Y - 2 * S, FIELD_W, 3 * S, 0x6fd0ff)
+      .rectangle(0, GROUND_Y - 2 * S, FIELD_W, 3 * S, 0x73eff7)
       .setOrigin(0)
       .setAlpha(0.35)
       .setDepth(2);
@@ -153,11 +153,11 @@ export class WordBlasterScene extends Phaser.Scene {
     });
 
     this.add
-      .ellipse(FIELD_W / 2, GROUND_Y - S, 80, 10, 0x6fd0ff, 0.3)
+      .ellipse(FIELD_W / 2, GROUND_Y - S, 80, 10, 0x73eff7, 0.3)
       .setDepth(5)
       .setName("shipGlow");
-    this.flame = this.add.rectangle(0, 0, 3 * S, 3 * S, 0xff9d4f).setDepth(5);
-    this.flameCore = this.add.rectangle(0, 0, S, 2 * S, 0xfff6c4).setDepth(5);
+    this.flame = this.add.rectangle(0, 0, 3 * S, 3 * S, 0xef7d57).setDepth(5);
+    this.flameCore = this.add.rectangle(0, 0, S, 2 * S, 0xfff3cf).setDepth(5);
     this.ship = this.add
       .image(FIELD_W / 2, SHIP_Y, "wb-ship")
       .setScale(S)
@@ -258,7 +258,7 @@ export class WordBlasterScene extends Phaser.Scene {
     this.flame
       .setPosition(sx, tail + S * (flicker ? 2 : 1))
       .setSize(3 * S, (flicker ? 4 : 3) * S)
-      .setFillStyle(flicker ? 0xff9d4f : 0xffd866);
+      .setFillStyle(flicker ? 0xef7d57 : 0xffcd75);
     this.flameCore.setPosition(sx, tail + S);
     const glow = this.children.getByName("shipGlow") as Phaser.GameObjects.Ellipse | null;
     glow?.setPosition(sx, GROUND_Y - S);
@@ -280,12 +280,12 @@ export class WordBlasterScene extends Phaser.Scene {
       .text(0, 0, w.word.meaningVi, {
         fontFamily: MEANING_FONT,
         fontSize: "12px",
-        color: "#cfc8ef",
+        color: "#c5d6e3",
       })
       .setOrigin(0.5, 0)
       .setScale(S)
       .setDepth(4)
-      .setShadow(1, 1, "#0c0a1a", 0, false, true);
+      .setShadow(1, 1, "#0d0e18", 0, false, true);
     return { img, tex, key, meaning, typed: 0, lock: false, w: width * S, kick: 0 };
   }
 
@@ -332,7 +332,7 @@ export class WordBlasterScene extends Phaser.Scene {
     const right = v.img.x + v.w / 2;
     const pulse = Math.floor(time / 160) % 2 ? 2 * S : 3 * S;
     const L = 5 * S;
-    this.aim.fillStyle(0xffd866, 1);
+    this.aim.fillStyle(0xffcd75, 1);
     for (const [x, y, dx, dy] of [
       [left - pulse, top - pulse, 1, 1],
       [right + pulse, top - pulse, -1, 1],
@@ -450,7 +450,7 @@ export class WordBlasterScene extends Phaser.Scene {
       b.img.setPosition(snap(b.img.x + (dx / dist) * step), snap(b.img.y + (dy / dist) * step));
       b.trail.forEach(([x, y], i) => {
         const size = (i < 2 ? 2 : 1) * S;
-        this.trails.fillStyle(i < 2 ? 0x6fd0ff : 0x2f5bd0, 1 - i * 0.2);
+        this.trails.fillStyle(i < 2 ? 0x73eff7 : 0x3b5dc9, 1 - i * 0.2);
         this.trails.fillRect(snap(x) - size / 2, snap(y) - size / 2, size, size);
       });
       return true;
@@ -462,7 +462,7 @@ export class WordBlasterScene extends Phaser.Scene {
     const y = v.img.y;
     if (b.finalPoints === null) {
       v.kick = 3 * S;
-      this.burst(x, y + PLATE_H / 2, [0xffffff, 0xc2f4ff, 0x6fd0ff], 5, 22);
+      this.burst(x, y + PLATE_H / 2, [0xffffff, 0xc6fbff, 0x73eff7], 5, 22);
       return;
     }
     this.ghosts.delete(b.uid);
@@ -478,10 +478,10 @@ export class WordBlasterScene extends Phaser.Scene {
       .text(x + 12, y - 30, `+${points}`, {
         fontFamily: WORD_FONT,
         fontSize: "12px",
-        color: "#b4f57a",
+        color: "#a7f070",
       })
       .setScale(S)
-      .setShadow(1, 1, "#0c0a1a", 0, false, true)
+      .setShadow(1, 1, "#0d0e18", 0, false, true)
       .setDepth(9);
     this.tweens.add({
       targets: label,
@@ -499,9 +499,9 @@ export class WordBlasterScene extends Phaser.Scene {
     this.tweens.add({ targets: this.flash, alpha: 0, duration: 280 });
     this.cameras.main.shake(200, 0.007);
     this.shield.setFillStyle(0xf05d6c).setAlpha(0.8);
-    this.time.delayedCall(260, () => this.shield.setFillStyle(0x6fd0ff));
+    this.time.delayedCall(260, () => this.shield.setFillStyle(0x73eff7));
     const x = Phaser.Math.Clamp(word.x, 30, FIELD_W - 30);
-    this.burst(x, GROUND_Y, [0xf05d6c, 0xc43356, 0xff9d4f, 0x7a1d3f], 14, 50);
+    this.burst(x, GROUND_Y, [0xf05d6c, 0xb13e53, 0xef7d57, 0x7a1d3f], 14, 50);
     this.explode(x, GROUND_Y - 6);
   }
 }

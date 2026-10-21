@@ -34,7 +34,7 @@ function ToastItem({ id, text, tone }: { id: number; text: string; tone: keyof t
   return (
     <div role="status" className="hb-panel hb-lift flex items-center gap-3 px-3 py-1">
       <span className={`${TONE[tone].chip} flex h-8 w-8 items-center justify-center`}>
-        <PixelIcon name={TONE[tone].icon} size={12} color="#0c0a1a" />
+        <PixelIcon name={TONE[tone].icon} size={12} color="#0d0e18" />
       </span>
       <span className="t-md">{text}</span>
     </div>

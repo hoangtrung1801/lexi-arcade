@@ -33,7 +33,7 @@ interface Spark {
   c: string;
 }
 
-/** Self-playing miniature of the game for the hub card (decorative). */
+/** Self-playing miniature of the game for the hub card (decorative). Fills its parent's height. */
 export function BlasterPreview({ className = "" }: { className?: string }) {
   const ref = useRef<HTMLCanvasElement>(null);
 
@@ -112,9 +112,9 @@ export function BlasterPreview({ className = "" }: { className?: string }) {
           return true;
         }
         if (b.final) {
-          burst(tx, ty, ["#fff6c4", "#ffd866", "#ff9d4f", "#f05d6c", "#c2f4ff"], 16, 20);
+          burst(tx, ty, ["#fff3cf", "#ffcd75", "#ef7d57", "#f05d6c", "#c6fbff"], 16, 20);
           plates = plates.filter((p) => p !== b.plate);
-        } else burst(tx, ty + 4, ["#ffffff", "#6fd0ff"], 4, 14);
+        } else burst(tx, ty + 4, ["#ffffff", "#73eff7"], 4, 14);
         return false;
       });
       if (plates.length < 3) plates.push(spawn(-PLATE_H - plates.length * 30));
@@ -128,10 +128,10 @@ export function BlasterPreview({ className = "" }: { className?: string }) {
       drawStars(ctx, stars, t, W, still ? 0 : 0.8);
       ctx.drawImage(planet, W - planet.width + 6, 4);
       // ground strip
-      ctx.fillStyle = "#0a0819";
+      ctx.fillStyle = "#0a0d17";
       ctx.fillRect(0, H - 8, W, 8);
       for (let x = 0; x < W; x += 6) {
-        ctx.fillStyle = (x / 6) % 2 ? "#c43356" : "#f05d6c";
+        ctx.fillStyle = (x / 6) % 2 ? "#b13e53" : "#f05d6c";
         ctx.fillRect(x, H - 9, 4, 1);
       }
       for (const p of plates)
@@ -148,16 +148,16 @@ export function BlasterPreview({ className = "" }: { className?: string }) {
       for (const b of bullets) {
         const bx = Math.round(b.x);
         const by = Math.round(b.y);
-        ctx.fillStyle = "#2f5bd0";
+        ctx.fillStyle = "#3b5dc9";
         ctx.fillRect(bx, by + 3, 1, 2);
-        ctx.fillStyle = "#6fd0ff";
+        ctx.fillStyle = "#73eff7";
         ctx.fillRect(bx - 1, by, 3, 3);
         ctx.fillStyle = "#ffffff";
         ctx.fillRect(bx, by, 1, 2);
       }
       ctx.drawImage(ship, sx, sy + (Math.floor(t * 4) % 2));
       // engine flicker
-      ctx.fillStyle = Math.floor(t * 12) % 2 ? "#ffd866" : "#ff9d4f";
+      ctx.fillStyle = Math.floor(t * 12) % 2 ? "#ffcd75" : "#ef7d57";
       ctx.fillRect(sx + 9, sy + ship.height, 3, 2);
       for (const s of sparks) s.life -= dt;
       sparks = sparks.filter((s) => s.life > 0);
@@ -188,13 +188,13 @@ export function BlasterPreview({ className = "" }: { className?: string }) {
   }, []);
 
   return (
-    <div aria-hidden="true" className={className}>
+    <div aria-hidden="true" className={`h-full ${className}`}>
       <canvas
         ref={ref}
         width={W}
         height={H}
-        className="pixelated block"
-        style={{ width: W * 2, height: H * 2 }}
+        className="pixelated block h-full w-auto"
+        style={{ aspectRatio: `${W} / ${H}` }}
       />
     </div>
   );

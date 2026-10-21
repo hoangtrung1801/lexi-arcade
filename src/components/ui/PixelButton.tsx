@@ -7,8 +7,8 @@ type Tone = Exclude<ToneName, "dark">;
 /** Light faces get dark, embossed text; dark faces get light text with a hard shadow. */
 const TEXT: Record<Tone, string> = {
   gold: "text-[#3a1a18] [text-shadow:2px_0_0_currentColor,0_2px_0_rgb(255_255_255/0.45)]",
-  blue: "text-[#0c1440] [text-shadow:2px_0_0_currentColor,0_2px_0_rgb(255_255_255/0.4)]",
-  green: "text-[#0f2d2c] [text-shadow:2px_0_0_currentColor,0_2px_0_rgb(255_255_255/0.4)]",
+  blue: "text-[#141b3d] [text-shadow:2px_0_0_currentColor,0_2px_0_rgb(255_255_255/0.4)]",
+  green: "text-[#12302b] [text-shadow:2px_0_0_currentColor,0_2px_0_rgb(255_255_255/0.4)]",
   red: "text-snow t-bold",
   grey: "text-snow t-bold",
 };

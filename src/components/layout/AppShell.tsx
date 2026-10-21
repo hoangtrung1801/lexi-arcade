@@ -14,9 +14,9 @@ export function AppShell() {
   const me = useMe();
   const user = me.data?.user;
   return (
-    <div className="relative flex min-h-full flex-col">
+    <div className="relative flex h-screen w-screen flex-col overflow-hidden">
       <SkyScene />
-      <header className="relative z-10 shrink-0 bg-[linear-gradient(180deg,#2a2352_0_50%,#221d45_50%_100%)] shadow-[0_2px_0_#4a3f7a,0_4px_0_#0c0a1a,0_10px_18px_rgb(6_5_13/0.5)]">
+      <header className="relative z-10 shrink-0 bg-[linear-gradient(180deg,#2a304b_0_50%,#29366f_50%_100%)] shadow-[0_2px_0_#4a5878,0_4px_0_#0d0e18,0_10px_18px_rgb(10_11_20/0.5)]">
         <div className="mx-auto flex h-[72px] max-w-[1280px] items-center gap-8 px-8">
           <Link to="/" className="flex items-center gap-3 no-underline">
             <PixelIcon name="logo" size={30} />
@@ -31,7 +31,7 @@ export function AppShell() {
                 className={({ isActive }) =>
                   `t-md px-3 pt-0.5 pb-1 no-underline ${
                     isActive
-                      ? "hb-chip-blue text-[#0c1440]"
+                      ? "hb-chip-blue text-[#141b3d]"
                       : "border-[6px] border-transparent text-mist hover:text-snow"
                   }`
                 }
@@ -72,10 +72,10 @@ export function AppShell() {
           </div>
         </div>
       </header>
-      <div className="relative z-10 flex-1">
+      <div className="relative z-10 min-h-0 flex-1">
         <Outlet />
       </div>
-      <footer className="t-sm relative z-10 flex justify-center gap-6 py-4 text-mist">
+      <footer className="t-sm relative z-10 flex shrink-0 justify-center gap-6 pb-1 text-mist">
         <Link to="/about" className="text-mist hover:text-snow">
           Nguồn dữ liệu
         </Link>

@@ -44,7 +44,7 @@ export function SkyScene() {
         const k = age / 0.9;
         const hx = shoot.x - k * 120;
         const hy = shoot.y + k * 48;
-        const trail = ["#ffffff", "#c2f4ff", "#6fd0ff", "#4a5ab0", "#2a2a6a"];
+        const trail = ["#ffffff", "#c6fbff", "#73eff7", "#4a5ab0", "#333c61"];
         trail.forEach((c, i) => {
           ctx.fillStyle = c;
           ctx.fillRect(Math.round(hx + i * 5), Math.round(hy - i * 2), 5, 1);

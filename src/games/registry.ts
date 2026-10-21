@@ -17,7 +17,7 @@ export const GAMES: GameEntry[] = [
     tag: "GAME 01 · GÕ PHÍM",
     desc: "Gõ đúng từ tiếng Anh đang rơi để bắn hạ chúng trước khi chạm mặt đất. Luyện tốc độ gõ và nhớ nghĩa từ cùng lúc.",
     glyph: "WB",
-    accent: "#ffcd75",
+    accent: "#ffc175",
     path: "/games/word-blaster",
     unlockLevel: 1,
   },

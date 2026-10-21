@@ -2,9 +2,9 @@ import { dimmed, type Palette, recolor, type Sprite, sprite } from "./pixelart";
 
 /** Placeholder hi-bit sprites (ASCII maps) until the hand-drawn set lands. */
 
-export const OUTLINE = "#0c0a1a";
+export const OUTLINE = "#0d0e18";
 
-const GOLD: Palette = { w: "#fff6c4", Y: "#ffd866", y: "#f7b538", d: "#d9822b", D: "#a35a2a" };
+const GOLD: Palette = { w: "#fff3cf", Y: "#ffcd75", y: "#f5a95f", d: "#d9742b", D: "#9e4a3a" };
 
 interface Def {
   rows: string[];
@@ -26,7 +26,7 @@ export const SPRITES = {
       "...Rrd...",
       "....d....",
     ],
-    palette: { w: "#ffffff", h: "#ffc2c2", R: "#f05d6c", r: "#c43356", d: "#7a1d3f" },
+    palette: { w: "#ffffff", h: "#ffc2c2", R: "#f05d6c", r: "#b13e53", d: "#7a1d3f" },
     outline: true,
   },
   star: {
@@ -70,7 +70,7 @@ export const SPRITES = {
       "royywyo",
       ".ryyyo.",
     ],
-    palette: { w: "#fff6c4", y: "#ffd866", o: "#ff9d4f", r: "#f05d6c" },
+    palette: { w: "#fff3cf", y: "#ffcd75", o: "#ef7d57", r: "#f05d6c" },
     outline: true,
   },
   lock: {
@@ -86,7 +86,7 @@ export const SPRITES = {
       "YYYYkYyyd",
       "ddddddDDd",
     ],
-    palette: { ...GOLD, s: "#cfc8ef", S: "#6a5c9e", k: "#3a1a18" },
+    palette: { ...GOLD, s: "#c5d6e3", S: "#566c86", k: "#3a1a18" },
     outline: true,
   },
   play: {
@@ -149,7 +149,7 @@ export const SPRITES = {
       ".dyyyyyyyyyd.",
       "..dddDDDddd..",
     ],
-    palette: { ...GOLD, k: "#2a1630", c: "#5a2a4e" },
+    palette: { ...GOLD, k: "#1a1d2c", c: "#5a2a4e" },
     outline: true,
   },
   avatar: {
@@ -170,14 +170,14 @@ export const SPRITES = {
     palette: {
       h: "#e88ad6",
       p: "#b54fb0",
-      P: "#7d2f86",
-      c: "#c2f4ff",
-      C: "#6fd0ff",
-      V: "#2f5bd0",
-      b: "#55bdf7",
-      B: "#3f8ff0",
-      y: "#ffd866",
-      Y: "#f7b538",
+      P: "#5d275d",
+      c: "#c6fbff",
+      C: "#73eff7",
+      V: "#3b5dc9",
+      b: "#55d8f7",
+      B: "#41a6f6",
+      y: "#ffcd75",
+      Y: "#f5a95f",
     },
     outline: true,
   },
@@ -204,19 +204,19 @@ export const SPRITES = {
     ],
     palette: {
       w: "#ffffff",
-      c: "#c2f4ff",
-      C: "#6fd0ff",
-      b: "#55bdf7",
-      B: "#3f8ff0",
-      d: "#2f5bd0",
-      D: "#1d3383",
+      c: "#c6fbff",
+      C: "#73eff7",
+      b: "#55d8f7",
+      B: "#41a6f6",
+      d: "#3b5dc9",
+      D: "#29366f",
       k: "#0f1a45",
       r: "#f05d6c",
-      R: "#c43356",
-      g: "#cfc8ef",
-      G: "#6a5c9e",
-      y: "#ffd866",
-      o: "#ff9d4f",
+      R: "#b13e53",
+      g: "#c5d6e3",
+      G: "#566c86",
+      y: "#ffcd75",
+      o: "#ef7d57",
     },
     outline: true,
   },
@@ -226,7 +226,7 @@ export type SpriteName = keyof typeof SPRITES;
 
 const cache = new Map<string, Sprite>();
 
-export function getSprite(name: SpriteName, color = "#f6f1ff", dim = false): Sprite {
+export function getSprite(name: SpriteName, color = "#f4f4f4", dim = false): Sprite {
   const key = `${name}|${color}|${dim}`;
   const hit = cache.get(key);
   if (hit) return hit;

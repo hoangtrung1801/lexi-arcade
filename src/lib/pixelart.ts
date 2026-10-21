@@ -100,7 +100,7 @@ export function mix(a: string, b: string, t: number) {
 export function dimmed(c: string) {
   const [r, g, b] = hex(c);
   const l = (0.3 * r + 0.59 * g + 0.11 * b) / 255;
-  return mix("#1d1938", "#7a6fae", Math.min(1, l * 1.1));
+  return mix("#1d2234", "#7884a5", Math.min(1, l * 1.1));
 }
 
 /** 4x4 ordered-dither threshold in [0,1). */
@@ -216,7 +216,7 @@ export function drawNine(
 }
 
 /** A shaded sphere (lit from the top-left) with a 1px outline; `ramp` is dark→light. */
-export function orb(r: number, ramp: string[], outline = "#0c0a1a"): Sprite {
+export function orb(r: number, ramp: string[], outline = "#0d0e18"): Sprite {
   const size = r * 2 + 2;
   const px: (string | null)[] = new Array(size * size).fill(null);
   const n = ramp.length - 1;

@@ -41,7 +41,7 @@ export function ResultPage() {
   };
 
   return (
-    <main className="mx-auto flex max-w-[1040px] items-center justify-center p-8">
+    <main className="mx-auto flex h-full max-w-[1040px] items-center justify-center overflow-y-auto px-8 py-4">
       <PixelPanel variant="ornate" className="flex w-full flex-col gap-5 px-8 py-6">
         <div className="flex flex-col items-center gap-3">
           <span className="hb-chip-dark t-sm px-2 text-cyan uppercase">
@@ -80,7 +80,7 @@ export function ResultPage() {
                     <PixelIcon
                       name="speaker"
                       size={16}
-                      color="#f6f1ff"
+                      color="#f4f4f4"
                       className="relative group-active:top-0.5"
                     />
                   </button>
@@ -117,12 +117,12 @@ export function ResultPage() {
               <PixelIcon name="coin" size={20} />+{rewards.coinsGained} xu
             </span>
             {rewards.levelUp && (
-              <span className="hb-chip-green t-md px-2 text-[#0f2d2c] uppercase">
+              <span className="hb-chip-green t-md px-2 text-[#12302b] uppercase">
                 Lên cấp {rewards.level}!
               </span>
             )}
             {rewards.unlockedUnitId && (
-              <span className="hb-chip-blue t-md px-2 text-[#0c1440]">Mở khoá mốc mới</span>
+              <span className="hb-chip-blue t-md px-2 text-[#141b3d]">Mở khoá mốc mới</span>
             )}
           </div>
         ) : (

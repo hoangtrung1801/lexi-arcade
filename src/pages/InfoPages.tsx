@@ -2,7 +2,7 @@ import { PixelPanel } from "../components/ui/PixelPanel";
 
 export function AboutPage() {
   return (
-    <main className="t-md mx-auto flex max-w-3xl flex-col gap-5 p-8">
+    <main className="t-md mx-auto flex h-full max-w-3xl flex-col gap-5 overflow-y-auto px-8 pt-5 pb-3">
       <h1 className="t-lg t-bold text-gold uppercase">Nguồn dữ liệu</h1>
       <PixelPanel className="flex flex-col gap-3 text-haze [&_a]:text-gold [&_a:hover]:text-snow [&_b]:text-snow">
         <p>
@@ -25,7 +25,7 @@ export function AboutPage() {
 
 export function PrivacyPage() {
   return (
-    <main className="t-md mx-auto flex max-w-3xl flex-col gap-5 p-8">
+    <main className="t-md mx-auto flex h-full max-w-3xl flex-col gap-5 overflow-y-auto px-8 pt-5 pb-3">
       <h1 className="t-lg t-bold text-gold uppercase">Quyền riêng tư</h1>
       <PixelPanel className="flex flex-col gap-3 text-haze [&_a]:text-gold [&_a:hover]:text-snow [&_b]:text-snow">
         <p>
@@ -48,7 +48,7 @@ export function PrivacyPage() {
 
 export function NotFoundPage() {
   return (
-    <main className="flex flex-col items-center gap-4 p-16 text-center">
+    <main className="flex h-full flex-col items-center justify-center gap-4 p-8 text-center">
       <h1 className="font-px t-gold text-[144px] leading-[144px]">404</h1>
       <p className="t-md text-haze">Trang này không tồn tại.</p>
     </main>

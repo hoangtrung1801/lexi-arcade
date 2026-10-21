@@ -16,12 +16,12 @@ interface PlateTone {
 }
 
 export const PLATE_TONES: PlateTone[] = [
-  { hi: "#d08ae0", shade: "#4b1f5e", top: "#9a4aa8", bottom: "#6a2a7a", lip: "#3a1446" },
+  { hi: "#96b1d4", shade: "#283155", top: "#9a4aa8", bottom: "#35416f", lip: "#1b223f" },
   { hi: "#a8f0a0", shade: "#17574a", top: "#3fae68", bottom: "#237a52", lip: "#0f3a30" },
-  { hi: "#9af2e4", shade: "#0f4a55", top: "#2a9a9a", bottom: "#1a6a74", lip: "#0b343d" },
-  { hi: "#a8d8ff", shade: "#1d3383", top: "#3f78e0", bottom: "#2a4fb0", lip: "#14235e" },
+  { hi: "#9af2e4", shade: "#0f4a55", top: "#2a9a9a", bottom: "#1a6a74", lip: "#0b3c3d" },
+  { hi: "#a8e7ff", shade: "#29366f", top: "#3f78e0", bottom: "#2a4fb0", lip: "#14235e" },
   { hi: "#ffb0b8", shade: "#5c1532", top: "#d8456a", bottom: "#a02a50", lip: "#4a0f2a" },
-  { hi: "#a99fe0", shade: "#1d1938", top: "#4a3f8a", bottom: "#332a66", lip: "#15112b" },
+  { hi: "#a8bfd7", shade: "#1d2234", top: "#4a5480", bottom: "#323b5e", lip: "#151827" },
 ];
 
 const C = 4;
@@ -35,7 +35,7 @@ function plateFrame(tone: PlateTone, lock: boolean) {
     const spec: FrameSpec = {
       c: C,
       cut: 2,
-      outline: lock ? "#ffd866" : "#0c0a1a",
+      outline: lock ? "#ffcd75" : "#0d0e18",
       rings: [[tone.hi, tone.shade]],
       bands: Array.from({ length: bands }, (_, i) => mix(tone.top, tone.bottom, i / (bands - 1))),
       lip: 2,
@@ -78,12 +78,12 @@ export function paintPlate(
   const dw = Math.round(ctx.measureText(done).width);
   ctx.fillStyle = tone.lip;
   ctx.fillText(rest, tx + dw, ty + 1);
-  ctx.fillStyle = "#f6f1ff";
+  ctx.fillStyle = "#f4f4f4";
   ctx.fillText(rest, tx + dw, ty);
   if (done) {
     ctx.fillStyle = "#7a3a12";
     ctx.fillText(done, tx, ty + 1);
-    ctx.fillStyle = "#ffd866";
+    ctx.fillStyle = "#ffcd75";
     ctx.fillText(done, tx, ty);
   }
   return w;
@@ -91,14 +91,14 @@ export function paintPlate(
 
 const BOOM = [
   "#ffffff",
-  "#fff6c4",
-  "#ffd866",
-  "#ff9d4f",
+  "#fff3cf",
+  "#ffcd75",
+  "#ef7d57",
   "#f05d6c",
-  "#c43356",
-  "#7d2f86",
-  "#4a3f7a",
-  "#2b2550",
+  "#b13e53",
+  "#5d275d",
+  "#4a5878",
+  "#333c57",
 ];
 
 /** Procedural explosion strip: `frames` cells of `size`², fireball → ring → smoke. */
@@ -131,7 +131,7 @@ export function paintExplosion(frames = 8, size = 44) {
           const idx = Math.floor(t * 5 + (d / r) * 2.6 + th * 0.8);
           color = BOOM[Math.min(BOOM.length - 1, idx)];
         } else if (t < 0.7 && Math.abs(d - ring) < 0.7) {
-          color = t < 0.35 ? "#c2f4ff" : "#6fd0ff";
+          color = t < 0.35 ? "#c6fbff" : "#73eff7";
         }
         if (!color) continue;
         ctx.fillStyle = color;
