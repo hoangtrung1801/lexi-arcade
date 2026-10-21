@@ -177,6 +177,38 @@ describe("WordBlasterEngine", () => {
     expect(g.engine.events.length).toBe(logged);
   });
 
+  it("words that are not being asked land without costing a life", () => {
+    const g = make("hard");
+    g.engine.start();
+    let landed = 0;
+    g.engine.subscribe((n) => {
+      if (n.kind === "clear") landed += n.words.length;
+    });
+    for (let i = 0; i < 3000 && g.engine.status === "playing"; i++) {
+      const lives = g.engine.lives;
+      const asked = g.engine.prompt?.id;
+      g.advance(16);
+      // a life only goes when the asked word itself hits the ground
+      if (g.engine.lives < lives)
+        expect(g.engine.events.at(-1)).toMatchObject({ type: "miss", wordId: asked });
+    }
+    expect(landed).toBeGreaterThan(0);
+  });
+
+  it("only asks about words with time left to type them", () => {
+    for (const difficulty of ["easy", "normal", "hard"] as const) {
+      const g = make(difficulty, 7);
+      g.engine.start();
+      g.engine.subscribe((n) => {
+        if (n.kind !== "prompt") return;
+        const w = g.engine.active.find((a) => a.correct);
+        const speed = { easy: 36, normal: 50, hard: 70 }[difficulty];
+        expect((GROUND_Y - (w?.y ?? GROUND_Y)) / speed).toBeGreaterThan(3.4);
+      });
+      g.advance(60000);
+    }
+  });
+
   it("loses a life when the right answer reaches the ground and asks it again later", () => {
     const g = make("hard");
     g.engine.start();

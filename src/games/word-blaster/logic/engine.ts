@@ -56,7 +56,7 @@ const CHOICE_WAIT_MS = 1500;
 /** A plate can be asked about once it is clear of the top HUD... */
 const ASK_BELOW = 70;
 /** ...and while it still has this long to fall, so there is time to type it. */
-const ASK_LEAD_MS = 1800;
+const ASK_LEAD_MS = 3500;
 
 /**
  * Pure game logic. No DOM, no Phaser: it reads time from an injected clock, so tests can drive it.
@@ -233,8 +233,9 @@ export class WordBlasterEngine {
     // any word on screen may be next, not just the oldest, so the order can't be guessed
     const open = this.active.filter((a) => !a.filler && a.y >= ASK_BELOW);
     const fallSpeed = DIFFICULTY[this.config.difficulty].fallSpeed;
-    const roomy = open.filter((a) => a.y < GROUND_Y - (fallSpeed * ASK_LEAD_MS) / 1000);
-    const pool = roomy.length ? roomy : open;
+    // a word close to the ground is never asked: it would land (and cost a life) right after
+    // its meaning appears
+    const pool = open.filter((a) => a.y < GROUND_Y - (fallSpeed * ASK_LEAD_MS) / 1000);
     // with a single candidate the question would just follow the drop order, so give the next
     // word a moment to come into view first
     const more = this.queue.length > 0 || this.active.some((a) => !a.filler && a.y < ASK_BELOW);
