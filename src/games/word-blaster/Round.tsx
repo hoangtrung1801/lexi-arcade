@@ -3,6 +3,7 @@ import type { GameConfig, RoundResult } from "@shared/types";
 import { useCallback, useEffect, useReducer, useRef, useState } from "react";
 import { HeartRow } from "../../components/ui/HeartRow";
 import { Modal } from "../../components/ui/Modal";
+import { PixelBar } from "../../components/ui/PixelBar";
 import { PixelButton } from "../../components/ui/PixelButton";
 import { PixelIcon } from "../../components/ui/PixelIcon";
 import { playSfx, speak } from "../../lib/sfx";
@@ -148,7 +149,7 @@ export function Round({ config, unitIdx, unitCount, setName, onFinish, onExit }:
 
   return (
     <div
-      className="relative overflow-hidden bg-ink"
+      className="relative overflow-hidden bg-void"
       style={{ width: "min(100vw, calc(100vh * 960 / 540))", aspectRatio: "960 / 540" }}
       onPointerDown={() => inputRef.current?.focus()}
     >
@@ -167,129 +168,111 @@ export function Round({ config, unitIdx, unitCount, setName, onFinish, onExit }:
       />
 
       {/* HUD */}
-      <div className="pointer-events-none absolute top-[3%] right-[2.5%] left-[2.5%] flex items-center justify-between">
-        <div className="font-px flex items-center gap-2.5 bg-abyss/80 px-3.5 py-2.5 text-sm text-gold px-inset">
-          <PixelIcon name="star" size={18} color="#ffcd75" />
-          {engine.score.toLocaleString("vi-VN")}
-        </div>
-        <div className="flex items-center gap-3.5 bg-abyss/80 px-4 py-1.5 px-inset">
-          <span className="font-vi text-[20px]">
-            MỐC {unitIdx}/{unitCount}
-          </span>
-          <div
-            className="h-3 w-40 bg-steel px-inset"
-            role="progressbar"
-            aria-valuenow={engine.hitCount}
-            aria-valuemax={engine.total}
-            aria-label="Tiến độ mốc"
-          >
-            <div
-              className="h-full"
-              style={{
-                width: `${(engine.hitCount / Math.max(1, engine.total)) * 100}%`,
-                background: "repeating-linear-gradient(90deg,#a7f070 0 8px,transparent 8px 10px)",
-              }}
-            />
-          </div>
-          <span className="text-[22px] text-mist">
-            {engine.hitCount}/{engine.total} từ
+      <div className="pointer-events-none absolute top-[2.5%] right-[2%] left-[2%] flex items-start justify-between">
+        <div className="hb-hud flex items-center gap-2 px-2">
+          <PixelIcon name="star" size={22} />
+          <span className="font-px t-lg t-shadow min-w-[4ch] text-gold">
+            {engine.score.toLocaleString("vi-VN")}
           </span>
         </div>
-        <div className="bg-abyss/80 px-3 py-2.5 px-inset">
+        <div className="hb-hud flex items-center gap-3 px-3 py-0.5">
+          <span className="t-sm t-bold uppercase">
+            Mốc {unitIdx}/{unitCount}
+          </span>
+          <PixelBar
+            value={engine.hitCount}
+            max={Math.max(1, engine.total)}
+            label="Tiến độ mốc"
+            className="w-44"
+            height={8}
+          />
+          <span className="t-sm text-mist">
+            <span className="text-snow">{engine.hitCount}</span>/{engine.total} từ
+          </span>
+        </div>
+        <div className="hb-hud px-2 py-1">
           <HeartRow lives={engine.lives} max={MAX_LIVES} />
         </div>
       </div>
 
-      <div className="absolute top-[18%] right-[2.5%] flex flex-col gap-3.5">
-        <button
-          type="button"
-          aria-label="Thoát"
-          className="px-btn flex h-11 w-11 cursor-pointer items-center justify-center border-0 bg-steel"
+      <div className="absolute top-[17%] right-[2%] flex flex-col gap-2">
+        <SideButton
+          label="Thoát"
           onClick={() => {
             if (engine.status === "playing") engine.pause();
             setOverlay("paused");
           }}
         >
-          <PixelIcon name="close" size={16} color="#f4f4f4" />
-        </button>
-        <button
-          type="button"
-          aria-label="Tạm dừng"
-          className="px-btn flex h-11 w-11 cursor-pointer items-center justify-center border-0 bg-steel"
-          onClick={() => pause("paused")}
-        >
-          <PixelIcon name="pause" size={16} color="#f4f4f4" />
-        </button>
-        <button
-          type="button"
-          aria-label="Phát âm từ"
-          className="px-btn flex h-11 w-11 cursor-pointer items-center justify-center border-0 bg-steel"
-          onClick={speakWord}
-        >
-          <PixelIcon name="speaker" size={20} color="#f4f4f4" />
-        </button>
-        <button
-          type="button"
-          aria-label={showMeaning ? "Ẩn nghĩa tiếng Việt" : "Hiện nghĩa tiếng Việt"}
-          aria-pressed={showMeaning}
-          className={`px-btn font-px flex h-11 w-11 cursor-pointer items-center justify-center border-0 text-[10px] ${showMeaning ? "bg-lime text-ink" : "bg-steel text-mist"}`}
+          <PixelIcon name="close" size={14} color="#f6f1ff" />
+        </SideButton>
+        <SideButton label="Tạm dừng" onClick={() => pause("paused")}>
+          <PixelIcon name="pause" size={14} color="#f6f1ff" />
+        </SideButton>
+        <SideButton label="Phát âm từ" onClick={speakWord}>
+          <PixelIcon name="speaker" size={18} color="#f6f1ff" />
+        </SideButton>
+        <SideButton
+          label={showMeaning ? "Ẩn nghĩa tiếng Việt" : "Hiện nghĩa tiếng Việt"}
+          pressed={showMeaning}
           onClick={() => setSettings({ showMeaning: !showMeaning })}
         >
-          VI
-        </button>
-        <button
-          type="button"
-          aria-label={sound ? "Tắt âm thanh" : "Bật âm thanh"}
-          aria-pressed={sound}
-          className={`px-btn font-px flex h-11 w-11 cursor-pointer items-center justify-center border-0 text-[10px] ${sound ? "bg-lime text-ink" : "bg-steel text-mist"}`}
+          <span className="font-px t-sm">VI</span>
+        </SideButton>
+        <SideButton
+          label={sound ? "Tắt âm thanh" : "Bật âm thanh"}
+          pressed={sound}
           onClick={() => setSettings({ sound: !sound })}
         >
-          ♪
-        </button>
+          <PixelIcon name="note" size={14} color={sound ? "#0f2d2c" : "#a39bd2"} />
+        </SideButton>
       </div>
 
-      <div className="absolute right-0 bottom-[1.2%] left-0 flex items-center justify-center gap-4">
-        <span className="font-vi bg-abyss/80 px-3 py-1.5 text-[20px] text-mist px-inset">
-          {setName}
-        </span>
+      <div className="pointer-events-none absolute right-0 bottom-[1.5%] left-0 flex items-center justify-center gap-3">
+        <span className="hb-hud t-sm px-2 py-1 text-mist uppercase">{setName}</span>
         <div
-          className="font-px px-inset flex h-11 w-[300px] items-center bg-abyss px-3.5 text-base text-gold"
+          className="hb-inset font-px t-md flex h-[52px] w-[320px] items-center px-3"
           aria-live="off"
         >
           {target ? (
             <>
-              <span>{target.word.lemma.slice(0, target.typed)}</span>
-              <span className="animate-pulse text-mist">_</span>
+              <span className="text-gold [text-shadow:0_2px_0_#7a3a12]">
+                {target.word.lemma.slice(0, target.typed)}
+              </span>
+              <span className="text-slate">{target.word.lemma.slice(target.typed)}</span>
+              <span className="anim-pulse ml-0.5 inline-block h-6 w-3 bg-ice" />
             </>
           ) : (
-            <span className="text-slate">gõ từ...</span>
+            <span className="t-sm text-slate">gõ chữ cái đầu của một từ…</span>
           )}
         </div>
-        <span className="font-px bg-abyss/80 px-3 py-2.5 text-[10px] text-lime px-inset">
-          COMBO x{engine.combo}
+        <span
+          className={`hb-hud flex items-center gap-1 px-2 py-1 ${engine.combo >= 5 ? "hb-glow" : ""}`}
+        >
+          <PixelIcon name="flame" size={18} dim={engine.combo < 2} />
+          <span className={`font-px t-md ${engine.combo >= 2 ? "text-orange" : "text-slate"}`}>
+            x{engine.combo}
+          </span>
         </span>
       </div>
 
       {/* overlays */}
       {overlay === "countdown" && count > 0 && (
-        <div className="absolute inset-0 flex flex-col items-center justify-center gap-6 bg-abyss/60">
-          <div className="font-px text-[96px] text-gold [text-shadow:6px_6px_0_var(--color-abyss)]">
+        <div className="absolute inset-0 flex flex-col items-center justify-center gap-6 bg-void/60">
+          <div key={count} className="font-px t-gold text-[144px] leading-[144px]">
             {count}
           </div>
-          <p className="text-3xl text-snow">
-            Gõ chữ cái đầu để khoá mục tiêu, gõ hết từ để bắn hạ.
-          </p>
-          <p className="text-2xl text-mist">
-            Hãy tắt bộ gõ tiếng Việt (Unikey/EVKey) trước khi chơi.
-          </p>
+          <div className="hb-panel hb-lift flex max-w-[640px] flex-col items-center gap-1 px-5 py-3 text-center">
+            <p className="t-md">Gõ chữ cái đầu để khoá mục tiêu, gõ hết từ để bắn hạ.</p>
+            <p className="t-sm text-mist">
+              Hãy tắt bộ gõ tiếng Việt (Unikey/EVKey) trước khi chơi.
+            </p>
+          </div>
         </div>
       )}
 
       {overlay === "finishing" && banner && (
-        <div className="absolute inset-0 flex items-center justify-center bg-abyss/70">
-          <div className="font-vi text-[72px] text-gold [text-shadow:6px_6px_0_var(--color-abyss)]">
-            {banner}
-          </div>
+        <div className="absolute inset-0 flex items-center justify-center bg-void/70">
+          <div className="t-gold text-[72px] leading-[80px]">{banner}</div>
         </div>
       )}
 
@@ -331,5 +314,35 @@ export function Round({ config, unitIdx, unitCount, setName, onFinish, onExit }:
         </ul>
       </Modal>
     </div>
+  );
+}
+
+function SideButton({
+  label,
+  pressed,
+  onClick,
+  children,
+}: {
+  label: string;
+  pressed?: boolean;
+  onClick: () => void;
+  children: React.ReactNode;
+}) {
+  return (
+    <button
+      type="button"
+      aria-label={label}
+      aria-pressed={pressed}
+      onClick={onClick}
+      className={`group flex h-[52px] w-[52px] items-center justify-center pb-1 ${
+        pressed === undefined
+          ? "hb-btn-grey"
+          : pressed
+            ? "hb-btn-green text-[#0f2d2c]"
+            : "hb-btn-dark text-mist"
+      }`}
+    >
+      <span className="relative group-active:top-1">{children}</span>
+    </button>
   );
 }

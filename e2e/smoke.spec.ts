@@ -43,7 +43,7 @@ async function playRound(page: Page) {
 test("guest can browse, play unit 1 and sees an unsaved result", async ({ page }) => {
   await page.goto("/");
   await expect(page.getByRole("heading", { name: "CHỌN TRÒ CHƠI" })).toBeVisible();
-  await page.getByRole("link", { name: /CHƠI NGAY/ }).click();
+  await page.getByRole("link", { name: /CHƠI NGAY/i }).click();
   await expect(page.getByText("BỘ TỪ VỰNG")).toBeVisible();
 
   // guests only get the first 3 units
@@ -52,7 +52,7 @@ test("guest can browse, play unit 1 and sees an unsaved result", async ({ page }
   await expect(page.getByText(/Khách chỉ chơi được 3 mốc đầu/)).toBeVisible();
 
   await page.getByRole("button", { name: /Mốc 1:/ }).click();
-  await page.getByRole("button", { name: /BẮT ĐẦU/ }).click();
+  await page.getByRole("button", { name: /BẮT ĐẦU/i }).click();
   expect(await playRound(page)).toBe("won");
 
   await expect(page.getByRole("heading", { name: "HOÀN THÀNH!" })).toBeVisible({ timeout: 10_000 });
@@ -71,13 +71,13 @@ test("a Vietnamese IME key pauses the game with instructions", async ({ page }) 
   });
   await expect(page.getByRole("dialog", { name: /bộ gõ tiếng Việt/i })).toBeVisible();
   expect(await page.evaluate(() => window.__wordBlaster?.status)).toBe("paused");
-  await page.getByRole("button", { name: /TIẾP TỤC/ }).click();
+  await page.getByRole("button", { name: /TIẾP TỤC/i }).click();
   expect(await page.evaluate(() => window.__wordBlaster?.status)).toBe("playing");
 });
 
 test("logged-in player saves progress and unlocks the next unit", async ({ page }) => {
   await page.goto("/login");
-  await page.getByRole("button", { name: /ĐĂNG NHẬP THỬ/ }).click();
+  await page.getByRole("button", { name: /ĐĂNG NHẬP THỬ/i }).click();
   await expect(page.getByRole("link", { name: "Hồ sơ người chơi" })).toBeVisible();
 
   await page.goto("/games/word-blaster/play/1001?set=a1");
@@ -85,12 +85,12 @@ test("logged-in player saves progress and unlocks the next unit", async ({ page 
   await expect(page.getByRole("heading", { name: "HOÀN THÀNH!" })).toBeVisible({ timeout: 15_000 });
   await expect(page.getByText(/\+\d+ XP/)).toBeVisible();
 
-  await page.getByRole("button", { name: /BẢN ĐỒ/ }).click();
+  await page.getByRole("button", { name: /BẢN ĐỒ/i }).click();
   await expect(page.getByRole("button", { name: /Mốc 2:/ })).not.toContainText("đã khoá");
 
   await page.goto("/vocab");
-  await expect(page.getByRole("tab", { name: /Đã học \(\d+\)/ })).toBeVisible();
-  await expect(page.getByText("boy")).toBeVisible();
+  await expect(page.getByRole("tab", { name: /Đã học \d+/ })).toBeVisible();
+  await expect(page.getByText("boy", { exact: true })).toBeVisible();
 });
 
 test("small screens get the desktop-only screen", async ({ page }) => {

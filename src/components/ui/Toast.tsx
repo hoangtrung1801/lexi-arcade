@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { create } from "zustand";
+import { PixelIcon } from "./PixelIcon";
 
 interface ToastState {
   toasts: { id: number; text: string; tone: "info" | "good" | "bad" }[];
@@ -18,7 +19,11 @@ export const useToasts = create<ToastState>((set) => ({
 export const toast = (text: string, tone: "info" | "good" | "bad" = "info") =>
   useToasts.getState().push(text, tone);
 
-const TONE = { info: "bg-blue", good: "bg-green", bad: "bg-berry" } as const;
+const TONE = {
+  info: { chip: "hb-chip-blue", icon: "star" },
+  good: { chip: "hb-chip-green", icon: "check" },
+  bad: { chip: "hb-chip-red", icon: "close" },
+} as const;
 
 function ToastItem({ id, text, tone }: { id: number; text: string; tone: keyof typeof TONE }) {
   const dismiss = useToasts((s) => s.dismiss);
@@ -27,8 +32,11 @@ function ToastItem({ id, text, tone }: { id: number; text: string; tone: keyof t
     return () => clearTimeout(t);
   }, [id, dismiss]);
   return (
-    <div role="status" className={`px-box ${TONE[tone]} px-4 py-2 text-2xl`}>
-      {text}
+    <div role="status" className="hb-panel hb-lift flex items-center gap-3 px-3 py-1">
+      <span className={`${TONE[tone].chip} flex h-8 w-8 items-center justify-center`}>
+        <PixelIcon name={TONE[tone].icon} size={12} color="#0c0a1a" />
+      </span>
+      <span className="t-md">{text}</span>
     </div>
   );
 }

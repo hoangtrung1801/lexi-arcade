@@ -21,18 +21,18 @@ export function Modal({ open, title, onClose, children, actions }: Props) {
   }, [open, onClose]);
   if (!open) return null;
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-abyss/80 p-6">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-void/75 p-6">
       <div
         ref={ref}
         tabIndex={-1}
         role="dialog"
         aria-modal="true"
         aria-label={title}
-        className="px-box w-full max-w-lg bg-navy p-7 outline-none"
+        className="hb-ornate hb-lift w-full max-w-xl px-6 pt-4 pb-5 outline-none"
       >
-        <h2 className="font-vi mb-4 text-[28px] text-gold">{title}</h2>
-        <div className="text-2xl leading-tight">{children}</div>
-        {actions && <div className="mt-6 flex justify-end gap-4">{actions}</div>}
+        <h2 className="t-lg t-gold mb-3 uppercase">{title}</h2>
+        <div className="t-md text-haze">{children}</div>
+        {actions && <div className="mt-5 flex justify-end gap-3">{actions}</div>}
       </div>
     </div>
   );

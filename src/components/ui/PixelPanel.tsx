@@ -1,11 +1,15 @@
 import type { HTMLAttributes } from "react";
 
-const BG = { steel: "bg-steel", navy: "bg-navy", ink: "bg-ink", deep: "bg-[#0f1424]" } as const;
+const VARIANT = {
+  panel: "hb-panel hb-lift p-4",
+  ornate: "hb-ornate hb-lift p-5",
+  inset: "hb-inset p-3",
+} as const;
 
 export function PixelPanel({
-  tone = "steel",
+  variant = "panel",
   className = "",
   ...rest
-}: { tone?: keyof typeof BG } & HTMLAttributes<HTMLElement>) {
-  return <section className={`px-box ${BG[tone]} p-5 ${className}`} {...rest} />;
+}: { variant?: keyof typeof VARIANT } & HTMLAttributes<HTMLElement>) {
+  return <section className={`${VARIANT[variant]} ${className}`} {...rest} />;
 }

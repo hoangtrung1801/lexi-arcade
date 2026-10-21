@@ -1,29 +1,56 @@
 @import "tailwindcss";
-@import "@fontsource/press-start-2p/400.css";
-@import "@fontsource/vt323/400.css";
+
+@font-face {
+  font-family: "Galmuri11";
+  src: url("./assets/fonts/Galmuri11.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Galmuri11 Bold";
+  src: url("./assets/fonts/Galmuri11-Bold.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Galmuri9";
+  src: url("./assets/fonts/Galmuri9.woff2") format("woff2");
+  font-display: swap;
+}
 
 @theme {
-  /* Sweetie-16 */
-  --color-ink: #1a1c2c;
-  --color-plum: #5d275d;
-  --color-berry: #b13e53;
-  --color-orange: #ef7d57;
-  --color-gold: #ffcd75;
-  --color-lime: #a7f070;
-  --color-green: #38b764;
-  --color-teal: #257179;
-  --color-navy: #29366f;
-  --color-blue: #3b5dc9;
-  --color-sky: #41a6f6;
-  --color-cyan: #73eff7;
-  --color-snow: #f4f4f4;
-  --color-mist: #94b0c2;
-  --color-slate: #566c86;
-  --color-steel: #333c57;
-  --color-abyss: #0d0e18;
+  /* Hi-bit palette: hue-shifted ramps (cool violet shadows, warm highlights). */
+  --color-void: #06050d;
+  --color-abyss: #0c0a1a;
+  --color-ink: #141128;
+  --color-deep: #1a1533;
+  --color-navy: #221d45;
+  --color-steel: #2b2550;
+  --color-rim: #4a3f7a;
+  --color-slate: #6a5c9e;
+  --color-mist: #a39bd2;
+  --color-haze: #cfc8ef;
+  --color-snow: #f6f1ff;
 
-  --font-px: "Press Start 2P", monospace;
-  --font-body: "VT323", monospace;
+  --color-gold-hi: #fff6c4;
+  --color-gold: #ffd866;
+  --color-gold-lo: #f7b538;
+  --color-gold-dk: #a35a2a;
+  --color-orange: #ff9d4f;
+  --color-berry: #f05d6c;
+  --color-berry-dk: #c43356;
+  --color-plum: #7d2f86;
+  --color-pink: #e88ad6;
+  --color-lime: #b4f57a;
+  --color-green: #5fd36a;
+  --color-teal: #2fc0b5;
+  --color-blue: #2f5bd0;
+  --color-sky: #3f8ff0;
+  --color-cyan: #6fd0ff;
+  --color-ice: #c2f4ff;
+
+  /* Galmuri11 is drawn on a 12px grid and Galmuri9 on 10px: only use whole multiples. */
+  --font-body: "Galmuri11", monospace;
+  --font-px: "Galmuri11 Bold", "Galmuri11", monospace;
+  --font-small: "Galmuri9", monospace;
 }
 
 @layer base {
@@ -35,61 +62,181 @@
 
   body {
     margin: 0;
-    background: var(--color-ink);
+    background: var(--color-void);
     color: var(--color-snow);
     font-family: var(--font-body);
-    font-size: 22px;
+    font-size: 24px;
+    line-height: 32px;
     -webkit-font-smoothing: none;
+    -moz-osx-font-smoothing: unset;
+    text-rendering: optimizeSpeed;
   }
 
-  a {
-    color: var(--color-gold);
+  button,
+  input {
+    font: inherit;
+    color: inherit;
   }
-  a:hover {
-    color: var(--color-snow);
+
+  ::selection {
+    background: var(--color-gold);
+    color: var(--color-abyss);
   }
 }
 
-/* Press Start 2P has no Vietnamese diacritics, so Vietnamese headings use VT323 in caps instead. */
-@utility font-vi {
-  font-family: var(--font-body);
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  line-height: 1.05;
+/* ---------- type scale (each step is a whole multiple of the font grid) ---------- */
+@utility t-sm {
+  font-family: var(--font-small);
+  font-size: 20px;
+  line-height: 24px;
+}
+@utility t-md {
+  font-size: 24px;
+  line-height: 32px;
+}
+@utility t-lg {
+  font-size: 36px;
+  line-height: 44px;
+}
+@utility t-xl {
+  font-size: 48px;
+  line-height: 56px;
+}
+@utility t-2xl {
+  font-size: 72px;
+  line-height: 80px;
 }
 
-/* Pixel "box": hard outline + drop shadow, no blur. */
-.px-box {
-  box-shadow:
-    0 -4px 0 0 var(--color-abyss),
-    0 4px 0 0 var(--color-abyss),
-    -4px 0 0 0 var(--color-abyss),
-    4px 0 0 0 var(--color-abyss),
-    6px 8px 0 0 var(--color-abyss);
+/* Pixel "fake bold" (one art pixel to the right) plus a hard drop shadow. Works with accents. */
+@utility t-bold {
+  text-shadow:
+    2px 0 0 currentColor,
+    0 2px 0 var(--color-abyss),
+    2px 2px 0 var(--color-abyss),
+    4px 2px 0 var(--color-abyss);
 }
-.px-btn {
-  box-shadow:
-    0 -4px 0 0 var(--color-abyss),
-    0 4px 0 0 var(--color-abyss),
-    -4px 0 0 0 var(--color-abyss),
-    4px 0 0 0 var(--color-abyss),
-    inset -4px -6px 0 0 rgba(0, 0, 0, 0.28),
-    inset 4px 4px 0 0 rgba(255, 255, 255, 0.35);
+@utility t-shadow {
+  text-shadow: 0 2px 0 var(--color-abyss);
 }
-.px-btn:active:not(:disabled) {
-  transform: translateY(2px);
+/* Big headings: banded gold gradient with a 1-pixel outline and a deep drop shadow. */
+@utility t-gold {
+  /* room for stacked Vietnamese diacritics, which background-clip would cut off */
+  padding-top: 0.3em;
+  margin-top: -0.3em;
+  background: linear-gradient(
+    180deg,
+    var(--color-gold-hi) 0 42%,
+    var(--color-gold) 42% 62%,
+    var(--color-gold-lo) 62% 80%,
+    #e0862f 80%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(2px 0 0 var(--color-abyss)) drop-shadow(-2px 0 0 var(--color-abyss))
+    drop-shadow(0 2px 0 var(--color-abyss)) drop-shadow(0 -2px 0 var(--color-abyss))
+    drop-shadow(0 4px 0 var(--color-plum));
 }
-.px-inset {
-  box-shadow: 0 0 0 3px var(--color-abyss);
+@utility t-ice {
+  /* room for stacked Vietnamese diacritics, which background-clip would cut off */
+  padding-top: 0.3em;
+  margin-top: -0.3em;
+  background: linear-gradient(
+    180deg,
+    #ffffff 0 44%,
+    var(--color-ice) 44% 66%,
+    var(--color-cyan) 66%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(2px 0 0 var(--color-abyss)) drop-shadow(-2px 0 0 var(--color-abyss))
+    drop-shadow(0 2px 0 var(--color-abyss)) drop-shadow(0 -2px 0 var(--color-abyss))
+    drop-shadow(0 4px 0 var(--color-blue));
 }
+
+/* Soft drop shadow under framed elements (frames themselves come from lib/frames.ts). */
+@utility hb-lift {
+  filter: drop-shadow(0 4px 0 rgb(6 5 13 / 0.7)) drop-shadow(0 14px 18px rgb(6 5 13 / 0.45));
+}
+@utility hb-glow {
+  filter: drop-shadow(0 0 10px rgb(255 216 102 / 0.35)) drop-shadow(0 4px 0 rgb(6 5 13 / 0.7));
+}
+
+/* Segmented, shaded progress fill. */
+@utility hb-fill {
+  background:
+    repeating-linear-gradient(90deg, transparent 0 14px, rgb(12 10 26 / 0.45) 14px 16px),
+    linear-gradient(
+      180deg,
+      rgb(255 255 255 / 0.55) 0 2px,
+      var(--fill, var(--color-lime)) 2px calc(100% - 4px),
+      rgb(12 10 26 / 0.35) calc(100% - 4px)
+    );
+}
+
 .pixelated {
   image-rendering: pixelated;
   shape-rendering: crispEdges;
 }
+[class*="hb-"] {
+  image-rendering: pixelated;
+}
+
+/* Interactive frames: brighten on hover, nudge when pressed. */
+[class*="hb-btn-"] {
+  cursor: pointer;
+  transition: filter 80ms steps(2);
+}
+[class*="hb-btn-"]:hover:not(:disabled) {
+  filter: brightness(1.12);
+}
+[class*="hb-btn-"]:disabled {
+  cursor: not-allowed;
+  filter: grayscale(0.7) brightness(0.7);
+}
 
 :focus-visible {
-  outline: 3px solid var(--color-cyan);
-  outline-offset: 3px;
+  outline: 2px solid var(--color-ice);
+  outline-offset: 4px;
+}
+
+@keyframes hb-bob {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+@keyframes hb-pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.45;
+  }
+}
+@keyframes hb-ring {
+  0% {
+    transform: scale(0.85);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(1.35);
+    opacity: 0;
+  }
+}
+.anim-bob {
+  animation: hb-bob 1.6s steps(4) infinite;
+}
+.anim-pulse {
+  animation: hb-pulse 1.2s steps(3) infinite;
+}
+.anim-ring {
+  animation: hb-ring 1.4s steps(6) infinite;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -97,4 +244,9 @@
     animation: none !important;
     transition: none !important;
   }
+}
+
+/* Galmuri11 Bold has no 10px-grid cut: small ASCII labels fall back to Galmuri9. */
+.font-px.t-sm {
+  font-family: var(--font-small);
 }

@@ -34,44 +34,48 @@ export function ProfilePage() {
   };
 
   return (
-    <main className="mx-auto flex max-w-xl flex-col gap-6 p-8">
-      <PixelPanel className="flex flex-col gap-4 p-7">
+    <main className="mx-auto flex max-w-[640px] flex-col gap-5 p-8">
+      <PixelPanel variant="ornate" className="flex flex-col gap-4 px-6">
         <div className="flex items-center gap-4">
-          <div className="flex h-[72px] w-[72px] items-center justify-center bg-sky px-inset">
-            <PixelIcon name="avatar" size={64} />
+          <div className="hb-inset h-[88px] w-[88px] p-0">
+            <div className="flex h-full w-full items-center justify-center bg-[radial-gradient(circle_at_40%_35%,#2f5bd0,transparent_75%)]">
+              <PixelIcon name="avatar" size={52} />
+            </div>
           </div>
-          <div>
-            <div className="text-3xl">{me.displayName}</div>
-            <div className="text-xl text-mist">{me.email}</div>
+          <div className="flex min-w-0 flex-col gap-1">
+            <div className="t-lg t-bold truncate">{me.displayName}</div>
+            <div className="t-sm truncate text-mist">{me.email}</div>
           </div>
+          <span className="hb-chip-green font-px t-md ml-auto self-start px-2 text-[#0f2d2c]">
+            LV {me.level}
+          </span>
         </div>
-        <div className="font-px text-[11px] text-lime">LV.{me.level}</div>
         <PixelBar value={me.xp - me.xpForCurrent} max={span} label="Kinh nghiệm" />
-        <div className="grid grid-cols-3 gap-2 text-center text-2xl">
-          <div className="bg-ink p-2">
-            {me.xp}
-            <div className="text-lg text-mist">XP</div>
-          </div>
-          <div className="bg-ink p-2">
-            {me.coins}
-            <div className="text-lg text-mist">xu</div>
-          </div>
-          <div className="bg-ink p-2">
-            {me.streakDays}
-            <div className="text-lg text-mist">ngày liên tiếp</div>
-          </div>
+        <div className="grid grid-cols-3 gap-3 text-center">
+          {[
+            { v: me.xp, l: "XP", c: "text-lime" },
+            { v: me.coins, l: "xu", c: "text-gold" },
+            { v: me.streakDays, l: "ngày liên tiếp", c: "text-orange" },
+          ].map((s) => (
+            <div key={s.l} className="hb-inset flex flex-col py-2">
+              <span className={`font-px t-lg t-shadow ${s.c}`}>{s.v}</span>
+              <span className="t-sm text-mist">{s.l}</span>
+            </div>
+          ))}
         </div>
-        <label className="flex flex-col gap-2 text-2xl">
+        <label className="t-sm flex flex-col gap-2 text-mist">
           Tên hiển thị
           <div className="flex gap-3">
-            <input
-              value={name}
-              maxLength={24}
-              onChange={(e) => setName(e.target.value)}
-              className="min-h-11 flex-1 border-0 bg-abyss px-3 text-2xl text-snow"
-            />
+            <div className="hb-inset flex flex-1 items-center px-2 py-0">
+              <input
+                value={name}
+                maxLength={24}
+                onChange={(e) => setName(e.target.value)}
+                className="t-md min-h-10 w-full bg-transparent text-snow outline-none"
+              />
+            </div>
             <PixelButton tone="blue" size="sm" onClick={rename}>
-              LƯU
+              Lưu
             </PixelButton>
           </div>
         </label>
@@ -79,13 +83,14 @@ export function ProfilePage() {
       <PixelButton
         tone="red"
         size="sm"
+        className="self-end"
         onClick={async () => {
           await signOut();
           await qc.invalidateQueries();
           nav("/");
         }}
       >
-        ĐĂNG XUẤT
+        Đăng xuất
       </PixelButton>
     </main>
   );

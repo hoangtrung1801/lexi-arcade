@@ -4,20 +4,23 @@ interface Props {
   color?: string;
   label?: string;
   className?: string;
+  /** fill height in CSS px */
+  height?: number;
 }
 
-/** Segmented progress bar. */
+/** Recessed, segmented progress bar. */
 export function PixelBar({
   value,
   max,
   color = "var(--color-lime)",
   label,
   className = "",
+  height = 10,
 }: Props) {
-  const pct = max <= 0 ? 0 : Math.max(0, Math.min(100, Math.round((value / max) * 100)));
+  const pct = max <= 0 ? 0 : Math.max(0, Math.min(100, (value / max) * 100));
   return (
     <div
-      className={`px-inset h-4 bg-steel ${className}`}
+      className={`hb-inset ${className}`}
       role="progressbar"
       aria-valuenow={value}
       aria-valuemin={0}
@@ -25,11 +28,8 @@ export function PixelBar({
       aria-label={label}
     >
       <div
-        className="h-full"
-        style={{
-          width: `${pct}%`,
-          background: `repeating-linear-gradient(90deg, ${color} 0 10px, transparent 10px 12px)`,
-        }}
+        className="hb-fill transition-[width] duration-300 ease-[steps(6)]"
+        style={{ width: `${pct}%`, height, ["--fill" as string]: color }}
       />
     </div>
   );

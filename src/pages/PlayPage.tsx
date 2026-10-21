@@ -2,8 +2,10 @@ import type { GameConfig, GameWord, RoundResult } from "@shared/types";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { useCallback, useMemo, useState } from "react";
 import { useLocation, useNavigate, useParams, useSearchParams } from "react-router-dom";
+import { SkyScene } from "../components/layout/SkyScene";
 import { Modal } from "../components/ui/Modal";
 import { PixelButton } from "../components/ui/PixelButton";
+import { PixelIcon } from "../components/ui/PixelIcon";
 import { toast } from "../components/ui/Toast";
 import type { WordBlasterEngine } from "../games/word-blaster/logic/engine";
 import { Round } from "../games/word-blaster/Round";
@@ -111,7 +113,7 @@ export function PlayPage() {
       loadError instanceof ApiError && (loadError.status === 403 || loadError.status === 401);
     return (
       <Centered>
-        <p className="text-3xl">
+        <p className="t-md">
           {locked
             ? "Mốc này chưa mở. Hãy hoàn thành mốc trước hoặc đăng nhập."
             : "Không tải được ván chơi."}
@@ -122,10 +124,16 @@ export function PlayPage() {
       </Centered>
     );
   }
-  if (!config) return <Centered>Đang chuẩn bị ván chơi…</Centered>;
+  if (!config)
+    return (
+      <Centered>
+        <PixelIcon name="ship" size={60} className="anim-bob" />
+        <span className="t-md text-mist">Đang chuẩn bị ván chơi…</span>
+      </Centered>
+    );
 
   return (
-    <div className="flex h-screen w-screen items-center justify-center bg-abyss">
+    <div className="flex h-screen w-screen items-center justify-center bg-void">
       <Round
         key={config.sessionId ?? "guest"}
         config={config}
@@ -165,8 +173,9 @@ export function PlayPage() {
 
 function Centered({ children }: { children: React.ReactNode }) {
   return (
-    <div className="flex h-screen w-screen flex-col items-center justify-center gap-6 bg-ink text-center text-2xl">
-      {children}
+    <div className="relative flex h-screen w-screen flex-col items-center justify-center gap-6 text-center">
+      <SkyScene />
+      <div className="relative flex flex-col items-center gap-5">{children}</div>
     </div>
   );
 }

@@ -4,6 +4,7 @@ import { PixelLink } from "../components/ui/PixelButton";
 import { PixelIcon } from "../components/ui/PixelIcon";
 import { PixelPanel } from "../components/ui/PixelPanel";
 import { GAMES } from "../games/registry";
+import { BlasterPreview } from "../games/word-blaster/Preview";
 import { useClaimQuest, useMe, useQuests, useUnits, useVocab } from "../lib/queries";
 
 function ProfileCard() {
@@ -12,13 +13,21 @@ function ProfileCard() {
   const learned = useVocab("learned", !!me);
   if (!me) {
     return (
-      <PixelPanel className="flex flex-col gap-3.5">
-        <h2 className="font-vi text-[22px] text-gold">KHÁCH</h2>
-        <p className="text-2xl leading-tight text-snow">
-          Bạn đang chơi với tư cách khách: chơi được 3 mốc đầu mỗi bộ và <b>không lưu</b> tiến độ.
+      <PixelPanel className="flex flex-col gap-3">
+        <div className="flex items-center gap-3">
+          <div className="hb-inset flex h-[64px] w-[64px] items-center justify-center">
+            <PixelIcon name="avatar" size={36} dim />
+          </div>
+          <div className="flex flex-col">
+            <h2 className="t-md t-bold text-gold uppercase">Khách</h2>
+            <span className="t-sm text-mist">Chưa đăng nhập</span>
+          </div>
+        </div>
+        <p className="t-sm text-haze">
+          Bạn chơi được 3 mốc đầu mỗi bộ, nhưng tiến độ <b className="text-snow">không được lưu</b>.
         </p>
         <PixelLink to="/login" tone="gold" size="sm">
-          ĐĂNG NHẬP ĐỂ LƯU
+          Đăng nhập để lưu
         </PixelLink>
       </PixelPanel>
     );
@@ -26,19 +35,23 @@ function ProfileCard() {
   const span = Math.max(1, me.xpForNext - me.xpForCurrent);
   const done = units?.units.filter((u) => u.state === "done").length ?? 0;
   return (
-    <PixelPanel className="flex flex-col gap-3.5">
-      <div className="flex items-center gap-3.5">
-        <div className="flex h-[72px] w-[72px] items-center justify-center bg-sky px-inset">
-          <PixelIcon name="avatar" size={64} />
+    <PixelPanel className="flex flex-col gap-3">
+      <div className="flex items-center gap-3">
+        <div className="hb-inset h-[64px] w-[64px] p-0">
+          <div className="flex h-full w-full items-center justify-center bg-[radial-gradient(circle_at_40%_35%,#2f5bd0,transparent_75%)]">
+            <PixelIcon name="avatar" size={36} />
+          </div>
         </div>
-        <div className="flex min-w-0 flex-col gap-1.5">
-          <span className="truncate text-[28px] leading-none">{me.displayName}</span>
-          <span className="font-px text-[10px] text-lime">LV.{me.level}</span>
+        <div className="flex min-w-0 flex-col gap-1">
+          <span className="t-md t-bold truncate">{me.displayName}</span>
+          <span className="hb-chip-green font-px t-md self-start px-1 text-[#0f2d2c]">
+            LV {me.level}
+          </span>
         </div>
       </div>
-      <div className="flex justify-between text-[22px] text-mist">
+      <div className="t-sm flex justify-between text-mist">
         <span>Kinh nghiệm</span>
-        <span>
+        <span className="text-haze">
           {me.xp - me.xpForCurrent} / {span} XP
         </span>
       </div>
@@ -47,11 +60,11 @@ function ProfileCard() {
         {[
           { v: learned.data?.counts.learned ?? 0, l: "từ đã học", c: "text-gold" },
           { v: done, l: "mốc đã qua", c: "text-cyan" },
-          { v: me.streakDays, l: "ngày liên tiếp", c: "text-orange" },
+          { v: me.streakDays, l: "ngày liền", c: "text-orange" },
         ].map((s) => (
-          <div key={s.l} className="bg-ink px-1 py-2">
-            <div className={`font-px text-sm ${s.c}`}>{s.v}</div>
-            <div className="text-lg text-mist">{s.l}</div>
+          <div key={s.l} className="hb-inset flex flex-col items-center px-0 py-1">
+            <span className={`font-px t-md t-shadow ${s.c}`}>{s.v}</span>
+            <span className="t-sm text-mist">{s.l}</span>
           </div>
         ))}
       </div>
@@ -64,17 +77,21 @@ function QuestsCard() {
   const quests = useQuests(!!me);
   const claim = useClaimQuest();
   return (
-    <PixelPanel className="flex flex-col gap-3.5">
-      <h2 className="font-vi text-[22px] text-gold">NHIỆM VỤ HÔM NAY</h2>
-      {!me && (
-        <p className="text-2xl leading-tight text-mist">Đăng nhập để nhận nhiệm vụ hằng ngày.</p>
-      )}
+    <PixelPanel className="flex flex-col gap-3">
+      <h2 className="t-md t-bold flex items-center gap-2 text-gold uppercase">
+        <PixelIcon name="star" size={20} />
+        Nhiệm vụ hôm nay
+      </h2>
+      {!me && <p className="t-sm text-mist">Đăng nhập để nhận nhiệm vụ hằng ngày.</p>}
       {quests.data?.quests.map((q) => {
         const complete = q.progress >= q.target;
         return (
-          <div key={q.key} className="flex flex-col gap-1.5">
-            <div className="flex justify-between gap-2 text-[22px]">
-              <span className={q.claimed ? "text-lime line-through" : ""}>{q.title}</span>
+          <div key={q.key} className="flex flex-col gap-1">
+            <div className="t-sm flex items-center justify-between gap-2">
+              <span className={`flex items-center gap-2 ${q.claimed ? "text-lime" : "text-haze"}`}>
+                {q.claimed && <PixelIcon name="check" size={14} color="#b4f57a" />}
+                {q.title}
+              </span>
               <span className="text-mist">
                 {q.progress}/{q.target}
               </span>
@@ -82,22 +99,26 @@ function QuestsCard() {
             <PixelBar
               value={q.progress}
               max={q.target}
-              color={complete ? "#a7f070" : "#41a6f6"}
+              color={complete ? "var(--color-lime)" : "var(--color-cyan)"}
               label={q.title}
+              height={8}
             />
             {complete && !q.claimed && (
               <button
                 type="button"
-                className="font-vi cursor-pointer self-start bg-gold px-2.5 py-2 text-[16px] text-ink"
+                className="hb-btn-gold t-sm mt-1 self-start px-2 pb-1 text-[#3a1a18] uppercase"
                 onClick={() => claim.mutate(q.key)}
               >
-                NHẬN +{q.reward} XU
+                <span className="flex items-center gap-2">
+                  Nhận +{q.reward}
+                  <PixelIcon name="coin" size={20} />
+                </span>
               </button>
             )}
           </div>
         );
       })}
-      {me && <div className="text-xl text-mist">Làm mới lúc 00:00 (giờ Việt Nam)</div>}
+      {me && <div className="t-sm text-slate">Làm mới lúc 00:00 (giờ Việt Nam)</div>}
     </PixelPanel>
   );
 }
@@ -108,54 +129,36 @@ function FeaturedGame() {
   const current = units?.units.find((u) => u.state === "open") ?? units?.units.at(-1);
   if (!g) return null;
   return (
-    <section className="px-box flex h-[330px] bg-navy">
-      <div className="flex flex-1 flex-col gap-4 p-7">
-        <div className="flex gap-2.5">
-          <span className="font-vi bg-berry px-2 py-1.5 text-[18px]">MỚI</span>
-          <span className="font-vi bg-ink px-2 py-1 text-[18px] text-cyan">{g.tag}</span>
+    <section className="hb-ornate hb-lift flex">
+      <div className="flex flex-1 flex-col gap-3 p-5">
+        <div className="flex gap-2">
+          <span className="hb-chip-red t-sm px-1 text-snow uppercase [text-shadow:0_2px_0_#5c1532]">
+            Mới
+          </span>
+          <span className="hb-chip-dark t-sm px-1 text-cyan">{g.tag}</span>
         </div>
-        <h2 className="font-px text-[32px] leading-tight text-gold [text-shadow:4px_4px_0_var(--color-abyss)]">
+        <h2 className="font-px t-2xl t-gold mt-1 tracking-[2px]">
           WORD
           <br />
           BLASTER
         </h2>
-        <p className="max-w-[380px] text-2xl leading-[1.15]">{g.desc}</p>
-        <div className="mt-auto flex items-center gap-4">
-          <PixelLink to={g.path ?? "/"} tone="gold" size="lg">
-            <PixelIcon name="play" size={16} />
-            CHƠI NGAY
+        <p className="t-md max-w-[400px] text-haze">{g.desc}</p>
+        <div className="mt-auto flex items-center gap-4 pt-2">
+          <PixelLink to={g.path ?? "/"} tone="gold" size="lg" className="hb-glow">
+            <PixelIcon name="play" size={18} color="#3a1a18" />
+            Chơi ngay
           </PixelLink>
           {current && (
-            <span className="text-[22px] text-mist">
-              Mốc {current.idx} / {units?.set.unitCount} · {units?.set.name}
+            <span className="t-sm text-mist">
+              Mốc {current.idx} / {units?.set.unitCount}
+              <br />
+              {units?.set.name}
             </span>
           )}
         </div>
       </div>
-      <div
-        aria-hidden="true"
-        className="relative w-[340px] overflow-hidden border-l-4 border-abyss bg-ink"
-      >
-        <div className="absolute top-[22px] right-[26px] h-14 w-14 bg-orange shadow-[inset_-8px_-8px_0_#b13e53,inset_6px_6px_0_#ffcd75]" />
-        {[
-          { t: "apple", l: 30, top: 60, bg: "#38b764", hit: "" },
-          { t: "river", l: 170, top: 128, bg: "#5d275d", hit: "riv" },
-          { t: "soap", l: 60, top: 190, bg: "#257179", hit: "" },
-        ].map((w) => (
-          <div
-            key={w.t}
-            className="font-px absolute px-2.5 py-2 text-xs shadow-[0_0_0_3px_#0d0e18]"
-            style={{ left: w.l, top: w.top, background: w.bg }}
-          >
-            <span className="text-gold">{w.hit}</span>
-            {w.t.slice(w.hit.length)}
-          </div>
-        ))}
-        <div className="absolute top-40 left-[207px] h-24 w-1 bg-[repeating-linear-gradient(180deg,#73eff7_0_8px,transparent_8px_12px)]" />
-        <div className="absolute bottom-3 left-[186px]">
-          <PixelIcon name="ship" size={48} />
-        </div>
-        <div className="absolute right-0 bottom-0 left-0 h-1.5 bg-berry" />
+      <div className="hb-inset m-3 ml-0 flex shrink-0 items-center p-0">
+        <BlasterPreview />
       </div>
     </section>
   );
@@ -165,44 +168,48 @@ export function HubPage() {
   const me = useMe().data?.user;
   const open = GAMES.filter((g) => g.path).length;
   return (
-    <main className="mx-auto flex max-w-[1280px] gap-8 p-8">
-      <aside className="flex w-[300px] shrink-0 flex-col gap-7">
+    <main className="mx-auto flex max-w-[1280px] gap-6 p-8">
+      <aside className="flex w-[344px] shrink-0 flex-col gap-6">
         <ProfileCard />
         <QuestsCard />
       </aside>
-      <div className="flex min-w-0 flex-1 flex-col gap-7">
-        <div className="flex items-baseline justify-between">
-          <h1 className="font-vi text-[28px]">CHỌN TRÒ CHƠI</h1>
-          <span className="text-[22px] text-mist">
-            {open} / {GAMES.length} game đã mở
+      <div className="flex min-w-0 flex-1 flex-col gap-6">
+        <div className="flex items-end justify-between">
+          <h1 className="t-lg t-bold uppercase">Chọn trò chơi</h1>
+          <span className="t-sm hb-inset px-2 py-0 text-mist">
+            <span className="text-gold">{open}</span> / {GAMES.length} game đã mở
           </span>
         </div>
         <FeaturedGame />
-        <div className="grid grid-cols-3 gap-6">
+        <div className="grid grid-cols-3 gap-5">
           {GAMES.filter((g) => !g.path).map((g) => (
-            <article key={g.id} className="px-box relative flex flex-col gap-2.5 bg-steel p-[18px]">
+            <article key={g.id} className="hb-panel hb-lift relative flex flex-col gap-2 p-3">
               <div className="flex items-start justify-between">
-                <div
-                  className="flex h-12 w-16 items-center justify-center shadow-[0_0_0_3px_#0d0e18]"
-                  style={{ background: g.accent }}
-                >
-                  <span className="font-px text-base text-ink">{g.glyph}</span>
+                <div className="hb-inset h-[64px] w-[80px] p-0">
+                  <div
+                    className="flex h-full w-full items-center justify-center"
+                    style={{
+                      background: `radial-gradient(circle at 50% 45%, ${g.accent}66, transparent 70%)`,
+                    }}
+                  >
+                    <span className="font-px t-md t-shadow" style={{ color: g.accent }}>
+                      {g.glyph}
+                    </span>
+                  </div>
                 </div>
-                <span className="font-vi bg-ink px-1.5 py-1.5 text-[14px] text-mist">
-                  SẮP RA MẮT
-                </span>
+                <span className="hb-chip-dark t-sm px-1 text-mist uppercase">Sắp ra mắt</span>
               </div>
-              <h3 className="font-px mt-1 text-xs">{g.title}</h3>
-              <p className="text-[21px] leading-[1.1] text-mist">{g.desc}</p>
-              <div className="flex items-center gap-2 text-xl text-mist">
-                <PixelIcon name="lock" size={16} color="#94b0c2" />
-                Mở ở LV.{g.unlockLevel}
+              <h3 className="font-px t-md t-shadow mt-1 tracking-[1px]">{g.title}</h3>
+              <p className="t-sm text-mist">{g.desc}</p>
+              <div className="t-sm mt-auto flex items-center gap-2 text-slate">
+                <PixelIcon name="lock" size={20} dim />
+                Mở ở LV {g.unlockLevel}
                 {me && me.level >= g.unlockLevel ? " (đã đủ cấp)" : ""}
               </div>
             </article>
           ))}
         </div>
-        <Link to="/leaderboard" className="self-end text-2xl">
+        <Link to="/leaderboard" className="t-md self-end text-gold hover:text-snow">
           Xem bảng xếp hạng ▸
         </Link>
       </div>

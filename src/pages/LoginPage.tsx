@@ -2,6 +2,7 @@ import { useQueryClient } from "@tanstack/react-query";
 import { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { PixelButton } from "../components/ui/PixelButton";
+import { PixelIcon } from "../components/ui/PixelIcon";
 import { PixelPanel } from "../components/ui/PixelPanel";
 import { toast } from "../components/ui/Toast";
 import { devLogin, signInWithGoogle } from "../lib/auth";
@@ -37,21 +38,26 @@ export function LoginPage() {
   };
 
   return (
-    <main className="mx-auto flex max-w-xl flex-col gap-6 p-8 pt-16">
-      <PixelPanel tone="navy" className="flex flex-col gap-5 p-8">
-        <h1 className="font-vi text-[32px] text-gold">ĐĂNG NHẬP</h1>
-        <p className="text-2xl leading-tight">
+    <main className="mx-auto flex max-w-[600px] flex-col gap-6 p-8 pt-16">
+      <PixelPanel variant="ornate" className="flex flex-col gap-5 px-7 py-6">
+        <div className="flex items-center gap-4">
+          <PixelIcon name="logo" size={52} />
+          <div className="flex flex-col">
+            <h1 className="t-xl t-gold uppercase">Đăng nhập</h1>
+          </div>
+        </div>
+        <p className="t-md text-haze">
           Đăng nhập bằng Google để lưu tiến độ, XP, xu, từ đã học và lên bảng xếp hạng.
         </p>
-        <PixelButton tone="gold" size="lg" disabled={busy} onClick={google}>
-          TIẾP TỤC VỚI GOOGLE
+        <PixelButton tone="gold" size="lg" className="hb-glow" disabled={busy} onClick={google}>
+          Tiếp tục với Google
         </PixelButton>
         {(import.meta.env.DEV || import.meta.env.VITE_E2E === "1") && (
           <PixelButton tone="grey" size="sm" disabled={busy} onClick={dev}>
-            ĐĂNG NHẬP THỬ (CHỈ DEV)
+            Đăng nhập thử (chỉ dev)
           </PixelButton>
         )}
-        <p className="text-xl text-mist">
+        <p className="t-sm text-mist">
           Không muốn đăng nhập? Bạn vẫn chơi được 3 mốc đầu mỗi bộ, nhưng sẽ không có dữ liệu nào
           được lưu.
         </p>

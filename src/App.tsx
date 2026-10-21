@@ -32,7 +32,7 @@ export function App() {
           <Route
             path="/games/word-blaster/play/:unitId"
             element={
-              <Suspense fallback={<p className="p-8 text-3xl text-mist">Đang tải game…</p>}>
+              <Suspense fallback={<p className="t-md p-8 text-mist">Đang tải game…</p>}>
                 <PlayPage />
               </Suspense>
             }

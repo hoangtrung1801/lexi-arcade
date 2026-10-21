@@ -1,5 +1,6 @@
 import Phaser from "phaser";
 import { useEffect, useRef } from "react";
+import { MEANING_FONT, WORD_FONT } from "../art";
 import type { GameBus } from "../bus";
 import { FIELD_H, FIELD_W, type WordBlasterEngine } from "../logic/engine";
 import { WordBlasterScene } from "./scene";
@@ -26,8 +27,8 @@ export function GameHost({ engine, bus, showMeaning }: Props) {
     const boot = async () => {
       try {
         await Promise.all([
-          document.fonts.load('16px "Press Start 2P"'),
-          document.fonts.load("22px VT323"),
+          document.fonts.load(`12px ${WORD_FONT}`),
+          document.fonts.load(`12px ${MEANING_FONT}`),
         ]);
       } catch {}
       if (cancelled || !parent.current) return;
@@ -38,7 +39,7 @@ export function GameHost({ engine, bus, showMeaning }: Props) {
         height: FIELD_H,
         pixelArt: true,
         roundPixels: true,
-        backgroundColor: "#1a1c2c",
+        backgroundColor: "#06050d",
         scale: { mode: Phaser.Scale.FIT, autoCenter: Phaser.Scale.CENTER_BOTH },
         scene: [],
         audio: { noAudio: true },
