@@ -4,18 +4,15 @@ declare global {
   interface Window {
     __wordBlaster?: {
       status: string;
-      active: { y: number; word: { lemma: string } }[];
-      target: unknown;
+      prompt: { lemma: string } | null;
+      typed: string;
     };
   }
 }
 
 test.beforeEach(async ({ page }) => {
   await page.addInitScript(() =>
-    localStorage.setItem(
-      "lexi.settings.v1",
-      JSON.stringify({ difficulty: "hard", sound: false, showMeaning: true }),
-    ),
+    localStorage.setItem("lexi.settings.v1", JSON.stringify({ difficulty: "hard", sound: false })),
   );
 });
 
@@ -29,8 +26,8 @@ async function playRound(page: Page) {
     const state = await page.evaluate(() => {
       const g = window.__wordBlaster;
       if (!g) return { status: "gone", word: null };
-      const w = [...g.active].sort((a, b) => b.y - a.y)[0];
-      return { status: g.status, word: w?.word.lemma ?? null };
+      // answer the question on screen: the English word for the Vietnamese prompt
+      return { status: g.status, word: g.prompt && !g.typed ? g.prompt.lemma : null };
     });
     if (state.status === "won" || state.status === "lost" || state.status === "gone")
       return state.status;

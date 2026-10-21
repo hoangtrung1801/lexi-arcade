@@ -1,6 +1,6 @@
 import Phaser from "phaser";
 import { useEffect, useRef } from "react";
-import { MEANING_FONT, WORD_FONT } from "../art";
+import { WORD_FONT } from "../art";
 import type { GameBus } from "../bus";
 import { FIELD_H, FIELD_W, type WordBlasterEngine } from "../logic/engine";
 import { WordBlasterScene } from "./scene";
@@ -8,17 +8,14 @@ import { WordBlasterScene } from "./scene";
 interface Props {
   engine: WordBlasterEngine;
   bus: GameBus;
-  showMeaning: boolean;
 }
 
 /**
  * Owns the Phaser.Game instance. Created in an effect and destroyed on cleanup, so it survives
  * React StrictMode mounting effects twice in development.
  */
-export function GameHost({ engine, bus, showMeaning }: Props) {
+export function GameHost({ engine, bus }: Props) {
   const parent = useRef<HTMLDivElement>(null);
-  const meaning = useRef(showMeaning);
-  meaning.current = showMeaning;
 
   useEffect(() => {
     let game: Phaser.Game | null = null;
@@ -26,10 +23,7 @@ export function GameHost({ engine, bus, showMeaning }: Props) {
 
     const boot = async () => {
       try {
-        await Promise.all([
-          document.fonts.load(`12px ${WORD_FONT}`),
-          document.fonts.load(`12px ${MEANING_FONT}`),
-        ]);
+        await Promise.all([document.fonts.load(`12px ${WORD_FONT}`)]);
       } catch {}
       if (cancelled || !parent.current) return;
       game = new Phaser.Game({
@@ -44,11 +38,7 @@ export function GameHost({ engine, bus, showMeaning }: Props) {
         scene: [],
         audio: { noAudio: true },
       });
-      game.scene.add("word-blaster", WordBlasterScene, true, {
-        engine,
-        bus,
-        showMeaning: meaning.current,
-      });
+      game.scene.add("word-blaster", WordBlasterScene, true, { engine, bus });
     };
     boot();
 
@@ -58,10 +48,6 @@ export function GameHost({ engine, bus, showMeaning }: Props) {
       game = null;
     };
   }, [engine, bus]);
-
-  useEffect(() => {
-    bus.emit("showMeaning", showMeaning);
-  }, [bus, showMeaning]);
 
   return <div ref={parent} className="absolute inset-0" data-testid="phaser-parent" />;
 }

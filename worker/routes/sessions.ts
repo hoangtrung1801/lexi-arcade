@@ -26,6 +26,12 @@ const eventSchema = z.discriminatedUnion("type", [
   z.object({ t: z.number(), type: z.literal("wrong"), wordId: z.number().int().optional() }),
   z.object({ t: z.number(), type: z.literal("hit"), wordId: z.number().int() }),
   z.object({ t: z.number(), type: z.literal("miss"), wordId: z.number().int() }),
+  z.object({
+    t: z.number(),
+    type: z.literal("bad"),
+    wordId: z.number().int(),
+    choiceId: z.number().int(),
+  }),
 ]);
 const finishBody = z.object({ events: z.array(eventSchema).max(20000) });
 

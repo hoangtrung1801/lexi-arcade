@@ -12,13 +12,14 @@ export interface GameWord {
 
 /**
  * Event log produced by the game and replayed by the server.
- * `t` is milliseconds since the round started.
+ * `t` is milliseconds since the round started; `wordId` is the word being asked.
  */
 export type GameEvent =
-  | { t: number; type: "correct"; wordId: number } // one correct key on the locked word
-  | { t: number; type: "wrong"; wordId?: number } // wrong key (wordId = locked target, if any)
-  | { t: number; type: "hit"; wordId: number } // word fully typed and shot down
-  | { t: number; type: "miss"; wordId: number }; // word reached the ground
+  | { t: number; type: "correct"; wordId: number } // a key that still matches an answer plate
+  | { t: number; type: "wrong"; wordId?: number } // a key that matches no answer plate
+  | { t: number; type: "hit"; wordId: number } // right answer typed and shot down
+  | { t: number; type: "miss"; wordId: number } // the right answer reached the ground
+  | { t: number; type: "bad"; wordId: number; choiceId: number }; // typed a wrong answer (choiceId)
 
 export interface GameConfig {
   unitId: number;

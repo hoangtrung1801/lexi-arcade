@@ -3,7 +3,6 @@ import { drawNine, type FrameSpec, frameSprite, mix, toCanvas } from "../../lib/
 /** Shared Word Blaster art: word plates (also used by the hub preview). */
 
 export const WORD_FONT = '"Galmuri11 Bold", "Galmuri11", monospace';
-export const MEANING_FONT = '"Galmuri11", monospace';
 export const PLATE_H = 20;
 const PLATE_PAD = 7;
 

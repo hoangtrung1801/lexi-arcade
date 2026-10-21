@@ -19,17 +19,20 @@ export const STAR_BONUS_XP = 20;
 export const COINS_PER_STAR = 5;
 
 export interface DifficultyConfig {
-  /** fall speed, px per second in a 720px tall playfield */
+  /** fall speed, px per second in a 540px tall playfield */
   fallSpeed: number;
-  spawnIntervalMs: number;
-  maxOnScreen: number;
+  /** answer plates per question: the right word plus distractors */
+  options: number;
 }
 
 export const DIFFICULTY: Record<Difficulty, DifficultyConfig> = {
-  easy: { fallSpeed: 38, spawnIntervalMs: 2800, maxOnScreen: 3 },
-  normal: { fallSpeed: 55, spawnIntervalMs: 2200, maxOnScreen: 4 },
-  hard: { fallSpeed: 78, spawnIntervalMs: 1600, maxOnScreen: 6 },
+  easy: { fallSpeed: 36, options: 3 },
+  normal: { fallSpeed: 50, options: 4 },
+  hard: { fallSpeed: 70, options: 5 },
 };
+
+/** Pause between one question being settled and the next wave of answers. */
+export const WAVE_GAP_MS = 600;
 
 export const DAILY_QUESTS = [
   { key: "play_3", title: "Chơi 3 ván", target: 3, reward: 15 },

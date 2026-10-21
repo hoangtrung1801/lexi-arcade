@@ -2,7 +2,7 @@ import Phaser from "phaser";
 import { sprite, toCanvas } from "../../../lib/pixelart";
 import { paintPlanet, paintSky } from "../../../lib/sky";
 import { getSprite } from "../../../lib/sprites";
-import { MEANING_FONT, PLATE_H, paintExplosion, paintPlate, plateWidth, WORD_FONT } from "../art";
+import { PLATE_H, paintExplosion, paintPlate, plateWidth, WORD_FONT } from "../art";
 import type { GameBus } from "../bus";
 import {
   type ActiveWord,
@@ -30,7 +30,6 @@ interface WordView {
   img: Phaser.GameObjects.Image;
   tex: Phaser.Textures.CanvasTexture;
   key: string;
-  meaning: Phaser.GameObjects.Text;
   typed: number;
   lock: boolean;
   /** plate width in game px */
@@ -43,8 +42,8 @@ interface Bullet {
   img: Phaser.GameObjects.Image;
   uid: number;
   trail: [number, number][];
-  /** the word-completing shot: explodes the plate on impact */
-  finalPoints: number | null;
+  /** the answering shot: explodes the plate on impact (points for a right answer, "bad" for a wrong one) */
+  final: number | "bad" | null;
 }
 
 const BULLET_SPEED = 1200;
@@ -52,7 +51,6 @@ const BULLET_SPEED = 1200;
 export interface SceneData {
   engine: WordBlasterEngine;
   bus: GameBus;
-  showMeaning: boolean;
 }
 
 /** Paints the deck under the shield line: metal plates, seams, rivets and window lights. */
@@ -93,7 +91,6 @@ function paintGround(w: number, h: number) {
 export class WordBlasterScene extends Phaser.Scene {
   private engine!: WordBlasterEngine;
   private bus!: GameBus;
-  private showMeaning = true;
   private views = new Map<number, WordView>();
   private stars: { obj: Phaser.GameObjects.Rectangle; speed: number }[] = [];
   private ship!: Phaser.GameObjects.Image;
@@ -118,7 +115,6 @@ export class WordBlasterScene extends Phaser.Scene {
   init(data: SceneData) {
     this.engine = data.engine;
     this.bus = data.bus;
-    this.showMeaning = data.showMeaning;
   }
 
   create() {
@@ -173,16 +169,11 @@ export class WordBlasterScene extends Phaser.Scene {
       .setDepth(20);
 
     this.unsubscribe = this.engine.subscribe((n) => this.onNotice(n));
-    const onMeaning = (v: boolean) => {
-      this.showMeaning = v;
-    };
     const onShake = (v: number) => this.cameras.main.shake(120, v);
-    this.bus.on("showMeaning", onMeaning);
     this.bus.on("shake", onShake);
 
     this.events.once(Phaser.Scenes.Events.SHUTDOWN, () => {
       this.unsubscribe?.();
-      this.bus.off("showMeaning", onMeaning);
       this.bus.off("shake", onShake);
     });
   }
@@ -276,17 +267,7 @@ export class WordBlasterScene extends Phaser.Scene {
     paintPlate(tex.context, w.word.lemma, 0, w.uid, false);
     tex.refresh();
     const img = this.add.image(0, 0, key).setScale(S).setDepth(3);
-    const meaning = this.add
-      .text(0, 0, w.word.meaningVi, {
-        fontFamily: MEANING_FONT,
-        fontSize: "12px",
-        color: "#c5d6e3",
-      })
-      .setOrigin(0.5, 0)
-      .setScale(S)
-      .setDepth(4)
-      .setShadow(1, 1, "#0d0e18", 0, false, true);
-    return { img, tex, key, meaning, typed: 0, lock: false, w: width * S, kick: 0 };
+    return { img, tex, key, typed: 0, lock: false, w: width * S, kick: 0 };
   }
 
   private syncWords(time: number) {
@@ -313,7 +294,6 @@ export class WordBlasterScene extends Phaser.Scene {
       const cy = snap(w.y + PLATE_H - v.kick);
       v.kick = Math.max(0, v.kick - S / 2);
       v.img.setPosition(cx, cy);
-      v.meaning.setVisible(this.showMeaning).setPosition(cx, cy + PLATE_H + S * 2);
     }
     for (const [uid, v] of this.views) {
       if (!live.has(uid)) {
@@ -346,7 +326,6 @@ export class WordBlasterScene extends Phaser.Scene {
 
   private destroyView(v: WordView) {
     v.img.destroy();
-    v.meaning.destroy();
     this.textures.remove(v.key);
   }
 
@@ -357,7 +336,9 @@ export class WordBlasterScene extends Phaser.Scene {
       const tg = this.engine.target;
       if (tg) this.fire(tg.uid, null);
     } else if (n.kind === "hit") this.playHit(n.word, n.points);
+    else if (n.kind === "bad") this.playHit(n.word, "bad");
     else if (n.kind === "miss") this.playMiss(n.word);
+    else if (n.kind === "clear") this.fizzle(n.words);
     else if (n.kind === "wrong") {
       this.wrongUntil = this.time.now + 160;
       this.cameras.main.shake(80, 0.002);
@@ -400,10 +381,11 @@ export class WordBlasterScene extends Phaser.Scene {
   }
 
   /** Keeps the completed plate on screen (fully typed) and sends the final shot at it. */
-  private playHit(word: ActiveWord, points: number) {
+  private playHit(word: ActiveWord, final: number | "bad") {
     const v = this.views.get(word.uid);
     if (!v) {
-      this.blowUp(word.x, word.y + PLATE_H, points);
+      if (final === "bad") this.playBad(word.x, word.y + PLATE_H);
+      else this.blowUp(word.x, word.y + PLATE_H, final);
       return;
     }
     this.views.delete(word.uid);
@@ -412,14 +394,25 @@ export class WordBlasterScene extends Phaser.Scene {
     paintPlate(v.tex.context, word.word.lemma, word.word.lemma.length, word.uid, true);
     v.tex.refresh();
     this.aim.clear();
-    this.fire(word.uid, points);
+    this.fire(word.uid, final);
   }
 
-  private fire(uid: number, finalPoints: number | null) {
+  /** The other answers of a settled question break up quietly. */
+  private fizzle(words: ActiveWord[]) {
+    for (const w of words) {
+      const v = this.views.get(w.uid);
+      if (!v) continue;
+      this.views.delete(w.uid);
+      this.burst(v.img.x, v.img.y, [0x94b0c2, 0x566c86, 0x333c57], 10, 30);
+      this.destroyView(v);
+    }
+  }
+
+  private fire(uid: number, final: Bullet["final"]) {
     const x = snap(this.ship.x);
     const y = this.ship.y - 22;
     const img = this.add.image(x, y, "wb-bullet").setScale(S).setDepth(7);
-    this.bullets.push({ img, uid, trail: [], finalPoints });
+    this.bullets.push({ img, uid, trail: [], final });
     this.muzzle.setPosition(x, y + S).setVisible(true);
     this.time.delayedCall(50, () => this.muzzle.setVisible(false));
     this.recoilUntil = this.time.now + 70;
@@ -460,14 +453,38 @@ export class WordBlasterScene extends Phaser.Scene {
   private impact(b: Bullet, v: WordView) {
     const x = v.img.x;
     const y = v.img.y;
-    if (b.finalPoints === null) {
+    if (b.final === null) {
       v.kick = 3 * S;
       this.burst(x, y + PLATE_H / 2, [0xffffff, 0xc6fbff, 0x73eff7], 5, 22);
       return;
     }
     this.ghosts.delete(b.uid);
     this.destroyView(v);
-    this.blowUp(x, y, b.finalPoints);
+    if (b.final === "bad") this.playBad(x, y);
+    else this.blowUp(x, y, b.final);
+  }
+
+  /** A wrong answer: the plate blows up red and the screen flashes like a lost life. */
+  private playBad(x: number, y: number) {
+    this.explode(x, y);
+    this.burst(x, y, [0xf05d6c, 0xb13e53, 0x5d275d], 18, 60);
+    this.flash.setAlpha(0.25);
+    this.tweens.add({ targets: this.flash, alpha: 0, duration: 260 });
+    this.cameras.main.shake(160, 0.006);
+    const label = this.add
+      .text(x + 12, y - 30, "SAI!", { fontFamily: WORD_FONT, fontSize: "12px", color: "#f05d6c" })
+      .setScale(S)
+      .setShadow(1, 1, "#0d0e18", 0, false, true)
+      .setDepth(9);
+    this.tweens.add({
+      targets: label,
+      y: y - 76,
+      alpha: 0,
+      duration: 760,
+      ease: "Stepped",
+      easeParams: [8],
+      onComplete: () => label.destroy(),
+    });
   }
 
   private blowUp(x: number, y: number, points: number) {

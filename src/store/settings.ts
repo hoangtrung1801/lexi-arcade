@@ -3,7 +3,6 @@ import { create } from "zustand";
 
 interface Settings {
   sound: boolean;
-  showMeaning: boolean;
   difficulty: Difficulty;
   set: (patch: Partial<Omit<Settings, "set">>) => void;
 }
@@ -20,14 +19,13 @@ function load(): Partial<Settings> {
 
 export const useSettings = create<Settings>((set, get) => ({
   sound: true,
-  showMeaning: true,
   difficulty: "normal",
   ...load(),
   set: (patch) => {
     set(patch);
     try {
-      const { sound, showMeaning, difficulty } = get();
-      localStorage.setItem(KEY, JSON.stringify({ sound, showMeaning, difficulty }));
+      const { sound, difficulty } = get();
+      localStorage.setItem(KEY, JSON.stringify({ sound, difficulty }));
     } catch {}
   },
 }));

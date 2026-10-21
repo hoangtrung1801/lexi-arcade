@@ -232,6 +232,19 @@
     opacity: 0;
   }
 }
+@keyframes hb-pop {
+  0% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(0.95);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 .anim-bob {
   animation: hb-bob 1.6s steps(4) infinite;
 }
@@ -240,6 +253,10 @@
 }
 .anim-ring {
   animation: hb-ring 1.4s steps(6) infinite;
+}
+.anim-pop {
+  display: inline-block;
+  animation: hb-pop 0.3s steps(4);
 }
 
 @media (prefers-reduced-motion: reduce) {

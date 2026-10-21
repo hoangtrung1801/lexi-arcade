@@ -70,6 +70,18 @@ describe("scoring", () => {
     expect(r.livesLost).toBe(4);
   });
 
+  it("a wrong answer costs a life, resets the combo and keeps the word out of the clean list", () => {
+    const events: GameEvent[] = [
+      ...type(1, "cat", 1000),
+      { t: 2000, type: "bad", wordId: 2, choiceId: 1 },
+      ...type(2, "dog", 3000),
+    ];
+    const r = computeResult(events, words);
+    expect(r.livesLost).toBe(1);
+    expect(r.score).toBe(30 + 30);
+    expect(r.cleanWordIds).toEqual([1]);
+  });
+
   it("ignores duplicate hits", () => {
     const events: GameEvent[] = [...type(1, "cat", 1000), { t: 2000, type: "hit", wordId: 1 }];
     expect(computeResult(events, words).hitWordIds).toEqual([1]);
@@ -93,6 +105,15 @@ describe("validateEvents", () => {
   it("rejects unknown words", () => {
     const events: GameEvent[] = [{ t: 100, type: "hit", wordId: 99 }];
     expect(validateEvents(events, words, 10000)).toEqual({ ok: false, reason: "unknown-word" });
+  });
+
+  it("rejects a wrong answer that names an unknown word or the asked word", () => {
+    expect(
+      validateEvents([{ t: 100, type: "bad", wordId: 1, choiceId: 99 }], words, 10000),
+    ).toEqual({ ok: false, reason: "bad-choice" });
+    expect(validateEvents([{ t: 100, type: "bad", wordId: 1, choiceId: 1 }], words, 10000)).toEqual(
+      { ok: false, reason: "bad-choice" },
+    );
   });
 
   it("rejects a hit with no typing", () => {

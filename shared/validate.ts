@@ -25,6 +25,8 @@ export function validateEvents(
     prevT = ev.t;
     if (ev.wordId !== undefined && !ids.has(ev.wordId))
       return { ok: false, reason: "unknown-word" };
+    if (ev.type === "bad" && (!ids.has(ev.choiceId) || ev.choiceId === ev.wordId))
+      return { ok: false, reason: "bad-choice" };
     if (ev.type === "correct" || ev.type === "wrong") {
       if (ev.t - prevKeyT < MIN_KEY_INTERVAL_MS) return { ok: false, reason: "keys-too-fast" };
       prevKeyT = ev.t;

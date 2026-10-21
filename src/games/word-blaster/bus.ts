@@ -5,7 +5,6 @@ import mitt from "mitt";
  * Game state itself flows through the engine's notices; the bus only carries UI -> scene commands.
  */
 export type GameBusEvents = {
-  showMeaning: boolean;
   shake: number;
 };
 

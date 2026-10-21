@@ -34,14 +34,15 @@ function isImeKey(e: KeyboardEvent) {
 }
 
 /** Largest 16:9 box that fits the window, in CSS px (explicit sizes behave the same in every browser). */
+function measureField() {
+  const k = Math.min(window.innerWidth / FIELD_W, window.innerHeight / FIELD_H);
+  return { width: Math.floor(FIELD_W * k), height: Math.floor(FIELD_H * k) };
+}
+
 function useFieldSize() {
-  const measure = () => {
-    const k = Math.min(window.innerWidth / FIELD_W, window.innerHeight / FIELD_H);
-    return { width: Math.floor(FIELD_W * k), height: Math.floor(FIELD_H * k) };
-  };
-  const [size, setSize] = useState(measure);
+  const [size, setSize] = useState(measureField);
   useEffect(() => {
-    const on = () => setSize(measure());
+    const on = () => setSize(measureField());
     window.addEventListener("resize", on);
     return () => window.removeEventListener("resize", on);
   }, []);
@@ -59,7 +60,6 @@ export function Round({ config, unitIdx, unitCount, setName, onFinish, onExit }:
   const [count, setCount] = useState(3);
   const [banner, setBanner] = useState<string | null>(null);
   const inputRef = useRef<HTMLInputElement>(null);
-  const showMeaning = useSettings((s) => s.showMeaning);
   const sound = useSettings((s) => s.sound);
   const setSettings = useSettings((s) => s.set);
   const soundRef = useRef(sound);
@@ -74,7 +74,7 @@ export function Round({ config, unitIdx, unitCount, setName, onFinish, onExit }:
         if (n.kind === "key") play("key");
         else if (n.kind === "hit") play("hit");
         else if (n.kind === "wrong") play("wrong");
-        else if (n.kind === "miss") play("miss");
+        else if (n.kind === "miss" || n.kind === "bad") play("miss");
         else if (n.kind === "end") {
           play(n.status === "won" ? "win" : "lose");
           if (!finishing.current) {
@@ -130,7 +130,10 @@ export function Round({ config, unitIdx, unitCount, setName, onFinish, onExit }:
         return;
       }
       if (e.ctrlKey || e.metaKey || e.altKey) return;
-      if (e.key.length === 1) {
+      if (e.key === "Backspace") {
+        e.preventDefault();
+        engine.erase();
+      } else if (e.key.length === 1) {
         e.preventDefault();
         engine.type(e.key);
       }
@@ -157,10 +160,11 @@ export function Round({ config, unitIdx, unitCount, setName, onFinish, onExit }:
   }, []);
 
   const target = engine.target;
+  const prompt = engine.prompt;
   const field = useFieldSize();
+  // reads out the answer being typed (reading the asked word would give it away)
   const speakWord = () => {
-    const w = target?.word ?? [...engine.active].sort((a, b) => b.y - a.y)[0]?.word;
-    if (w) speak(w.id, w.lemma);
+    if (target) speak(target.word.id, target.word.lemma);
   };
 
   return (
@@ -169,7 +173,7 @@ export function Round({ config, unitIdx, unitCount, setName, onFinish, onExit }:
       style={field}
       onPointerDown={() => inputRef.current?.focus()}
     >
-      <GameHost engine={engine} bus={bus} showMeaning={showMeaning} />
+      <GameHost engine={engine} bus={bus} />
 
       <input
         ref={inputRef}
@@ -192,6 +196,7 @@ export function Round({ config, unitIdx, unitCount, setName, onFinish, onExit }:
           </span>
         </div>
         <div className="hb-hud flex items-center gap-3 px-3 py-0.5">
+          <span className="t-sm text-mist">{setName}</span>
           <span className="t-sm t-bold uppercase">
             Mốc {unitIdx}/{unitCount}
           </span>
@@ -224,15 +229,8 @@ export function Round({ config, unitIdx, unitCount, setName, onFinish, onExit }:
         <SideButton label="Tạm dừng" onClick={() => pause("paused")}>
           <PixelIcon name="pause" size={14} color="#f4f4f4" />
         </SideButton>
-        <SideButton label="Phát âm từ" onClick={speakWord}>
+        <SideButton label="Phát âm đáp án đang gõ" onClick={speakWord}>
           <PixelIcon name="speaker" size={18} color="#f4f4f4" />
-        </SideButton>
-        <SideButton
-          label={showMeaning ? "Ẩn nghĩa tiếng Việt" : "Hiện nghĩa tiếng Việt"}
-          pressed={showMeaning}
-          onClick={() => setSettings({ showMeaning: !showMeaning })}
-        >
-          <span className="font-px t-sm">VI</span>
         </SideButton>
         <SideButton
           label={sound ? "Tắt âm thanh" : "Bật âm thanh"}
@@ -244,21 +242,29 @@ export function Round({ config, unitIdx, unitCount, setName, onFinish, onExit }:
       </div>
 
       <div className="pointer-events-none absolute right-0 bottom-[1.5%] left-0 flex items-center justify-center gap-3">
-        <span className="hb-hud t-sm px-2 py-1 text-mist uppercase">{setName}</span>
         <div
-          className="hb-inset font-px t-md flex h-[52px] w-[320px] items-center px-3"
+          className="hb-panel flex h-[60px] min-w-[240px] max-w-[400px] items-center gap-3 px-2"
+          data-testid="prompt"
+        >
+          <span className="hb-chip-gold t-sm shrink-0 px-1 text-[#3a1a18] uppercase">Nghĩa</span>
+          <span
+            key={prompt?.id ?? "none"}
+            className={`t-lg t-bold truncate ${prompt ? "anim-pop text-gold" : "text-slate"}`}
+          >
+            {prompt?.meaningVi ?? "…"}
+          </span>
+        </div>
+        <div
+          className="hb-inset font-px t-md flex h-[60px] w-[280px] items-center px-3"
           aria-live="off"
         >
-          {target ? (
+          {engine.typed ? (
             <>
-              <span className="text-gold [text-shadow:0_2px_0_#7a3a12]">
-                {target.word.lemma.slice(0, target.typed)}
-              </span>
-              <span className="text-slate">{target.word.lemma.slice(target.typed)}</span>
+              <span className="text-gold [text-shadow:0_2px_0_#7a3a12]">{engine.typed}</span>
               <span className="anim-pulse ml-0.5 inline-block h-6 w-3 bg-ice" />
             </>
           ) : (
-            <span className="t-sm text-slate">gõ chữ cái đầu của một từ…</span>
+            <span className="t-sm whitespace-nowrap text-slate">gõ đáp án tiếng Anh…</span>
           )}
         </div>
         <span
@@ -278,7 +284,12 @@ export function Round({ config, unitIdx, unitCount, setName, onFinish, onExit }:
             {count}
           </div>
           <div className="hb-panel hb-lift flex max-w-[640px] flex-col items-center gap-1 px-5 py-3 text-center">
-            <p className="t-md">Gõ chữ cái đầu để khoá mục tiêu, gõ hết từ để bắn hạ.</p>
+            <p className="t-md">
+              Đọc nghĩa tiếng Việt, rồi gõ đúng từ tiếng Anh đang rơi để bắn hạ.
+            </p>
+            <p className="t-sm text-haze">
+              Gõ trọn một đáp án sai sẽ mất 1 mạng. Backspace để xoá chữ vừa gõ.
+            </p>
             <p className="t-sm text-mist">
               Hãy tắt bộ gõ tiếng Việt (Unikey/EVKey) trước khi chơi.
             </p>

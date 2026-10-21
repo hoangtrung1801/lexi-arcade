@@ -27,7 +27,8 @@ export function calcStars(
 
 /**
  * Replays an event log into a RoundResult.
- * Rules: wrong key or a missed word resets the combo; hitting 0 lives ends the round
+ * Rules: a wrong key, a wrong answer or a missed word resets the combo; a wrong answer or a
+ * missed word costs a life and hitting 0 lives ends the round
  * (events after that are ignored); the round is won when every word has been hit.
  */
 export function computeResult(
@@ -72,6 +73,12 @@ export function computeResult(
       }
       case "miss":
         missed.add(ev.wordId);
+        combo = 0;
+        lives--;
+        if (lives <= 0) status = "lost";
+        break;
+      case "bad":
+        wrongOn.add(ev.wordId);
         combo = 0;
         lives--;
         if (lives <= 0) status = "lost";

@@ -1,6 +1,6 @@
 import type { UnitSummary } from "@shared/api";
 import type { Difficulty } from "@shared/types";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { type MouseEvent, type PointerEvent, useEffect, useMemo, useRef, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { PixelButton, PixelLink } from "../components/ui/PixelButton";
 import { PixelIcon } from "../components/ui/PixelIcon";
@@ -34,30 +34,93 @@ function orbUrl(kind: keyof typeof ORBS, r: number) {
   return spriteUrl(`orb-${kind}-${r}`, () => orb(r, [...ORBS[kind]]));
 }
 
-function nodeCenter(i: number, gap: number): [number, number] {
+/** horizontal room kept left and right of the outer columns */
+const COL_EDGE = 50;
+
+interface Gap {
+  x: number;
+  y: number;
+}
+
+function nodeCenter(i: number, gap: Gap): [number, number] {
   const row = Math.floor(i / COLS);
   const c = i % COLS;
   const col = row % 2 === 0 ? c : COLS - 1 - c;
-  return [50 + col * 106, ROW_TOP + row * gap];
+  return [COL_EDGE + col * gap.x, ROW_TOP + row * gap.y];
 }
 
-/** Row spacing that fits the 4 rows of a page into the available height. */
-function useRowGap() {
+/**
+ * Node spacing that fits a page of units into the board. Below the minimum spacing the board
+ * overflows instead, and the viewport scrolls (or drags) to show the rest.
+ */
+function useBoardGap() {
   const ref = useRef<HTMLDivElement>(null);
-  const [height, setHeight] = useState(0);
+  const [box, setBox] = useState({ w: 0, h: 0 });
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
-    const ro = new ResizeObserver(([e]) => setHeight(e?.contentRect.height ?? 0));
+    const ro = new ResizeObserver(() => setBox({ w: el.clientWidth, h: el.clientHeight }));
     ro.observe(el);
     return () => ro.disconnect();
   }, []);
   const rows = PAGE / COLS;
-  const fit = Math.floor((height - ROW_TOP - ROW_END) / (rows - 1));
-  return [ref, height ? Math.max(76, Math.min(116, fit)) : 116] as const;
+  const fitX = Math.floor((box.w - COL_EDGE * 2) / (COLS - 1));
+  const fitY = Math.floor((box.h - ROW_TOP - ROW_END) / (rows - 1));
+  const gap: Gap = {
+    x: box.w ? Math.max(68, Math.min(106, fitX)) : 106,
+    y: box.h ? Math.max(66, Math.min(116, fitY)) : 116,
+  };
+  const overflows = !!box.w && (fitX < gap.x || fitY < gap.y);
+  return [ref, gap, overflows] as const;
 }
 
-function Segment({ a, b, gap, done }: { a: number; b: number; gap: number; done: boolean }) {
+/** Click-and-drag panning for a scrollable box; a drag never counts as a click on a node. */
+function useDragPan() {
+  const drag = useRef<{ x: number; y: number; left: number; top: number; moved: boolean } | null>(
+    null,
+  );
+  const onPointerDown = (e: PointerEvent<HTMLDivElement>) => {
+    if (e.pointerType !== "mouse" || e.button !== 0) return;
+    const el = e.currentTarget;
+    if (el.scrollWidth <= el.clientWidth && el.scrollHeight <= el.clientHeight) return;
+    drag.current = {
+      x: e.clientX,
+      y: e.clientY,
+      left: el.scrollLeft,
+      top: el.scrollTop,
+      moved: false,
+    };
+  };
+  const onPointerMove = (e: PointerEvent<HTMLDivElement>) => {
+    const d = drag.current;
+    if (!d) return;
+    const dx = e.clientX - d.x;
+    const dy = e.clientY - d.y;
+    if (!d.moved && Math.abs(dx) + Math.abs(dy) < 5) return;
+    if (!d.moved) e.currentTarget.setPointerCapture(e.pointerId);
+    d.moved = true;
+    e.currentTarget.scrollLeft = d.left - dx;
+    e.currentTarget.scrollTop = d.top - dy;
+  };
+  const onPointerUp = () => {
+    // keep the flag until the click that follows this pointerup has been swallowed
+    setTimeout(() => {
+      drag.current = null;
+    });
+  };
+  const onClickCapture = (e: MouseEvent) => {
+    if (drag.current?.moved) e.stopPropagation();
+  };
+  return {
+    onPointerDown,
+    onPointerMove,
+    onPointerUp,
+    onPointerCancel: onPointerUp,
+    onClickCapture,
+  };
+}
+
+function Segment({ a, b, gap, done }: { a: number; b: number; gap: Gap; done: boolean }) {
   const [x1, y1] = nodeCenter(a, gap);
   const [x2, y2] = nodeCenter(b, gap);
   const color = done ? "#ffcd75" : "#3a4367";
@@ -130,7 +193,8 @@ export function MapPage() {
   const totalStars = units.reduce((n, u) => n + u.bestStars, 0);
   const bestScore = units.reduce((n, u) => Math.max(n, u.bestScore), 0);
   const canPlay = !!selected && selected.state !== "locked";
-  const [boardRef, gap] = useRowGap();
+  const [boardRef, gap, overflows] = useBoardGap();
+  const pan = useDragPan();
 
   return (
     <div className="mx-auto flex h-full max-w-[1280px] flex-col">
@@ -144,7 +208,9 @@ export function MapPage() {
         </Link>
         <div className="flex flex-col">
           <span className="font-px t-lg t-gold tracking-[2px]">WORD BLASTER</span>
-          <span className="t-sm text-mist">Gõ các từ tiếng Anh đang rơi để bắn hạ chúng</span>
+          <span className="t-sm text-mist">
+            Đọc nghĩa tiếng Việt, gõ đúng đáp án tiếng Anh đang rơi
+          </span>
         </div>
         <div className="ml-auto flex items-center gap-3">
           {me && (
@@ -164,8 +230,8 @@ export function MapPage() {
         </div>
       </div>
 
-      <div className="flex min-h-0 flex-1 gap-6 px-8 pt-4 pb-3">
-        <PixelPanel className="flex w-[250px] shrink-0 flex-col gap-3 overflow-y-auto">
+      <div className="flex min-h-0 flex-1 gap-4 px-8 pt-4 pb-3 xl:gap-6">
+        <PixelPanel className="flex w-[210px] shrink-0 xl:w-[250px] flex-col gap-3 overflow-y-auto">
           <h2 className="t-md t-bold text-gold uppercase">Bộ từ vựng</h2>
           {sets.map((s) => (
             <button
@@ -197,21 +263,21 @@ export function MapPage() {
 
         <section
           aria-label="Bản đồ mốc"
-          className="hb-inset relative flex min-w-0 flex-1 flex-col overflow-hidden p-5"
+          className="hb-inset relative flex min-w-0 flex-1 flex-col overflow-hidden p-4 xl:p-5"
         >
           <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_30%_20%,rgb(55_68_121/0.35),transparent_60%),radial-gradient(ellipse_at_80%_90%,rgb(59_93_201/0.25),transparent_55%)]" />
-          <div className="relative mb-2 flex shrink-0 items-center justify-between">
-            <h2 className="t-md t-bold uppercase">
+          <div className="relative mb-2 flex shrink-0 items-center justify-between gap-3">
+            <h2 className="t-md t-bold whitespace-nowrap uppercase">
               Mốc {page * PAGE + 1}–{Math.min(units.length, page * PAGE + PAGE)}
             </h2>
-            <div className="flex gap-2">
+            <div className="-mr-1 flex min-w-0 gap-2 overflow-x-auto pr-1 pb-1">
               {Array.from({ length: pageCount }, (_, p) => (
                 <button
                   key={p}
                   type="button"
                   onClick={() => setPage(p)}
                   aria-pressed={p === page}
-                  className={`font-px t-sm px-2 pt-0.5 pb-1.5 ${
+                  className={`font-px t-sm shrink-0 whitespace-nowrap px-2 pt-0.5 pb-1.5 ${
                     p === page ? "hb-btn-blue text-[#141b3d]" : "hb-btn-dark text-mist"
                   }`}
                 >
@@ -220,10 +286,17 @@ export function MapPage() {
               ))}
             </div>
           </div>
-          <div ref={boardRef} className="relative min-h-0 flex-1">
+          <div
+            ref={boardRef}
+            {...pan}
+            className={`relative min-h-0 flex-1 overflow-auto ${overflows ? "cursor-grab select-none active:cursor-grabbing" : ""}`}
+          >
             <div
-              className="relative mx-auto w-[530px]"
-              style={{ height: ROW_TOP + (PAGE / COLS - 1) * gap + ROW_END }}
+              className="relative mx-auto"
+              style={{
+                width: COL_EDGE * 2 + (COLS - 1) * gap.x,
+                height: ROW_TOP + (PAGE / COLS - 1) * gap.y + ROW_END,
+              }}
             >
               {pageUnits.slice(1).map((u, i) => (
                 <Segment key={u.id} a={i} b={i + 1} gap={gap} done={u.state !== "locked"} />
@@ -287,7 +360,7 @@ export function MapPage() {
           </div>
         </section>
 
-        <PixelPanel className="flex w-[340px] shrink-0 flex-col gap-3">
+        <PixelPanel className="flex w-[290px] shrink-0 flex-col gap-3 xl:w-[340px]">
           {selected ? (
             <>
               <div className="-mr-2 flex min-h-0 flex-1 flex-col gap-3 overflow-y-auto pr-2">
