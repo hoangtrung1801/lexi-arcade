@@ -63,5 +63,5 @@ export function GameHost({ engine, bus, showMeaning }: Props) {
     bus.emit("showMeaning", showMeaning);
   }, [bus, showMeaning]);
 
-  return <div ref={parent} className="h-full w-full" data-testid="phaser-parent" />;
+  return <div ref={parent} className="absolute inset-0" data-testid="phaser-parent" />;
 }

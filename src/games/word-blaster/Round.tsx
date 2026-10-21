@@ -9,7 +9,7 @@ import { PixelIcon } from "../../components/ui/PixelIcon";
 import { playSfx, speak } from "../../lib/sfx";
 import { useSettings } from "../../store/settings";
 import { createGameBus } from "./bus";
-import { WordBlasterEngine } from "./logic/engine";
+import { FIELD_H, FIELD_W, WordBlasterEngine } from "./logic/engine";
 import { GameHost } from "./phaser/GameHost";
 
 interface Props {
@@ -31,6 +31,21 @@ function isImeKey(e: KeyboardEvent) {
   if (e.isComposing || e.key === "Process" || e.keyCode === 229) return true;
   // composed result such as "â" or "ơ" arrives as a single non-ASCII letter
   return e.key.length === 1 && /\p{L}/u.test(e.key) && !/^[a-z]$/i.test(e.key);
+}
+
+/** Largest 16:9 box that fits the window, in CSS px (explicit sizes behave the same in every browser). */
+function useFieldSize() {
+  const measure = () => {
+    const k = Math.min(window.innerWidth / FIELD_W, window.innerHeight / FIELD_H);
+    return { width: Math.floor(FIELD_W * k), height: Math.floor(FIELD_H * k) };
+  };
+  const [size, setSize] = useState(measure);
+  useEffect(() => {
+    const on = () => setSize(measure());
+    window.addEventListener("resize", on);
+    return () => window.removeEventListener("resize", on);
+  }, []);
+  return size;
 }
 
 export function Round({ config, unitIdx, unitCount, setName, onFinish, onExit }: Props) {
@@ -142,6 +157,7 @@ export function Round({ config, unitIdx, unitCount, setName, onFinish, onExit }:
   }, []);
 
   const target = engine.target;
+  const field = useFieldSize();
   const speakWord = () => {
     const w = target?.word ?? [...engine.active].sort((a, b) => b.y - a.y)[0]?.word;
     if (w) speak(w.id, w.lemma);
@@ -149,8 +165,8 @@ export function Round({ config, unitIdx, unitCount, setName, onFinish, onExit }:
 
   return (
     <div
-      className="relative overflow-hidden bg-void"
-      style={{ width: "min(100vw, calc(100vh * 960 / 540))", aspectRatio: "960 / 540" }}
+      className="relative shrink-0 overflow-hidden bg-void"
+      style={field}
       onPointerDown={() => inputRef.current?.focus()}
     >
       <GameHost engine={engine} bus={bus} showMeaning={showMeaning} />

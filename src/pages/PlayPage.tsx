@@ -133,7 +133,7 @@ export function PlayPage() {
     );
 
   return (
-    <div className="flex h-screen w-screen items-center justify-center bg-void">
+    <div className="flex h-screen w-screen items-center justify-center overflow-hidden bg-void">
       <Round
         key={config.sessionId ?? "guest"}
         config={config}
