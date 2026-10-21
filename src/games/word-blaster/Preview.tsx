@@ -15,6 +15,14 @@ interface Plate {
   typed: number;
   tone: number;
   speed: number;
+  /** fully typed, waiting for its last bullet */
+  dying: boolean;
+}
+interface Bullet {
+  x: number;
+  y: number;
+  plate: Plate;
+  final: boolean;
 }
 interface Spark {
   x: number;
@@ -50,14 +58,13 @@ export function BlasterPreview({ className = "" }: { className?: string }) {
         typed: 0,
         tone: n,
         speed: 9 + (n % 3) * 2,
+        dying: false,
       };
     };
     let plates: Plate[] = [];
     let sparks: Spark[] = [];
     let shipX = W / 2;
-    let beam = 0;
-    let beamX = 0;
-    let beamY = 0;
+    let bullets: Bullet[] = [];
     let lastType = 0;
     let raf = 0;
     let prev = performance.now();
@@ -69,34 +76,47 @@ export function BlasterPreview({ className = "" }: { className?: string }) {
       prev = now;
       const t = now / 1000;
 
-      // simulate: the lowest plate gets typed one letter every 0.16s once it is on screen
+      // simulate: the lowest plate gets one letter (and one bullet) every 0.16s once on screen
+      const sy = H - ship.height - 10;
       for (const p of plates) p.y += p.speed * dt;
-      const target = [...plates].sort((a, b) => b.y - a.y)[0];
+      const target = plates.filter((p) => !p.dying).sort((a, b) => b.y - a.y)[0];
       if (target && target.y > 18 && t - lastType > 0.16) {
         lastType = t;
         target.typed++;
-        if (target.typed >= target.text.length) {
-          const cx = target.x + plateWidth(target.text) / 2;
-          const cy = target.y + PLATE_H / 2;
-          beam = 0.12;
-          beamX = cx;
-          beamY = cy;
-          const cols = ["#fff6c4", "#ffd866", "#ff9d4f", "#f05d6c", "#c2f4ff"];
-          for (let i = 0; i < 16; i++) {
-            const a = (i / 16) * Math.PI * 2;
-            const v = 20 + (i % 4) * 12;
-            sparks.push({
-              x: cx,
-              y: cy,
-              vx: Math.cos(a) * v,
-              vy: Math.sin(a) * v,
-              life: 0.45,
-              c: cols[i % cols.length] ?? "#fff",
-            });
-          }
-          plates = plates.filter((p) => p !== target);
-        }
+        target.dying = target.typed >= target.text.length;
+        bullets.push({ x: shipX, y: sy - 1, plate: target, final: target.dying });
       }
+      const burst = (cx: number, cy: number, cols: string[], count: number, speed: number) => {
+        for (let i = 0; i < count; i++) {
+          const a = (i / count) * Math.PI * 2;
+          const v = speed + (i % 4) * speed * 0.6;
+          sparks.push({
+            x: cx,
+            y: cy,
+            vx: Math.cos(a) * v,
+            vy: Math.sin(a) * v,
+            life: 0.45,
+            c: cols[i % cols.length] ?? "#fff",
+          });
+        }
+      };
+      bullets = bullets.filter((b) => {
+        if (!plates.includes(b.plate)) return false;
+        const tx = b.plate.x + plateWidth(b.plate.text) / 2;
+        const ty = b.plate.y + PLATE_H / 2;
+        const d = Math.hypot(tx - b.x, ty - b.y);
+        const step = 260 * dt;
+        if (d > step) {
+          b.x += ((tx - b.x) / d) * step;
+          b.y += ((ty - b.y) / d) * step;
+          return true;
+        }
+        if (b.final) {
+          burst(tx, ty, ["#fff6c4", "#ffd866", "#ff9d4f", "#f05d6c", "#c2f4ff"], 16, 20);
+          plates = plates.filter((p) => p !== b.plate);
+        } else burst(tx, ty + 4, ["#ffffff", "#6fd0ff"], 4, 14);
+        return false;
+      });
       if (plates.length < 3) plates.push(spawn(-PLATE_H - plates.length * 30));
       plates = plates.filter((p) => p.y < H - 30);
       const goal = target ? target.x + plateWidth(target.text) / 2 : W / 2;
@@ -115,21 +135,25 @@ export function BlasterPreview({ className = "" }: { className?: string }) {
         ctx.fillRect(x, H - 9, 4, 1);
       }
       for (const p of plates)
-        paintPlate(ctx, p.text, p.typed, p.tone, p === target, Math.round(p.x), Math.round(p.y));
-      const sy = H - ship.height - 10;
+        paintPlate(
+          ctx,
+          p.text,
+          p.typed,
+          p.tone,
+          p === target || p.dying,
+          Math.round(p.x),
+          Math.round(p.y),
+        );
       const sx = Math.round(shipX - ship.width / 2);
-      if (target) {
-        ctx.fillStyle = "rgba(111,208,255,0.35)";
-        for (let y = Math.round(target.y + PLATE_H); y < sy; y += 3) {
-          ctx.fillRect(Math.round(goal), y, 1, 2);
-        }
-      }
-      if (beam > 0) {
-        beam -= dt;
+      for (const b of bullets) {
+        const bx = Math.round(b.x);
+        const by = Math.round(b.y);
+        ctx.fillStyle = "#2f5bd0";
+        ctx.fillRect(bx, by + 3, 1, 2);
         ctx.fillStyle = "#6fd0ff";
-        ctx.fillRect(Math.round(beamX) - 1, Math.round(beamY), 3, sy - beamY);
+        ctx.fillRect(bx - 1, by, 3, 3);
         ctx.fillStyle = "#ffffff";
-        ctx.fillRect(Math.round(beamX), Math.round(beamY), 1, sy - beamY);
+        ctx.fillRect(bx, by, 1, 2);
       }
       ctx.drawImage(ship, sx, sy + (Math.floor(t * 4) % 2));
       // engine flicker

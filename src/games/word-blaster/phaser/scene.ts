@@ -1,5 +1,5 @@
 import Phaser from "phaser";
-import { toCanvas } from "../../../lib/pixelart";
+import { sprite, toCanvas } from "../../../lib/pixelart";
 import { paintPlanet, paintSky } from "../../../lib/sky";
 import { getSprite } from "../../../lib/sprites";
 import { MEANING_FONT, PLATE_H, paintExplosion, paintPlate, plateWidth, WORD_FONT } from "../art";
@@ -24,6 +24,7 @@ const SHIP_Y = GROUND_Y - 34;
 
 const FIRE = [0xfff6c4, 0xffd866, 0xff9d4f, 0xf05d6c, 0xc43356, 0x6fd0ff];
 const STAR_COLORS = [0x3a3170, 0x6a5c9e, 0xa99fe0, 0xe6e0ff];
+const BOLT = { w: "#ffffff", C: "#6fd0ff", c: "#3f8ff0" };
 
 interface WordView {
   img: Phaser.GameObjects.Image;
@@ -34,7 +35,19 @@ interface WordView {
   lock: boolean;
   /** plate width in game px */
   w: number;
+  /** upward knock from a bullet impact, in game px */
+  kick: number;
 }
+
+interface Bullet {
+  img: Phaser.GameObjects.Image;
+  uid: number;
+  trail: [number, number][];
+  /** the word-completing shot: explodes the plate on impact */
+  finalPoints: number | null;
+}
+
+const BULLET_SPEED = 1200;
 
 export interface SceneData {
   engine: WordBlasterEngine;
@@ -90,6 +103,12 @@ export class WordBlasterScene extends Phaser.Scene {
   private shield!: Phaser.GameObjects.Rectangle;
   private flash!: Phaser.GameObjects.Rectangle;
   private wrongUntil = 0;
+  private recoilUntil = 0;
+  private bullets: Bullet[] = [];
+  /** plates the engine already removed, kept on screen until their last bullet lands */
+  private ghosts = new Map<number, WordView>();
+  private trails!: Phaser.GameObjects.Graphics;
+  private muzzle!: Phaser.GameObjects.Image;
   private unsubscribe: (() => void) | null = null;
 
   constructor() {
@@ -145,6 +164,8 @@ export class WordBlasterScene extends Phaser.Scene {
       .setDepth(6);
 
     this.aim = this.add.graphics().setDepth(5);
+    this.trails = this.add.graphics().setDepth(7);
+    this.muzzle = this.add.image(0, 0, "wb-muzzle").setScale(S).setDepth(7).setVisible(false);
     this.flash = this.add
       .rectangle(0, 0, FIELD_W, FIELD_H, 0xf05d6c)
       .setOrigin(0)
@@ -171,6 +192,7 @@ export class WordBlasterScene extends Phaser.Scene {
     this.scrollStars(delta);
     this.syncWords(time);
     this.flyShip(time);
+    this.moveBullets(delta);
   }
 
   /* ---------- art ---------- */
@@ -184,6 +206,13 @@ export class WordBlasterScene extends Phaser.Scene {
       const tex = t.addCanvas("wb-boom", paintExplosion(BOOM_FRAMES, BOOM_SIZE));
       for (let i = 0; i < BOOM_FRAMES; i++) tex?.add(i, 0, i * BOOM_SIZE, 0, BOOM_SIZE, BOOM_SIZE);
     }
+    if (!t.exists("wb-bullet"))
+      t.addCanvas(
+        "wb-bullet",
+        toCanvas(sprite(["..w..", ".wCw.", ".CwC.", "cCwCc", ".CwC.", ".cCc.", "..c.."], BOLT)),
+      );
+    if (!t.exists("wb-muzzle"))
+      t.addCanvas("wb-muzzle", toCanvas(sprite(["..w..", ".wCw.", "wCcCw", ".c.c."], BOLT)));
     if (!t.exists("wb-ground"))
       t.addCanvas("wb-ground", paintGround(FIELD_W / S, (FIELD_H - GROUND_Y) / S + 2));
   }
@@ -222,7 +251,7 @@ export class WordBlasterScene extends Phaser.Scene {
     const x = this.ship.x + (goal - this.ship.x) * 0.2;
     this.ship.x = x;
     const bob = Math.floor(time / 250) % 2 ? S : 0;
-    this.ship.y = SHIP_Y + bob;
+    this.ship.y = SHIP_Y + bob + (time < this.recoilUntil ? S : 0);
     const sx = snap(x);
     const tail = this.ship.y + this.ship.displayHeight / 2;
     const flicker = Math.floor(time / 60) % 2;
@@ -257,7 +286,7 @@ export class WordBlasterScene extends Phaser.Scene {
       .setScale(S)
       .setDepth(4)
       .setShadow(1, 1, "#0c0a1a", 0, false, true);
-    return { img, tex, key, meaning, typed: 0, lock: false, w: width * S };
+    return { img, tex, key, meaning, typed: 0, lock: false, w: width * S, kick: 0 };
   }
 
   private syncWords(time: number) {
@@ -281,7 +310,8 @@ export class WordBlasterScene extends Phaser.Scene {
       }
       const half = v.w / 2;
       const cx = snap(Phaser.Math.Clamp(w.x, half + 8, PLAY_W - half + 8)) + (lock ? shake : 0);
-      const cy = snap(w.y + PLATE_H);
+      const cy = snap(w.y + PLATE_H - v.kick);
+      v.kick = Math.max(0, v.kick - S / 2);
       v.img.setPosition(cx, cy);
       v.meaning.setVisible(this.showMeaning).setPosition(cx, cy + PLATE_H + S * 2);
     }
@@ -292,7 +322,7 @@ export class WordBlasterScene extends Phaser.Scene {
       }
     }
 
-    // dotted aiming line + lock-on brackets
+    // lock-on brackets
     this.aim.clear();
     const v = tg && this.views.get(tg.uid);
     if (!v) return;
@@ -300,9 +330,6 @@ export class WordBlasterScene extends Phaser.Scene {
     const bottom = v.img.y + PLATE_H;
     const left = v.img.x - v.w / 2;
     const right = v.img.x + v.w / 2;
-    this.aim.fillStyle(0x6fd0ff, 0.45);
-    for (let y = bottom + 6; y < this.ship.y - 24; y += 10)
-      this.aim.fillRect(snap(v.img.x) - 1, y, S, 6);
     const pulse = Math.floor(time / 160) % 2 ? 2 * S : 3 * S;
     const L = 5 * S;
     this.aim.fillStyle(0xffd866, 1);
@@ -326,7 +353,10 @@ export class WordBlasterScene extends Phaser.Scene {
   /* ---------- feedback ---------- */
 
   private onNotice(n: Notice) {
-    if (n.kind === "hit") this.playHit(n.word, n.points);
+    if (n.kind === "key") {
+      const tg = this.engine.target;
+      if (tg) this.fire(tg.uid, null);
+    } else if (n.kind === "hit") this.playHit(n.word, n.points);
     else if (n.kind === "miss") this.playMiss(n.word);
     else if (n.kind === "wrong") {
       this.wrongUntil = this.time.now + 160;
@@ -369,36 +399,81 @@ export class WordBlasterScene extends Phaser.Scene {
     });
   }
 
+  /** Keeps the completed plate on screen (fully typed) and sends the final shot at it. */
   private playHit(word: ActiveWord, points: number) {
     const v = this.views.get(word.uid);
-    const x = v?.img.x ?? word.x;
-    const y = v?.img.y ?? word.y;
-    const nose = this.ship.y - 20;
+    if (!v) {
+      this.blowUp(word.x, word.y + PLATE_H, points);
+      return;
+    }
+    this.views.delete(word.uid);
+    this.ghosts.set(word.uid, v);
+    v.tex.context.clearRect(0, 0, v.tex.width, v.tex.height);
+    paintPlate(v.tex.context, word.word.lemma, word.word.lemma.length, word.uid, true);
+    v.tex.refresh();
+    this.aim.clear();
+    this.fire(word.uid, points);
+  }
 
-    const beam = this.add
-      .rectangle(snap(x), nose, 3 * S, nose - y, 0x6fd0ff)
-      .setOrigin(0.5, 1)
-      .setDepth(7);
-    const core = this.add
-      .rectangle(snap(x), nose, S, nose - y, 0xffffff)
-      .setOrigin(0.5, 1)
-      .setDepth(7);
-    this.tweens.add({
-      targets: [beam, core],
-      alpha: 0,
-      scaleX: 0.3,
-      duration: 200,
-      ease: "Stepped",
-      easeParams: [4],
-      onComplete: () => {
-        beam.destroy();
-        core.destroy();
-      },
+  private fire(uid: number, finalPoints: number | null) {
+    const x = snap(this.ship.x);
+    const y = this.ship.y - 22;
+    const img = this.add.image(x, y, "wb-bullet").setScale(S).setDepth(7);
+    this.bullets.push({ img, uid, trail: [], finalPoints });
+    this.muzzle.setPosition(x, y + S).setVisible(true);
+    this.time.delayedCall(50, () => this.muzzle.setVisible(false));
+    this.recoilUntil = this.time.now + 70;
+  }
+
+  /** Bullets home in on their plate; a plate that vanished (missed) just lets them fizzle. */
+  private moveBullets(delta: number) {
+    this.trails.clear();
+    const step = (BULLET_SPEED * delta) / 1000;
+    this.bullets = this.bullets.filter((b) => {
+      const v = this.views.get(b.uid) ?? this.ghosts.get(b.uid);
+      if (!v) {
+        b.img.destroy();
+        return false;
+      }
+      const tx = v.img.x;
+      const ty = v.img.y + PLATE_H / 2;
+      const dx = tx - b.img.x;
+      const dy = ty - b.img.y;
+      const dist = Math.hypot(dx, dy);
+      if (dist <= step) {
+        b.img.destroy();
+        this.impact(b, v);
+        return false;
+      }
+      b.trail.unshift([b.img.x, b.img.y]);
+      b.trail.length = Math.min(b.trail.length, 4);
+      b.img.setPosition(snap(b.img.x + (dx / dist) * step), snap(b.img.y + (dy / dist) * step));
+      b.trail.forEach(([x, y], i) => {
+        const size = (i < 2 ? 2 : 1) * S;
+        this.trails.fillStyle(i < 2 ? 0x6fd0ff : 0x2f5bd0, 1 - i * 0.2);
+        this.trails.fillRect(snap(x) - size / 2, snap(y) - size / 2, size, size);
+      });
+      return true;
     });
+  }
 
+  private impact(b: Bullet, v: WordView) {
+    const x = v.img.x;
+    const y = v.img.y;
+    if (b.finalPoints === null) {
+      v.kick = 3 * S;
+      this.burst(x, y + PLATE_H / 2, [0xffffff, 0xc2f4ff, 0x6fd0ff], 5, 22);
+      return;
+    }
+    this.ghosts.delete(b.uid);
+    this.destroyView(v);
+    this.blowUp(x, y, b.finalPoints);
+  }
+
+  private blowUp(x: number, y: number, points: number) {
     this.explode(x, y);
     this.burst(x, y, FIRE, 22, 70);
-
+    this.cameras.main.shake(70, 0.002);
     const label = this.add
       .text(x + 12, y - 30, `+${points}`, {
         fontFamily: WORD_FONT,
