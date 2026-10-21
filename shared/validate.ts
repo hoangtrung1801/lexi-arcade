@@ -1,4 +1,4 @@
-import { MAX_SESSION_MS, MAX_WPM, MIN_KEY_INTERVAL_MS } from "./rules";
+import { KEY_BURST_WINDOW_MS, MAX_KEYS_PER_WINDOW, MAX_SESSION_MS, MAX_WPM } from "./rules";
 import type { GameEvent, GameWord } from "./types";
 
 export type ValidationResult = { ok: true } | { ok: false; reason: string };
@@ -16,7 +16,8 @@ export function validateEvents(
   const ids = new Set(words.map((w) => w.id));
   const typedChars = new Map<number, number>();
   let prevT = -1;
-  let prevKeyT = -Infinity;
+  /** times of the keys inside the current burst window */
+  const recentKeys: number[] = [];
   let correctKeys = 0;
 
   for (const ev of events) {
@@ -28,8 +29,9 @@ export function validateEvents(
     if (ev.type === "bad" && (!ids.has(ev.choiceId) || ev.choiceId === ev.wordId))
       return { ok: false, reason: "bad-choice" };
     if (ev.type === "correct" || ev.type === "wrong") {
-      if (ev.t - prevKeyT < MIN_KEY_INTERVAL_MS) return { ok: false, reason: "keys-too-fast" };
-      prevKeyT = ev.t;
+      recentKeys.push(ev.t);
+      while ((recentKeys[0] ?? ev.t) <= ev.t - KEY_BURST_WINDOW_MS) recentKeys.shift();
+      if (recentKeys.length > MAX_KEYS_PER_WINDOW) return { ok: false, reason: "keys-too-fast" };
     }
     if (ev.type === "correct") {
       correctKeys++;

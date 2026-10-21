@@ -6,8 +6,13 @@ export const GUEST_UNIT_LIMIT = 3;
 export const MAX_DUE_RATIO = 0.3;
 export const MAX_WPM = 250;
 export const MAX_SESSION_MS = 30 * 60 * 1000;
-/** Minimum time between two keys that a human can plausibly produce. */
-export const MIN_KEY_INTERVAL_MS = 8;
+/**
+ * Most keys a human can plausibly produce within any one window. Single gaps between keys are not
+ * checked: keys pressed while the page stutters are handled back to back, a fraction of a
+ * millisecond apart, and fast typists press keys almost together.
+ */
+export const KEY_BURST_WINDOW_MS = 1000;
+export const MAX_KEYS_PER_WINDOW = 30;
 
 export const SRS_INTERVALS_DAYS = [0, 1, 3, 7, 14, 30] as const;
 export const MAX_BOX = SRS_INTERVALS_DAYS.length - 1;

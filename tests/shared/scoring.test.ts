@@ -107,6 +107,28 @@ describe("validateEvents", () => {
     expect(validateEvents(events, words, 10000)).toEqual({ ok: false, reason: "unknown-word" });
   });
 
+  it("accepts keys handled back to back after the page stutters", () => {
+    // 5 keys pressed during a freeze arrive a fraction of a millisecond apart
+    const events: GameEvent[] = [
+      ...type(1, "cat", 1000),
+      { t: 3000, type: "correct", wordId: 2 },
+      { t: 3000.2, type: "correct", wordId: 2 },
+      { t: 3000.3, type: "correct", wordId: 2 },
+      { t: 3000.3, type: "hit", wordId: 2 },
+    ];
+    expect(validateEvents(events, words, 10000)).toEqual({ ok: true });
+  });
+
+  it("rejects more keys in one second than a human can type", () => {
+    const events: GameEvent[] = Array.from({ length: 31 }, (_, i) => ({
+      t: 1000 + i * 30,
+      type: "wrong" as const,
+      wordId: 1,
+    }));
+    expect(validateEvents(events, words, 10000)).toEqual({ ok: false, reason: "keys-too-fast" });
+    expect(validateEvents(events.slice(0, 30), words, 10000)).toEqual({ ok: true });
+  });
+
   it("rejects a wrong answer that names an unknown word or the asked word", () => {
     expect(
       validateEvents([{ t: 100, type: "bad", wordId: 1, choiceId: 99 }], words, 10000),
@@ -126,7 +148,7 @@ describe("validateEvents", () => {
 
   it("rejects superhuman typing speed", () => {
     const events: GameEvent[] = [];
-    for (let i = 0; i < 400; i++) events.push({ t: 1000 + i * 30, type: "correct", wordId: 1 });
+    for (let i = 0; i < 400; i++) events.push({ t: 1000 + i * 35, type: "correct", wordId: 1 });
     expect(validateEvents(events, words, 60000)).toEqual({ ok: false, reason: "wpm-too-high" });
   });
 

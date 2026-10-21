@@ -94,7 +94,12 @@ function play(seed: number, difficulty: Difficulty, skill: number) {
     if (out === "bad") expect(engine.lives).toBe(before - 1);
     else expect(engine.lives).toBe(before);
     if (out === "wrong" && engine.typed === "" && ch !== "q") plan = [];
-    nextKeyAt = now + 60 + r() * 200;
+    // now and then the page stutters and the next keys are handled at the same instant
+    nextKeyAt = r() < 0.2 ? now : now + 60 + r() * 200;
+    while (nextKeyAt === now && plan.length > 0 && engine.status === "playing" && r() < 0.7) {
+      const lives = engine.lives;
+      if (engine.type(plan.shift() as string) !== "bad") expect(engine.lives).toBe(lives);
+    }
   }
   return engine;
 }
