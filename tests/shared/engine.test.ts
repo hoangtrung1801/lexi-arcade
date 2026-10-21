@@ -59,13 +59,10 @@ describe("WordBlasterEngine", () => {
     expect(g.engine.active[0]?.y).toBeGreaterThan(g.engine.active[1]?.y ?? 0);
     // nothing is asked until a word has come out from under the top HUD
     expect(g.engine.prompt).toBeNull();
-    g.advance(1300);
-    expect(g.engine.active).toHaveLength(2);
+    g.advance(2500);
     const prompt = g.engine.prompt;
     expect(prompt).not.toBeNull();
     expect(g.engine.active.filter((w) => w.correct).map((w) => w.word.id)).toEqual([prompt?.id]);
-    g.advance(1000);
-    expect(g.engine.active).toHaveLength(3);
     g.advance(20000);
     // never more than the cap at once
     expect(g.engine.active.length).toBeLessThanOrEqual(5);
@@ -75,7 +72,7 @@ describe("WordBlasterEngine", () => {
     const g = make();
     g.engine.start();
     ready(g);
-    g.advance(1000); // let the second word enter the field so it can be asked next
+    g.advance(3000); // let more words into view so there is a choice for the next question
     const first = g.engine.prompt;
     const others = g.engine.active.filter((w) => !w.correct).map((w) => w.uid);
     const lemma = first?.lemma ?? "";
@@ -89,6 +86,51 @@ describe("WordBlasterEngine", () => {
     expect(g.engine.prompt).not.toBeNull();
     expect(g.engine.prompt?.id).not.toBe(first?.id);
     expect(g.engine.typed).toBe("");
+  });
+
+  it("asks about the falling words in a random order, not the order they fell in", () => {
+    const many: GameWord[] = [
+      "cat",
+      "dog",
+      "sun",
+      "map",
+      "bed",
+      "pen",
+      "cup",
+      "hat",
+      "box",
+      "egg",
+    ].map((lemma, i) => ({ id: i + 1, lemma, meaningVi: lemma }));
+    let lowest = 0;
+    let asked = 0;
+    for (let seed = 1; seed <= 15; seed++) {
+      let now = 0;
+      const engine = new WordBlasterEngine(
+        { unitId: 1, words: many, seed, difficulty: "normal" },
+        () => now,
+      );
+      engine.subscribe((n) => {
+        if (n.kind !== "prompt") return;
+        const first = [...engine.active].filter((w) => !w.filler).sort((a, b) => b.y - a.y)[0];
+        asked++;
+        if (first?.word.id === n.word.id) lowest++;
+      });
+      engine.start();
+      let since = 0;
+      for (let i = 0; i < 6000 && engine.status === "playing"; i++) {
+        now += 16;
+        engine.tick();
+        if (!engine.prompt) since = now;
+        else if (now - since > 2000) {
+          for (const ch of engine.prompt.lemma) engine.type(ch);
+          since = now;
+        }
+      }
+      expect(engine.status).toBe("won");
+    }
+    expect(asked).toBeGreaterThan(100);
+    // with words picked in drop order this would be ~100%
+    expect(lowest / asked).toBeLessThan(0.75);
   });
 
   it("a key that matches no plate is a wrong key: logged, combo reset, nothing typed", () => {

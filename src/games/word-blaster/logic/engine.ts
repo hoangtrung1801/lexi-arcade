@@ -48,11 +48,15 @@ function overlaps(a: string, b: string) {
   return a.startsWith(b) || b.startsWith(a);
 }
 
-/** Words fall one after another; the first one waits this long before the next joins it. */
+/** Words fall one after another; until a few are on screen they follow each other this fast. */
 const FIRST_GAP_MS = 700;
-/** A plate is asked about once it is clear of the top HUD and still in the upper part of the field. */
+const FAST_UNTIL = 3;
+/** Wait up to this long for a second candidate so the question isn't simply the next word in. */
+const CHOICE_WAIT_MS = 1500;
+/** A plate can be asked about once it is clear of the top HUD... */
 const ASK_BELOW = 70;
-const ASK_ABOVE = GROUND_Y * 0.6;
+/** ...and while it still has this long to fall, so there is time to type it. */
+const ASK_LEAD_MS = 1800;
 
 /**
  * Pure game logic. No DOM, no Phaser: it reads time from an injected clock, so tests can drive it.
@@ -90,6 +94,8 @@ export class WordBlasterEngine {
   private rng: () => number;
   private uid = 0;
   private spawnedAt = -Infinity;
+  /** when the field started waiting for a question to be asked */
+  private askWaitFrom = 0;
   private lastT = 0;
   private startedAt = 0;
   private pausedAt = 0;
@@ -172,9 +178,9 @@ export class WordBlasterEngine {
       }
     }
 
-    const gap = this.active.length < 2 ? FIRST_GAP_MS : cfg.spawnMs;
+    const gap = this.active.length < FAST_UNTIL ? FIRST_GAP_MS : cfg.spawnMs;
     if (this.active.length < cfg.maxOnScreen && t - this.spawnedAt >= gap) this.spawn(t);
-    if (!this.prompt) this.ask();
+    if (!this.prompt) this.ask(t);
   }
 
   /** Can `w` fall now without making a typed answer or a meaning ambiguous? */
@@ -223,10 +229,16 @@ export class WordBlasterEngine {
   }
 
   /** Shows the meaning of one of the falling words that has not been answered yet. */
-  private ask() {
+  private ask(t: number) {
+    // any word on screen may be next, not just the oldest, so the order can't be guessed
     const open = this.active.filter((a) => !a.filler && a.y >= ASK_BELOW);
-    const high = open.filter((a) => a.y < ASK_ABOVE);
-    const pool = high.length ? high : open;
+    const fallSpeed = DIFFICULTY[this.config.difficulty].fallSpeed;
+    const roomy = open.filter((a) => a.y < GROUND_Y - (fallSpeed * ASK_LEAD_MS) / 1000);
+    const pool = roomy.length ? roomy : open;
+    // with a single candidate the question would just follow the drop order, so give the next
+    // word a moment to come into view first
+    const more = this.queue.length > 0 || this.active.some((a) => !a.filler && a.y < ASK_BELOW);
+    if (pool.length < 2 && more && t - this.askWaitFrom < CHOICE_WAIT_MS) return;
     const pick = pool[Math.floor(this.rng() * pool.length)];
     if (!pick) return;
     pick.correct = true;
@@ -247,6 +259,7 @@ export class WordBlasterEngine {
     this.lives--;
     this.combo = 0;
     this.prompt = null;
+    this.askWaitFrom = t;
     this.typed = "";
     this.retarget();
     this.emit({ kind: "miss", word: w });
@@ -311,7 +324,10 @@ export class WordBlasterEngine {
         this.emit({ kind: "clear", words: this.active });
         this.active = [];
         this.finish("won");
-      } else this.ask();
+      } else {
+        this.askWaitFrom = t;
+        this.ask(t);
+      }
       return "hit";
     }
 
