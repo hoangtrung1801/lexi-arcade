@@ -1,6 +1,9 @@
 /** Content checks. Errors exit 1; warnings only print. Usage: pnpm content:validate */
+import { existsSync } from "node:fs";
+import { join } from "node:path";
 import { SETS, TOPIC_TITLE } from "../../content/topics";
-import { readSet } from "./lib";
+import { PROPER_NOUNS, sentenceParts } from "../../shared/sentence";
+import { ROOT, readSet, readText } from "./lib";
 
 let errors = 0;
 let warnings = 0;
@@ -33,6 +36,24 @@ for (const set of SETS) {
     units.set(r.unit, (units.get(r.unit) ?? 0) + 1);
   }
   for (const [u, n] of units) if (n < 8 || n > 16) warn(`${set.slug}: unit ${u} has ${n} words`);
+
+  // Crates show words in lower case; a capital anywhere but the start must be a known proper
+  // noun, or the crate would give its place away.
+  const tsv = join(ROOT, "content", "sentences", `${set.slug}.tsv`);
+  const lines = existsSync(tsv)
+    ? readText(tsv)
+        .split("\n")
+        .slice(1)
+        .filter((l) => l.trim())
+    : [];
+  for (const line of lines) {
+    for (const w of sentenceParts(line.split("\t")[2] ?? "").words.slice(1)) {
+      const bare = w.replace(/[^A-Za-z']/g, "");
+      if (/^[A-Z]/.test(bare) && bare !== "I" && !bare.startsWith("I'") && !PROPER_NOUNS.has(bare))
+        err(`${set.slug}: "${bare}" is capitalised mid-sentence but not in PROPER_NOUNS`);
+    }
+  }
+
   const unreviewed = rows.filter((r) => !r.reviewed).length;
   console.log(
     `${set.slug}: ${rows.length} words, ${units.size} units, ${unreviewed} not reviewed yet`,

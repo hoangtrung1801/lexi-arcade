@@ -1,12 +1,21 @@
 import { createRng, shuffle } from "@shared/rng";
 import { TRAIN_LIVES } from "@shared/rules";
-import { computeTrainResult, sentenceParts, trainTimeLimit } from "@shared/sentence";
+import {
+  computeTrainResult,
+  crateLabel,
+  sameOrder,
+  sameWord,
+  sentenceParts,
+  trainTimeLimit,
+} from "@shared/sentence";
 import type { GameConfig, RoundResult, Sentence, TrainEvent } from "@shared/types";
 import { Clock } from "../common/Stage";
 
 export interface Crate {
   id: number;
   text: string;
+  /** what the crate shows (see crateLabel) */
+  label: string;
 }
 
 export type TrainNotice =
@@ -112,7 +121,7 @@ export class TrainEngine {
     const words = sentenceParts(s.en).words;
     const rng = createRng((this.config.seed ^ (s.id * 2654435761)) >>> 0);
     let order = shuffle(
-      words.map((text, id) => ({ id, text })),
+      words.map((text, id) => ({ id, text, label: crateLabel(text, id) })),
       rng,
     );
     // never hand out the sentence already in order
@@ -247,7 +256,7 @@ export class TrainEngine {
     const answer = this.answer();
     this.events.push({ t, type: "submit", sentenceId: s.id, answer });
     const words = this.parts.words;
-    if (answer.join(" ") === words.join(" ")) {
+    if (sameOrder(answer, words)) {
       this.combo = this.hinted ? 0 : this.combo + 1;
       this.departing = true;
       this.buffer = "";
@@ -256,7 +265,7 @@ export class TrainEngine {
     }
     this.lives--;
     this.combo = 0;
-    this.wrongSlots = new Set(answer.flatMap((w, i) => (w === words[i] ? [] : [i])));
+    this.wrongSlots = new Set(answer.flatMap((w, i) => (sameWord(w, words[i] ?? "") ? [] : [i])));
     this.emit({ kind: "wrong" });
     if (this.lives <= 0) this.end();
   }
@@ -268,7 +277,7 @@ export class TrainEngine {
     const words = this.parts.words;
     const answer = this.answer();
     let k = 0;
-    while (k < answer.length && answer[k] === words[k]) k++;
+    while (k < answer.length && sameWord(answer[k] ?? "", words[k] ?? "")) k++;
     if (k >= words.length) return;
     this.events.push({ t: this.elapsed(), type: "hint", sentenceId: s.id });
     this.hinted = true;

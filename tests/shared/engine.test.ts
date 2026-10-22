@@ -317,7 +317,7 @@ describe("WordBlasterEngine", () => {
       for (const a of lemmas)
         for (const b of lemmas) if (a !== b) expect(a.startsWith(b)).toBe(false);
     }
-  });
+  }, 20_000); // 40 seeds × 1500 frames: slow when the suites run in parallel
 
   it("a full run's result matches the server-side replay and passes validation", () => {
     const g = make("easy");

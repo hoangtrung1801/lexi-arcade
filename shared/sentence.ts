@@ -19,6 +19,36 @@ export function sentenceParts(en: string): { words: string[]; end: string } {
   return { words: body.split(/\s+/).filter(Boolean), end };
 }
 
+/** Words that keep their capital letter on a crate, wherever they stand in the sentence. */
+export const PROPER_NOUNS: ReadonlySet<string> = new Set([
+  ...["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+  ...["Mondays", "Tuesdays", "Wednesdays", "Thursdays", "Fridays", "Saturdays", "Sundays"],
+  ...["January", "February", "March", "April", "May", "June", "July", "August"],
+  ...["September", "October", "November", "December", "Christmas", "Celsius"],
+  ...["English", "Chinese", "Japanese", "Vietnamese", "Asia", "Earth", "Paris"],
+  ...["Anna", "Tom"],
+]);
+
+/**
+ * How a word is written on its crate: the sentence's opening capital is dropped so it does not
+ * give the first word away. "I" and proper nouns keep their capital.
+ */
+export function crateLabel(word: string, index: number): string {
+  if (index > 0) return word;
+  const bare = word.replace(/[^A-Za-z']/g, "");
+  if (bare === "I" || bare.startsWith("I'") || PROPER_NOUNS.has(bare)) return word;
+  return word.charAt(0).toLowerCase() + word.slice(1);
+}
+
+/** Whether a train answer is the sentence. Case is ignored: crates are shown in lower case. */
+export function sameOrder(answer: readonly string[], words: readonly string[]): boolean {
+  return answer.length === words.length && answer.every((w, i) => sameWord(w, words[i] ?? ""));
+}
+
+export function sameWord(a: string, b: string): boolean {
+  return a.toLowerCase() === b.toLowerCase();
+}
+
 function sameWords(a: readonly string[], b: readonly string[]): boolean {
   if (a.length !== b.length) return false;
   const x = [...a].sort();
@@ -77,7 +107,7 @@ export function computeTrainResult(
       combo = 0;
       continue;
     }
-    if (ev.answer.join(" ") === item.words.join(" ")) {
+    if (sameOrder(ev.answer, item.words)) {
       solved.add(ev.sentenceId);
       goodSubmits++;
       placed += item.words.length;
@@ -145,7 +175,7 @@ export function validateTrain(
     }
     if (!Array.isArray(ev.answer) || !sameWords(ev.answer, words))
       return { ok: false, reason: "answer-not-the-sentence" };
-    if (ev.answer.join(" ") === words.join(" ")) solved.add(ev.sentenceId);
+    if (sameOrder(ev.answer, words)) solved.add(ev.sentenceId);
   }
   // Loading a sentence takes time: a whole round faster than a human can click is a bot.
   const minMs = sentences

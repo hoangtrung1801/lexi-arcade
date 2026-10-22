@@ -310,7 +310,11 @@ export function Round({ config, setName, onFinish, onExit }: Props) {
             data-testid="train-sign"
           >
             <span className="font-px t-sm text-slate">CÂU CẦN XẾP</span>
-            <span key={s?.id} className="t-md t-bold anim-pop text-center">
+            {/* regular Galmuri11: the fake-bold shadow smeared the Vietnamese accents */}
+            <span
+              key={s?.id}
+              className={`anim-pop text-center ${(s?.vi.length ?? 0) > 44 ? "t-md" : "t-lg"}`}
+            >
               {s?.vi}
             </span>
             {key && (
@@ -333,7 +337,7 @@ export function Round({ config, setName, onFinish, onExit }: Props) {
           <Loco />
           {words.map((_, slot) => {
             const id = engine.placed[slot];
-            const text = id === undefined ? "" : (engine.crate(id)?.text ?? "");
+            const text = id === undefined ? "" : (engine.crate(id)?.label ?? "");
             const bad = engine.wrongSlots.has(slot);
             const good = engine.departing;
             return (
@@ -411,7 +415,7 @@ export function Round({ config, setName, onFinish, onExit }: Props) {
                       : undefined,
                   }}
                 >
-                  {c.text}
+                  {c.label}
                 </button>
               );
             })}

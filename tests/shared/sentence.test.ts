@@ -1,5 +1,6 @@
 import {
   computeTrainResult,
+  crateLabel,
   type Sentence,
   sentenceParts,
   TRAIN_BONUS_MS,
@@ -27,6 +28,17 @@ describe("sentence parts", () => {
     expect(sentenceParts("I have a cat.")).toEqual({ words: ["I", "have", "a", "cat"], end: "." });
     expect(sentenceParts("Is it an apple?").end).toBe("?");
     expect(sentenceParts("Don't stop, please!").words).toEqual(["Don't", "stop,", "please"]);
+  });
+});
+
+describe("crate labels", () => {
+  it("drops the opening capital but keeps I and proper nouns", () => {
+    expect(crateLabel("My", 0)).toBe("my");
+    expect(crateLabel("Ironically,", 0)).toBe("ironically,");
+    expect(crateLabel("I", 0)).toBe("I");
+    expect(crateLabel("I'll", 0)).toBe("I'll");
+    expect(crateLabel("Tom", 0)).toBe("Tom");
+    expect(crateLabel("Paris", 3)).toBe("Paris");
   });
 });
 
@@ -169,5 +181,34 @@ describe("train engine", () => {
     expect(e.wrongSlots.size).toBeGreaterThan(0);
     e.hint();
     expect(e.answer()[0]).toBe(right[0]);
+  });
+
+  it("crates that look the same are interchangeable", () => {
+    let now = 0;
+    const e = new TrainEngine(
+      {
+        unitId: 1,
+        seed: 3,
+        difficulty: "normal",
+        words: [],
+        sentences: [
+          { id: 7, wordId: 70, en: "My dog likes my cat.", vi: "Chó tôi thích mèo tôi." },
+        ],
+      },
+      () => now,
+    );
+    e.start();
+    expect(e.crates.map((c) => c.label).sort()).toEqual(["cat", "dog", "likes", "my", "my"]);
+    // load the lower-case "my" first and the sentence's "My" fourth
+    const order = ["my", "dog", "likes", "My", "cat"];
+    for (const w of order) {
+      const c = e.crates.find((x) => x.text === w && !e.isPlaced(x.id));
+      if (c) e.place(c.id);
+    }
+    now = 2000;
+    e.submit();
+    expect(e.departing).toBe(true);
+    expect(validateTrain(e.events, e.sentences, 3000)).toEqual({ ok: true });
+    expect(computeTrainResult(e.events, e.sentences).score).toBeGreaterThan(0);
   });
 });
