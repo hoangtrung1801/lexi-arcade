@@ -351,7 +351,7 @@ describe("api", () => {
       const sets = await c.req<TrainSetsResponse>("GET", "/api/train/sets");
       const a1 = sets.json.sets.find((s) => s.slug === "a1");
       expect(a1?.bestScore).toBe(trainFin.json.result.score);
-      expect(sets.json.sets.map((s) => s.slug)).toEqual(["a1", "a2", "b1", "b2"]);
+      expect(sets.json.sets.map((s) => s.slug)).toEqual(["a1", "a2", "b1", "b2", "c1", "c2"]);
 
       // vocab is shared: keywords from both games are in the same notebook
       const learned = await c.req<VocabResponse>("GET", "/api/vocab?filter=learned");

@@ -1,60 +1,123 @@
 # lemma|nghĩa tiếng Việt|chủ đề   (dịch tự động, cần duyệt: reviewed=false)
 abandon|bỏ rơi, từ bỏ|verb
+aberration|sự lệch lạc|misc
+abhor|ghê tởm|feel
+abhorrent|đáng ghê tởm|feel
+abhorrently|một cách ghê tởm|adj
 ability|khả năng|misc
+abject|khốn khổ, hèn hạ|adj
 able|có thể, có khả năng|adj
+abolish|bãi bỏ, xóa bỏ|verb
+abortion|sự phá thai|body
 about|khoảng; về|func
 above|ở trên|func
 abroad|ở nước ngoài|trav
+absence|sự vắng mặt|misc
+absent|vắng mặt|adj
 absolute|tuyệt đối|adj
 absolutely|hoàn toàn, tuyệt đối|func
+absurd|vô lý, ngớ ngẩn|adj
+abundance|sự dồi dào|misc
+abundant|dồi dào|adj
+abundantly|dồi dào, rất|adj
+abuse|sự lạm dụng; lạm dụng|misc
 academic|thuộc học thuật|work
+academy|học viện|work
+accelerate|tăng tốc|verb
 accept|chấp nhận|verb
 acceptable|chấp nhận được|adj
+acceptance|sự chấp nhận|misc
 access|sự tiếp cận; truy cập|misc
+accessibility|khả năng tiếp cận|misc
+accessible|dễ tiếp cận|adj
 accident|tai nạn|misc
 accommodation|chỗ ở|trav
 accompany|đi cùng|verb
+accomplishment|thành tựu|misc
+accordance|sự phù hợp|misc
+accordingly|theo đó, do đó|func
 account|tài khoản|work
+accountability|trách nhiệm giải trình|work
+accountable|chịu trách nhiệm|adj
+accrue|tích lũy|verb
+accumulate|tích lũy|verb
+accumulation|sự tích lũy|misc
 accurate|chính xác|adj
+accusation|lời buộc tội|work
 accuse|buộc tội|verb
+accused|bị cáo|work
 achieve|đạt được|verb
 achievement|thành tựu|misc
+acid|có tính axit, chua|work
 acknowledge|thừa nhận|verb
 acquire|đạt được, thu được|verb
+acquisition|sự mua lại, thu nhận|work
+acre|mẫu Anh|time
+acreage|diện tích đất|nat
+acrobatic|thuộc nhào lộn|fun
+acrobatically|một cách nhào lộn|fun
+acrobatics|môn nhào lộn|fun
 across|băng qua, ngang qua|func
 act|hành động; diễn|verb
 action|hành động|misc
+activation|sự kích hoạt|misc
 active|năng động|adj
+activist|nhà hoạt động|work
 activity|hoạt động|fun
 actor|nam diễn viên|fun
 actress|nữ diễn viên|fun
 actual|thực tế|adj
 actually|thực ra|func
+acute|cấp tính, sắc bén|body
 ad|quảng cáo|fun
 adapt|thích nghi|verb
+adaptation|sự thích nghi, chuyển thể|misc
 add|thêm vào|verb
 addition|sự thêm vào|misc
 additional|bổ sung, thêm|adj
+additive|bổ sung; chất phụ gia|food
 address|địa chỉ|place
+adept|thành thạo; người lão luyện|adj
+adhere|tuân thủ, bám vào|verb
+adhesion|sự dính, bám|misc
+adjacent|liền kề|adj
+adjustment|sự điều chỉnh|misc
+administer|quản lý, cho dùng thuốc|verb
 administration|sự quản lý, hành chính|work
+administrative|thuộc hành chính|work
+administrator|quản trị viên|work
 admire|ngưỡng mộ|feel
+admission|sự nhận vào, phí vào cửa|misc
 admit|thừa nhận|verb
+adolescent|thanh thiếu niên|fam
 adopt|nhận nuôi, áp dụng|verb
+adoption|sự nhận nuôi, áp dụng|fam
+adorn|tô điểm, trang trí|verb
+adornment|đồ trang trí|home
 adult|người lớn|fam
+adulterate|pha trộn, làm giả|verb
 advance|trước; sự tiến bộ; tiến lên|misc
 advanced|tiên tiến, nâng cao|adj
 advantage|lợi thế|misc
+advantageous|có lợi|adj
 adventure|cuộc phiêu lưu|fun
+adverse|bất lợi|adj
+adversely|bất lợi|adj
 advertise|quảng cáo|verb
 advertisement|mẩu quảng cáo|fun
 advertising|ngành quảng cáo|work
 advice|lời khuyên|misc
 advise|khuyên|verb
+advocate|người ủng hộ; ủng hộ|work
+aesthetic|thuộc thẩm mỹ|fun
 affair|sự việc, vấn đề|misc
 affect|ảnh hưởng đến|verb
+affectation|sự giả tạo, điệu bộ|feel
+affection|tình cảm, sự yêu mến|feel
 afford|đủ khả năng chi trả|cloth
 afraid|sợ hãi|feel
 after|sau, sau khi|func
+aftermath|hậu quả|misc
 afternoon|buổi chiều|time
 afterwards|sau đó|time
 again|lại, một lần nữa|func
@@ -64,25 +127,51 @@ aged|ở độ tuổi|time
 agency|cơ quan, đại lý|work
 agenda|chương trình nghị sự|work
 agent|đại lý, người đại diện|work
+aggression|sự hung hăng, xâm lược|feel
 aggressive|hung hăng|adj
+aghast|kinh hoàng|feel
+agile|nhanh nhẹn|adj
+agility|sự nhanh nhẹn|body
 ago|trước đây|time
 agree|đồng ý|verb
 agreement|sự đồng ý, thỏa thuận|misc
+agricultural|thuộc nông nghiệp|nat
 ah|à, ồ|func
 ahead|phía trước|func
 aid|sự viện trợ; giúp đỡ|misc
+aide|phụ tá|work
 aim|mục tiêu; nhắm tới|misc
 air|không khí|nat
 aircraft|máy bay|trav
 airline|hãng hàng không|trav
 airport|sân bay|trav
 alarm|chuông báo động|home
+albeit|mặc dù|func
 album|album|fun
 alcohol|rượu, cồn|food
 alcoholic|có cồn|food
+alert|tỉnh táo; cảnh báo; báo động|adj
+alien|xa lạ, ngoài hành tinh|adj
+align|căn chỉnh, liên kết|verb
+alignment|sự thẳng hàng|misc
+alike|giống nhau; như nhau|adj
 alive|còn sống|adj
 all|tất cả|func
+allegation|lời cáo buộc|work
+allege|cáo buộc|verb
+allegedly|được cho là|func
+allegorical|ngụ ngôn|fun
+allegory|truyện ngụ ngôn|fun
+alliance|liên minh|work
+allocate|phân bổ|verb
+allocation|sự phân bổ|work
+allot|phân bổ, chia|verb
+allotment|sự phân bổ, mảnh đất|misc
 allow|cho phép|verb
+allowance|trợ cấp, tiền tiêu vặt|cloth
+allude|ám chỉ|verb
+allusion|sự ám chỉ|misc
+ally|đồng minh|work
 almost|gần như|func
 alone|một mình|adj
 along|dọc theo|func
@@ -91,22 +180,39 @@ also|cũng|func
 alter|thay đổi|verb
 alternative|lựa chọn khác|misc
 although|mặc dù|func
+aluminium|nhôm|home
 always|luôn luôn|func
+amateur|nghiệp dư; người nghiệp dư|fun
 amazed|kinh ngạc|feel
 amazing|tuyệt vời, đáng kinh ngạc|adj
+ambassador|đại sứ|work
 ambition|hoài bão, tham vọng|feel
 ambitious|có tham vọng|adj
+amend|sửa đổi|verb
+amendment|bản sửa đổi|work
+amid|giữa, trong lúc|func
 among|giữa, trong số|func
+amorphous|vô định hình|adj
+amorphously|một cách vô định hình|adj
 amount|số lượng|misc
+analogy|sự tương đồng, phép so sánh|misc
 analyse|phân tích|verb
 analysis|sự phân tích|work
+anarchic|vô chính phủ, hỗn loạn|adj
+anchor|mỏ neo|trav
 ancient|cổ xưa|adj
 and|và|func
+angel|thiên thần|misc
 anger|sự tức giận|feel
 angle|góc|misc
 angry|tức giận|feel
+angst|nỗi lo âu|feel
+angsty|lo âu, u sầu|feel
+angular|có góc cạnh|adj
+angularity|tính góc cạnh|misc
 animal|động vật|nat
 ankle|mắt cá chân|body
+annex|nhà phụ; sáp nhập|work
 anniversary|ngày kỷ niệm|time
 announce|thông báo|verb
 announcement|lời thông báo|misc
@@ -114,8 +220,15 @@ annoy|làm phiền|feel
 annoyed|bực mình|feel
 annoying|gây khó chịu|feel
 annual|hằng năm|time
+anonymity|sự ẩn danh|misc
+anonymous|ẩn danh|adj
 another|một cái khác|func
 answer|câu trả lời; trả lời|work
+antediluvian|cổ lỗ sĩ|adj
+anthology|tuyển tập|fun
+antidote|thuốc giải độc|body
+antithesis|sự đối lập|misc
+antithetical|đối lập|adj
 anxious|lo lắng|feel
 any|bất kỳ|func
 anybody|bất cứ ai|func
@@ -126,26 +239,49 @@ anywhere|bất cứ nơi đâu|func
 apart|cách nhau, riêng ra|func
 apartment|căn hộ|home
 apologize|xin lỗi|verb
+apostle|tông đồ|fam
 app|ứng dụng|fun
+apparatus|thiết bị, bộ máy|home
 apparent|rõ ràng|adj
 apparently|hình như|func
 appeal|lời kêu gọi; kêu gọi|misc
+appealing|hấp dẫn|adj
 appear|xuất hiện|verb
 appearance|vẻ bề ngoài|body
+appetite|sự thèm ăn|food
+applaud|vỗ tay, hoan nghênh|fun
 apple|quả táo|food
+applicable|có thể áp dụng|adj
 application|đơn xin; ứng dụng|work
 apply|nộp đơn; áp dụng|verb
+appoint|bổ nhiệm|work
 appointment|cuộc hẹn|time
 appreciate|trân trọng, cảm kích|feel
+appreciation|sự đánh giá cao, biết ơn|feel
+apprehend|bắt giữ, hiểu|verb
+apprentice|học việc|work
 approach|cách tiếp cận; đến gần|misc
 appropriate|phù hợp|adj
 approval|sự chấp thuận|misc
 approve|chấp thuận|verb
 approximately|khoảng, xấp xỉ|func
 April|tháng Tư|time
+aptitude|năng khiếu|feel
+arbitrary|tùy tiện|adj
+arcane|bí ẩn, khó hiểu|adj
+arcanely|một cách bí ẩn|adj
+archetypal|điển hình|adj
+archetype|nguyên mẫu|misc
 architect|kiến trúc sư|work
+architectural|thuộc kiến trúc|place
 architecture|kiến trúc|work
+archival|thuộc lưu trữ|work
+archive|kho lưu trữ|work
+arduous|gian khổ, khó nhọc|adj
+arduously|một cách gian khổ|adj
 area|khu vực|place
+arena|đấu trường, sân vận động|fun
+arguably|có thể nói là|func
 argue|tranh cãi|verb
 argument|cuộc tranh cãi|misc
 arise|nảy sinh|verb
@@ -156,69 +292,130 @@ army|quân đội|misc
 around|xung quanh|func
 arrange|sắp xếp|verb
 arrangement|sự sắp xếp|misc
+array|dãy, loạt|misc
 arrest|sự bắt giữ; bắt giữ|misc
 arrival|sự đến nơi|trav
 arrive|đến nơi|trav
 art|nghệ thuật|fun
 article|bài báo|fun
+articulate|diễn đạt rõ ràng|verb
+articulation|sự diễn đạt, phát âm|misc
+artifact|đồ tạo tác, hiện vật|work
+artifice|mưu mẹo, sự khéo léo|misc
 artificial|nhân tạo|adj
 artist|nghệ sĩ|fun
 artistic|có tính nghệ thuật|fun
 as|như, khi|func
+ash|tro|nat
 ashamed|xấu hổ|feel
 ask|hỏi|verb
 asleep|đang ngủ|adj
 aspect|khía cạnh|misc
+aspiration|khát vọng|feel
+aspire|khao khát|verb
+assassination|vụ ám sát|work
+assault|vụ tấn công; tấn công|work
+assemble|tập hợp, lắp ráp|verb
+assembly|cuộc họp, sự lắp ráp|work
+assert|khẳng định|verb
+assertion|sự khẳng định|misc
 assess|đánh giá|verb
 assessment|sự đánh giá|work
 assignment|bài tập, nhiệm vụ|work
+assimilate|đồng hóa, tiếp thu|verb
+assimilation|sự đồng hóa|misc
 assist|hỗ trợ|verb
 assistant|trợ lý|work
 associate|liên tưởng, gắn với|verb
 associated|có liên quan|adj
 association|hiệp hội|work
 assume|cho rằng, giả định|verb
+assurance|sự đảm bảo|misc
+astringent|chất làm se|body
+asylum|tị nạn, nơi trú ẩn|work
 at|tại, ở|func
 athlete|vận động viên|fun
+athleticism|năng lực thể thao|fun
 atmosphere|bầu không khí|nat
+atrocity|tội ác tàn bạo|work
 attach|gắn, đính kèm|verb
 attack|cuộc tấn công; tấn công|misc
+attain|đạt được|verb
+attainment|sự đạt được, thành tựu|misc
 attempt|nỗ lực; cố gắng|verb
 attend|tham dự|verb
+attendance|sự có mặt|work
 attention|sự chú ý|misc
 attitude|thái độ|feel
+attorney|luật sư|work
 attract|thu hút|verb
 attraction|sức hút; điểm tham quan|trav
 attractive|hấp dẫn|adj
+attribute|thuộc tính; quy cho|misc
+attributive|thuộc ngữ|work
+attrition|sự hao mòn|misc
+attuned|hòa hợp, nhạy bén|adj
 audience|khán giả|fun
+audit|kiểm toán|work
 August|tháng Tám|time
 aunt|dì, cô|fam
+austere|khắc khổ, giản dị|adj
+austerely|một cách khắc khổ|adj
+austerity|sự thắt lưng buộc bụng|cloth
+authentic|đích thực, chính gốc|adj
+authenticity|tính xác thực|misc
 author|tác giả|work
 authority|quyền lực, chính quyền|misc
+authorize|cho phép, ủy quyền|verb
+auto|ô tô|trav
+automate|tự động hóa|work
+autonomous|tự trị, tự chủ|adj
+autonomously|một cách tự chủ|adj
+autonomy|quyền tự chủ|work
+autopilot|chế độ lái tự động|trav
 autumn|mùa thu|wthr
+availability|sự sẵn có|misc
 available|có sẵn|adj
 average|trung bình|adj
+averse|không thích, ghét|feel
+avian|thuộc loài chim|nat
 avoid|tránh|verb
+await|chờ đợi|verb
 award|giải thưởng|fun
 aware|nhận thức được|adj
 away|xa, đi khỏi|func
 awful|tệ hại, kinh khủng|adj
+axiom|tiên đề, chân lý|work
+axiomatic|hiển nhiên|adj
+babble|nói lảm nhảm|verb
 baby|em bé|fam
 back|lưng; phía sau|body
+backdrop|phông nền, bối cảnh|fun
 background|bối cảnh, nền|misc
+backing|sự ủng hộ|misc
+backup|bản sao lưu, dự phòng|work
 backwards|về phía sau|func
 bacteria|vi khuẩn|body
 bad|xấu, tệ|adj
 badly|tệ, dở|func
 bag|cái túi|cloth
+bail|tiền bảo lãnh|work
 bake|nướng (bánh)|food
 balance|sự cân bằng; giữ thăng bằng|misc
 ball|quả bóng|fun
+ballot|lá phiếu|work
 ban|lệnh cấm; cấm|misc
 banana|quả chuối|food
 band|ban nhạc|fun
+banish|trục xuất, xua đuổi|verb
+banishment|sự trục xuất|misc
 bank|ngân hàng|place
+banner|biểu ngữ|misc
 bar|quán bar|place
+bare|trần, trơ trụi|adj
+barometer|khí áp kế, thước đo|wthr
+baroque|kiểu ba-rốc|fun
+barrel|thùng tròn|home
 barrier|rào cản|misc
 base|nền tảng; dựa vào|misc
 baseball|bóng chày|fun
@@ -227,14 +424,21 @@ basic|cơ bản|adj
 basically|về cơ bản|func
 basis|cơ sở, nền tảng|misc
 basketball|bóng rổ|fun
+bass|âm trầm, đàn bass|fun
+bat|đánh bóng|fun
 bath|bồn tắm|home
 bathroom|phòng tắm|home
 battery|pin|home
 battle|trận chiến|misc
+battlefield|chiến trường|place
+bauble|đồ trang sức rẻ tiền|cloth
+bay|vịnh|nat
 be|thì, là, ở|verb
 beach|bãi biển|nat
+beam|tia sáng, xà nhà|misc
 bean|hạt đậu|food
 bear|con gấu|nat
+beast|con thú|nat
 beat|đánh bại; nhịp|verb
 beautiful|đẹp|adj
 beauty|vẻ đẹp|misc
@@ -249,21 +453,34 @@ before|trước, trước khi|func
 beg|cầu xin|verb
 begin|bắt đầu|verb
 beginning|sự bắt đầu|time
+behalf|thay mặt|func
 behave|cư xử|verb
 behaviour|hành vi|misc
+behest|lệnh, yêu cầu|misc
 behind|phía sau|func
 being|sinh vật, con người|misc
 belief|niềm tin|feel
 believe|tin tưởng|verb
 bell|cái chuông|home
+belligerence|tính hiếu chiến|feel
+belligerent|hiếu chiến|feel
 belong|thuộc về|verb
+beloved|yêu quý|feel
 below|bên dưới|func
 belt|thắt lưng|cloth
+bench|ghế dài|home
+benchmark|chuẩn mực, tiêu chuẩn|work
 bend|khúc cua; uốn cong|verb
+beneath|bên dưới|func
+beneficiary|người thụ hưởng|work
 benefit|lợi ích|misc
 bent|bị cong|adj
+bereft|mất mát, thiếu vắng|feel
+bereftly|một cách mất mát|feel
+besiege|bao vây|verb
 best|tốt nhất|adj
 bet|vụ cá cược; cá cược|fun
+betray|phản bội|verb
 better|tốt hơn|adj
 between|giữa (hai thứ)|func
 beyond|ở phía bên kia, vượt quá|func
@@ -273,32 +490,52 @@ bike|xe đạp|trav
 bill|hóa đơn|cloth
 billion|tỷ|time
 bin|thùng rác|home
+bind|buộc, ràng buộc|verb
+biography|tiểu sử|fun
 biology|sinh học|work
 bird|con chim|nat
 birth|sự ra đời|fam
 birthday|sinh nhật|time
 biscuit|bánh quy|food
+bishop|giám mục|work
 bit|một chút|misc
 bite|vết cắn; cắn|verb
 bitter|đắng; cay đắng|food
+bizarre|kỳ quái|adj
 black|màu đen|wthr
+blade|lưỡi dao|home
 blame|lỗi; đổ lỗi|verb
+blandishment|lời nịnh bợ|feel
 blank|trống, để trống|adj
+blast|vụ nổ; làm nổ|misc
+bleed|chảy máu|body
+blend|hỗn hợp; pha trộn|food
+bless|ban phước|verb
+blessing|phước lành|misc
+blight|bệnh cây; làm hại|nat
 blind|mù|body
+blitz|cuộc tấn công chớp nhoáng|misc
 block|khối, dãy nhà; chặn|place
 blog|nhật ký mạng|fun
 blonde|tóc vàng hoe|body
 blood|máu|body
 blow|thổi|verb
+blubber|mỡ cá voi|nat
+blubbery|béo nhẽo|body
 blue|màu xanh dương|wthr
+blurb|lời giới thiệu sách|fun
 board|cái bảng|work
+boast|khoe khoang|verb
 boat|con thuyền|trav
 body|cơ thể|body
+bogus|giả mạo|adj
 boil|đun sôi|verb
 bomb|quả bom; đánh bom|misc
 bond|mối liên kết|misc
 bone|xương|body
+bonus|tiền thưởng|cloth
 book|quyển sách|work
+boom|sự bùng nổ|misc
 boot|giày ống|cloth
 border|biên giới|trav
 bored|chán|feel
@@ -310,6 +547,10 @@ both|cả hai|func
 bother|làm phiền|verb
 bottle|cái chai|home
 bottom|đáy, phần dưới cùng|misc
+bounce|nảy lên|verb
+boundary|ranh giới|misc
+bout|cơn, hiệp đấu|fun
+bow|cái cúi chào; cúi chào|misc
 bowl|cái bát|home
 box|cái hộp|home
 boy|cậu bé|fam
@@ -317,33 +558,59 @@ boyfriend|bạn trai|fam
 brain|bộ não|body
 branch|cành cây; chi nhánh|nat
 brand|nhãn hiệu|cloth
+brandish|vung, khua|verb
 brave|dũng cảm|adj
+breach|sự vi phạm; vi phạm|work
 bread|bánh mì|food
+breadwinner|trụ cột gia đình|fam
 break|nghỉ giải lao; làm vỡ|verb
+breakdown|sự hỏng hóc, suy sụp|misc
 breakfast|bữa sáng|food
+breakthrough|bước đột phá|work
 breast|ngực|body
 breath|hơi thở|body
 breathe|thở|body
 breathing|sự thở|body
+breed|giống; sinh sản, nhân giống|nat
+brevity|sự ngắn gọn|misc
 bride|cô dâu|fam
 bridge|cây cầu|place
 brief|ngắn gọn|adj
 bright|sáng, tươi|adj
 brilliant|rực rỡ, xuất sắc|adj
+brim|tràn đầy|verb
+brimstone|lưu huỳnh|nat
 bring|mang đến|verb
+brink|bờ vực|misc
 broad|rộng|adj
+broadband|băng thông rộng|work
 broadcast|chương trình; phát sóng|fun
 broken|bị vỡ, hỏng|adj
+brood|lứa con; ấp, nghiền ngẫm|nat
 brother|anh/em trai|fam
+brouhaha|sự ồn ào|misc
 brown|màu nâu|wthr
+browser|trình duyệt|work
 brush|cái bàn chải; chải|home
+brutal|tàn bạo|adj
 bubble|bong bóng|misc
+buccaneer|cướp biển; liều lĩnh|trav
+buck|đô la, con đực|cloth
+buddy|bạn thân|fam
 budget|ngân sách|work
+buffer|vùng đệm|misc
+buffoonery|trò hề|fun
 build|xây dựng|verb
 building|tòa nhà|place
+bulk|phần lớn, số lượng lớn|misc
 bullet|viên đạn|misc
 bunch|bó, chùm|misc
+burden|gánh nặng|misc
+bureaucracy|bộ máy quan liêu|work
+burgeoning|đang phát triển nhanh|adj
+burial|sự chôn cất|misc
 burn|đốt cháy|verb
+burst|nổ tung, vỡ|verb
 bury|chôn cất|verb
 bus|xe buýt|trav
 bush|bụi cây|nat
@@ -354,14 +621,24 @@ but|nhưng|func
 butter|bơ|food
 button|cái nút|misc
 buy|mua|verb
+buzzard|chim ó|nat
 by|bởi, bằng, gần|func
 bye|tạm biệt|func
+cabinet|tủ, nội các|home
 cable|dây cáp|home
 cafe|quán cà phê|place
+caffeinate|bổ sung cafein|food
 cake|bánh ngọt|food
+calamitous|tai hại|adj
+calamitously|một cách tai hại|adj
+calamity|tai họa|misc
 calculate|tính toán|verb
+calculation|sự tính toán|time
 call|cuộc gọi; gọi|verb
+callous|nhẫn tâm, vô cảm|feel
+callously|một cách nhẫn tâm|feel
 calm|bình tĩnh; làm dịu|feel
+calorific|sinh nhiệt, nhiều calo|food
 camera|máy ảnh|fun
 camp|trại; cắm trại|fun
 campaign|chiến dịch; vận động|work
@@ -372,10 +649,15 @@ cancel|hủy bỏ|verb
 cancer|bệnh ung thư|body
 candidate|ứng viên|work
 cannot|không thể|func
+canvas|vải bạt, bức tranh|fun
 cap|mũ lưỡi trai|cloth
+capability|năng lực|misc
 capable|có khả năng|adj
+capacious|rộng rãi|adj
 capacity|sức chứa, năng lực|misc
 capital|thủ đô|place
+capitalism|chủ nghĩa tư bản|work
+capitalist|tư bản chủ nghĩa|work
 captain|thuyền trưởng, đội trưởng|fun
 capture|sự bắt giữ; bắt giữ|verb
 car|xe hơi|trav
@@ -385,24 +667,39 @@ career|sự nghiệp|work
 careful|cẩn thận|adj
 carefully|một cách cẩn thận|func
 careless|bất cẩn|adj
+cargo|hàng hóa chở đi|trav
 carpet|tấm thảm|home
+carriage|toa xe, xe ngựa|trav
 carrot|củ cà rốt|food
 carry|mang, xách|verb
 cartoon|phim hoạt hình|fun
+carve|chạm khắc, cắt|verb
+cascade|thác nước; đổ xuống|nat
 case|trường hợp; vỏ hộp|misc
 cash|tiền mặt|cloth
+casino|sòng bạc|fun
 cast|dàn diễn viên; ném|fun
 castle|lâu đài|place
+casualty|thương vong|misc
 cat|con mèo|nat
+catalogue|danh mục|cloth
+catastrophic|thảm khốc|adj
 catch|bắt, đón|verb
 category|loại, hạng mục|misc
+cater|cung cấp đồ ăn, phục vụ|food
+cattle|gia súc|nat
 cause|nguyên nhân; gây ra|misc
+caution|sự thận trọng|feel
+cautious|thận trọng|feel
+cay|đảo nhỏ|nat
 CD|đĩa CD|fun
+cease|ngừng, chấm dứt|verb
 ceiling|trần nhà|home
 celebrate|ăn mừng|verb
 celebration|lễ kỷ niệm|fun
 celebrity|người nổi tiếng|fun
 cell|tế bào|body
+cemetery|nghĩa trang|place
 cent|xu (đồng tiền)|cloth
 central|trung tâm|place
 centre|trung tâm|place
@@ -414,16 +711,21 @@ chain|dây xích, chuỗi|home
 chair|cái ghế|home
 chairman|chủ tịch|work
 challenge|thử thách|misc
+chamber|phòng, buồng|home
 champion|nhà vô địch|fun
 chance|cơ hội|misc
 change|sự thay đổi; thay đổi|verb
 channel|kênh|fun
+chaos|sự hỗn loạn|misc
 chapter|chương (sách)|work
 character|nhân vật; tính cách|fun
 characteristic|đặc trưng; đặc điểm|misc
+characterize|mô tả đặc điểm|verb
 charge|phí; tính phí, sạc|cloth
 charity|tổ chức từ thiện|misc
+charm|sức quyến rũ|feel
 chart|biểu đồ|work
+charter|hiến chương|work
 chat|trò chuyện|verb
 cheap|rẻ|adj
 cheat|kẻ gian lận; gian lận|verb
@@ -442,19 +744,35 @@ chip|khoai tây chiên|food
 chocolate|sô-cô-la|food
 choice|sự lựa chọn|misc
 choose|chọn|verb
+choreography|biên đạo múa|fun
+chronic|mãn tính|body
+chronological|theo trình tự thời gian|time
+chronology|niên đại học, trình tự|time
+chrysalis|con nhộng|nat
+chunk|khúc, miếng lớn|misc
 church|nhà thờ|place
 cigarette|điếu thuốc lá|misc
 cinema|rạp chiếu phim|place
+cinematography|nghệ thuật quay phim|fun
 circle|hình tròn|misc
+circulate|lưu thông, lan truyền|verb
+circulation|sự lưu thông, tuần hoàn|misc
+circumnavigate|đi vòng quanh|trav
 circumstance|hoàn cảnh|misc
 cite|trích dẫn|verb
 citizen|công dân|fam
+citizenship|quyền công dân|work
 city|thành phố|place
+civic|thuộc công dân|work
 civil|thuộc dân sự|adj
+civilian|thường dân; dân thường|work
 claim|lời khẳng định; tuyên bố|verb
+clarity|sự rõ ràng|misc
+clash|cuộc xung đột|misc
 class|lớp học|work
 classic|kinh điển; tác phẩm kinh điển|fun
 classical|cổ điển|adj
+classification|sự phân loại|work
 classroom|phòng học|work
 clause|mệnh đề|work
 clean|sạch; lau dọn|adj
@@ -465,176 +783,357 @@ click|tiếng tách; nhấp chuột|verb
 client|khách hàng|work
 climate|khí hậu|wthr
 climb|leo trèo|verb
+clinch|giành được, chốt|verb
+cling|bám chặt|verb
+clinical|thuộc lâm sàng|body
 clock|đồng hồ treo tường|home
+cloister|tu viện, hành lang|place
+cloistered|ẩn dật|adj
 close|gần; đóng lại|adj
 closed|đã đóng cửa|adj
 closely|chặt chẽ, sát|func
+closure|sự đóng cửa|misc
 cloth|vải|cloth
 clothes|quần áo|cloth
 clothing|trang phục|cloth
 cloud|đám mây|wthr
 club|câu lạc bộ|fun
 clue|manh mối|misc
+cluster|cụm, nhóm|misc
 coach|huấn luyện viên; xe khách|work
 coal|than đá|nat
+coalition|liên minh|work
 coast|bờ biển|nat
+coastal|thuộc ven biển|nat
 coat|áo khoác|cloth
+coax|dỗ dành|verb
+cocktail|cốc tai|food
+cocoon|bao bọc|verb
 code|mã|misc
 coffee|cà phê|food
+cogent|thuyết phục|adj
+cogently|một cách thuyết phục|adj
+cognitive|thuộc nhận thức|work
 coin|đồng xu|cloth
+coincide|trùng hợp|verb
 cold|lạnh|wthr
+collaborate|cộng tác|work
+collaboration|sự cộng tác|work
 collapse|sự sụp đổ; sụp đổ|verb
 colleague|đồng nghiệp|work
 collect|thu thập, sưu tầm|verb
 collection|bộ sưu tập|fun
+collective|tập thể|adj
 college|trường cao đẳng|work
+collide|va chạm, đâm vào nhau|verb
+collider|máy gia tốc va chạm|work
+collision|sự va chạm|trav
+colloquial|thông tục, khẩu ngữ|adj
+colloquially|theo lối thông tục|adj
+colloquium|hội thảo chuyên đề|work
+colonial|thuộc địa|work
 colour|màu sắc|wthr
 coloured|có màu|wthr
 column|cột|misc
+columnist|người viết chuyên mục|work
+combat|trận chiến; chiến đấu|misc
 combination|sự kết hợp|misc
 combine|kết hợp|verb
+combustion|sự đốt cháy|work
 come|đến|verb
 comedy|phim hài|fun
 comfort|sự thoải mái; an ủi|feel
 comfortable|thoải mái|adj
 command|mệnh lệnh; ra lệnh|verb
+commence|bắt đầu|verb
+commensurate|tương xứng|adj
+commensurately|một cách tương xứng|adj
 comment|lời bình luận|misc
+commentary|bài bình luận|fun
+commentator|bình luận viên|fun
+commerce|thương mại|work
 commercial|thương mại; quảng cáo|work
 commission|tiền hoa hồng; ủy thác|work
+commissioner|ủy viên|work
 commit|phạm (tội), cam kết|verb
 commitment|sự cam kết|misc
 committee|ủy ban|work
+commode|ghế bô, tủ thấp|home
+commodity|hàng hóa|cloth
 common|phổ biến|adj
 commonly|thường thường|func
 communicate|giao tiếp|verb
 communication|sự giao tiếp|misc
+communist|cộng sản|work
 community|cộng đồng|misc
+companion|bạn đồng hành|fam
 company|công ty|work
+comparable|có thể so sánh|adj
 compare|so sánh|verb
 comparison|sự so sánh|misc
+compassion|lòng trắc ẩn|feel
+compel|bắt buộc|verb
+compelling|thuyết phục, hấp dẫn|adj
+compellingly|một cách thuyết phục|adj
+compensate|bồi thường, bù đắp|verb
+compensation|tiền bồi thường|cloth
 compete|thi đấu|verb
+competence|năng lực|work
+competent|có năng lực|adj
 competition|cuộc thi|fun
 competitive|cạnh tranh|adj
 competitor|đối thủ|fun
+compile|biên soạn, tập hợp|verb
 complain|phàn nàn|verb
 complaint|lời phàn nàn|misc
+complement|bổ sung|verb
 complete|hoàn chỉnh; hoàn thành|adj
 completely|hoàn toàn|func
 complex|phức tạp|adj
+complexity|sự phức tạp|misc
+compliance|sự tuân thủ|work
 complicated|phức tạp|adj
+complication|biến chứng, sự phức tạp|body
+comply|tuân thủ|verb
 component|thành phần|misc
+composition|thành phần, sáng tác|fun
+compromise|sự thỏa hiệp; thỏa hiệp|misc
+compute|tính toán|time
 computer|máy tính|home
+conceal|che giấu|verb
+concede|thừa nhận, nhượng bộ|verb
+conceive|hình dung, thụ thai|verb
 concentrate|tập trung|verb
 concentration|sự tập trung|misc
 concept|khái niệm|misc
+conception|quan niệm, sự thụ thai|misc
 concern|mối lo ngại; liên quan|feel
 concerned|lo lắng, quan tâm|feel
 concert|buổi hòa nhạc|fun
+concession|sự nhượng bộ|misc
+conciliation|sự hòa giải|misc
+conciliatory|mang tính hòa giải|adj
 conclude|kết luận|verb
 conclusion|kết luận|misc
+concurrence|sự đồng tình, trùng hợp|misc
+condemn|lên án|verb
+condensation|sự ngưng tụ|wthr
 condition|điều kiện, tình trạng|misc
+condone|dung túng, bỏ qua|verb
 conduct|hạnh kiểm; tiến hành|verb
+conduit|ống dẫn, kênh truyền|misc
+confabulate|bịa chuyện, tán gẫu|verb
+confabulation|sự bịa chuyện|misc
+confection|bánh kẹo|food
+confer|trao, bàn bạc|verb
 conference|hội nghị|work
+confession|lời thú tội|work
 confidence|sự tự tin|feel
 confident|tự tin|feel
+configuration|cấu hình|work
+confine|giới hạn, giam giữ|verb
 confirm|xác nhận|verb
+confirmation|sự xác nhận|misc
 conflict|xung đột; mâu thuẫn|misc
+confront|đối mặt|verb
+confrontation|sự đối đầu|misc
 confuse|làm bối rối|verb
 confused|bối rối|feel
 confusing|khó hiểu|adj
+conglomerate|tập đoàn đa ngành|work
+congratulate|chúc mừng|verb
+congregation|giáo đoàn, hội chúng|fam
+congressional|thuộc quốc hội|work
+conjecture|sự phỏng đoán; phỏng đoán|misc
 connect|kết nối|verb
 connected|được kết nối|adj
 connection|sự kết nối|misc
+connotation|hàm ý, nghĩa hàm ẩn|misc
+connote|hàm ý|verb
+conquer|chinh phục|verb
+conscience|lương tâm|feel
 conscious|có ý thức, tỉnh táo|adj
+consciousness|ý thức|misc
+consecutive|liên tiếp|time
+consensus|sự đồng thuận|misc
+consent|sự đồng ý; đồng ý|misc
 consequence|hậu quả|misc
 conservative|bảo thủ; người bảo thủ|adj
+conserve|bảo tồn, tiết kiệm|verb
 consider|cân nhắc|verb
 consideration|sự cân nhắc|misc
+consign|gửi, giao phó|verb
+consignment|lô hàng gửi|work
 consist|bao gồm|verb
+consistency|sự nhất quán|misc
 consistent|nhất quán|adj
+consolidate|củng cố, hợp nhất|verb
 constant|liên tục, không đổi|adj
 constantly|liên tục|func
+consternation|sự kinh hoàng, sửng sốt|feel
+constituency|khu vực bầu cử|work
+constitute|cấu thành|verb
+constitution|hiến pháp|work
+constitutional|thuộc hiến pháp|work
+constrained|bị gò bó, hạn chế|adj
+constraint|sự ràng buộc|misc
 construct|xây dựng|verb
 construction|sự xây dựng|work
+consultation|sự tham vấn|work
 consume|tiêu thụ|verb
 consumer|người tiêu dùng|cloth
 contact|sự liên lạc; liên hệ|misc
+contagion|sự lây nhiễm|body
 contain|chứa đựng|verb
 container|đồ đựng, thùng chứa|home
+contemplate|suy ngẫm|verb
 contemporary|đương đại|adj
+contempt|sự khinh miệt|feel
+contemptuous|khinh miệt|feel
+contemptuously|một cách khinh miệt|feel
+contend|tranh đấu, cho rằng|verb
+contender|đối thủ|fun
 content|nội dung|misc
+contention|sự tranh cãi, luận điểm|misc
 contest|cuộc thi; tranh giành|fun
 context|ngữ cảnh|misc
+contextual|theo ngữ cảnh|adj
+contextually|theo ngữ cảnh|adj
 continent|châu lục|nat
+continually|liên tục|time
 continue|tiếp tục|verb
 continuous|liên tục|adj
 contract|hợp đồng; ký hợp đồng|work
+contractor|nhà thầu|work
+contractual|theo hợp đồng|work
+contractually|theo hợp đồng|work
+contradiction|sự mâu thuẫn|misc
+contraption|máy móc kỳ cục|home
+contrary|trái ngược; điều ngược lại|adj
 contrast|sự tương phản; đối chiếu|misc
 contribute|đóng góp|verb
 contribution|sự đóng góp|misc
+contributor|người đóng góp|misc
+contrive|xoay xở, bày đặt|verb
 control|sự kiểm soát; kiểm soát|verb
 convenient|thuận tiện|adj
 conversation|cuộc trò chuyện|misc
+converse|ngược lại; điều ngược lại|adj
+conversion|sự chuyển đổi|misc
 convert|chuyển đổi|verb
+convict|kết án|work
+conviction|niềm tin chắc, sự kết án|work
 convince|thuyết phục|verb
 convinced|tin chắc|feel
 cook|đầu bếp; nấu ăn|verb
 cooker|bếp nấu|home
 cooking|việc nấu ăn|food
 cool|mát mẻ, ngầu|adj
+cooperate|hợp tác|verb
+cooperative|hợp tác|adj
+coordinate|phối hợp|verb
+coordination|sự phối hợp|misc
+coordinator|điều phối viên|work
+cop|cảnh sát|work
+copper|đồng (kim loại)|nat
 copy|bản sao; sao chép|verb
+copyright|bản quyền|work
+cordon|phong tỏa|verb
 core|cốt lõi; lõi|misc
 corner|góc|place
 corporate|thuộc công ty|work
+corpse|xác chết|body
+corpus|kho ngữ liệu|work
 correct|đúng; sửa lỗi|adj
+correction|sự sửa chữa|misc
 correctly|một cách chính xác|func
+correlate|tương quan|verb
+correlation|sự tương quan|work
+correspond|tương ứng, trao đổi thư|verb
+correspondence|thư từ, sự tương ứng|work
+correspondent|phóng viên|work
+corresponding|tương ứng|adj
+corrupt|tham nhũng, đồi bại|adj
+corruption|tham nhũng|work
+cosmic|thuộc vũ trụ|nat
+cosset|nuông chiều|verb
 cost|chi phí; có giá|verb
+costly|tốn kém|cloth
 costume|trang phục|cloth
 cottage|nhà tranh, nhà nhỏ|home
 cotton|vải bông|cloth
 could|có thể (quá khứ)|func
 council|hội đồng|work
+councillor|ủy viên hội đồng|work
+counsel|lời khuyên; luật sư|work
+counselling|sự tư vấn|work
+counsellor|người tư vấn|work
 count|đếm|verb
+counter|chống lại, phản bác|verb
+counterpart|người đồng cấp|work
+countless|vô số|time
 country|đất nước|place
 countryside|vùng nông thôn|place
 county|hạt, quận|place
+coup|cuộc đảo chính|work
 couple|cặp đôi|fam
 courage|lòng dũng cảm|feel
 course|khóa học|work
 court|tòa án; sân (thể thao)|place
+courtesy|sự lịch sự|feel
 cousin|anh/chị/em họ|fam
 cover|che phủ|verb
 covered|được phủ, che|adj
 cow|con bò cái|nat
+craft|chế tác thủ công|verb
 crash|vụ va chạm; đâm|trav
+crawl|bò|verb
 crazy|điên rồ|adj
 cream|kem tươi|food
 create|tạo ra|verb
 creation|sự sáng tạo|misc
 creative|sáng tạo|adj
+creator|người sáng tạo|misc
 creature|sinh vật|nat
+credibility|sự đáng tin cậy|misc
+credible|đáng tin|adj
 credit|tín dụng|cloth
+creep|bò, rón rén|verb
 crew|phi hành đoàn, đội|work
 crime|tội phạm|misc
 criminal|tên tội phạm|misc
+crippling|gây tê liệt, nặng nề|adj
 crisis|khủng hoảng|misc
 criterion|tiêu chí|misc
 critic|nhà phê bình|fun
 critical|quan trọng, chỉ trích|adj
 criticism|sự chỉ trích|misc
 criticize|chỉ trích|verb
+critique|bài phê bình|fun
+crony|bạn bè thân cánh hẩu|fam
 crop|mùa màng, cây trồng|nat
 cross|chữ thập; băng qua|verb
 crowd|đám đông|misc
 crowded|đông đúc|adj
+crown|vương miện|cloth
 crucial|cốt yếu|adj
+crude|thô, thô lỗ|adj
 cruel|tàn nhẫn|adj
+crush|nghiền nát|verb
 cry|khóc|verb
+crystal|pha lê, tinh thể|home
+cull|tiêu hủy, chọn lọc|verb
+cult|được hâm mộ; giáo phái|misc
+cultish|kiểu giáo phái|adj
+cultivate|trồng trọt, trau dồi|nat
 cultural|thuộc văn hóa|adj
 culture|văn hóa|misc
 cup|cái tách|home
 cupboard|tủ chén|home
+curate|tuyển chọn, quản lý|verb
+curator|người phụ trách bảo tàng|fun
 cure|cách chữa; chữa khỏi|body
+curiosity|sự tò mò|feel
 curly|xoăn|body
 currency|tiền tệ|trav
 current|hiện tại|time
@@ -642,13 +1141,19 @@ currently|hiện nay|time
 curtain|rèm cửa|home
 curve|đường cong; uốn cong|misc
 curved|cong|adj
+custody|quyền nuôi con, giam giữ|work
 custom|phong tục|misc
 customer|khách hàng|cloth
 cut|cắt|verb
+cutting|bài cắt báo, cành giâm|misc
 cycle|chu kỳ; đạp xe|verb
+cynical|hoài nghi, yếm thế|feel
 dad|bố|fam
 daily|hằng ngày|adj
+dam|đập nước|nat
 damage|thiệt hại; làm hư hại|misc
+damaging|gây hại|adj
+dampen|làm ẩm; làm giảm|verb
 dance|điệu nhảy; nhảy múa|fun
 dancer|vũ công|fun
 dancing|việc khiêu vũ|fun
@@ -658,91 +1163,176 @@ dark|tối|adj
 data|dữ liệu|work
 date|ngày tháng; buổi hẹn|time
 daughter|con gái|fam
+daunt|làm nản chí|verb
+daunting|đáng nản, khó khăn|adj
+dawn|bình minh|time
 day|ngày|time
 dead|đã chết|adj
+deaden|làm giảm, làm tê|verb
 deal|giao dịch; xử lý|verb
 dear|thân mến|adj
 death|cái chết|misc
 debate|cuộc tranh luận; tranh luận|misc
+debris|mảnh vụn|misc
 debt|món nợ|work
+debut|lần ra mắt đầu tiên|fun
 decade|thập kỷ|time
 December|tháng Mười Hai|time
 decent|tử tế, đàng hoàng|adj
 decide|quyết định|verb
 decision|quyết định|misc
+decisive|quyết đoán, quyết định|feel
+declaration|tuyên bố|work
 declare|tuyên bố|verb
+declination|độ lệch, sự từ chối|work
 decline|sự suy giảm; giảm, từ chối|verb
 decorate|trang trí|home
 decoration|đồ trang trí|home
 decrease|sự giảm; giảm|verb
+dedicated|tận tụy|feel
+dedication|sự cống hiến|feel
+deed|việc làm, chứng thư|misc
+deem|cho là|verb
 deep|sâu|adj
 deeply|sâu sắc|func
+default|mặc định, vỡ nợ|work
 defeat|thất bại; đánh bại|fun
+defect|khuyết tật, lỗi|misc
 defence|sự phòng thủ|misc
 defend|bảo vệ|verb
+defensive|phòng thủ|adj
+deficiency|sự thiếu hụt|body
+deficient|thiếu hụt|adj
+deficiently|một cách thiếu hụt|adj
+deficit|thâm hụt|work
 define|định nghĩa|verb
 definite|chắc chắn, rõ ràng|adj
 definitely|chắc chắn|func
 definition|định nghĩa|work
+defy|thách thức, bất chấp|verb
 degree|bằng cấp; độ|work
 delay|sự chậm trễ; trì hoãn|trav
+delegate|đại biểu|work
+delegation|phái đoàn|work
 deliberate|cố ý|adj
 deliberately|cố tình|func
+delicate|mỏng manh, tinh tế|adj
+delicatessen|cửa hàng đồ ăn sẵn|food
 delicious|ngon|food
 delight|niềm vui; làm vui thích|feel
 delighted|vui mừng|feel
 deliver|giao hàng|verb
 delivery|sự giao hàng|cloth
 demand|nhu cầu; yêu cầu|misc
+demon|ác quỷ|misc
 demonstrate|chứng minh, biểu tình|verb
+demystify|làm sáng tỏ|verb
+denial|sự phủ nhận|misc
+denotation|nghĩa biểu thị|misc
+denote|biểu thị|verb
+denounce|tố cáo, lên án|verb
+dense|dày đặc|adj
+density|mật độ|work
 dentist|nha sĩ|work
+denunciation|sự tố cáo, lên án|misc
 deny|phủ nhận|verb
 department|phòng ban|work
 departure|sự khởi hành|trav
 depend|phụ thuộc|verb
+dependence|sự phụ thuộc|misc
+depict|miêu tả|verb
+deploy|triển khai|verb
+deployment|sự triển khai|work
+deposit|gửi tiền, đặt cọc|cloth
+depraved|đồi bại|feel
+depravity|sự đồi bại|feel
+deprecate|phản đối, chê bai|verb
+deprecatingly|một cách chê bai|adj
 depressed|chán nản, trầm cảm|feel
 depressing|gây chán nản|feel
+depressive|trầm cảm|body
+deprivation|sự thiếu thốn|misc
+deprive|tước đoạt|verb
 depth|chiều sâu|misc
+deputy|phó, cấp phó|work
+derelict|bỏ hoang; kẻ vô gia cư|adj
+derision|sự chế nhạo|feel
+derisive|chế nhạo|feel
+derisively|một cách chế nhạo|feel
+descend|đi xuống|verb
+descent|sự đi xuống, dòng dõi|misc
 describe|miêu tả|verb
 description|sự miêu tả|misc
 desert|sa mạc|nat
 deserve|xứng đáng|verb
 design|thiết kế|verb
+designate|chỉ định|verb
 designer|nhà thiết kế|work
+desirable|đáng mong muốn|adj
 desire|mong muốn; khao khát|feel
 desk|bàn làm việc|work
+desktop|máy tính để bàn|work
 desperate|tuyệt vọng|feel
 despite|mặc dù|func
 destination|điểm đến|trav
 destroy|phá hủy|verb
+destructive|có tính phá hoại|adj
 detail|chi tiết|misc
 detailed|chi tiết|adj
+detain|giam giữ|work
 detect|phát hiện|verb
+detection|sự phát hiện|misc
 detective|thám tử|work
+detention|sự giam giữ|work
+deteriorate|xấu đi, suy thoái|verb
 determine|xác định, quyết định|verb
 determined|quyết tâm|feel
+deterrent|biện pháp răn đe|misc
+detract|làm giảm giá trị|verb
+devastate|tàn phá|verb
 develop|phát triển|verb
 development|sự phát triển|misc
+deviant|lệch chuẩn; kẻ lệch lạc|adj
+deviantly|một cách lệch lạc|adj
 device|thiết bị|home
+devil|ma quỷ|misc
+devise|nghĩ ra, sáng chế|verb
+diagnose|chẩn đoán|body
+diagnosis|sự chẩn đoán|body
 diagram|biểu đồ, sơ đồ|work
 dialogue|đoạn hội thoại|work
 diamond|kim cương|cloth
 diary|nhật ký|work
+dictate|đọc chính tả, ra lệnh|verb
+dictator|kẻ độc tài|work
 dictionary|từ điển|work
 die|chết|verb
 diet|chế độ ăn|food
 difference|sự khác biệt|misc
 different|khác nhau|adj
+differentiate|phân biệt|verb
 differently|một cách khác|func
 difficult|khó|adj
 difficulty|khó khăn|misc
+diffuse|khuếch tán; lan tỏa|verb
 dig|đào|verb
 digital|kỹ thuật số|adj
+dignity|phẩm giá|feel
+dilemma|thế tiến thoái lưỡng nan|misc
+diligence|sự siêng năng|feel
+diligent|siêng năng, cần cù|feel
+diligently|một cách siêng năng|feel
+dimension|kích thước, chiều|misc
+diminish|giảm bớt|verb
 dinner|bữa tối|food
+dip|nhúng; giảm nhẹ|verb
+diplomat|nhà ngoại giao|work
+diplomatic|thuộc ngoại giao|work
 direct|trực tiếp|adj
 direction|phương hướng|trav
 directly|trực tiếp|func
 director|giám đốc; đạo diễn|work
+directory|danh bạ, thư mục|work
 dirt|bụi bẩn|home
 dirty|bẩn|adj
 disadvantage|bất lợi|misc
@@ -751,37 +1341,81 @@ disappear|biến mất|verb
 disappointed|thất vọng|feel
 disappointing|gây thất vọng|feel
 disaster|thảm họa|misc
+disastrous|thảm khốc|adj
 disc|đĩa|fun
+discard|vứt bỏ|verb
+discharge|thả ra, cho xuất viện|verb
 discipline|kỷ luật|work
+disclose|tiết lộ|verb
+disclosure|sự tiết lộ|misc
 discount|sự giảm giá|cloth
+discourse|diễn ngôn, bài nói|misc
 discover|khám phá|verb
 discovery|sự khám phá|misc
+discretion|sự thận trọng, tùy ý|feel
+discrimination|sự phân biệt đối xử|work
 discuss|thảo luận|verb
 discussion|cuộc thảo luận|misc
+disdainful|khinh khỉnh|feel
 disease|bệnh tật|body
 dish|món ăn; cái đĩa|food
 dishonest|không trung thực|adj
 disk|đĩa, ổ đĩa|work
 dislike|sự không thích; không thích|feel
 dismiss|gạt bỏ, sa thải|verb
+dismissal|sự sa thải|work
+disparage|chê bai, gièm pha|verb
+disparagement|sự gièm pha|misc
+disparaging|gièm pha|adj
+disparagingly|một cách gièm pha|adj
+dispersal|sự phân tán|misc
+disperse|giải tán, phân tán|verb
+displace|di dời, thay thế|verb
 display|sự trưng bày; trưng bày|verb
+disposal|sự vứt bỏ, xử lý|misc
+dispose|vứt bỏ, xử lý|verb
+dispute|tranh chấp; tranh cãi|work
+disrupt|làm gián đoạn|verb
+disruption|sự gián đoạn|misc
+dissemble|che giấu, giả vờ|verb
+disseminate|phổ biến, truyền bá|verb
+dissemination|sự phổ biến|misc
+dissension|sự bất đồng|misc
+dissolve|hòa tan; giải tán|verb
 distance|khoảng cách|trav
+distill|chưng cất; chắt lọc|verb
+distillation|sự chưng cất|work
+distinction|sự khác biệt|misc
+distinctive|đặc trưng, riêng biệt|adj
+distort|bóp méo, xuyên tạc|verb
+distress|sự đau khổ; làm đau khổ|feel
 distribute|phân phát|verb
 distribution|sự phân phối|misc
 district|quận, huyện|place
+disturbing|đáng lo ngại|feel
+divert|chuyển hướng|verb
 divide|chia, phân chia|verb
+divination|thuật bói toán|misc
+divine|thần thánh|adj
 division|sự phân chia; bộ phận|misc
 divorced|đã ly hôn|fam
 do|làm|verb
 doctor|bác sĩ|work
+doctrine|học thuyết|work
 document|tài liệu|work
 documentary|phim tài liệu|fun
+documentation|tài liệu|work
 dog|con chó|nat
 dollar|đô la|cloth
+domain|lĩnh vực|misc
 domestic|trong nước, gia đình|adj
+domesticity|cuộc sống gia đình|fam
+dominance|sự thống trị|misc
 dominate|thống trị|verb
 donate|quyên góp, hiến tặng|verb
+donor|người hiến tặng|fam
 door|cánh cửa|home
+dose|liều lượng|body
 double|gấp đôi|adj
 doubt|sự nghi ngờ; nghi ngờ|feel
 down|xuống|func
@@ -789,8 +1423,10 @@ download|tải xuống|verb
 downstairs|ở tầng dưới|home
 downwards|xuống dưới|func
 dozen|một tá|time
+drabness|sự buồn tẻ|adj
 draft|bản nháp; soạn thảo|work
 drag|kéo lê|verb
+drain|rút nước, làm cạn|verb
 drama|kịch, phim chính kịch|fun
 dramatic|kịch tính|adj
 draw|vẽ|verb
@@ -798,34 +1434,59 @@ drawing|bức vẽ|fun
 dream|giấc mơ; mơ|verb
 dress|chiếc váy; mặc đồ|cloth
 dressed|mặc quần áo|cloth
+dribble|nước dãi; nhỏ giọt, rê bóng|verb
+drift|trôi dạt|verb
 drink|đồ uống; uống|food
 drive|lái xe|trav
 driver|tài xế|trav
 driving|việc lái xe|trav
 drop|làm rơi; giọt|verb
+drown|chết đuối|verb
+drudgery|công việc cực nhọc|work
 drug|thuốc; ma túy|body
 drum|cái trống|fun
 drunk|say rượu|adj
 dry|khô; làm khô|adj
+dual|kép, đôi|adj
+dub|lồng tiếng; đặt biệt danh|verb
+dubiously|một cách ngờ vực|adj
 due|đến hạn, dự kiến|adj
+dumb|ngu ngốc; câm|feel
+duo|cặp đôi|fam
 during|trong suốt|func
 dust|bụi|home
 duty|nhiệm vụ, bổn phận|work
 DVD|đĩa DVD|fun
+dwarf|làm lu mờ|verb
+dwarfism|chứng lùn|body
+dynamic|động lực|misc
 each|mỗi|func
+eager|háo hức|feel
 ear|cái tai|body
 early|sớm|adj
 earn|kiếm được|verb
+earnings|thu nhập|cloth
 earth|trái đất|nat
 earthquake|động đất|nat
+ease|sự dễ dàng; làm dịu|misc
 easily|một cách dễ dàng|func
 east|hướng đông|trav
 eastern|thuộc phía đông|place
 easy|dễ|adj
 eat|ăn|verb
+ebb|rút xuống, suy giảm|verb
+eccentricity|tính lập dị|feel
+echo|tiếng vang; vang lại|misc
+echolocate|định vị bằng tiếng vang|nat
+echolocation|sự định vị tiếng vang|nat
+ecological|thuộc sinh thái|nat
 economic|thuộc kinh tế|adj
 economy|nền kinh tế|misc
+ecotourism|du lịch sinh thái|trav
 edge|mép, cạnh|misc
+edification|sự khai sáng|misc
+edifice|tòa nhà đồ sộ|place
+edify|khai sáng, giáo hóa|verb
 edit|biên tập, chỉnh sửa|work
 edition|ấn bản|fun
 editor|biên tập viên|work
@@ -833,51 +1494,101 @@ educate|giáo dục|work
 educated|có học thức|adj
 education|giáo dục|work
 educational|mang tính giáo dục|work
+educator|nhà giáo dục|work
 effect|ảnh hưởng, hiệu quả|misc
 effective|hiệu quả|adj
 effectively|một cách hiệu quả|func
+effectiveness|tính hiệu quả|misc
+efficiency|hiệu suất|work
 efficient|hiệu quả|adj
 effort|nỗ lực|misc
+egalitarian|bình đẳng; người theo bình quyền|work
 egg|quả trứng|food
+ego|cái tôi|feel
 eight|số tám|time
 eighteen|số mười tám|time
 eighty|số tám mươi|time
 either|một trong hai; cũng không|func
+elaborate|tỉ mỉ, phức tạp|adj
+elasticity|tính đàn hồi|misc
+elated|phấn khởi, hân hoan|feel
+elation|sự phấn khởi|feel
 elderly|cao tuổi|fam
 elect|bầu chọn|verb
 election|cuộc bầu cử|misc
+electoral|thuộc bầu cử|work
 electric|chạy bằng điện|adj
 electrical|thuộc về điện|adj
 electricity|điện|home
+electrode|điện cực|work
 electronic|điện tử|adj
 element|yếu tố, nguyên tố|misc
 elephant|con voi|nat
+elephantine|to lớn, nặng nề|adj
+elevate|nâng lên|verb
 eleven|số mười một|time
+eligible|đủ điều kiện|adj
+elite|giới tinh hoa|fam
 else|khác, nữa|func
 elsewhere|ở nơi khác|func
 email|thư điện tử|fun
+embark|lên tàu; bắt tay vào|trav
 embarrassed|xấu hổ, ngượng|feel
 embarrassing|đáng xấu hổ|feel
+embarrassment|sự xấu hổ|feel
+embassy|đại sứ quán|place
+embed|gắn vào, nhúng|verb
+embodiment|hiện thân|misc
+embody|hiện thân, thể hiện|verb
 emerge|xuất hiện, nổi lên|verb
+emergence|sự xuất hiện|misc
 emergency|tình trạng khẩn cấp|misc
+eminence|sự nổi tiếng, danh vọng|misc
+eminent|xuất chúng, lỗi lạc|adj
+emolument|thù lao|cloth
 emotion|cảm xúc|feel
 emotional|xúc động, cảm xúc|feel
 emphasis|sự nhấn mạnh|misc
 emphasize|nhấn mạnh|verb
+empirical|thực nghiệm|work
 employ|thuê, tuyển dụng|verb
 employee|nhân viên|work
 employer|người sử dụng lao động|work
 employment|việc làm|work
+empower|trao quyền|verb
 empty|trống rỗng|adj
+emulate|noi gương, mô phỏng|verb
+emulation|sự noi gương, mô phỏng|misc
+emulsification|sự nhũ hóa|work
+emulsifier|chất nhũ hóa|food
+emulsify|nhũ hóa|verb
 enable|cho phép, giúp|verb
+enabler|người tạo điều kiện|misc
+enact|ban hành|work
+encompass|bao gồm|verb
 encounter|cuộc gặp; bắt gặp|verb
 encourage|khuyến khích|verb
+encouragement|sự khích lệ|feel
+encouraging|đáng khích lệ|adj
+encumber|cản trở, đè nặng|verb
+encumbrance|gánh nặng, trở ngại|misc
 end|kết thúc; phần cuối|verb
+endeavour|nỗ lực|misc
 ending|phần kết|misc
+endless|vô tận|adj
+endorse|tán thành, ủng hộ|verb
+endorsement|sự tán thành|misc
+endure|chịu đựng|verb
+enduringly|một cách lâu bền|adj
 enemy|kẻ thù|fam
 energy|năng lượng|misc
+enforce|thi hành|work
+enforcement|sự thi hành|work
 engage|thu hút, tham gia|verb
 engaged|đã đính hôn; bận|fam
+engagement|sự đính hôn; tham gia|fam
+engaging|lôi cuốn|adj
+engender|gây ra, sinh ra|verb
 engine|động cơ|trav
 engineer|kỹ sư|work
 engineering|ngành kỹ thuật|work
@@ -885,33 +1596,66 @@ enhance|nâng cao|verb
 enjoy|thích thú, tận hưởng|verb
 enormous|khổng lồ|adj
 enough|đủ|func
+enquire|hỏi thăm|verb
 enquiry|sự hỏi thông tin|misc
+enrich|làm giàu thêm|verb
+enrol|đăng ký học|work
+ensue|xảy ra sau đó|verb
 ensure|đảm bảo|verb
 enter|đi vào|verb
+enterprise|doanh nghiệp|work
 entertain|giải trí, tiếp đãi|fun
 entertainment|sự giải trí|fun
+enthuse|hăng hái nói, phấn khích|feel
 enthusiasm|sự nhiệt tình|feel
+enthusiast|người đam mê|fam
 enthusiastic|nhiệt tình|feel
 entire|toàn bộ|adj
 entirely|hoàn toàn|func
+entitle|cho quyền|verb
+entity|thực thể|misc
 entrance|lối vào|place
 entry|sự đi vào, lối vào|misc
 environment|môi trường|nat
 environmental|thuộc môi trường|nat
+envisage|hình dung, dự tính|verb
+ephemera|đồ dùng nhất thời|misc
+ephemeral|phù du, chóng tàn|adj
+ephemerality|tính phù du|misc
+epidemic|dịch bệnh|body
 episode|tập phim|fun
+epoxy|keo epoxy|home
+equable|điềm đạm, ôn hòa|feel
 equal|bằng nhau; bằng|adj
+equality|sự bình đẳng|work
 equally|như nhau|func
+equation|phương trình|work
+equilibrium|trạng thái cân bằng|misc
 equipment|thiết bị|work
+erect|dựng lên|verb
 error|lỗi|misc
+escalate|leo thang|verb
 escape|sự trốn thoát; trốn thoát|verb
 especially|đặc biệt là|func
 essay|bài luận|work
+essence|bản chất|misc
 essential|thiết yếu|adj
 establish|thành lập|verb
+establishment|sự thành lập, cơ sở|work
 estate|bất động sản, điền trang|place
 estimate|ước tính; ước lượng|verb
+etch|khắc, khắc axit|verb
+etching|tranh khắc|fun
+eternal|vĩnh cửu|time
 ethical|có đạo đức|adj
+ethos|đặc tính, tinh thần|misc
+euphemism|uyển ngữ|misc
+euphemistic|mang tính uyển ngữ|adj
+euphoria|sự hưng phấn|feel
+euphoric|hưng phấn, phởn phơ|feel
+euphorically|một cách hưng phấn|feel
 euro|đồng euro|cloth
+evacuate|sơ tán|verb
 evaluate|đánh giá|verb
 even|thậm chí|func
 evening|buổi tối|time
@@ -926,64 +1670,107 @@ everything|mọi thứ|func
 everywhere|mọi nơi|func
 evidence|bằng chứng|misc
 evil|độc ác; cái ác|adj
+evoke|gợi lên|verb
+evokingly|một cách gợi cảm xúc|adj
+evolutionary|thuộc tiến hóa|nat
 exact|chính xác|adj
 exactly|chính xác|func
+exaggerate|phóng đại|verb
+exalted|cao quý, cao sang|adj
+exaltedly|một cách cao quý|adj
 exam|kỳ thi|work
 examination|kỳ thi, sự kiểm tra|work
 examine|kiểm tra, khám|verb
 example|ví dụ|work
+excellence|sự xuất sắc|misc
 excellent|xuất sắc|adj
 except|ngoại trừ|func
+exceptional|xuất sắc, đặc biệt|adj
+excess|dư thừa; sự dư thừa|adj
 exchange|sự trao đổi; trao đổi|verb
 excited|hào hứng|feel
 excitement|sự phấn khích|feel
 exciting|thú vị, gay cấn|adj
+exclusion|sự loại trừ|misc
+exclusive|độc quyền, riêng|adj
+exclusively|chỉ, độc quyền|adj
 excuse|lời bào chữa; tha lỗi|misc
+execute|thực hiện; hành quyết|verb
+execution|sự thực hiện; xử tử|misc
 executive|điều hành; giám đốc|work
 exercise|bài tập; tập thể dục|fun
+exert|gây ra, dùng sức|verb
 exhibition|cuộc triển lãm|fun
+exhibitionist|người thích phô trương|feel
+exile|sự lưu đày|work
 exist|tồn tại|verb
 existence|sự tồn tại|misc
+exit|ra ngoài, rời khỏi|verb
+exorcism|sự trừ tà|misc
+exorcist|thầy trừ tà|fam
 expand|mở rộng|verb
 expect|mong đợi|verb
 expectation|sự kỳ vọng|misc
 expected|được mong đợi|adj
 expedition|cuộc thám hiểm|trav
+expenditure|chi tiêu|cloth
 expense|chi phí|work
 expensive|đắt|adj
 experience|kinh nghiệm|misc
 experienced|có kinh nghiệm|work
 experiment|thí nghiệm|work
+experimental|thử nghiệm|work
 expert|chuyên gia|work
+expire|hết hạn|time
 explain|giải thích|verb
 explanation|lời giải thích|misc
+explicit|rõ ràng|adj
+explicitly|một cách rõ ràng|adj
 explode|nổ|verb
+exploitation|sự khai thác, bóc lột|work
 exploration|sự thám hiểm|trav
 explore|khám phá|trav
 explosion|vụ nổ|misc
+explosive|dễ nổ; chất nổ|misc
 export|hàng xuất khẩu; xuất khẩu|work
 expose|phơi bày, vạch trần|verb
 express|bày tỏ|verb
 expression|biểu cảm; cách diễn đạt|misc
+extant|còn tồn tại|adj
 extend|kéo dài, mở rộng|verb
 extent|mức độ, phạm vi|misc
 external|bên ngoài|adj
 extra|thêm|adj
+extract|chiết xuất, rút ra|verb
 extraordinary|phi thường|adj
 extreme|cực độ|adj
 extremely|cực kỳ|func
+extremist|kẻ cực đoan|work
+exude|toát ra, rỉ ra|verb
 eye|con mắt|body
+fabled|huyền thoại|adj
+fabricate|bịa đặt; chế tạo|verb
+fabrication|sự bịa đặt, chế tạo|misc
+fabulate|bịa chuyện|verb
+fabulation|sự bịa chuyện|misc
 face|khuôn mặt|body
+facilitate|tạo điều kiện|verb
 facility|cơ sở vật chất|place
+facsimile|bản sao, bản fax|work
 fact|sự thật|misc
+faction|phe phái|work
 factor|yếu tố|misc
 factory|nhà máy|place
+faculty|khoa; năng lực|work
+fade|phai mờ|verb
 fail|thất bại, trượt|verb
 failure|sự thất bại|misc
 fair|công bằng|adj
 fairly|khá; công bằng|func
+fairness|sự công bằng|feel
 faith|niềm tin, đức tin|misc
 fall|ngã; mùa thu (Mỹ)|verb
+fallacy|ngụy biện, ý sai lầm|misc
 false|sai|adj
 familiar|quen thuộc|adj
 family|gia đình|fam
@@ -992,6 +1779,7 @@ fan|người hâm mộ; cái quạt|fun
 fancy|sang trọng; thích|adj
 fantastic|tuyệt diệu|adj
 far|xa|func
+farcical|lố bịch, như trò hề|adj
 farm|nông trại|nat
 farmer|nông dân|work
 farming|nghề nông|work
@@ -1001,11 +1789,15 @@ fashionable|hợp thời trang|cloth
 fast|nhanh|adj
 fasten|buộc, cài chặt|verb
 fat|béo; mỡ|adj
+fatal|chết người|body
+fate|số phận|misc
 father|bố, cha|fam
 fault|lỗi|misc
 favour|sự giúp đỡ, ân huệ|misc
+favourable|thuận lợi|adj
 favourite|yêu thích|adj
 fear|nỗi sợ|feel
+feat|kỳ tích|misc
 feather|lông vũ|nat
 feature|đặc điểm|misc
 February|tháng Hai|time
@@ -1014,22 +1806,31 @@ feed|cho ăn|verb
 feedback|phản hồi|work
 feel|cảm thấy|verb
 feeling|cảm giác|feel
+feign|giả vờ|verb
 fellow|cùng cảnh, đồng nghiệp|fam
 female|giống cái, nữ|adj
+feminist|nữ quyền; người nữ quyền|work
 fence|hàng rào|home
+ferocity|sự hung dữ|feel
 festival|lễ hội|fun
+fete|hội chợ, lễ hội|fun
 few|vài, một ít|func
+fibre|sợi, chất xơ|food
 fiction|tiểu thuyết hư cấu|fun
 field|cánh đồng|nat
+fierce|dữ dội|feel
 fifteen|số mười lăm|time
 fifth|thứ năm|time
 fifty|số năm mươi|time
 fight|cuộc chiến; đánh nhau|verb
 fighting|cuộc chiến đấu|misc
+figurative|nghĩa bóng|adj
+figuratively|theo nghĩa bóng|adj
 figure|con số; hình dáng|misc
 file|tập tin, hồ sơ|work
 fill|lấp đầy|verb
 film|bộ phim|fun
+filter|bộ lọc; lọc|home
 final|cuối cùng|adj
 finally|cuối cùng thì|func
 finance|tài chính; cấp vốn|work
@@ -1040,6 +1841,7 @@ fine|tốt, ổn|adj
 finger|ngón tay|body
 finish|kết thúc|verb
 fire|lửa|nat
+firearm|súng|misc
 firm|công ty|work
 first|đầu tiên|time
 firstly|trước hết|func
@@ -1050,19 +1852,37 @@ fitness|thể lực|body
 five|số năm|time
 fix|sửa chữa|verb
 fixed|cố định|adj
+fixture|đồ đạc cố định; trận đấu|home
 flag|lá cờ|misc
+flagging|suy yếu dần|adj
 flame|ngọn lửa|nat
 flash|tia sáng; lóe sáng|misc
 flat|căn hộ; phẳng|home
+flatout|hết tốc lực, thẳng thừng|adj
+flaw|khuyết điểm|misc
+flawed|có khiếm khuyết|adj
+flee|chạy trốn|verb
+fleet|đội tàu, đoàn xe|trav
+flesh|thịt|body
+flexibility|sự linh hoạt|misc
 flexible|linh hoạt|adj
 flight|chuyến bay|trav
+flightiness|tính hay thay đổi|feel
+flighty|đỏng đảnh, hay thay đổi|feel
+flit|bay vụt, lướt qua|verb
 float|nổi, trôi|verb
+floe|tảng băng trôi|nat
 flood|lũ lụt; làm ngập|wthr
+floodgates|cửa cống|place
 floor|sàn nhà; tầng|home
 flour|bột mì|food
+flourish|phát triển mạnh|verb
 flow|dòng chảy; chảy|nat
 flower|bông hoa|nat
 flu|bệnh cúm|body
+fluctuate|dao động, biến động|verb
+fluctuation|sự dao động|misc
+fluid|chất lỏng|misc
 fly|con ruồi; bay|verb
 flying|việc bay|trav
 focus|sự tập trung|verb
@@ -1073,27 +1893,44 @@ follow|đi theo|verb
 following|tiếp theo|adj
 food|thức ăn|food
 foot|bàn chân|body
+footage|đoạn phim|fun
 football|bóng đá|fun
 for|cho, để|func
 force|sức mạnh; ép buộc|misc
 foreign|nước ngoài|adj
+foreigner|người nước ngoài|fam
 forest|khu rừng|nat
 forever|mãi mãi|time
+forfeiture|sự tịch thu|work
+forge|giả mạo; rèn|verb
 forget|quên|verb
 forgive|tha thứ|verb
 fork|cái nĩa|home
+forlorn|đơn độc, tuyệt vọng|feel
+forlornly|một cách buồn bã|feel
 form|mẫu đơn; hình thành|misc
 formal|trang trọng|adj
 former|trước đây, cũ|adj
+formidable|đáng gờm, ghê gớm|adj
+formidably|một cách đáng gờm|adj
+formula|công thức|work
+formulate|xây dựng, đề ra|verb
+forth|về phía trước|func
+forthcoming|sắp tới|time
 fortunately|may mắn là|func
 fortune|vận may, gia tài|misc
 forty|số bốn mươi|time
 forward|về phía trước|func
+foster|nuôi dưỡng, thúc đẩy|verb
 found|thành lập|verb
 four|số bốn|time
 fourteen|số mười bốn|time
 fourth|thứ tư|time
+fractious|cáu kỉnh, khó bảo|feel
+fragile|mong manh, dễ vỡ|adj
 frame|khung; đóng khung|home
+franchise|nhượng quyền|work
+frankly|thẳng thắn mà nói|func
 free|miễn phí; tự do|adj
 freedom|sự tự do|misc
 freeze|đóng băng|wthr
@@ -1109,19 +1946,27 @@ frighten|làm sợ hãi|feel
 frightened|sợ hãi|feel
 frightening|đáng sợ|feel
 frog|con ếch|nat
+frolic|nô đùa|verb
 from|từ|func
 front|phía trước|func
 frozen|đông lạnh|food
 fruit|trái cây|food
+fruition|sự thành hiện thực|misc
+frustrated|bực bội, thất vọng|feel
+frustrating|gây bực bội|feel
+frustration|sự bực bội|feel
 fry|chiên, rán|food
 fuel|nhiên liệu|trav
 full|đầy; no|adj
 fully|hoàn toàn|func
 fun|niềm vui|fun
 function|chức năng|misc
+functional|chức năng, hoạt động được|adj
 fund|quỹ; tài trợ|work
 fundamental|cơ bản|adj
 funding|nguồn tài trợ|work
+fundraising|gây quỹ|work
+funeral|đám tang|fam
 funny|buồn cười|adj
 fur|lông thú|nat
 furniture|đồ nội thất|home
@@ -1129,7 +1974,11 @@ further|xa hơn|adj
 furthermore|hơn nữa|func
 future|tương lai|time
 gain|lợi ích; đạt được|verb
+gale|cơn gió mạnh|wthr
 gallery|phòng trưng bày|place
+gallon|ga-lông|time
+gambit|nước cờ, mưu kế|fun
+gambling|cờ bạc|fun
 game|trò chơi|fun
 gang|băng nhóm|misc
 gap|khoảng trống|misc
@@ -1138,11 +1987,19 @@ garden|khu vườn|home
 gas|khí ga|home
 gate|cổng|home
 gather|tụ tập, thu thập|verb
+gathering|cuộc tụ họp|fam
+gauche|vụng về|feel
+gaze|cái nhìn; nhìn chằm chằm|verb
+gear|thiết bị; hộp số|trav
 general|chung, tổng quát|adj
 generally|nói chung|func
 generate|tạo ra|verb
 generation|thế hệ|fam
+generic|chung, phổ biến|adj
 generous|hào phóng|adj
+genocide|tội diệt chủng|work
+genomic|thuộc bộ gen|work
+genomically|về mặt bộ gen|work
 genre|thể loại|fun
 gentle|nhẹ nhàng, hiền lành|adj
 gentleman|quý ông|fam
@@ -1155,8 +2012,15 @@ girl|cô bé|fam
 girlfriend|bạn gái|fam
 give|cho, tặng|verb
 glad|vui mừng|feel
+glance|cái liếc; liếc nhìn|verb
 glass|cái ly; thủy tinh|home
+glimpse|cái nhìn thoáng qua|misc
+glint|tia sáng; lấp lánh|verb
+glitz|vẻ hào nhoáng|misc
+glitzy|hào nhoáng|adj
 global|toàn cầu|adj
+glorious|vinh quang, huy hoàng|adj
+glory|vinh quang|misc
 glove|găng tay|cloth
 go|đi|verb
 goal|bàn thắng; mục tiêu|fun
@@ -1166,60 +2030,106 @@ golf|môn gôn|fun
 good|tốt|adj
 goodbye|tạm biệt|func
 goods|hàng hóa|cloth
+gout|bệnh gút|body
 govern|cai trị, quản lý|verb
+governance|sự quản trị|work
 government|chính phủ|misc
 grab|chộp, túm lấy|verb
+grace|sự duyên dáng, ân sủng|feel
 grade|điểm, lớp|work
 gradually|dần dần|func
 graduate|người tốt nghiệp; tốt nghiệp|work
+graft|mảnh ghép; sự tham nhũng|work
 grain|hạt ngũ cốc|food
 grand|lớn, hoành tráng|adj
 grandfather|ông|fam
 grandmother|bà|fam
 grandparent|ông hoặc bà|fam
 grant|trợ cấp; cấp, cho phép|work
+grasp|sự nắm bắt; nắm chặt|verb
 grass|cỏ|nat
 grateful|biết ơn|feel
+grave|nghiêm trọng; ngôi mộ|adj
+gravitate|bị thu hút về|verb
+gravitational|thuộc trọng lực|work
+gravity|trọng lực|work
 great|tuyệt vời|adj
 green|màu xanh lá|wthr
 greet|chào hỏi|verb
 grey|màu xám|wthr
+grid|lưới|misc
+grief|nỗi đau buồn|feel
+grievance|lời than phiền, bất bình|feel
+grin|nụ cười toe; cười toe|feel
+grind|xay, nghiền|food
+grip|sự nắm chặt; nắm chặt|verb
+gross|tổng; ghê tởm|adj
 ground|mặt đất|nat
 group|nhóm|misc
 grow|lớn lên; trồng|verb
 growth|sự tăng trưởng|misc
+grumble|càu nhàu|verb
 guarantee|sự bảo đảm; bảo đảm|verb
 guard|người bảo vệ; canh gác|work
+guerrilla|du kích|work
 guess|đoán|verb
 guest|khách mời|misc
+guidance|sự hướng dẫn|misc
 guide|người hướng dẫn; hướng dẫn|trav
+guilt|cảm giác tội lỗi|feel
 guilty|có tội; áy náy|feel
 guitar|đàn ghi-ta|fun
 gun|khẩu súng|misc
+gut|ruột; trực giác|body
 guy|chàng trai|fam
 gym|phòng tập thể dục|place
 habit|thói quen|misc
+habitation|sự cư trú, nơi ở|home
+hail|ca ngợi; gọi|verb
 hair|tóc|body
 half|một nửa|time
+halfway|nửa đường|func
 hall|hội trường; sảnh|home
+halt|sự dừng lại; dừng lại|verb
+hamper|cản trở|verb
 hand|bàn tay|body
+handful|một nắm, số ít|time
 handle|tay cầm; xử lý|verb
+handling|sự xử lý|misc
+handy|tiện dụng|adj
 hang|treo|verb
+haphazard|bừa bãi, tùy tiện|adj
+haphazardly|một cách bừa bãi|adj
+hapless|bất hạnh, xui xẻo|adj
 happen|xảy ra|verb
+happenstance|sự tình cờ|misc
 happily|một cách hạnh phúc|func
 happiness|niềm hạnh phúc|feel
 happy|vui vẻ, hạnh phúc|feel
+harassment|sự quấy rối|work
 hard|cứng; khó; chăm chỉ|adj
 hardly|hầu như không|func
+hardware|phần cứng|work
 harm|sự tổn hại; làm hại|misc
 harmful|có hại|adj
+harmony|sự hòa hợp|misc
+harsh|khắc nghiệt|adj
+harvest|mùa gặt; thu hoạch|nat
 hat|cái mũ|cloth
 hate|ghét|verb
+hatred|lòng căm thù|feel
+haughtily|một cách kiêu ngạo|feel
+haughty|kiêu ngạo, ngạo mạn|feel
+haunt|ám ảnh|verb
+hauntingly|một cách ám ảnh|adj
 have|có|verb
+haven|nơi trú ẩn|place
+hazard|mối nguy hiểm|misc
 he|anh ấy, ông ấy|func
 head|cái đầu|body
 headache|chứng đau đầu|body
 headline|tiêu đề báo|fun
+headmistress|nữ hiệu trưởng|work
 health|sức khỏe|body
 healthy|khỏe mạnh|adj
 hear|nghe thấy|verb
@@ -1232,13 +2142,19 @@ heavily|nặng nề, rất nhiều|func
 heavy|nặng|adj
 heel|gót chân|body
 height|chiều cao|body
+heighten|tăng cường|verb
 helicopter|trực thăng|trav
 hell|địa ngục|misc
 hello|xin chào|func
+helm|bánh lái; quyền lãnh đạo|trav
 help|giúp đỡ|verb
 helpful|hữu ích|adj
 her|cô ấy; của cô ấy|func
+herald|sứ giả; báo hiệu|verb
 here|ở đây|func
+heritage|di sản|misc
+hermetic|kín hơi|adj
+hermit|ẩn sĩ|fam
 hero|anh hùng|fun
 hers|của cô ấy|func
 herself|chính cô ấy|func
@@ -1246,45 +2162,71 @@ hesitate|do dự|verb
 hey|này, ê|func
 hi|chào|func
 hide|ẩn nấp|verb
+hierarchy|hệ thống cấp bậc|work
 high|cao|adj
 highlight|điểm nổi bật; làm nổi bật|misc
 highly|rất, hết sức|func
 hill|ngọn đồi|nat
 him|anh ấy (tân ngữ)|func
 himself|chính anh ấy|func
+hinder|cản trở|verb
+hindrance|sự cản trở|misc
+hindsight|sự nhận thức muộn|misc
+hint|gợi ý; ám chỉ|misc
 hire|thuê|work
 his|của anh ấy|func
 historic|có tính lịch sử|adj
 historical|thuộc lịch sử|adj
 history|lịch sử|work
+histrionic|kịch tính, cường điệu|feel
+histrionically|một cách cường điệu|feel
 hit|đánh, va vào|verb
+hitch|buộc, móc; đi nhờ xe|trav
+hitherto|cho đến nay|func
 hobby|sở thích|fun
 hockey|môn khúc côn cầu|fun
+hoist|kéo lên, nâng lên|verb
 hold|cầm, giữ|verb
 hole|cái lỗ|misc
 holiday|kỳ nghỉ|trav
 hollow|rỗng|adj
 holy|thiêng liêng|adj
 home|nhà|home
+homeland|quê hương|place
+homestead|trang trại, nhà vườn|home
 homework|bài tập về nhà|work
 honest|trung thực|adj
 honour|vinh dự; tôn vinh|misc
+hook|móc vào|verb
 hope|hy vọng|verb
+hopeful|đầy hy vọng|feel
+horizon|chân trời|nat
+horn|sừng; còi|nat
 horrible|kinh khủng|adj
 horror|sự kinh hoàng|fun
 horse|con ngựa|nat
 hospital|bệnh viện|place
 host|chủ nhà, người dẫn|fun
+hostage|con tin|work
+hostile|thù địch|feel
+hostility|sự thù địch|feel
 hot|nóng|wthr
 hotel|khách sạn|trav
+hotelier|chủ khách sạn|trav
 hour|giờ|time
 house|ngôi nhà|home
 household|hộ gia đình|home
 housing|nhà ở|home
+hover|bay lượn, lơ lửng|verb
 how|như thế nào|func
 however|tuy nhiên|func
+huddle|đám túm tụm; túm tụm|verb
 huge|rất lớn|adj
+hull|thân tàu|trav
 human|con người|fam
+humanitarian|nhân đạo|work
+humanity|nhân loại, lòng nhân đạo|fam
+humble|khiêm tốn|feel
 humorous|hài hước|adj
 humour|sự hài hước|fun
 hundred|một trăm|time
@@ -1295,12 +2237,31 @@ hurricane|bão lớn|wthr
 hurry|sự vội vàng; vội vã|verb
 hurt|đau; làm đau|verb
 husband|chồng|fam
+hydrogen|hy-đrô|work
+hypnotherapy|liệu pháp thôi miên|body
+hypothesize|đưa ra giả thuyết|verb
+hypothetical|giả định|adj
+hysteria|sự cuồng loạn|feel
+hysterical|cuồng loạn, kích động|feel
+hysterically|một cách cuồng loạn|feel
 ice|đá, băng|wthr
 idea|ý tưởng|misc
 ideal|lý tưởng|adj
+identification|sự nhận dạng|misc
 identify|nhận ra, xác định|verb
 identity|danh tính|misc
+ideological|thuộc hệ tư tưởng|work
+ideology|hệ tư tưởng|work
+idiomatic|mang tính thành ngữ|adj
+idiomatically|theo lối thành ngữ|adj
+idiosyncrasy|đặc điểm riêng|feel
+idiosyncratic|đặc thù, khác thường|adj
+idiot|kẻ ngốc|fam
+idle|chạy không tải, ngồi không|verb
 if|nếu|func
+ignominious|nhục nhã|adj
+ignominiously|một cách nhục nhã|adj
+ignorance|sự thiếu hiểu biết|misc
 ignore|phớt lờ|verb
 ill|ốm|body
 illegal|bất hợp pháp|adj
@@ -1308,91 +2269,211 @@ illness|bệnh tật|body
 illustrate|minh họa|verb
 illustration|hình minh họa|work
 image|hình ảnh|fun
+imagery|hình ảnh|fun
 imaginary|tưởng tượng|adj
 imagination|trí tưởng tượng|misc
 imagine|tưởng tượng|verb
 immediate|ngay lập tức|adj
 immediately|ngay lập tức|func
+immense|bao la, to lớn|adj
 immigrant|người nhập cư|fam
+imminent|sắp xảy ra|time
 impact|tác động; tác động đến|misc
 impatient|thiếu kiên nhẫn|feel
+impeccable|hoàn hảo, không tì vết|adj
+impeccably|một cách hoàn hảo|adj
+imperceptible|không thể nhận thấy|adj
+imperceptibly|một cách khó nhận thấy|adj
+implementation|sự thực hiện|work
 imply|ngụ ý|verb
 import|hàng nhập khẩu; nhập khẩu|work
 importance|tầm quan trọng|misc
 important|quan trọng|adj
 impose|áp đặt|verb
+imposition|sự áp đặt|misc
 impossible|không thể|adj
+impresario|ông bầu|fun
 impress|gây ấn tượng|verb
 impressed|có ấn tượng tốt|feel
 impression|ấn tượng|misc
 impressive|ấn tượng|adj
+imprison|bỏ tù|work
+imprisonment|sự bỏ tù|work
 improve|cải thiện|verb
 improvement|sự cải thiện|misc
 in|trong|func
+inability|sự không có khả năng|misc
+inadequate|không đủ|adj
+inappropriate|không phù hợp|adj
+inartistic|thiếu tính nghệ thuật|fun
 inch|in-sơ (2,54 cm)|time
+inchoate|mới chớm, chưa rõ|adj
+inchoately|một cách mơ hồ|adj
+incidence|tỷ lệ mắc|misc
 incident|sự việc, vụ việc|misc
+incipient|chớm nở, ban đầu|adj
+incise|khắc, rạch|verb
+inclined|có xu hướng|adj
 include|bao gồm|verb
 included|được bao gồm|adj
 including|bao gồm cả|func
+inclusion|sự bao gồm|misc
 income|thu nhập|work
+incongruity|sự không phù hợp|misc
+incongruous|không hợp, lạc lõng|adj
+incongruously|một cách lạc lõng|adj
 increase|sự tăng; tăng lên|verb
 increasingly|ngày càng|func
 incredible|không thể tin được|adj
 incredibly|cực kỳ|func
+incumbent|đương nhiệm; người đương nhiệm|work
+incur|gánh chịu|verb
 indeed|thực vậy, quả thật|func
 independent|độc lập|adj
 indicate|chỉ ra, cho biết|verb
+indicator|chỉ số, dấu hiệu|misc
+indictment|bản cáo trạng|work
+indigenous|bản địa|adj
+indignant|phẫn nộ|feel
+indignantly|một cách phẫn nộ|feel
 indirect|gián tiếp|adj
+indiscrete|không tách rời|adj
+indiscretion|sự thiếu thận trọng|feel
 individual|cá nhân|adj
+individualism|chủ nghĩa cá nhân|misc
+indolence|sự lười biếng|feel
+indolent|lười biếng|feel
+indolently|một cách lười biếng|feel
 indoor|trong nhà|home
 indoors|ở trong nhà|home
+induce|gây ra, xui khiến|verb
+inducement|sự khích lệ, mồi chài|misc
+indulge|chiều chuộng, nuông chiều|verb
+indulgence|sự nuông chiều|feel
+indulgently|một cách nuông chiều|feel
 industrial|thuộc công nghiệp|work
 industry|ngành công nghiệp|work
+inequality|sự bất bình đẳng|work
+inert|trơ, bất động|adj
+inexorability|tính không lay chuyển|misc
+inexorable|không thể ngăn cản|adj
+inexorably|không thể cưỡng lại|adj
+infallibility|tính không thể sai|misc
+infallible|không thể sai|adj
+infallibly|không bao giờ sai|adj
+infamous|khét tiếng|adj
+infant|trẻ sơ sinh|fam
+infect|lây nhiễm|body
 infection|sự nhiễm trùng|body
+infernal|thuộc địa ngục|adj
+infernally|quá chừng, khủng khiếp|adj
+inflict|gây ra|verb
 influence|ảnh hưởng; ảnh hưởng đến|misc
+influential|có ảnh hưởng|adj
 inform|thông báo|verb
 informal|thân mật|adj
+informant|người cung cấp tin|work
 information|thông tin|misc
+ingenuous|ngây thơ, chân thật|feel
+ingenuously|một cách ngây thơ|feel
+ingrate|kẻ vô ơn|feel
+ingratiate|lấy lòng|verb
+ingratiating|xu nịnh, lấy lòng|feel
+ingratiatingly|một cách xu nịnh|feel
 ingredient|nguyên liệu|food
+inherent|vốn có|adj
+inhibit|ngăn cản, kìm hãm|verb
 initial|ban đầu|adj
 initially|ban đầu|func
+initiate|khởi xướng|verb
 initiative|sáng kiến|misc
+inject|tiêm|body
+injection|mũi tiêm|body
 injure|làm bị thương|body
 injured|bị thương|body
 injury|vết thương|body
+injustice|sự bất công|work
+inmate|tù nhân|work
 inner|bên trong|adj
 innocent|vô tội, ngây thơ|adj
+innuendo|lời ám chỉ|misc
 inquiry|sự điều tra, câu hỏi|misc
+inscrutable|khó hiểu, bí ẩn|adj
 insect|côn trùng|nat
+insertion|sự chèn vào|misc
 inside|bên trong|func
+insider|người trong cuộc|fam
 insight|sự thấu hiểu|misc
 insist|khăng khăng, nài nỉ|verb
+inspect|kiểm tra|verb
+inspection|sự kiểm tra|work
+inspiration|nguồn cảm hứng|feel
 inspire|truyền cảm hứng|verb
 install|lắp đặt, cài đặt|verb
 instance|ví dụ, trường hợp|misc
+instantaneous|tức thời|time
 instead|thay vào đó|func
+instinct|bản năng|feel
 institute|viện, học viện|work
 institution|tổ chức, cơ quan|work
+institutional|thuộc thể chế|work
+instruct|hướng dẫn, chỉ thị|verb
 instruction|hướng dẫn|work
 instructor|người hướng dẫn|work
 instrument|nhạc cụ; dụng cụ|fun
+instrumental|có tính công cụ|adj
+insufficient|không đủ|adj
+insular|hẹp hòi, biệt lập|adj
+insult|lời lăng mạ; xúc phạm|feel
 insurance|bảo hiểm|work
+intact|nguyên vẹn|adj
+intake|lượng hấp thụ|food
+integral|không thể thiếu|adj
+integrated|tích hợp|adj
+integration|sự hội nhập|misc
+integrity|sự chính trực|feel
+intellectual|người trí thức|fam
 intelligence|trí thông minh|misc
 intelligent|thông minh|adj
 intend|dự định|verb
 intended|có chủ đích|adj
 intense|mãnh liệt, dữ dội|adj
+intensify|tăng cường|verb
+intensity|cường độ|misc
+intensive|chuyên sâu|adj
+intent|ý định|misc
 intention|ý định|misc
+interactive|tương tác|adj
 interest|sự quan tâm|misc
 interested|quan tâm, thích thú|feel
 interesting|thú vị|adj
+interface|giao diện|work
+interfere|can thiệp|verb
+interference|sự can thiệp|misc
+interim|tạm thời|time
+interior|bên trong; nội thất|home
+interlocking|khớp vào nhau|adj
+interlude|khoảng nghỉ, khúc chuyển|fun
+intermediary|người trung gian|work
+intermediate|trung cấp|adj
 internal|bên trong, nội bộ|adj
 international|quốc tế|adj
 internet|mạng internet|fun
 interpret|giải thích, phiên dịch|verb
+interrogate|thẩm vấn|verb
+interrogation|sự thẩm vấn|work
+interrogative|nghi vấn|adj
 interrupt|ngắt lời, làm gián đoạn|verb
+intersperse|rải rác, xen kẽ|verb
+intervene|can thiệp|verb
+intervention|sự can thiệp|misc
 interview|buổi phỏng vấn|work
+interweave|đan xen|verb
+intimate|thân mật|feel
 into|vào trong|func
+intriguing|hấp dẫn, gây tò mò|adj
+intrinsic|nội tại, vốn có|adj
+intrinsically|về bản chất|adj
 introduce|giới thiệu|verb
 introduction|lời giới thiệu|misc
 invent|phát minh|verb
@@ -1400,13 +2481,25 @@ invention|phát minh|misc
 invest|đầu tư|work
 investigate|điều tra|verb
 investigation|cuộc điều tra|misc
+investigator|điều tra viên|work
 investment|sự đầu tư|work
+invisible|vô hình|adj
 invitation|lời mời|misc
 invite|mời|verb
+invoke|viện dẫn|verb
 involve|liên quan đến|verb
 involved|có liên quan|adj
+involvement|sự tham gia|misc
 iron|sắt, bàn là; là quần áo|home
+ironic|mỉa mai|adj
+ironically|trớ trêu thay|func
+irony|sự trớ trêu|misc
+irrelevancy|sự không liên quan|misc
+irrelevant|không liên quan|adj
+irrevocable|không thể thay đổi|adj
+irrevocably|không thể đảo ngược|adj
 island|hòn đảo|nat
+isolation|sự cô lập|misc
 issue|vấn đề|misc
 it|nó|func
 item|món đồ|misc
@@ -1415,6 +2508,8 @@ itself|chính nó|func
 jacket|áo khoác ngắn|cloth
 jam|mứt|food
 January|tháng Một|time
+jargon|biệt ngữ|work
+jarring|chói tai, khó chịu|adj
 jazz|nhạc jazz|fun
 jeans|quần jean|cloth
 jewellery|đồ trang sức|cloth
@@ -1427,13 +2522,17 @@ journey|chuyến đi|trav
 joy|niềm vui|feel
 judge|thẩm phán; đánh giá|work
 judgement|sự phán đoán, phán quyết|misc
+judicial|thuộc tư pháp|work
 juice|nước ép|food
 July|tháng Bảy|time
 jump|nhảy|verb
+junction|ngã ba, giao lộ|trav
 June|tháng Sáu|time
 junior|cấp dưới, trẻ hơn|work
+jurisdiction|quyền tài phán|work
 just|chỉ, vừa mới|func
 justice|công lý|misc
+justification|sự biện minh|misc
 justify|biện minh|verb
 keen|hăng hái, say mê|adj
 keep|giữ|verb
@@ -1441,13 +2540,19 @@ key|chìa khóa; chủ chốt|home
 keyboard|bàn phím|work
 kick|cú đá; đá|fun
 kid|đứa trẻ|fam
+kidnap|bắt cóc|verb
+kidney|quả thận|body
 kill|giết|verb
 killing|vụ giết người|misc
 kilometre|ki-lô-mét|trav
 kind|loại; tử tế|adj
+kinetic|thuộc động học|work
+kinetically|về mặt động học|work
 king|vua|misc
+kingdom|vương quốc|place
 kiss|nụ hôn; hôn|fam
 kitchen|nhà bếp|home
+knack|sở trường, mẹo|misc
 knee|đầu gối|body
 knife|con dao|home
 knock|gõ cửa|verb
@@ -1458,26 +2563,42 @@ label|nhãn; dán nhãn|cloth
 laboratory|phòng thí nghiệm|work
 labour|lao động|work
 lack|sự thiếu; thiếu|misc
+lad|chàng trai|fam
 lady|quý bà|fam
 lake|cái hồ|nat
+lament|than khóc, than vãn|feel
+lamentation|sự than khóc|feel
 lamp|cái đèn|home
 land|đất liền; hạ cánh|nat
+landlord|chủ nhà|home
+landmark|địa danh|place
 landscape|phong cảnh|nat
 language|ngôn ngữ|work
+lap|lòng; vòng đua|body
 laptop|máy tính xách tay|home
 large|rộng lớn|adj
 largely|phần lớn|func
+lark|chim sơn ca; trò đùa|nat
+laryngitis|viêm thanh quản|body
+laser|tia la-de|work
+lassitude|sự mệt mỏi|body
 last|cuối cùng; kéo dài|adj
 late|muộn|adj
 later|sau đó|func
 latest|mới nhất|adj
+latter|sau; cái sau|func
+laud|ca ngợi|verb
+laudatory|ca ngợi, tán dương|adj
 laugh|cười|verb
 laughter|tiếng cười|feel
 launch|sự ra mắt; ra mắt, phóng|verb
 law|luật|misc
+lawn|bãi cỏ|home
+lawsuit|vụ kiện|work
 lawyer|luật sư|work
 lay|đặt, để|verb
 layer|lớp|misc
+layout|bố cục|misc
 lazy|lười biếng|adj
 lead|dẫn dắt|verb
 leader|người lãnh đạo|work
@@ -1485,37 +2606,63 @@ leadership|sự lãnh đạo|work
 leading|hàng đầu, dẫn đầu|adj
 leaf|chiếc lá|nat
 league|giải đấu, liên đoàn|fun
+leak|chỗ rò; rò rỉ|home
 lean|dựa vào, nghiêng|verb
+leap|bước nhảy; nhảy vọt|verb
 learn|học|verb
 learning|việc học|work
 least|ít nhất|func
 leather|da thuộc|cloth
 leave|rời đi; để lại|verb
+leaven|làm men; làm sinh động|verb
+leavening|men làm bánh|food
 lecture|bài giảng|work
 left|bên trái|trav
 leg|cái chân|body
+legacy|di sản|misc
 legal|hợp pháp, thuộc pháp luật|adj
+legendary|huyền thoại|adj
+legion|quân đoàn; vô số|misc
+legislation|luật pháp|work
+legislative|lập pháp|work
+legislature|cơ quan lập pháp|work
+legitimate|hợp pháp, chính đáng|adj
 leisure|thời gian rảnh rỗi|fun
 lemon|quả chanh vàng|food
 lend|cho mượn|verb
 length|chiều dài, độ dài|time
+lengthy|dài dòng|adj
+lesbian|đồng tính nữ|fam
 less|ít hơn|func
+lesser|kém hơn, nhỏ hơn|adj
 lesson|bài học|work
 let|để cho, cho phép|verb
+lethal|gây chết người|adj
 letter|lá thư; chữ cái|work
 level|cấp độ|misc
+liable|có trách nhiệm pháp lý|work
+liaise|liên lạc, phối hợp|work
+liberal|tự do; người tự do|work
+liberation|sự giải phóng|work
+liberty|sự tự do|work
 library|thư viện|place
 licence|giấy phép|misc
+license|cấp phép|work
 lie|nói dối; nằm|verb
 life|cuộc sống|misc
+lifelong|suốt đời|time
 lifestyle|lối sống|misc
 lift|thang máy; nâng lên|verb
 light|ánh sáng; nhẹ|adj
 like|thích; giống như|verb
+likelihood|khả năng xảy ra|misc
 likely|có khả năng|adj
+limb|chân tay|body
 limit|giới hạn; hạn chế|misc
 limited|có hạn|adj
 line|đường kẻ; hàng|misc
+linear|tuyến tính|adj
+linger|nán lại|verb
 link|liên kết|misc
 lion|con sư tử|nat
 lip|môi|body
@@ -1523,22 +2670,33 @@ liquid|lỏng; chất lỏng|misc
 list|danh sách|work
 listen|lắng nghe|verb
 listener|người nghe|fun
+listing|danh sách|misc
+literacy|khả năng đọc viết|work
 literature|văn học|work
 little|nhỏ, một chút|adj
 live|sống|verb
 lively|sôi nổi, sống động|adj
+liver|gan|body
 living|còn sống; sinh kế|misc
 load|hàng chở; chất hàng|trav
 loan|khoản vay|work
+lobby|sảnh; vận động hành lang|place
 local|địa phương|adj
 locate|định vị, xác định vị trí|verb
 located|nằm ở, tọa lạc|place
 location|vị trí, địa điểm|place
 lock|ổ khóa; khóa lại|home
+locomotion|sự vận động|body
+locomotive|đầu máy xe lửa|trav
+log|khúc gỗ; ghi chép|misc
+logic|lôgic|work
 logical|hợp lý, logic|adj
+loiter|lảng vảng|verb
 lonely|cô đơn|feel
 long|dài|adj
 look|nhìn|verb
+loom|hiện ra lờ mờ|verb
+loop|vòng lặp|misc
 loose|lỏng, rộng|cloth
 lord|chúa, lãnh chúa|fam
 lorry|xe tải|trav
@@ -1552,47 +2710,94 @@ love|tình yêu; yêu|feel
 lovely|đáng yêu|adj
 low|thấp|adj
 lower|hạ thấp|verb
+loyalty|lòng trung thành|feel
 luck|vận may|misc
 lucky|may mắn|adj
 lunch|bữa trưa|food
 lung|phổi|body
+lurid|ghê rợn; sặc sỡ|adj
+luridly|một cách ghê rợn|adj
 luxury|sang trọng; sự xa xỉ|cloth
+lyrical|trữ tình|fun
+lyrically|một cách trữ tình|fun
+lyricist|người viết lời bài hát|fun
 machine|cái máy|home
+machinery|máy móc|work
 mad|điên, tức giận|feel
+maelstrom|xoáy nước; cơn hỗn loạn|nat
 magazine|tạp chí|fun
+maggot|con giòi|nat
 magic|kỳ diệu; phép thuật|fun
+magical|kỳ diệu, thần kỳ|adj
+magistrate|thẩm phán, quan tòa|work
+magnanimity|sự cao thượng|feel
+magnanimous|cao thượng, hào hiệp|feel
+magnanimously|một cách cao thượng|feel
+magnate|ông trùm|work
+magnetic|có từ tính, hấp dẫn|work
+magnitude|độ lớn, tầm quan trọng|misc
+magpie|chim ác là|nat
 mail|thư; gửi thư|fun
 main|chính|adj
+mainland|đất liền|nat
 mainly|chủ yếu|func
+mainstream|chính thống; xu hướng chính|misc
 maintain|duy trì, bảo dưỡng|verb
+maintenance|sự bảo trì, duy trì|work
 major|chính, lớn|adj
 majority|đa số|misc
 make|làm, tạo ra|verb
 male|giống đực, nam|adj
+malice|ác ý|feel
+malicious|độc hại, ác ý|feel
+maliciously|một cách ác ý|feel
 mall|trung tâm mua sắm|place
+malleability|tính dễ uốn|misc
+malleable|dễ uốn, dễ bảo|adj
 man|người đàn ông|fam
 manage|quản lý|verb
 management|sự quản lý|work
 manager|quản lý|work
+mandate|sự ủy nhiệm, nhiệm vụ|work
+mandatory|bắt buộc|adj
+mangle|làm nát, làm hỏng|verb
+manifest|biểu lộ, thể hiện|verb
+manipulate|thao túng, điều khiển|verb
+manipulation|sự thao túng|misc
 manner|cách thức|misc
+manuscript|bản thảo|work
 many|nhiều|func
 map|bản đồ|trav
 March|tháng Ba|time
+marginal|nhỏ, không đáng kể|adj
+marine|thuộc biển|nat
+mariner|thủy thủ|trav
 mark|dấu; điểm số|work
 market|chợ|place
+marketability|khả năng tiêu thụ|work
 marketing|tiếp thị|work
+marketplace|chợ, thị trường|place
 marriage|hôn nhân|fam
 married|đã kết hôn|fam
 marry|kết hôn|verb
+marvel|điều kỳ diệu|misc
+mask|mặt nạ, khẩu trang|cloth
 mass|đại chúng; khối, số đông|misc
+massacre|cuộc thảm sát|misc
 massive|to lớn, đồ sộ|adj
 master|bậc thầy; thành thạo|work
 match|trận đấu; que diêm|fun
 matching|phù hợp, đồng bộ|cloth
 material|vật liệu|misc
+materialism|chủ nghĩa vật chất|misc
+materialistic|thực dụng, ham vật chất|feel
+mathematical|thuộc toán học|work
 mathematics|toán học|work
 maths|môn toán|work
 matter|vấn đề|misc
+mature|trưởng thành; chín chắn|feel
+maverick|người độc lập khác người|feel
+maximize|tối đa hóa|verb
 maximum|tối đa; mức tối đa|time
 May|tháng Năm|time
 maybe|có lẽ|func
@@ -1600,72 +2805,143 @@ me|tôi (tân ngữ)|func
 meal|bữa ăn|food
 mean|có nghĩa là|verb
 meaning|ý nghĩa|work
+meaningful|có ý nghĩa|adj
 means|phương tiện, cách|misc
+meantime|trong lúc đó|time
 meanwhile|trong khi đó|func
 measure|biện pháp; đo lường|verb
 measurement|sự đo lường, số đo|time
 meat|thịt|food
 media|truyền thông|fun
+mediate|hòa giải, làm trung gian|verb
+mediation|sự hòa giải|work
 medical|thuộc y tế|adj
 medicine|thuốc; y học|body
+medieval|thuộc thời trung cổ|time
+mediocrity|sự tầm thường|misc
+meditation|thiền, sự suy ngẫm|body
 medium|trung bình, vừa|adj
 meet|gặp gỡ|verb
 meeting|cuộc họp|work
+melancholy|u sầu; nỗi u sầu|feel
+melodious|du dương|fun
+melodiously|một cách du dương|fun
+melody|giai điệu|fun
 melt|tan chảy|nat
 member|thành viên|misc
+memo|bản ghi nhớ|work
+memoir|hồi ký|fun
+memorial|đài tưởng niệm|place
 memory|trí nhớ; kỷ niệm|misc
+menace|mối đe dọa|misc
+menacing|đầy đe dọa|adj
+menacingly|một cách đe dọa|adj
+menial|tầm thường, hèn mọn|work
 mental|thuộc tinh thần|body
 mention|đề cập|verb
+mentor|người cố vấn|work
 menu|thực đơn|food
+mercantile|thuộc thương mại|work
+mercenary|lính đánh thuê|work
+merchant|thương nhân|work
+mercy|lòng thương xót|feel
+mere|chỉ là, đơn thuần|adj
+merely|chỉ, đơn thuần|func
+merge|hợp nhất, sáp nhập|verb
+merger|sự sáp nhập|work
+merit|giá trị, công lao|misc
+mesh|ăn khớp, hòa hợp|verb
+mesmeric|mê hoặc, thôi miên|adj
 mess|sự bừa bộn|home
 message|tin nhắn|fun
 metal|kim loại|misc
+metalled|rải đá, trải nhựa|trav
+meteorological|thuộc khí tượng|wthr
+meteorology|khí tượng học|wthr
 method|phương pháp|misc
+methodological|thuộc phương pháp luận|work
+methodology|phương pháp luận|work
+meticulous|tỉ mỉ, kỹ lưỡng|feel
+meticulously|một cách tỉ mỉ|adj
 metre|mét|misc
 middle|ở giữa|place
 midnight|nửa đêm|time
+midst|giữa, chính giữa|misc
+midwifery|nghề hộ sinh|body
+mien|vẻ mặt, dáng vẻ|feel
 might|có thể (khả năng thấp)|func
+migration|sự di cư|trav
 mild|nhẹ, ôn hòa|adj
 mile|dặm|trav
+milieu|môi trường, giới|misc
+militant|hiếu chiến; chiến binh|work
 military|quân sự; quân đội|work
+militia|dân quân|work
 milk|sữa|food
+mill|nhà máy xay, cối xay|work
 million|một triệu|time
 mind|tâm trí; phiền|misc
 mine|của tôi; mỏ|func
+minefield|bãi mìn|place
 mineral|khoáng chất|nat
+minimal|tối thiểu|adj
+minimize|giảm thiểu|verb
 minimum|tối thiểu; mức tối thiểu|time
+mining|khai thác mỏ|work
 minister|bộ trưởng|work
+ministry|bộ (chính phủ)|work
 minor|nhỏ, không quan trọng|adj
 minority|thiểu số|misc
+minster|nhà thờ lớn|place
 minute|phút|time
+miracle|phép màu, kỳ tích|misc
 mirror|cái gương|home
+misery|sự khốn khổ|feel
+misleading|gây hiểu lầm|adj
 miss|nhớ; lỡ|verb
+missile|tên lửa|work
 missing|bị mất, thiếu|adj
 mission|nhiệm vụ, sứ mệnh|work
 mistake|lỗi sai|misc
 mix|hỗn hợp; trộn|food
 mixed|hỗn hợp, lẫn lộn|adj
 mixture|hỗn hợp|misc
+mob|đám đông hỗn loạn|fam
 mobile|di động|adj
+mobility|tính di động|misc
+mobilize|huy động|verb
 model|người mẫu; mô hình|work
+moderate|vừa phải, ôn hòa|adj
 modern|hiện đại|adj
+modernism|chủ nghĩa hiện đại|fun
+modification|sự sửa đổi|misc
 modify|sửa đổi|verb
 moment|khoảnh khắc|time
+momentum|đà, động lượng|misc
+monastic|thuộc tu viện|misc
 Monday|thứ Hai|time
 money|tiền|cloth
 monitor|màn hình; giám sát|work
+monk|nhà sư, thầy tu|fam
 monkey|con khỉ|nat
+monopoly|sự độc quyền|work
 month|tháng|time
 mood|tâm trạng|feel
 moon|mặt trăng|nat
+moor|vùng đất hoang|nat
 moral|đạo đức; bài học|misc
+morality|đạo đức|feel
 more|nhiều hơn|func
+moribund|hấp hối, suy tàn|adj
 morning|buổi sáng|time
 most|nhiều nhất, hầu hết|func
 mostly|chủ yếu|func
 mother|mẹ|fam
+motive|động cơ|misc
 motor|có động cơ; động cơ|trav
 motorcycle|xe máy|trav
+motorist|người lái xe|trav
+mottled|lốm đốm|wthr
 mount|leo lên, gắn|verb
 mountain|ngọn núi|nat
 mouse|con chuột|nat
@@ -1678,6 +2954,9 @@ mud|bùn|nat
 multiple|nhiều, đa dạng|adj
 multiply|nhân, tăng lên|time
 mum|mẹ|fam
+mundanity|sự tầm thường|misc
+municipal|thuộc thành phố|place
+munificence|sự hào phóng|feel
 murder|vụ giết người; giết|misc
 muscle|cơ bắp|body
 museum|bảo tàng|place
@@ -1685,20 +2964,29 @@ music|âm nhạc|fun
 musical|thuộc âm nhạc|adj
 musician|nhạc sĩ|fun
 must|phải|func
+mutinous|nổi loạn, bất tuân|feel
+mutinously|một cách nổi loạn|adj
+mutual|lẫn nhau, chung|adj
 my|của tôi|func
+myriad|vô số|adj
 myself|chính tôi|func
 mysterious|bí ẩn|adj
 mystery|điều bí ẩn|misc
+mystique|vẻ huyền bí|misc
 nail|móng tay; cái đinh|body
 name|tên; đặt tên|misc
+namely|cụ thể là|func
 narrative|tường thuật; câu chuyện|fun
 narrow|hẹp|adj
+nascent|mới hình thành|adj
 nation|quốc gia, dân tộc|place
 national|thuộc quốc gia|adj
+nationwide|toàn quốc|adj
 native|bản địa; người bản xứ|fam
 natural|tự nhiên|adj
 naturally|một cách tự nhiên|func
 nature|thiên nhiên|nat
+naval|thuộc hải quân|work
 near|gần|func
 nearly|gần như|func
 neat|gọn gàng|adj
@@ -1708,41 +2996,67 @@ neck|cái cổ|body
 need|cần|verb
 needle|cây kim|home
 negative|tiêu cực|adj
+neglect|sự bỏ bê; bỏ bê, sao nhãng|verb
 neighbour|hàng xóm|fam
 neighbourhood|khu phố, hàng xóm|place
+neighbouring|lân cận, bên cạnh|place
 neither|không cái nào|func
+neophyte|người mới vào nghề|fam
 nerve|dây thần kinh|body
 nervous|lo lắng|feel
+nest|tổ (chim)|nat
 net|cái lưới|fun
 network|mạng lưới|fun
 never|không bao giờ|func
 nevertheless|tuy nhiên|func
 new|mới|adj
 news|tin tức|fun
+newsletter|bản tin|work
 newspaper|tờ báo|fun
 next|tiếp theo|func
 nice|tốt đẹp, dễ chịu|adj
+niche|thị trường ngách, hốc|work
+nigh|gần|func
 night|ban đêm|time
 nightmare|cơn ác mộng|feel
 nine|số chín|time
 nineteen|số mười chín|time
 ninety|số chín mươi|time
 no|không|func
+noble|cao quý, quý tộc|feel
 nobody|không ai|func
+nod|gật đầu|body
 noise|tiếng ồn|misc
 noisy|ồn ào|adj
+nominate|đề cử|verb
+nomination|sự đề cử|work
+nominee|người được đề cử|work
+nonchalant|thờ ơ, điềm nhiên|feel
+nonchalantly|một cách thờ ơ|feel
 none|không cái nào|func
+nonetheless|tuy nhiên, dù vậy|func
+nonsense|điều vô lý|misc
+noon|buổi trưa|time
 nor|cũng không|func
 normal|bình thường|adj
 normally|thông thường|func
 north|hướng bắc|trav
 northern|thuộc phía bắc|place
 nose|cái mũi|body
+nostalgia|nỗi hoài niệm|feel
+nostalgic|hoài niệm, luyến tiếc|feel
+nostalgically|một cách hoài niệm|feel
 not|không|func
+notable|đáng chú ý|adj
+notably|đáng chú ý là|func
 note|ghi chú|work
 nothing|không có gì|func
 notice|để ý|verb
+notify|thông báo|verb
 notion|khái niệm, ý niệm|misc
+notoriety|tai tiếng|misc
+notorious|khét tiếng|adj
+notoriously|nổi tiếng là, khét tiếng|adj
 novel|tiểu thuyết|fun
 November|tháng Mười Một|time
 now|bây giờ|time
@@ -1751,31 +3065,43 @@ nuclear|thuộc hạt nhân|adj
 number|con số|time
 numerous|nhiều, đông đảo|adj
 nurse|y tá|work
+nursery|nhà trẻ, vườn ươm|work
 nut|hạt (quả hạch)|food
 obey|vâng lời, tuân theo|verb
 object|đồ vật|misc
+objection|sự phản đối|misc
 objective|khách quan; mục tiêu|misc
 obligation|nghĩa vụ|misc
+oblige|bắt buộc, giúp đỡ|verb
+oblique|xiên, gián tiếp|adj
 observation|sự quan sát|misc
 observe|quan sát|verb
+obsess|ám ảnh|feel
+obsession|nỗi ám ảnh|feel
 obtain|đạt được, có được|verb
 obvious|rõ ràng, hiển nhiên|adj
 obviously|rõ ràng là|func
 occasion|dịp, cơ hội|time
+occasional|thỉnh thoảng|time
 occasionally|thỉnh thoảng|func
 occur|xảy ra|verb
+occurrence|sự xảy ra|misc
 ocean|đại dương|nat
 October|tháng Mười|time
+octogenarian|người tám mươi tuổi|fam
 odd|kỳ lạ, lẻ|adj
+odds|khả năng, tỷ lệ cược|misc
 of|của|func
 off|tắt; rời khỏi|func
 offence|sự phạm tội, xúc phạm|misc
 offend|xúc phạm|verb
 offensive|xúc phạm, gây khó chịu|adj
 offer|đề nghị|verb
+offering|lễ vật, sản phẩm|misc
 office|văn phòng|work
 officer|sĩ quan; viên chức|work
 official|chính thức|adj
+offspring|con cái|fam
 often|thường xuyên|func
 oh|ồ|func
 oil|dầu|food
@@ -1788,10 +3114,13 @@ onion|củ hành|food
 online|trực tuyến|adj
 only|chỉ|func
 onto|lên trên|func
+opacity|độ mờ đục|misc
+opaque|mờ đục, khó hiểu|adj
 open|mở|adj
 opening|sự khai mạc, lỗ hổng|misc
 operate|vận hành, phẫu thuật|verb
 operation|ca phẫu thuật, hoạt động|body
+operational|thuộc hoạt động|work
 opinion|ý kiến|misc
 opponent|đối thủ|fun
 opportunity|cơ hội|misc
@@ -1799,19 +3128,34 @@ oppose|phản đối|verb
 opposed|phản đối|adj
 opposite|đối diện; trái ngược|adj
 opposition|sự phản đối, phe đối lập|misc
+opt|lựa chọn|verb
+optical|thuộc quang học|work
+optimism|sự lạc quan|feel
 option|lựa chọn|misc
+opulence|sự giàu sang|cloth
+opulent|giàu sang, xa hoa|cloth
+opulently|một cách xa hoa|cloth
 or|hoặc|func
+oral|bằng miệng, thuộc miệng|body
 orange|quả cam; màu cam|wthr
+ordain|phong chức, ban hành|verb
 order|đơn hàng; gọi món|verb
 ordinary|bình thường|adj
+ore|quặng|nat
 organ|nội tạng, đàn organ|body
 organization|tổ chức|work
+organizational|thuộc tổ chức|work
 organize|tổ chức, sắp xếp|verb
 organized|có tổ chức, ngăn nắp|adj
 organizer|người tổ chức|work
+orientation|sự định hướng|misc
 origin|nguồn gốc|misc
 original|nguyên bản|adj
 originally|ban đầu, vốn dĩ|func
+originate|bắt nguồn|verb
+ornate|trang trí công phu|adj
+ostensible|bề ngoài, có vẻ|adj
+ostensibly|bề ngoài thì|adj
 other|khác|func
 otherwise|nếu không thì|func
 ought|nên, phải|func
@@ -1819,40 +3163,73 @@ our|của chúng tôi|func
 ours|của chúng tôi|func
 ourselves|chính chúng tôi|func
 out|ra ngoài|func
+outbreak|sự bùng phát|body
 outcome|kết quả|misc
 outdoor|ngoài trời|fun
 outdoors|ở ngoài trời|func
 outer|bên ngoài|adj
+outing|chuyến đi chơi|fun
+outlet|ổ cắm, cửa hàng|home
 outline|đề cương; phác thảo|work
+outlook|triển vọng, quan điểm|misc
+outmoded|lỗi thời|adj
+outpatient|bệnh nhân ngoại trú|body
+outrage|sự phẫn nộ; làm phẫn nộ|feel
 outside|bên ngoài|func
+outsider|người ngoài cuộc|fam
 oven|lò nướng|home
 over|phía trên; kết thúc|func
 overall|tổng thể; nhìn chung|func
+overlay|phủ lên|verb
+overlook|bỏ qua, nhìn ra|verb
+overly|quá mức|adj
+oversee|giám sát|work
+overturn|lật đổ, đảo ngược|verb
+overwhelm|áp đảo, choáng ngợp|verb
+overwhelming|áp đảo, choáng ngợp|adj
 owe|nợ|verb
 own|của riêng; sở hữu|adj
 owner|chủ sở hữu|work
 pace|nhịp độ; đi đi lại lại|misc
 pack|đóng gói|verb
 package|gói hàng, bưu kiện|home
+pad|miếng đệm, tập giấy|home
 page|trang giấy|work
 pain|cơn đau|body
 painful|đau đớn|body
+painstaking|cần cù, tỉ mỉ|feel
+painstakingly|một cách tỉ mỉ|adj
 paint|sơn; vẽ tranh|verb
 painter|họa sĩ|fun
 painting|bức tranh|fun
 pair|một cặp|cloth
 palace|cung điện|place
+palatable|ngon miệng, dễ chấp nhận|food
+palate|vòm miệng, khẩu vị|body
 pale|nhợt nhạt, nhạt|wthr
 pan|cái chảo|home
 panel|ban, bảng, tấm|misc
 pants|quần dài|cloth
 paper|giấy|work
+parable|truyện ngụ ngôn|fun
+paradoxical|nghịch lý|adj
+paradoxically|nghịch lý thay|func
 paragraph|đoạn văn|work
+paralysis|chứng tê liệt|body
+parameter|tham số|work
+paramount|tối quan trọng|adj
+parasitic|ký sinh|nat
 parent|cha hoặc mẹ|fam
+parental|thuộc cha mẹ|fam
+parish|giáo xứ|place
 park|công viên; đậu xe|place
 parking|việc đỗ xe|trav
 parliament|quốc hội|misc
+parliamentary|thuộc nghị viện|work
+parochial|hẹp hòi, thuộc giáo xứ|feel
 part|bộ phận|misc
+partial|một phần|adj
+partially|một phần|adj
 participant|người tham gia|fam
 participate|tham gia|verb
 particular|cụ thể|adj
@@ -1863,16 +3240,31 @@ party|bữa tiệc|fun
 pass|vượt qua; đưa|verb
 passage|đoạn văn, lối đi|work
 passenger|hành khách|trav
+passing|sự qua đời, trôi qua|misc
 passion|niềm đam mê|feel
+passive|thụ động|feel
 passport|hộ chiếu|trav
 past|quá khứ|time
+pastor|mục sư|work
+patch|miếng vá, mảnh|cloth
+patchily|lốm đốm, không đều|adj
+patchy|loang lổ, không đều|adj
+patent|bằng sáng chế|work
 path|con đường mòn|place
+pathway|lối đi, con đường|place
 patient|bệnh nhân; kiên nhẫn|body
+patrol|cuộc tuần tra; tuần tra|work
+patron|người bảo trợ, khách quen|fam
 pattern|hoa văn; mẫu|misc
 pay|trả tiền|verb
 payment|sự thanh toán|cloth
 peace|hòa bình|misc
 peaceful|yên bình|adj
+peak|đỉnh, cao điểm|nat
+peasant|nông dân|work
+peculiar|kỳ lạ, đặc biệt|adj
+pedestal|bệ, đế|home
+pedestrian|tầm thường, buồn tẻ|adj
 pen|cây bút mực|work
 pencil|bút chì|work
 penny|đồng xu nhỏ|cloth
@@ -1881,6 +3273,7 @@ people|mọi người|fam
 pepper|hạt tiêu; ớt chuông|food
 per|mỗi|func
 percentage|tỷ lệ phần trăm|time
+perch|cành đậu; đậu, ngồi|nat
 perfect|hoàn hảo|adj
 perfectly|một cách hoàn hảo|func
 perform|biểu diễn|verb
@@ -1890,16 +3283,31 @@ period|khoảng thời gian|time
 permanent|lâu dài, vĩnh viễn|adj
 permission|sự cho phép|misc
 permit|giấy phép; cho phép|verb
+persist|kiên trì, tồn tại dai dẳng|verb
+persistent|kiên trì, dai dẳng|feel
 person|người|fam
 personal|cá nhân|adj
 personality|tính cách|feel
 personally|cá nhân tôi, đích thân|func
+personnel|nhân sự|work
 perspective|quan điểm, góc nhìn|misc
 persuade|thuyết phục|verb
+pervasive|lan tràn, phổ biến|adj
+pervasiveness|sự lan tràn|misc
+perverse|ngang ngược, trái khoáy|feel
+perversity|tính ngang ngược|feel
 pet|thú cưng|nat
+petition|đơn thỉnh cầu|work
 petrol|xăng|trav
+phantom|bóng ma|misc
 phase|giai đoạn|time
 phenomenon|hiện tượng|misc
+philanthropic|nhân đức, từ thiện|feel
+philanthropist|nhà từ thiện|fam
+philanthropy|lòng từ thiện|feel
+philistine|kẻ phàm tục|fam
+philosopher|nhà triết học|work
+philosophical|thuộc triết học|work
 philosophy|triết học|work
 phone|điện thoại|home
 photo|bức ảnh|fun
@@ -1908,7 +3316,9 @@ photographer|nhiếp ảnh gia|work
 photography|nhiếp ảnh|fun
 phrase|cụm từ|work
 physical|thuộc thể chất|adj
+physician|bác sĩ|body
 physics|vật lý|work
+physiological|thuộc sinh lý|body
 piano|đàn piano|fun
 pick|chọn; hái|verb
 picture|bức tranh|fun
@@ -1918,7 +3328,11 @@ pile|đống; chất đống|home
 pilot|phi công|work
 pin|ghim; ghim lại|home
 pink|màu hồng|wthr
+pioneer|người tiên phong; mở đường|work
 pipe|ống nước, tẩu|home
+pipeline|đường ống|work
+pirate|cướp biển|trav
+pit|hố, hầm mỏ|nat
 pitch|sân bóng, cao độ|fun
 place|nơi chốn|place
 plain|đơn giản, trơn|adj
@@ -1932,21 +3346,33 @@ plate|cái đĩa|home
 platform|sân ga|trav
 play|chơi|verb
 player|người chơi|fun
+plea|lời cầu xin, lời bào chữa|work
+plead|cầu xin, biện hộ|verb
 pleasant|dễ chịu|adj
 please|làm ơn|func
 pleased|hài lòng|feel
 pleasure|niềm vui, sự hài lòng|feel
+pledge|lời cam kết; cam kết|verb
 plenty|nhiều, dư dả|func
 plot|cốt truyện|fun
+pluck|sự gan dạ|feel
+plug|phích cắm; cắm, bịt|home
+plum|béo bở|adj
+plumage|bộ lông chim|nat
+plume|chùm lông, cột khói|nat
+plunge|lao xuống, giảm mạnh|verb
 plus|cộng, thêm|func
+plutocrat|tài phiệt|work
 pocket|cái túi áo|cloth
 poem|bài thơ|fun
 poet|nhà thơ|work
 poetry|thơ ca|fun
 point|điểm; chỉ vào|misc
 pointed|nhọn|adj
+poise|giữ thăng bằng|verb
 poison|chất độc; đầu độc|misc
 poisonous|có độc|nat
+pole|cột, cực|home
 police|cảnh sát|work
 policeman|cảnh sát nam|work
 policy|chính sách|misc
@@ -1954,7 +3380,12 @@ polite|lịch sự|adj
 political|thuộc chính trị|adj
 politician|chính trị gia|work
 politics|chính trị|misc
+poll|cuộc thăm dò ý kiến|work
 pollution|ô nhiễm|nat
+polysyllabic|đa âm tiết|work
+pond|ao|nat
+ponderous|nặng nề, chậm chạp|adj
+ponderously|một cách nặng nề|adj
 pool|hồ bơi|place
 poor|nghèo|adj
 pop|nhạc pop|fun
@@ -1962,8 +3393,13 @@ popular|phổ biến|adj
 popularity|sự phổ biến|misc
 population|dân số|place
 port|cảng|trav
+porten|điềm báo|misc
+portfolio|danh mục, hồ sơ|work
 portrait|bức chân dung|fun
+portraiture|nghệ thuật chân dung|fun
+portray|miêu tả, khắc họa|verb
 pose|đặt ra, tạo dáng|verb
+posit|đặt giả thiết|verb
 position|vị trí|misc
 positive|tích cực|adj
 possess|sở hữu|verb
@@ -1973,6 +3409,11 @@ possible|có thể xảy ra|adj
 possibly|có lẽ|func
 post|bưu điện; đăng bài|fun
 poster|áp phích|home
+posterity|hậu thế|fam
+postpone|hoãn lại|verb
+postural|thuộc tư thế|body
+posture|làm bộ, ra vẻ|verb
+posturing|sự làm bộ|feel
 pot|cái nồi, chậu|home
 potato|khoai tây|food
 potential|tiềm năng|misc
@@ -1985,77 +3426,173 @@ powerful|mạnh mẽ, quyền lực|adj
 practical|thực tế, thiết thực|adj
 practice|sự luyện tập|work
 practise|luyện tập|verb
+practitioner|người hành nghề|work
 praise|lời khen; khen ngợi|verb
 pray|cầu nguyện|verb
 prayer|lời cầu nguyện|misc
+preach|thuyết giảng|verb
+precedent|tiền lệ|work
+precision|sự chính xác|misc
+precocious|sớm phát triển|feel
+precociously|một cách sớm phát triển|adj
+preconception|định kiến|misc
+predator|thú săn mồi|nat
+predecessor|người tiền nhiệm|work
 predict|dự đoán|verb
 prediction|sự dự đoán|misc
+predilection|sự thiên vị, sở thích|feel
+predominantly|chủ yếu|adj
+preeminent|xuất chúng, ưu việt|adj
 prefer|thích hơn|verb
+pregnancy|sự mang thai|body
 pregnant|có thai|body
+prejudice|định kiến|feel
+preliminary|sơ bộ|adj
+premier|hàng đầu|adj
+premise|tiền đề, cơ sở|misc
+premium|phí bảo hiểm, tiền thưởng|cloth
+preoccupation|mối bận tâm|feel
+preoccupy|làm bận tâm|verb
 preparation|sự chuẩn bị|misc
 prepare|chuẩn bị|verb
 prepared|sẵn sàng, đã chuẩn bị|adj
+prescribe|kê đơn, quy định|body
+prescription|đơn thuốc|body
+prescriptive|mang tính quy định|work
 presence|sự hiện diện|misc
 present|món quà; hiện tại|time
 presentation|bài thuyết trình|work
+presentational|thuộc trình bày|work
+presently|hiện nay, sắp|time
+preservation|sự bảo tồn|misc
 preserve|bảo tồn, giữ gìn|verb
+preside|chủ trì|work
+presidency|nhiệm kỳ tổng thống|work
 president|tổng thống; chủ tịch|work
+presidential|thuộc tổng thống|work
 press|báo chí; ấn, nhấn|verb
 pressure|áp lực|misc
+pressurization|sự điều áp|work
+pressurize|gây áp lực, điều áp|verb
+prestigious|có uy tín, danh giá|adj
+presumably|có lẽ, chắc là|func
+presume|cho rằng, đoán chừng|verb
+presuppose|giả định trước|verb
+presupposition|tiền giả định|misc
 pretend|giả vờ|verb
 pretty|xinh xắn|adj
+prevail|chiếm ưu thế, thắng thế|verb
+prevalence|sự phổ biến|misc
 prevent|ngăn chặn|verb
+prevention|sự phòng ngừa|body
 previous|trước đó|adj
 previously|trước đây|func
+prey|con mồi|nat
 price|giá cả|cloth
 priest|linh mục|work
 primary|chính, tiểu học|adj
 prime|chính, hàng đầu|adj
+primeval|nguyên thủy|nat
 prince|hoàng tử|fam
 princess|công chúa|fam
+principal|hiệu trưởng|work
 principle|nguyên tắc|misc
 print|in ấn|verb
 printer|máy in|home
 printing|sự in ấn|work
 priority|sự ưu tiên|misc
+prise|nạy, cạy|verb
 prison|nhà tù|place
 prisoner|tù nhân|misc
+prissy|kiểu cách, õng ẹo|feel
 privacy|sự riêng tư|misc
 private|riêng tư, tư nhân|adj
+privatization|sự tư nhân hóa|work
+privilege|đặc quyền|misc
 prize|giải thưởng|fun
 probably|có lẽ là|func
+probe|cuộc điều tra; thăm dò|verb
 problem|vấn đề|misc
+problematic|có vấn đề|adj
+procedural|thuộc thủ tục; phim hình sự|work
 procedure|thủ tục, quy trình|work
+proceeding|thủ tục tố tụng|work
+proceeds|tiền thu được|cloth
 process|quá trình|misc
+processing|sự xử lý|work
+processor|bộ xử lý|work
+proclaim|tuyên bố|verb
 produce|sản xuất|verb
 producer|nhà sản xuất|work
 product|sản phẩm|cloth
 production|sự sản xuất|work
+productive|năng suất, hiệu quả|adj
+productivity|năng suất|work
 profession|nghề nghiệp|work
 professional|chuyên nghiệp|adj
 professor|giáo sư|work
 profile|hồ sơ cá nhân|fun
 profit|lợi nhuận|work
+profitability|khả năng sinh lời|work
+profitable|có lãi, sinh lời|work
+profound|sâu sắc|adj
 program|chương trình|fun
 programme|chương trình|fun
 progress|tiến bộ|misc
 project|dự án|work
+projection|sự dự báo, phép chiếu|misc
+proliferate|sinh sôi, tăng nhanh|verb
+proliferation|sự gia tăng nhanh|misc
+prolong|kéo dài|verb
+promenade|đường đi dạo|place
+prominent|nổi bật, nổi tiếng|adj
 promise|lời hứa; hứa|verb
+promotable|có thể thăng chức|work
 promote|thúc đẩy, thăng chức|verb
+prone|dễ bị, nằm sấp|adj
 pronounce|phát âm|verb
+pronounced|rõ rệt|adj
 proof|bằng chứng|misc
+propaganda|tuyên truyền|work
 proper|đúng đắn, thích hợp|adj
 properly|đúng cách|func
 property|tài sản, bất động sản|home
+proportional|tỷ lệ thuận|time
+proportionally|theo tỷ lệ|time
 proposal|đề xuất|work
 propose|đề xuất, cầu hôn|verb
+proposition|đề xuất, mệnh đề|misc
+proprietary|độc quyền, sở hữu|work
+proprietorial|ra vẻ chủ nhân|feel
+proscribe|cấm, bài trừ|work
+proscription|sự cấm đoán|work
+prosecute|truy tố|work
+prosecution|sự truy tố, bên nguyên|work
+prosecutor|công tố viên|work
 prospect|triển vọng|misc
+prospective|tương lai, triển vọng|adj
+prosperity|sự thịnh vượng|misc
+prostrate|nằm sấp; phủ phục|body
 protect|bảo vệ|verb
 protection|sự bảo vệ|misc
+protective|bảo vệ, che chở|adj
 protest|cuộc biểu tình; phản đối|misc
+protocol|giao thức, nghi thức|work
+protrude|nhô ra, lồi ra|verb
+protrusion|chỗ lồi ra|misc
 proud|tự hào|feel
 prove|chứng minh|verb
+proverbial|như tục ngữ|adj
 provide|cung cấp|verb
+province|tỉnh|place
+provincial|thuộc tỉnh|place
+provision|sự cung cấp, điều khoản|misc
+provocation|sự khiêu khích|misc
+provoke|khiêu khích, gây ra|verb
+proximal|gần, phía gần|body
+prurience|tính dâm dục|feel
+prurient|dâm dục, tò mò bẩn|feel
+psychiatric|thuộc tâm thần|body
 psychologist|nhà tâm lý học|work
 psychology|tâm lý học|work
 pub|quán rượu|place
@@ -2063,62 +3600,102 @@ public|công cộng|adj
 publication|ấn phẩm, sự xuất bản|work
 publish|xuất bản|verb
 pull|kéo|verb
+pulse|mạch đập|body
+pump|máy bơm; bơm|home
+punch|cú đấm; đấm|verb
+punctual|đúng giờ|time
+punctuality|sự đúng giờ|time
 punish|trừng phạt|verb
 punishment|sự trừng phạt|misc
+punitive|trừng phạt|work
+punitively|mang tính trừng phạt|work
 pupil|học sinh|work
 purchase|sự mua; mua|cloth
 pure|tinh khiết, thuần túy|adj
+puritanical|khắt khe, khổ hạnh|feel
 purple|màu tím|wthr
 purpose|mục đích|misc
 pursue|theo đuổi|verb
 push|đẩy|verb
 put|đặt, để|verb
+pyre|giàn hỏa thiêu|misc
 qualification|bằng cấp, trình độ|work
 qualified|đủ trình độ|work
 qualify|đủ điều kiện|verb
+qualitative|định tính|work
 quality|chất lượng|misc
+qualm|sự áy náy|feel
 quantity|số lượng|misc
 quarter|một phần tư|time
 queen|nữ hoàng|misc
+query|câu hỏi, truy vấn|misc
+quest|cuộc tìm kiếm|misc
 question|câu hỏi|work
 queue|hàng người; xếp hàng|place
 quick|nhanh|adj
 quickly|một cách nhanh chóng|func
 quiet|yên tĩnh|adj
 quietly|một cách yên lặng|func
+quirk|uốn cong, nhếch|verb
 quit|bỏ, từ bỏ|verb
 quite|khá|func
+quiver|ống tên; run rẩy|verb
+quota|hạn ngạch|work
 quotation|trích dẫn, báo giá|misc
 quote|lời trích dẫn; trích dẫn|verb
 race|cuộc đua|fun
 racing|cuộc đua|fun
+radar|ra-đa|work
+radical|cấp tiến, triệt để|adj
 radio|đài phát thanh|fun
+rage|cơn thịnh nộ|feel
+raid|cuộc đột kích; đột kích|verb
 railway|đường sắt|trav
 rain|mưa|wthr
 raise|nâng lên|verb
+rally|cuộc mít tinh; tập hợp|work
 range|phạm vi, loạt|misc
 rank|cấp bậc; xếp hạng|misc
+ranking|bảng xếp hạng|fun
+rape|vụ hiếp dâm; hiếp dâm|work
 rapid|nhanh chóng|adj
 rapidly|một cách nhanh chóng|func
+rapture|sự sung sướng ngây ngất|feel
+rapturous|say mê, cuồng nhiệt|feel
+rapturously|một cách say mê|feel
 rare|hiếm|adj
 rarely|hiếm khi|func
 rate|tỷ lệ|misc
 rather|khá là|func
+ratio|tỷ lệ|time
+rational|hợp lý, lý trí|adj
+ravish|làm say mê, cưỡng đoạt|verb
 raw|sống, thô|food
+ray|tia sáng|nat
 reach|với tới; đến|verb
 react|phản ứng|verb
 reaction|phản ứng|misc
 read|đọc|verb
 reader|người đọc|fun
+readily|sẵn sàng, dễ dàng|adj
 reading|việc đọc|work
 ready|sẵn sàng|adj
 real|thật|adj
 realistic|thực tế|adj
 reality|thực tế|misc
+realization|sự nhận ra|misc
 realize|nhận ra|verb
 really|thật sự|func
+realm|lĩnh vực, vương quốc|misc
+rear|phía sau; nuôi nấng|misc
 reason|lý do|misc
 reasonable|hợp lý|adj
+reasoning|lập luận|misc
+reassure|trấn an|verb
+rebel|người nổi loạn|work
+rebellion|cuộc nổi loạn|work
+rebound|sự bật lại; bật lại|verb
+rebuke|lời quở trách; quở trách|verb
 recall|nhớ lại|verb
 receipt|hóa đơn, biên lai|cloth
 receive|nhận được|verb
@@ -2126,21 +3703,45 @@ recent|gần đây|adj
 recently|gần đây|func
 reception|lễ tân|trav
 recipe|công thức nấu ăn|food
+recipient|người nhận|misc
+recitation|sự ngâm thơ, đọc thuộc|fun
+recluse|người ẩn dật|fam
+reclusive|ẩn dật|feel
 recognize|nhận ra|verb
 recommend|giới thiệu, khuyên|verb
 recommendation|lời khuyên, đề xuất|misc
+reconcile|hòa giải, dung hòa|verb
+reconciliation|sự hòa giải|misc
+reconstruction|sự tái thiết|misc
 record|bản ghi; ghi lại|verb
 recording|bản ghi âm|fun
+recount|kể lại|verb
+recourse|sự cầu viện|misc
 recover|hồi phục, lấy lại|body
+recumbent|nằm ngả|body
+recuperate|hồi phục|body
+recuperation|sự hồi phục|body
+recuperative|giúp hồi phục|body
 recycle|tái chế|verb
 red|màu đỏ|wthr
 reduce|giảm bớt|verb
 reduction|sự giảm bớt|misc
+redundancy|sự dư thừa, sa thải|work
+redundant|dư thừa, bị sa thải|work
+redundantly|một cách thừa thãi|adj
 refer|tham khảo|verb
 reference|sự tham khảo|misc
+referendum|cuộc trưng cầu dân ý|work
 reflect|phản chiếu, phản ánh|verb
+reflection|sự phản chiếu, suy ngẫm|misc
+reform|cải cách|work
+refuge|nơi trú ẩn|place
+refusal|sự từ chối|misc
 refuse|từ chối|verb
+regain|lấy lại, giành lại|verb
 regard|sự quan tâm; coi là|verb
+regardless|bất kể|func
+regime|chế độ, chính thể|work
 region|vùng|place
 regional|thuộc khu vực|place
 register|sổ đăng ký; đăng ký|verb
@@ -2148,7 +3749,13 @@ regret|sự hối tiếc; hối tiếc|feel
 regular|đều đặn|adj
 regularly|thường xuyên|func
 regulation|quy định|misc
+regulator|cơ quan quản lý|work
+regulatory|thuộc quản lý|work
+rehabilitation|sự phục hồi|body
+reign|triều đại; trị vì|work
+reissue|phát hành lại|verb
 reject|từ chối, bác bỏ|verb
+rejection|sự từ chối|misc
 relate|liên quan, liên hệ|verb
 related|có liên quan|adj
 relation|mối quan hệ|fam
@@ -2159,79 +3766,161 @@ relax|thư giãn|verb
 relaxed|thư thái|feel
 relaxing|thư giãn|feel
 release|sự phát hành; thả, phát hành|verb
+relegate|giáng cấp, đẩy xuống|verb
+relevance|sự liên quan|misc
 relevant|có liên quan|adj
+reliability|độ tin cậy|misc
 reliable|đáng tin cậy|adj
 relief|sự nhẹ nhõm, cứu trợ|feel
 religion|tôn giáo|misc
 religious|thuộc tôn giáo|adj
+relinquish|từ bỏ|verb
+reluctant|miễn cưỡng|feel
 rely|dựa vào, tin cậy|verb
 remain|vẫn còn|verb
+remainder|phần còn lại|misc
+remains|di tích, hài cốt|misc
 remark|lời nhận xét; nhận xét|verb
+remedy|phương thuốc, biện pháp|body
 remember|nhớ|verb
 remind|nhắc nhở|verb
+reminder|lời nhắc nhở|misc
+remit|chuyển tiền|cloth
+remittance|tiền gửi về|cloth
+remonstrance|lời phản đối|misc
+remonstrate|phản đối, khuyên can|verb
+remorseful|ăn năn, hối hận|feel
 remote|xa xôi, hẻo lánh|place
+removal|sự loại bỏ|misc
 remove|loại bỏ|verb
+render|làm cho, cung cấp|verb
+renew|gia hạn, làm mới|verb
+renowned|nổi tiếng|adj
 rent|tiền thuê; thuê|home
+rental|sự cho thuê|home
 repair|sửa chữa|verb
 repeat|lặp lại|verb
 repeated|lặp đi lặp lại|adj
 replace|thay thế|verb
+replacement|sự thay thế|misc
 reply|trả lời|verb
 report|bản báo cáo|work
+reportedly|theo báo cáo|func
 reporter|phóng viên|work
+repose|sự nghỉ ngơi; nằm nghỉ|verb
 represent|đại diện, tượng trưng|verb
+representation|sự đại diện, thể hiện|misc
 representative|người đại diện|work
+reproach|trách móc|verb
+reproduce|tái tạo, sinh sản|verb
+reproduction|sự sinh sản, sao chép|body
+reptilian|thuộc loài bò sát|nat
+republic|nước cộng hòa|work
 reputation|danh tiếng|misc
+repute|danh tiếng|misc
 request|lời yêu cầu|misc
 require|yêu cầu, cần|verb
 requirement|yêu cầu, điều kiện|misc
+requisition|sự trưng dụng|work
 rescue|sự giải cứu; giải cứu|verb
 research|nghiên cứu|work
 researcher|nhà nghiên cứu|work
+resemble|giống với|verb
 reservation|sự đặt chỗ|trav
 reserve|sự dự trữ; đặt trước|trav
+reside|cư trú|verb
+residence|nơi cư trú|home
 resident|cư trú; cư dân|place
+residential|thuộc khu dân cư|place
+residual|còn sót lại|adj
+residue|cặn, phần còn lại|misc
+resignation|sự từ chức|work
+resin|nhựa cây|nat
 resist|chống lại, cưỡng lại|verb
+resistance|sự kháng cự|misc
 resolve|giải quyết|verb
 resort|khu nghỉ dưỡng|trav
+resound|vang dội|verb
+resounding|vang dội|adj
+resoundingly|một cách vang dội|adj
 resource|tài nguyên, nguồn lực|misc
 respect|sự tôn trọng; tôn trọng|feel
+respective|tương ứng|adj
+respectively|lần lượt, tương ứng|func
 respond|phản hồi|verb
 response|sự phản hồi|misc
 responsibility|trách nhiệm|work
 responsible|có trách nhiệm|adj
 rest|nghỉ ngơi; phần còn lại|verb
 restaurant|nhà hàng|food
+restoration|sự khôi phục|misc
+restraint|sự kiềm chế, hạn chế|feel
 result|kết quả|misc
+resume|tiếp tục lại|verb
+resuscitate|hồi sinh, cấp cứu|body
+resuscitation|sự hồi sức|body
 retain|giữ lại|verb
 retire|nghỉ hưu|work
 retired|đã nghỉ hưu|work
+retreat|sự rút lui; rút lui|verb
+retrieve|lấy lại|verb
+retrospect|sự hồi tưởng|time
+retrospection|sự nhìn lại quá khứ|time
+retrospective|hồi tưởng, hồi tố|time
 return|trở về|verb
 reveal|tiết lộ|verb
+revelation|sự tiết lộ|misc
+revelatory|mang tính tiết lộ|adj
+revenge|sự trả thù|feel
+reverb|tiếng vang|fun
+reverberate|vang dội|verb
+reverberation|tiếng vang dội|misc
+reverse|ngược lại; đảo ngược|verb
 review|bài đánh giá; ôn lại|work
+revile|chửi rủa|verb
 revise|ôn tập, sửa lại|work
+revival|sự hồi sinh|misc
+revive|hồi sinh, làm sống lại|verb
 revolution|cuộc cách mạng|misc
+revolutionary|cách mạng|work
+revulsion|sự ghê tởm|feel
 reward|phần thưởng; thưởng|misc
+rhetoric|tu từ, lời lẽ hoa mỹ|work
+rhetorical|thuộc tu từ|work
+rhetorically|theo lối tu từ|work
 rhythm|nhịp điệu|fun
 rice|gạo, cơm|food
 rich|giàu|adj
+rickety|ọp ẹp|adj
 rid|loại bỏ|verb
 ride|cưỡi, đi (xe)|verb
+rife|đầy rẫy|adj
+rifle|súng trường|work
+rift|vết nứt, sự rạn nứt|misc
 right|đúng; bên phải|adj
 ring|chiếc nhẫn; reo|cloth
+riot|cuộc bạo loạn|misc
+rip|xé toạc|verb
 rise|tăng lên; mọc|verb
 risk|rủi ro; liều, mạo hiểm|misc
+ritual|nghi lễ|misc
 river|dòng sông|nat
 road|con đường|trav
 robot|người máy|home
+robust|mạnh mẽ, vững chắc|adj
 rock|tảng đá; nhạc rock|nat
+rod|cái gậy, thanh|home
 role|vai trò|misc
 roll|cuộn; lăn|verb
 romantic|lãng mạn|feel
+romp|nô đùa|fun
+romper|bộ áo liền quần|cloth
 roof|mái nhà|home
 room|căn phòng|home
 root|rễ cây, gốc|nat
 rope|dây thừng|home
+rotate|xoay, luân phiên|verb
+rotation|sự xoay vòng|misc
 rough|thô ráp, gồ ghề|adj
 round|tròn|adj
 route|tuyến đường|trav
@@ -2244,11 +3933,20 @@ rubbish|rác|home
 rude|thô lỗ|adj
 rugby|bóng bầu dục|fun
 rule|quy tắc|misc
+ruling|phán quyết|work
+ruminant|nhai lại|nat
+ruminate|suy ngẫm, nhai lại|verb
+rumination|sự suy ngẫm|feel
+ruminative|trầm ngâm|feel
+rumour|tin đồn|misc
 run|chạy|verb
 runner|người chạy bộ|fun
 running|môn chạy bộ|fun
 rural|thuộc nông thôn|place
 rush|sự vội vàng; vội vã|verb
+sack|sa thải|work
+sacred|thiêng liêng|adj
+sacrifice|sự hy sinh; hy sinh|verb
 sad|buồn|feel
 sadly|đáng buồn là|func
 safe|an toàn|adj
@@ -2256,14 +3954,19 @@ safety|sự an toàn|misc
 sail|đi thuyền|verb
 sailing|môn chèo thuyền|fun
 sailor|thủy thủ|trav
+saint|vị thánh|fam
+sake|lợi ích, vì|misc
 salad|món salad|food
 salary|tiền lương|work
 sale|sự giảm giá; bán hàng|cloth
+salivary|thuộc nước bọt|body
 salt|muối|food
 same|giống nhau|adj
 sample|mẫu|misc
+sanction|lệnh trừng phạt|work
 sand|cát|nat
 sandwich|bánh mì kẹp|food
+sandwiched|bị kẹp giữa|adj
 satellite|vệ tinh|nat
 satisfied|hài lòng|feel
 satisfy|làm hài lòng|verb
@@ -2276,19 +3979,28 @@ scale|quy mô; cái cân|misc
 scan|quét, đọc lướt|verb
 scared|sợ hãi|feel
 scary|đáng sợ|adj
+scattered|rải rác|adj
+scavenger|loài ăn xác thối|nat
 scene|cảnh|fun
+sceptical|hoài nghi|feel
 schedule|lịch trình|time
 scheme|kế hoạch, chương trình|misc
+scholarly|uyên bác, học thuật|work
 school|trường học|work
 science|khoa học|work
 scientific|thuộc khoa học|work
 scientist|nhà khoa học|work
+scope|phạm vi|misc
 score|điểm số|fun
 scream|tiếng hét; la hét|verb
 screen|màn hình|home
+screw|đinh vít; vặn vít|home
 script|kịch bản|fun
+scroll|cuộn giấy|home
+scrutiny|sự xem xét kỹ|misc
 sculpture|tác phẩm điêu khắc|fun
 sea|biển|nat
+seal|con dấu; niêm phong|verb
 search|tìm kiếm|verb
 season|mùa|wthr
 seat|chỗ ngồi|trav
@@ -2299,25 +4011,42 @@ secret|bí mật|misc
 secretary|thư ký|work
 section|phần|misc
 sector|lĩnh vực, khu vực|work
+secular|thế tục|adj
+secularly|theo lối thế tục|adj
 secure|an toàn; đảm bảo|adj
 security|an ninh, sự bảo mật|misc
+sedately|điềm tĩnh, khoan thai|feel
 see|nhìn thấy|verb
 seed|hạt giống|nat
+seedy|tồi tàn, nhếch nhác|adj
 seek|tìm kiếm|verb
 seem|có vẻ|verb
+seemingly|có vẻ như|func
+segment|phân đoạn, phần|misc
+seismic|thuộc địa chấn|nat
+seize|nắm lấy, tịch thu|verb
+seldom|hiếm khi|time
 select|chọn lựa|verb
 selection|sự lựa chọn|misc
+selective|có chọn lọc|adj
+selectivity|tính chọn lọc|misc
 self|bản thân|fam
 sell|bán|verb
+senator|thượng nghị sĩ|work
 send|gửi|verb
 senior|cấp cao, lớn tuổi|work
+sensation|cảm giác, sự náo động|feel
 sense|giác quan; ý nghĩa|misc
 sensible|hợp lý, khôn ngoan|adj
 sensitive|nhạy cảm|feel
+sensitivity|sự nhạy cảm|feel
 sentence|câu; bản án|work
+sentiment|tình cảm, quan điểm|feel
 separate|riêng biệt|adj
+separation|sự chia cắt, ly thân|fam
 September|tháng Chín|time
 sequence|chuỗi, trình tự|misc
+serial|nối tiếp, hàng loạt|adj
 series|loạt phim|fun
 serious|nghiêm túc|adj
 seriously|nghiêm túc, nghiêm trọng|func
@@ -2328,6 +4057,7 @@ session|buổi, phiên|time
 set|bộ; đặt, thiết lập|verb
 setting|bối cảnh, khung cảnh|misc
 settle|giải quyết; định cư|verb
+settlement|sự dàn xếp, khu định cư|place
 seven|số bảy|time
 seventeen|số mười bảy|time
 seventy|số bảy mươi|time
@@ -2335,26 +4065,36 @@ several|một vài|func
 severe|nghiêm trọng|adj
 sex|giới tính; tình dục|body
 sexual|thuộc tình dục|body
+sexuality|tính dục|body
 shade|bóng râm|nat
 shadow|cái bóng|nat
 shake|lắc|verb
 shall|sẽ (xin phép/đề nghị)|func
 shallow|nông, cạn|adj
+shamble|đi lê bước|verb
 shame|sự xấu hổ|feel
 shape|hình dạng|misc
 share|chia sẻ|verb
+shareholder|cổ đông|work
 sharp|sắc, nhọn|adj
+shatter|vỡ tan, đập vỡ|verb
 she|cô ấy, bà ấy|func
+sheaf|bó, xấp|home
+shed|rơi, rụng, trút bỏ|verb
 sheep|con cừu|nat
+sheer|hoàn toàn, tuyệt đối|adj
 sheet|tờ giấy; ga giường|home
 shelf|cái kệ, giá sách|home
 shell|vỏ sò, vỏ|nat
 shelter|nơi trú ẩn; che chở|place
 shift|ca làm việc; sự thay đổi|work
+shimmer|lung linh|wthr
 shine|chiếu sáng, tỏa sáng|verb
 shiny|sáng bóng|adj
 ship|con tàu|trav
+shipping|vận chuyển hàng hóa|trav
 shirt|áo sơ mi|cloth
+shoal|đàn cá, bãi cạn|nat
 shock|cú sốc; gây sốc|feel
 shocked|bị sốc|feel
 shoe|chiếc giày|cloth
@@ -2369,10 +4109,13 @@ shoulder|bờ vai|body
 shout|la hét|verb
 show|chương trình; cho xem|verb
 shower|vòi hoa sen|home
+shrink|co lại, thu nhỏ|verb
+shrug|nhún vai|body
 shut|đóng lại|verb
 shy|nhút nhát|feel
 sick|ốm, bệnh|body
 side|bên, phía|misc
+sigh|tiếng thở dài; thở dài|feel
 sight|thị lực; cảnh tượng|body
 sign|biển báo; ký tên|verb
 signal|tín hiệu; ra hiệu|misc
@@ -2388,9 +4131,14 @@ similarity|sự giống nhau|misc
 similarly|tương tự|func
 simple|đơn giản|adj
 simply|đơn giản, chỉ|func
+simulate|mô phỏng|verb
+simulation|sự mô phỏng|work
+simultaneously|đồng thời|time
+sin|tội lỗi|misc
 since|kể từ khi|func
 sincere|chân thành|feel
 sing|hát|verb
+singe|làm cháy sém|verb
 singer|ca sĩ|fun
 singing|việc ca hát|fun
 single|độc thân; đơn|adj
@@ -2399,41 +4147,61 @@ sir|ngài, thưa ông|fam
 sister|chị/em gái|fam
 sit|ngồi|verb
 site|địa điểm; trang web|place
+situated|nằm ở, tọa lạc|place
 situation|tình huống|misc
 six|số sáu|time
 sixteen|số mười sáu|time
 sixty|số sáu mươi|time
 size|kích cỡ|cloth
+sketch|bản phác thảo|fun
+skew|làm lệch|verb
 ski|trượt tuyết|fun
 skiing|môn trượt tuyết|fun
 skill|kỹ năng|work
+skim|hớt váng, đọc lướt|verb
 skin|làn da|body
+skip|bỏ qua, nhảy|verb
 skirt|chân váy|cloth
 sky|bầu trời|nat
+slab|phiến, tấm|home
+slam|đóng sầm|verb
+slap|tát|verb
+slash|chém, cắt giảm|verb
 slave|nô lệ|fam
+slavery|chế độ nô lệ|work
 sleep|ngủ|verb
 slice|lát; cắt lát|food
 slide|cầu trượt; trượt|verb
 slight|nhẹ, không đáng kể|adj
 slightly|hơi, một chút|func
 slip|trượt chân|verb
+slither|trườn|verb
 slope|dốc; nghiêng|nat
+slot|khe, khung giờ|misc
 slow|chậm|adj
 slowly|một cách chậm rãi|func
 small|nhỏ|adj
 smart|thông minh|adj
 smartphone|điện thoại thông minh|home
+smash|đập vỡ|verb
+smattering|kiến thức sơ sài|misc
 smell|mùi; ngửi|verb
 smile|nụ cười; mỉm cười|verb
 smoke|khói; hút thuốc|verb
 smoking|việc hút thuốc|misc
 smooth|mịn, trơn tru|adj
 snake|con rắn|nat
+snap|bẻ gãy, chụp nhanh|verb
+snippet|đoạn trích|misc
+snobbery|thói trưởng giả|feel
 snow|tuyết|wthr
 so|vì vậy; rất|func
+soak|ngâm, làm ướt sũng|verb
 soap|xà phòng|home
+soar|bay vút, tăng vọt|verb
 soccer|bóng đá|fun
 social|thuộc xã hội|adj
+socialist|xã hội chủ nghĩa|work
 society|xã hội|misc
 sock|chiếc tất|cloth
 soft|mềm|adj
@@ -2441,7 +4209,19 @@ software|phần mềm|work
 soil|đất|nat
 solar|thuộc mặt trời|nat
 soldier|người lính|work
+sole|duy nhất|adj
+solely|chỉ, duy nhất|adj
+solicit|nài xin, gạ gẫm|verb
+solicitor|luật sư tư vấn|work
 solid|rắn, chắc; chất rắn|adj
+solidarity|tình đoàn kết|misc
+soliloquize|độc thoại|fun
+soliloquy|lời độc thoại|fun
+solipsism|thuyết duy ngã|work
+solitariness|sự cô độc|feel
+solitary|đơn độc; người ẩn dật|feel
+solitude|sự cô độc|feel
+solo|đơn ca, một mình; màn độc tấu|fun
 solution|giải pháp|misc
 solve|giải quyết|verb
 some|một vài|func
@@ -2462,48 +4242,83 @@ soup|món súp|food
 source|nguồn|misc
 south|hướng nam|trav
 southern|thuộc phía nam|place
+sovereignty|chủ quyền|work
 space|không gian|nat
+spam|thư rác|work
+span|khoảng thời gian; kéo dài|time
+spare|tha, dành ra|verb
+spark|châm ngòi, khơi dậy|verb
+spatial|thuộc không gian|adj
+spatially|về mặt không gian|adj
 speak|nói|verb
 speaker|người nói; cái loa|home
 special|đặc biệt|adj
 specialist|chuyên môn; chuyên gia|work
+specialized|chuyên biệt, chuyên môn|adj
 species|loài|nat
 specific|cụ thể|adj
 specifically|cụ thể là|func
+specification|thông số kỹ thuật|work
+specimen|mẫu vật|work
+spectacle|cảnh tượng|fun
+spectrum|quang phổ, phạm vi|work
 speech|bài phát biểu|work
 speed|tốc độ|trav
 spell|đánh vần|verb
 spelling|chính tả|work
 spend|tiêu tiền; dành thời gian|verb
 spending|sự chi tiêu|cloth
+sphere|hình cầu, lĩnh vực|misc
 spicy|cay|food
 spider|con nhện|nat
+spin|sự xoay; quay tròn|verb
+spine|xương sống|body
+spire|chóp tháp|place
 spirit|tinh thần, linh hồn|misc
 spiritual|thuộc tinh thần|adj
+splinter|làm vỡ vụn|verb
 split|sự chia rẽ; chia ra|verb
 spoken|nói, khẩu ngữ|adj
 sponsor|nhà tài trợ; tài trợ|work
+spontaneity|tính tự phát|feel
 spoon|cái thìa|home
 sport|thể thao|fun
 spot|chỗ, điểm; vết|misc
+spotlight|đèn sân khấu, tâm điểm|fun
+spouse|vợ hoặc chồng|fam
 spread|lan rộng; phết|verb
 spring|mùa xuân|wthr
+spurious|giả mạo, sai lạc|adj
+spuriously|một cách giả mạo|adj
+spy|gián điệp; theo dõi|work
+squad|đội, tiểu đội|fun
 square|hình vuông; quảng trường|place
+squeeze|ép, vắt, siết|verb
+squint|nheo mắt|body
+squirm|quằn quại, bồn chồn|verb
+squirmy|ngọ nguậy|adj
+stab|đâm|verb
+stability|sự ổn định|misc
+stabilize|ổn định|verb
 stable|ổn định|adj
 stadium|sân vận động|fun
 staff|nhân viên|work
 stage|sân khấu; giai đoạn|fun
 stair|bậc thang|home
+stake|cổ phần, cọc|work
 stamp|con tem|misc
 stand|đứng|verb
 standard|chuẩn; tiêu chuẩn|misc
+standing|thường trực, đứng|adj
 star|ngôi sao|nat
 stare|nhìn chằm chằm|verb
+stark|rõ rệt, trơ trụi|adj
 start|bắt đầu|verb
 state|bang, tiểu bang|place
 statement|lời tuyên bố|misc
 station|nhà ga|trav
 statistic|số liệu thống kê|time
+statistical|thuộc thống kê|work
 statue|bức tượng|place
 status|địa vị, tình trạng|misc
 stay|ở lại|verb
@@ -2511,22 +4326,37 @@ steady|đều đặn, vững vàng|adj
 steal|ăn cắp|verb
 steel|thép|home
 steep|dốc|nat
+steer|lái, điều khiển|verb
+stem|thân cây; bắt nguồn|nat
 step|bước chân|misc
+stereotype|định kiến, khuôn mẫu|misc
+sterility|sự vô sinh, vô trùng|body
 stick|que, gậy; dính, dán|verb
 sticky|dính|adj
 stiff|cứng|adj
 still|vẫn|func
+stimulus|tác nhân kích thích|misc
+stipulate|quy định|work
+stipulation|điều khoản quy định|work
+stir|khuấy, khuấy động|verb
 stock|hàng tồn kho; cổ phiếu|work
+stoicism|sự nhẫn nại|feel
 stomach|dạ dày, bụng|body
 stone|hòn đá|nat
 stop|dừng lại|verb
+storage|sự lưu trữ, kho chứa|home
 store|cửa hàng; lưu trữ|place
 storm|cơn bão|wthr
 story|câu chuyện|fun
 straight|thẳng|adj
+strain|sự căng thẳng|feel
+strait|eo biển|nat
+strand|sợi, tao|misc
 strange|lạ lùng|adj
 stranger|người lạ|fam
+strategic|thuộc chiến lược|work
 strategy|chiến lược|misc
+stratosphere|tầng bình lưu|nat
 stream|dòng suối|nat
 street|đường phố|place
 strength|sức mạnh|body
@@ -2534,69 +4364,147 @@ stress|căng thẳng|feel
 stretch|sự kéo dài; duỗi, căng|verb
 strict|nghiêm khắc|adj
 strike|cuộc đình công; đánh|verb
+striking|nổi bật, ấn tượng|adj
 string|sợi dây|home
+stringent|nghiêm ngặt|adj
+stringently|một cách nghiêm ngặt|adj
+strip|dải; lột, cởi|verb
+strive|phấn đấu, cố gắng|verb
 strong|mạnh mẽ|adj
 strongly|mạnh mẽ|func
+structural|thuộc cấu trúc|adj
 structure|cấu trúc|misc
 struggle|cuộc đấu tranh; vật lộn|verb
 student|học sinh, sinh viên|work
 studio|phòng thu, xưởng|work
 study|học tập|verb
 stuff|đồ đạc, thứ|misc
+stultify|làm mất hứng thú|verb
+stultifyingly|một cách buồn tẻ|adj
+stumble|vấp, loạng choạng|verb
+stun|làm choáng váng|verb
 stupid|ngu ngốc|adj
 style|phong cách|cloth
 subject|môn học; chủ đề|work
+submission|sự nộp, sự khuất phục|work
 submit|nộp, đệ trình|work
+subscriber|người đăng ký, thuê bao|work
+subscription|sự đăng ký, thuê bao|cloth
+subsidize|trợ cấp|work
+subsidy|trợ cấp|work
+subsist|sống sót, tồn tại|verb
+subsistence|sự sinh tồn|misc
 substance|chất|misc
+substantial|đáng kể, lớn|adj
+substantially|đáng kể|adj
+substantiate|chứng minh|verb
+substitute|người thay thế; thay thế|verb
+substitution|sự thay thế|misc
+subtle|tinh tế, khó nhận ra|adj
+suburban|thuộc ngoại ô|place
 succeed|thành công|verb
 success|sự thành công|misc
 successful|thành công|adj
 successfully|thành công|func
+succession|sự kế vị, sự liên tiếp|misc
+successive|liên tiếp|adj
+successor|người kế nhiệm|work
+succumb|khuất phục, chịu thua|verb
 such|như vậy|func
+suck|mút, hút|verb
 sudden|đột ngột|adj
 suddenly|đột nhiên|func
+sue|kiện|work
 suffer|chịu đựng, đau khổ|verb
+suffuse|lan tỏa, tràn ngập|verb
 sugar|đường|food
 suggest|đề nghị|verb
 suggestion|lời đề nghị|misc
+suicide|sự tự tử|body
 suit|bộ com-lê|cloth
 suitable|phù hợp|adj
+suite|dãy phòng, bộ|home
+sulphur|lưu huỳnh|work
+sulphuric|thuộc lưu huỳnh|work
 sum|tổng số; tính tổng|time
+summarily|ngay lập tức, tóm tắt|adj
 summarize|tóm tắt|work
 summary|bản tóm tắt|work
 summer|mùa hè|wthr
+summit|đỉnh núi, hội nghị thượng đỉnh|work
 sun|mặt trời|nat
 Sunday|Chủ nhật|time
+superb|tuyệt vời|adj
+superfluous|thừa thãi|adj
+superfluously|một cách thừa thãi|adj
+superior|cấp trên, vượt trội|adj
 supermarket|siêu thị|place
+supervise|giám sát|work
+supervision|sự giám sát|work
+supervisor|người giám sát|work
+supplement|phần bổ sung; bổ sung|misc
 supply|nguồn cung; cung cấp|misc
 support|sự ủng hộ|verb
 supporter|người ủng hộ|fun
+supportive|ủng hộ, hỗ trợ|feel
 suppose|cho rằng|verb
+supposedly|được cho là|func
+suppress|đàn áp, kìm nén|verb
+supreme|tối cao|adj
 sure|chắc chắn|adj
 surely|chắc chắn|func
 surface|bề mặt|misc
+surge|sự tăng vọt; dâng lên|verb
 surgery|phẫu thuật|body
+surgical|thuộc phẫu thuật|body
+surplus|thặng dư|work
 surprise|điều bất ngờ|feel
 surprised|ngạc nhiên|feel
 surprising|đáng ngạc nhiên|adj
+surrealism|chủ nghĩa siêu thực|fun
+surrealist|nghệ sĩ siêu thực|fun
+surrender|đầu hàng|verb
+surreptitious|lén lút|adj
 surround|bao quanh|verb
 surrounding|xung quanh|adj
+surveillance|sự giám sát|work
 survey|cuộc khảo sát|work
 survive|sống sót|verb
 suspect|nghi phạm; nghi ngờ|verb
+suspension|sự đình chỉ, treo|misc
+suspicion|sự nghi ngờ|feel
+suspicious|đáng ngờ, nghi ngờ|feel
+sustain|duy trì|verb
 swear|thề; chửi thề|verb
 sweater|áo len|cloth
 sweep|quét|home
 sweet|ngọt|food
 swim|bơi|verb
 swimming|môn bơi lội|fun
+swing|cú đánh đu; đung đưa|verb
 switch|chuyển đổi, bật tắt|verb
+swivel|xoay|verb
+sword|thanh kiếm|home
+syllabic|thuộc âm tiết|work
 symbol|biểu tượng|misc
+symbolic|tượng trưng|adj
 sympathy|sự cảm thông|feel
 symptom|triệu chứng|body
+syndrome|hội chứng|body
+synthesis|sự tổng hợp|work
 system|hệ thống|misc
+systematic|có hệ thống|adj
 table|cái bàn|home
 tablet|máy tính bảng; viên thuốc|home
+tacit|ngầm, mặc nhiên|adj
+tacitly|một cách ngầm|adj
+taciturn|ít nói|feel
+taciturnity|tính ít nói|feel
+tackle|đồ nghề, cú tắc bóng|fun
+tactic|chiến thuật|misc
+tactical|thuộc chiến thuật|adj
+tactically|về mặt chiến thuật|adj
+tactile|thuộc xúc giác|body
 tail|cái đuôi|nat
 take|lấy, mang đi|verb
 tale|câu chuyện|fun
@@ -2605,12 +4513,14 @@ talented|có tài|adj
 talk|nói chuyện|verb
 tall|cao|adj
 tank|bể chứa; xe tăng|misc
+tantamount|tương đương với|adj
 tape|băng dính; băng ghi âm|home
 target|mục tiêu|misc
 task|nhiệm vụ|work
 taste|vị; nếm|food
 tax|thuế; đánh thuế|work
 taxi|xe taxi|trav
+taxpayer|người nộp thuế|cloth
 tea|trà|food
 teach|dạy|verb
 teacher|giáo viên|work
@@ -2620,39 +4530,67 @@ tear|nước mắt; xé|feel
 technical|thuộc kỹ thuật|work
 technique|kỹ thuật|work
 technology|công nghệ|work
+tedium|sự buồn tẻ|feel
+teem|đầy rẫy, nhung nhúc|verb
 teenage|thuộc tuổi thiếu niên|adj
 teenager|thiếu niên|fam
 telephone|điện thoại|home
+telescopic|thuộc kính viễn vọng|work
+telescopically|như kính viễn vọng|adj
 television|tivi|home
 tell|kể, bảo|verb
+temper|làm dịu, tôi luyện|verb
 temperature|nhiệt độ|wthr
 temporary|tạm thời|adj
+tempt|cám dỗ|verb
 ten|số mười|time
+tenacious|kiên trì, bền bỉ|feel
+tenaciously|một cách bền bỉ|feel
+tenacity|sự kiên trì|feel
+tenant|người thuê nhà|home
 tend|có xu hướng|verb
+tender|mềm, dịu dàng|adj
 tennis|môn quần vợt|fun
 tent|cái lều|trav
+tenure|nhiệm kỳ, biên chế|work
 term|học kỳ; thuật ngữ|work
+terminal|giai đoạn cuối, chết người|body
+terminate|chấm dứt|verb
+terrain|địa hình|nat
 terrible|khủng khiếp|adj
+terrific|tuyệt vời|adj
 test|bài kiểm tra|work
+testify|làm chứng|work
+testimonial|lời chứng thực|work
+testimony|lời khai|work
+tetchy|dễ cáu|feel
 text|văn bản; nhắn tin|fun
+texture|kết cấu, bề mặt|misc
 than|hơn (so sánh)|func
 thank|cảm ơn|verb
+thankfully|may mắn thay|func
 thanks|cảm ơn|func
 that|đó, kia; rằng|func
 the|(mạo từ xác định)|func
 theatre|nhà hát|place
+theatrical|thuộc sân khấu|fun
 their|của họ|func
 theirs|của họ|func
 them|họ (tân ngữ)|func
 theme|chủ đề|misc
 themselves|chính họ|func
 then|sau đó|func
+theology|thần học|work
+theoretical|thuộc lý thuyết|work
 theory|lý thuyết|work
 therapy|liệu pháp điều trị|body
 there|ở đó|func
+thereafter|sau đó|func
+thereby|bằng cách đó|func
 therefore|vì vậy|func
 they|họ, chúng nó|func
 thick|dày|adj
+thicket|bụi rậm|nat
 thief|tên trộm|misc
 thin|mỏng, gầy|adj
 thing|đồ vật, việc|misc
@@ -2665,10 +4603,15 @@ thirty|số ba mươi|time
 this|này|func
 though|tuy nhiên; mặc dù|func
 thought|ý nghĩ|misc
+thoughtful|chu đáo, trầm tư|feel
 thousand|một nghìn|time
+thread|sợi chỉ|cloth
 threat|mối đe dọa|misc
 threaten|đe dọa|verb
 three|số ba|time
+threshold|ngưỡng cửa, ngưỡng|misc
+thrilled|rất vui mừng|feel
+thrive|phát triển mạnh|verb
 throat|cổ họng|body
 through|xuyên qua|func
 throughout|khắp; suốt|func
@@ -2676,21 +4619,30 @@ throw|ném|verb
 Thursday|thứ Năm|time
 thus|do đó|func
 ticket|vé|trav
+tide|thủy triều|nat
 tidy|gọn gàng|adj
 tie|cà vạt; buộc|cloth
 tight|chật, chặt|cloth
+tighten|thắt chặt|verb
 till|cho đến khi; đến|func
+timber|gỗ xây dựng|nat
 time|thời gian|time
+timely|kịp thời|time
+timidity|tính nhút nhát|feel
 tin|hộp thiếc; thiếc|food
 tiny|nhỏ xíu|adj
 tip|mẹo; tiền boa|misc
 tired|mệt mỏi|feel
 title|tiêu đề|work
 to|đến, để|func
+tobacco|thuốc lá|body
 today|hôm nay|time
 toe|ngón chân|body
 together|cùng nhau|func
 toilet|nhà vệ sinh|home
+tolerance|sự khoan dung, chịu đựng|feel
+tolerate|chịu đựng, dung thứ|verb
+toll|phí cầu đường, thiệt hại|trav
 tomato|quả cà chua|food
 tomorrow|ngày mai|time
 tone|giọng điệu|misc
@@ -2701,8 +4653,16 @@ tool|dụng cụ|work
 tooth|cái răng|body
 top|đỉnh, trên cùng|misc
 topic|chủ đề|work
+topographical|thuộc địa hình|nat
+topography|địa hình|nat
+topple|lật đổ, ngã nhào|verb
+torrential|như thác đổ|wthr
+torture|sự tra tấn; tra tấn|verb
+toss|tung, ném|verb
 total|toàn bộ; tổng số|time
 totally|hoàn toàn|func
+totemic|mang tính biểu tượng|adj
+totter|đi lảo đảo|verb
 touch|chạm vào|verb
 tough|khó khăn, cứng rắn|adj
 tour|chuyến tham quan|trav
@@ -2712,49 +4672,84 @@ towards|về phía|func
 towel|khăn tắm|home
 tower|tòa tháp|place
 town|thị trấn|place
+toxic|độc hại|adj
 toy|đồ chơi|fun
+trace|dấu vết|misc
 track|đường ray; theo dõi|trav
 trade|thương mại; buôn bán|work
+trademark|nhãn hiệu|work
 tradition|truyền thống|misc
 traditional|truyền thống|adj
 traffic|giao thông|trav
+trail|đường mòn; theo dấu|nat
+trailer|đoạn phim giới thiệu, rơ moóc|fun
 train|tàu hỏa; huấn luyện|trav
 trainer|huấn luyện viên; giày thể thao|work
 training|sự huấn luyện|work
+transaction|giao dịch|cloth
+transcript|bản ghi, bảng điểm|work
 transfer|sự chuyển; chuyển|verb
 transform|biến đổi|verb
+transformation|sự biến đổi|misc
+transit|sự quá cảnh, vận chuyển|trav
 transition|sự chuyển tiếp|misc
 translate|dịch|work
 translation|bản dịch|work
+transmission|sự truyền, hộp số|misc
+transmitter|máy phát|work
+transparency|sự minh bạch|misc
+transparent|trong suốt, minh bạch|adj
 transport|giao thông vận tải|trav
+trauma|chấn thương, sang chấn|body
 travel|du lịch|verb
 traveller|du khách|trav
+treacherous|phản bội, nguy hiểm|feel
+treacherously|một cách phản trắc|feel
+treachery|sự phản bội|feel
 treat|đối xử; chữa trị|verb
 treatment|sự điều trị|body
+treaty|hiệp ước|work
 tree|cái cây|nat
+tremendous|to lớn, khủng khiếp|adj
 trend|xu hướng|misc
 trial|phiên tòa; sự thử nghiệm|misc
+tribal|thuộc bộ lạc|fam
+tribunal|tòa án, hội đồng xét xử|work
+tribute|sự tri ân, cống vật|misc
 trick|mẹo, trò lừa; lừa|misc
+trifle|chuyện vặt; đùa cợt|misc
+trigger|cò súng, nguyên nhân|misc
+trio|bộ ba|time
 trip|chuyến đi|trav
+triumph|chiến thắng vẻ vang|fun
+trophy|cúp, chiến lợi phẩm|fun
 tropical|nhiệt đới|wthr
 trouble|rắc rối|misc
+troubled|lo lắng, gặp khó khăn|feel
 trousers|quần dài|cloth
 truck|xe tải|trav
 true|đúng sự thật|adj
+truism|chân lý hiển nhiên|misc
 truly|thật sự|func
 trust|sự tin tưởng; tin tưởng|feel
+trustee|người được ủy thác|work
 truth|sự thật|misc
 try|thử, cố gắng|verb
 tube|ống|home
 Tuesday|thứ Ba|time
+tuition|học phí|work
 tune|giai điệu|fun
 tunnel|đường hầm|trav
 turn|rẽ; lượt|verb
+turnout|số người tham gia|work
+turnover|doanh thu|work
+turret|tháp nhỏ|place
 TV|tivi|home
 twelve|số mười hai|time
 twenty|số hai mươi|time
 twice|hai lần|func
 twin|sinh đôi|fam
+twist|chỗ ngoặt; vặn, xoắn|verb
 two|số hai|time
 type|loại|misc
 typical|điển hình|adj
@@ -2764,21 +4759,37 @@ ugly|xấu xí|adj
 ultimately|cuối cùng|func
 umbrella|cái ô|cloth
 unable|không thể|adj
+unadulterated|nguyên chất|adj
+uncanny|kỳ lạ, khó hiểu|adj
 uncle|chú, bác, cậu|fam
 uncomfortable|không thoải mái|feel
 unconscious|bất tỉnh|body
 under|dưới|func
+undergraduate|sinh viên đại học|work
 underground|dưới lòng đất|adj
+underlying|cơ bản, tiềm ẩn|adj
+undermine|làm suy yếu|verb
 understand|hiểu|verb
 understanding|sự thấu hiểu|misc
 underwear|đồ lót|cloth
+undiminishing|không suy giảm|adj
+undoubtedly|chắc chắn, không nghi ngờ|func
 unemployed|thất nghiệp|work
 unemployment|nạn thất nghiệp|work
+unencumbered|không vướng bận|adj
+unequivocal|rõ ràng, dứt khoát|adj
+unequivocally|một cách dứt khoát|adj
+unexceptional|bình thường|adj
+unexcused|không có phép|adj
 unexpected|bất ngờ|adj
 unfair|không công bằng|adj
+unfeasible|không khả thi|adj
+unfeasibly|quá mức, khó tin|adj
 unfortunately|không may là|func
 unhappy|không vui|feel
+unharried|thong thả|adj
 uniform|đồng phục|cloth
+unify|thống nhất|verb
 union|liên minh, công đoàn|work
 unique|độc nhất|adj
 unit|đơn vị; bài học|work
@@ -2789,12 +4800,27 @@ unknown|không rõ, chưa biết|adj
 unless|trừ khi|func
 unlike|không giống|func
 unlikely|khó xảy ra|adj
+unmediated|trực tiếp|adj
 unnecessary|không cần thiết|adj
+unnerve|làm mất bình tĩnh|feel
+unnerving|đáng lo ngại|feel
+unnervingly|một cách đáng sợ|feel
+unobtrusive|kín đáo|adj
+unobtrusively|một cách kín đáo|adj
 unpleasant|khó chịu|feel
+unprecedented|chưa từng có|adj
+unpromising|không hứa hẹn|adj
+unravel|tháo gỡ, làm sáng tỏ|verb
+unsurpassed|vô song|adj
+unsuspected|không ngờ tới|adj
 until|cho đến khi|func
 unusual|khác thường|adj
+unveil|công bố, ra mắt|verb
 up|lên|func
+upcoming|sắp tới|time
 update|bản cập nhật; cập nhật|verb
+upgrade|sự nâng cấp; nâng cấp|verb
+uphold|duy trì, ủng hộ|verb
 upon|trên, khi|func
 upper|phía trên|adj
 upset|buồn bã; làm buồn|feel
@@ -2809,30 +4835,75 @@ useful|hữu ích|adj
 user|người dùng|fun
 usual|thường lệ|adj
 usually|thường thường|func
+utilitarian|thực dụng|adj
+utility|tiện ích, dịch vụ công cộng|home
+utilize|sử dụng|verb
+utter|hoàn toàn; thốt ra|verb
+utterly|hoàn toàn|func
 vacation|kỳ nghỉ|trav
+vacuum|chân không, máy hút bụi|home
+vague|mơ hồ|adj
+validity|giá trị pháp lý, tính hợp lệ|work
 valley|thung lũng|nat
 valuable|có giá trị, quý giá|adj
 value|giá trị|misc
 van|xe tải nhỏ|trav
+vandal|kẻ phá hoại|fam
+vandalize|phá hoại|verb
+vanish|biến mất|verb
+variable|thay đổi được; biến số|work
+varied|đa dạng|adj
 variety|sự đa dạng|misc
 various|khác nhau, đa dạng|adj
 vary|thay đổi, khác nhau|verb
 vast|rộng lớn|adj
 vegetable|rau củ|food
 vehicle|phương tiện|trav
+vein|tĩnh mạch|body
+venomous|có nọc độc, cay độc|nat
+venomously|một cách cay độc|adj
+venture|dự án mạo hiểm; liều|work
 venue|địa điểm tổ chức|place
+verbal|bằng lời nói|adj
+verbatim|nguyên văn|adj
+verdict|phán quyết|work
+verify|xác minh|verb
+verily|quả thật|func
+verisimilitude|tính chân thực|misc
+veritable|thật sự|adj
+vermin|sâu bọ, loài gây hại|nat
+verse|câu thơ, đoạn thơ|fun
 version|phiên bản|misc
+versus|đấu với|func
 very|rất|func
+vessel|tàu thuyền, mạch máu|trav
+vestigial|còn sót lại|nat
+vestigially|như dấu vết|adj
+veteran|cựu chiến binh|fam
 via|qua, thông qua|func
+viable|khả thi|adj
+vibrant|sôi động, rực rỡ|adj
+vice|thói xấu, phó|feel
+vicinity|vùng lân cận|place
+vicious|hung ác, dữ dội|feel
 victim|nạn nhân|fam
 victory|chiến thắng|fun
 video|đoạn phim|fun
 view|quang cảnh; quan điểm|misc
 viewer|người xem|fun
 village|ngôi làng|place
+villager|dân làng|fam
+vindicate|minh oan|verb
+vindication|sự minh oan|misc
+violate|vi phạm|verb
+violation|sự vi phạm|work
 violence|bạo lực|misc
 violent|bạo lực|adj
+virginal|trinh nguyên|adj
 virtual|ảo|adj
+virtue|đức tính|feel
+virtuosity|tài nghệ điêu luyện|fun
+virtuoso|bậc thầy nghệ thuật|fun
 virus|vi-rút|body
 vision|tầm nhìn; thị lực|misc
 visit|thăm viếng|verb
@@ -2840,40 +4911,60 @@ visitor|khách tham quan|trav
 visual|thuộc thị giác|adj
 vital|thiết yếu, sống còn|adj
 vitamin|vitamin|food
+vocal|thuộc giọng nói, lớn tiếng|adj
+vocalist|ca sĩ|fun
+vocational|thuộc hướng nghiệp|work
 voice|giọng nói|body
 volume|âm lượng; thể tích|misc
 volunteer|tình nguyện viên; tình nguyện|work
+voracity|tính tham ăn|food
+vortex|xoáy nước, cơn lốc|nat
 vote|lá phiếu; bỏ phiếu|verb
+vow|thề, nguyện|verb
+vulnerability|điểm yếu, sự dễ tổn thương|misc
+vulnerable|dễ bị tổn thương|adj
 wage|tiền lương|work
 wait|chờ đợi|verb
 waiter|bồi bàn|work
 wake|thức dậy|verb
 walk|đi bộ|verb
 wall|bức tường|home
+wallow|đắm mình, lăn lộn|verb
+wane|suy yếu, khuyết dần|verb
 want|muốn|verb
 war|chiến tranh|misc
+ward|khu, phường, phòng bệnh|place
+warehouse|nhà kho|place
+warfare|chiến tranh|work
 warm|ấm áp|wthr
 warn|cảnh báo|verb
 warning|lời cảnh báo|misc
+warrant|lệnh; biện minh|work
+warrior|chiến binh|fam
 wash|rửa|verb
 washing|đồ giặt|home
 waste|sự lãng phí; lãng phí|verb
 watch|đồng hồ đeo tay; xem|verb
 water|nước|food
 wave|con sóng; vẫy tay|nat
+wax|tròn dần, tăng lên|verb
 way|con đường; cách|misc
+wayward|bướng bỉnh|feel
 we|chúng tôi|func
 weak|yếu|adj
+weaken|làm suy yếu|verb
 weakness|điểm yếu|misc
 wealth|sự giàu có|misc
 wealthy|giàu có|adj
 weapon|vũ khí|misc
 wear|mặc|cloth
 weather|thời tiết|wthr
+weave|dệt, đan|verb
 web|mạng; mạng nhện|fun
 website|trang web|fun
 wedding|đám cưới|fam
 Wednesday|thứ Tư|time
+weed|cỏ dại|nat
 week|tuần|time
 weekend|cuối tuần|time
 weigh|cân, nặng|verb
@@ -2885,29 +4976,41 @@ western|thuộc phương tây|place
 wet|ướt|wthr
 what|cái gì|func
 whatever|bất cứ thứ gì|func
+whatsoever|chút nào|func
 wheel|bánh xe|trav
+wheeze|thở khò khè|body
 when|khi nào|func
 whenever|bất cứ khi nào|func
 where|ở đâu|func
 whereas|trong khi|func
+whereby|nhờ đó|func
 wherever|bất cứ nơi nào|func
 whether|liệu, có hay không|func
 which|cái nào|func
 while|trong khi|func
+whilst|trong khi|func
+whip|quất, đánh bông|verb
+whir|kêu vù vù|verb
+whirlwind|cơn lốc|wthr
 whisper|lời thì thầm; thì thầm|verb
 white|màu trắng|wthr
 who|ai|func
 whole|toàn bộ|adj
+wholly|hoàn toàn|func
 whom|người mà, ai|func
 whose|của ai|func
 why|tại sao|func
 wide|rộng|adj
 widely|rộng rãi|func
+widen|mở rộng|verb
+widow|góa phụ|fam
+width|chiều rộng|time
 wife|vợ|fam
 wild|hoang dã|adj
 wildlife|động vật hoang dã|nat
 will|sẽ|func
 willing|sẵn lòng|adj
+willingness|sự sẵn lòng|feel
 win|chiến thắng|verb
 wind|gió|wthr
 window|cửa sổ|home
@@ -2915,10 +5018,16 @@ wine|rượu vang|food
 wing|cánh|nat
 winner|người thắng cuộc|fun
 winter|mùa đông|wthr
+wipe|lau, chùi|verb
 wire|dây điện|home
 wise|khôn ngoan|adj
 wish|điều ước; ước|verb
+wistful|bâng khuâng, buồn bã|feel
+wistfully|một cách bâng khuâng|feel
+wit|sự dí dỏm|feel
 with|cùng với|func
+withdrawal|sự rút lui, rút tiền|misc
+wither|héo tàn|nat
 within|trong vòng, bên trong|func
 without|không có|func
 witness|nhân chứng; chứng kiến|verb
@@ -2929,19 +5038,26 @@ wood|gỗ|nat
 wooden|bằng gỗ|adj
 wool|len|cloth
 word|từ|work
+wordage|số lượng từ|work
+wordsmith|người giỏi chữ|work
 work|công việc; làm việc|verb
 worker|công nhân|work
 working|đang làm việc|adj
+workout|buổi tập luyện|fun
 world|thế giới|place
 worldwide|toàn cầu; khắp thế giới|adj
 worried|lo lắng|feel
 worry|lo lắng|verb
 worse|tệ hơn|adj
+worship|sự thờ cúng; tôn thờ|verb
 worst|tệ nhất|adj
 worth|đáng giá|adj
+worthwhile|đáng giá|adj
+worthy|xứng đáng|adj
 would|sẽ (giả định)|func
 wound|vết thương; làm bị thương|body
 wow|ôi chao|func
+wrack|tàn phá, giày vò|verb
 wrap|gói, bọc|verb
 write|viết|verb
 writer|nhà văn|work
@@ -2951,15 +5067,20 @@ wrong|sai|adj
 yard|sân; thước Anh|home
 yeah|ừ|func
 year|năm|time
+yell|la hét|verb
 yellow|màu vàng|wthr
 yes|vâng, có|func
 yesterday|hôm qua|time
 yet|vẫn chưa|func
+yield|sản lượng; mang lại, nhượng|verb
 you|bạn|func
 young|trẻ|adj
+youngster|thanh niên, đứa trẻ|fam
 your|của bạn|func
 yours|của bạn|func
 yourself|chính bạn|func
 youth|tuổi trẻ, thanh niên|fam
 zero|số không|time
 zone|khu vực|place
+zoologist|nhà động vật học|nat
+zoology|động vật học|nat

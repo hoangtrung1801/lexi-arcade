@@ -12,6 +12,8 @@ const ACCENT: Record<string, string> = {
   a2: "#73eff7",
   b1: "#ffcd75",
   b2: "#ef7d57",
+  c1: "#e88ad6",
+  c2: "#f45b69",
 };
 const MEDAL = ["text-gold", "text-haze", "text-orange"];
 
@@ -97,9 +99,12 @@ export function TrainSetsPage() {
                         <StarRow stars={s.bestStars} size={18} />
                       </>
                     ) : (
-                      <span className="t-sm text-slate">Đăng nhập để lưu kỷ lục</span>
+                      <span className="t-sm truncate text-slate">Đăng nhập để lưu kỷ lục</span>
                     )}
-                    <span className="t-sm ml-auto" style={{ color: on ? accent : "#94b0c2" }}>
+                    <span
+                      className="t-sm ml-auto shrink-0 whitespace-nowrap"
+                      style={{ color: on ? accent : "#94b0c2" }}
+                    >
                       {on ? "Đang chọn ✓" : "Chọn ▸"}
                     </span>
                   </div>

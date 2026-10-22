@@ -1,0 +1,696 @@
+unit,lemma,pos,cefr,meaning_vi,ipa,topic,source,reviewed
+1,crony,n,c2,bạn bè thân cánh hẩu,/ˈkɹoʊni/,fam,llm,false
+1,hermit,n,c2,ẩn sĩ,/ˈhɝmɪt/,fam,llm,false
+1,vandal,n,c2,kẻ phá hoại,/ˈvændəl/,fam,llm,false
+1,apostle,n,c2,tông đồ,/əˈpɑsl̩/,fam,llm,false
+1,recluse,n,c2,người ẩn dật,/ɹɪˈklus/,fam,llm,false
+1,exorcist,n,c2,thầy trừ tà,/ˈɛk.sɔː.sɪst/,fam,llm,false
+1,neophyte,n,c2,người mới vào nghề,/ˈniː.əˌfaɪt/,fam,llm,false
+1,posterity,n,c2,hậu thế,/pɒˈstɛɹɪti/,fam,llm,false
+1,philistine,n,c2,kẻ phàm tục,/ˈfɪlɪˌstaɪn/,fam,llm,false
+1,breadwinner,n,c2,trụ cột gia đình,/ˈbɹɛdˌwɪnɚ/,fam,llm,false
+1,octogenarian,n,c2,người tám mươi tuổi,/ˌɑktəd͡ʒɪˈnɛɹiən/,fam,llm,false
+2,gout,n,c2,bệnh gút,/ɡaʊt/,body,llm,false
+2,corpse,n,c2,xác chết,/koɹps/,body,llm,false
+2,palate,n,c2,"vòm miệng, khẩu vị",/ˈpæl.ət/,body,llm,false
+2,squint,v,c2,nheo mắt,/skwɪnt/,body,llm,false
+2,wheeze,v,c2,thở khò khè,/ʍiːz/,body,llm,false
+2,agility,n,c2,sự nhanh nhẹn,/əˈd͡ʒɪl.ɪ.ti/,body,llm,false
+2,tactile,adj,c2,thuộc xúc giác,/ˈtæktaɪl/,body,llm,false
+2,antidote,n,c2,thuốc giải độc,/ˈæn.tɪ.doʊt/,body,llm,false
+2,blubbery,adj,c2,béo nhẽo,/ˈblʌbəɹi/,body,llm,false
+2,dwarfism,n,c2,chứng lùn,/ˈdwɔɹfɪzəm/,body,llm,false
+2,postural,adj,c2,thuộc tư thế,/ˈpɒstʃəɹəl/,body,llm,false
+2,proximal,adj,c2,"gần, phía gần",/ˈpɹɒksɪməl/,body,llm,false
+2,salivary,adj,c2,thuộc nước bọt,/ˈsælɪˌvɛɹi/,body,llm,false
+2,contagion,n,c2,sự lây nhiễm,/kənˈteɪd͡ʒən/,body,llm,false
+3,lassitude,n,c2,sự mệt mỏi,/ˈlæsɪˌtud/,body,llm,false
+3,midwifery,n,c2,nghề hộ sinh,/mɪdˈwɪfəɹi/,body,llm,false
+3,paralysis,n,c2,chứng tê liệt,/pəˈɹæləsəs/,body,llm,false
+3,prostrate,v/adj,c2,nằm sấp; phủ phục,/ˈpɹɑstɹeɪt/,body,llm,false
+3,astringent,n,c2,chất làm se,/əˈstɹɪn.d͡ʒənt/,body,llm,false
+3,depressive,adj,c2,trầm cảm,/dɪˈpɹɛsɪv/,body,llm,false
+3,laryngitis,n,c2,viêm thanh quản,/lɛɹɪnˈd͡ʒaɪtɪs/,body,llm,false
+3,locomotion,n,c2,sự vận động,/ləʊ.kəˈməʊ.ʃən/,body,llm,false
+3,outpatient,n,c2,bệnh nhân ngoại trú,/ˈaʊtˌpeɪʃ(ə)nt/,body,llm,false
+3,recuperate,v,c2,hồi phục,/ɹɪˈk(j)uːpəˌɹeɪt/,body,llm,false
+3,resuscitate,v,c2,"hồi sinh, cấp cứu",/ɹɪˈsʌsɪˌteɪt/,body,llm,false
+3,hypnotherapy,n,c2,liệu pháp thôi miên,/ˌhɪpnoʊˈθɛɹəpi/,body,llm,false
+3,physiological,adj,c2,thuộc sinh lý,/ˌfɪz.i.əˈlɑ.d͡ʒɪ.kəl/,body,llm,false
+4,additive,n/adj,c2,bổ sung; chất phụ gia,/ˈæd.ɪ.tɪv/,food,llm,false
+4,voracity,n,c2,tính tham ăn,/vəˈɹæ.sə.ti/,food,llm,false
+4,calorific,adj,c2,"sinh nhiệt, nhiều calo",/ˌkæləˈɹɪf.ɪk/,food,llm,false
+4,palatable,adj,c2,"ngon miệng, dễ chấp nhận",/ˈpæl.ə.tə.bəl/,food,llm,false
+4,caffeinate,v,c2,bổ sung cafein,/ˈkæfɪˌneɪt/,food,llm,false
+4,confection,n,c2,bánh kẹo,/kənˈfɛkʃən/,food,llm,false
+4,emulsifier,n,c2,chất nhũ hóa,/ˈɪi.mʌl.sɪf.aɪ.ə(ɹ)/,food,llm,false
+4,delicatessen,n,c2,cửa hàng đồ ăn sẵn,/ˌdɛlɪkəˈtɛsən/,food,llm,false
+5,slab,n,c2,"phiến, tấm",/slæb/,home,llm,false
+5,epoxy,n,c2,keo epoxy,/ɪˈpɑk.si/,home,llm,false
+5,sheaf,n,c2,"bó, xấp",/ʃiːf/,home,llm,false
+5,scroll,n,c2,cuộn giấy,/skɹoʊl/,home,llm,false
+5,commode,n,c2,"ghế bô, tủ thấp",/kəˈməʊd/,home,llm,false
+5,pedestal,n,c2,"bệ, đế",/ˈpɛdɪstəl/,home,llm,false
+5,adornment,n,c2,đồ trang trí,/əˈdɔːnm(ə)nt/,home,llm,false
+5,homestead,n,c2,"trang trại, nhà vườn",/ˈhoʊmˌstɛd/,home,llm,false
+5,habitation,n,c2,"sự cư trú, nơi ở",/ˌhæb.ɪˈteɪ.ʃən/,home,llm,false
+5,contraption,n,c2,máy móc kỳ cục,/kənˈtɹæp.ʃən/,home,llm,false
+6,remit,v,c2,chuyển tiền,/ɹiˈmɪt/,cloth,llm,false
+6,bauble,n,c2,đồ trang sức rẻ tiền,/ˈbɔbəl/,cloth,llm,false
+6,romper,n,c2,bộ áo liền quần,/ˈɹɑmpɚ/,cloth,llm,false
+6,opulent,adj,c2,"giàu sang, xa hoa",/ˈɒpjʊlənt/,cloth,llm,false
+6,opulence,n,c2,sự giàu sang,/ˈɒp.jʊl.əns/,cloth,llm,false
+6,austerity,n,c2,sự thắt lưng buộc bụng,/ɔˈstɛɹɪti/,cloth,llm,false
+6,emolument,n,c2,thù lao,/əˈmɑljəmənt/,cloth,llm,false
+6,remittance,n,c2,tiền gửi về,/ɹɪˈmɪtəns/,cloth,llm,false
+7,cay,n,c2,đảo nhỏ,/kiː/,nat,llm,false
+7,ore,n,c2,quặng,/oɹ/,nat,llm,false
+7,floe,n,c2,tảng băng trôi,/floʊ/,nat,llm,false
+7,lark,n,c2,chim sơn ca; trò đùa,/lɑɹk/,nat,llm,false
+7,moor,n,c2,vùng đất hoang,/mʊə/,nat,llm,false
+7,avian,adj,c2,thuộc loài chim,/ˈeɪvi.ən/,nat,llm,false
+7,brood,v/n,c2,"lứa con; ấp, nghiền ngẫm",/bɹud/,nat,llm,false
+7,perch,v/n,c2,"cành đậu; đậu, ngồi",/pɜːtʃ/,nat,llm,false
+7,plume,n,c2,"chùm lông, cột khói",/ˈplum/,nat,llm,false
+7,resin,n,c2,nhựa cây,/ˈɹɛzɪn/,nat,llm,false
+7,shoal,n,c2,"đàn cá, bãi cạn",/ʃəʊl/,nat,llm,false
+7,blight,n/v,c2,bệnh cây; làm hại,/blaɪt/,nat,llm,false
+7,cosmic,adj,c2,thuộc vũ trụ,/ˈkɑz.mɪk/,nat,llm,false
+7,maggot,n,c2,con giòi,/ˈmæɡət/,nat,llm,false
+8,magpie,n,c2,chim ác là,/ˈmæɡˌpaɪ/,nat,llm,false
+8,strait,n,c2,eo biển,/stɹeɪt/,nat,llm,false
+8,vermin,n,c2,"sâu bọ, loài gây hại",/ˈvɝmɪn/,nat,llm,false
+8,vortex,n,c2,"xoáy nước, cơn lốc",/ˈvɔɹtɛks/,nat,llm,false
+8,wither,v,c2,héo tàn,/ˈwɪðɚ/,nat,llm,false
+8,acreage,n,c2,diện tích đất,/ˈeɪk(ə)ɹɪd͡ʒ/,nat,llm,false
+8,blubber,n,c2,mỡ cá voi,/ˈblʌbəɹ/,nat,llm,false
+8,buzzard,n,c2,chim ó,/ˈbʌzɚd/,nat,llm,false
+8,cascade,v/n,c2,thác nước; đổ xuống,/kæsˈkeɪd/,nat,llm,false
+8,plumage,n,c2,bộ lông chim,/ˈplumɪd͡ʒ/,nat,llm,false
+8,seismic,adj,c2,thuộc địa chấn,/ˈsaɪzmɪk/,nat,llm,false
+8,thicket,n,c2,bụi rậm,/ˈθɪkɪt/,nat,llm,false
+8,zoology,n,c2,động vật học,/zəʊˈɒlədʒi/,nat,llm,false
+8,primeval,adj,c2,nguyên thủy,/pɹaɪ̯ˈmi.vəl/,nat,llm,false
+9,ruminant,adj,c2,nhai lại,/ˈɹuːmɪnənt/,nat,llm,false
+9,venomous,adj,c2,"có nọc độc, cay độc",/ˈvɛnəməs/,nat,llm,false
+9,brimstone,n,c2,lưu huỳnh,/ˈbɹɪmstoʊn/,nat,llm,false
+9,chrysalis,n,c2,con nhộng,/ˈkɹɪsəlɪs/,nat,llm,false
+9,maelstrom,n,c2,xoáy nước; cơn hỗn loạn,/ˈmeɪl.stɹəm/,nat,llm,false
+9,parasitic,adj,c2,ký sinh,/ˌpæɹ.əˈsɪt.ɪk/,nat,llm,false
+9,reptilian,adj,c2,thuộc loài bò sát,/ɹɛpˈtɪliən/,nat,llm,false
+9,scavenger,n,c2,loài ăn xác thối,/ˈskæv.ən.d͡ʒə(ɹ)/,nat,llm,false
+9,vestigial,adj,c2,còn sót lại,/vɛˈstɪd͡ʒɪəl/,nat,llm,false
+9,zoologist,n,c2,nhà động vật học,/zəʊˈɒləd͡ʒɪst/,nat,llm,false
+9,topography,n,c2,địa hình,/təˈpɑɡɹəfi/,nat,llm,false
+9,echolocation,n,c2,sự định vị tiếng vang,/ˌɛkoʊloʊˈkeɪʃən/,nat,llm,false
+9,stratosphere,n,c2,tầng bình lưu,/ˈstɹætəsfɪɚ/,nat,llm,false
+10,gale,n,c2,cơn gió mạnh,/ɡeɪl/,wthr,llm,false
+10,mottled,adj,c2,lốm đốm,/ˈmɑt əld/,wthr,llm,false
+10,shimmer,v,c2,lung linh,/ˈʃɪm.ə(ɹ)/,wthr,llm,false
+10,barometer,n,c2,"khí áp kế, thước đo",/bəˈɹɑ.mə.tɚ/,wthr,llm,false
+10,whirlwind,n,c2,cơn lốc,/ˈ(h)wɝlwɪnd/,wthr,llm,false
+10,torrential,adj,c2,như thác đổ,/təˈɹɛn.tʃəl/,wthr,llm,false
+10,meteorology,n,c2,khí tượng học,/ˌmiːtɪəˈɹɒləd͡ʒi/,wthr,llm,false
+10,condensation,n,c2,sự ngưng tụ,/ˌkɒn.dɛnˈseɪ.ʃən/,wthr,llm,false
+10,meteorological,adj,c2,thuộc khí tượng,/ˌmitiəɹəˈlɑd͡ʒɪkl̩/,wthr,llm,false
+11,punctual,adj,c2,đúng giờ,/ˈpʌŋktjʊəl/,time,llm,false
+11,chronology,n,c2,"niên đại học, trình tự",/kɹəˈnɑl.ə.d͡ʒi/,time,llm,false
+11,retrospect,n,c2,sự hồi tưởng,/ˈɹɛtɹəˌspɛkt/,time,llm,false
+11,punctuality,n,c2,sự đúng giờ,/ˌpʌŋkt͡ʃuˈæləti/,time,llm,false
+11,chronological,adj,c2,theo trình tự thời gian,/ˌkɹɑnəˈlɑd͡ʒɪkəl/,time,llm,false
+11,instantaneous,adj,c2,tức thời,/ɪnstənˈteɪni.əs/,time,llm,false
+11,retrospective,adj,c2,"hồi tưởng, hồi tố",/ˌɹɛt.ɹəˈspɛk.tɪv/,time,llm,false
+11,proportionally,adv,c2,theo tỷ lệ,/pɹəˈpɔɹʃənəli/,time,llm,false
+12,haven,n,c2,nơi trú ẩn,/ˈheɪvən/,place,llm,false
+12,spire,n,c2,chóp tháp,/ˈspaɪ.ɚ/,place,llm,false
+12,turret,n,c2,tháp nhỏ,/ˈtɝ.ɪt/,place,llm,false
+12,edifice,n,c2,tòa nhà đồ sộ,/ˈɛd.ɪ.fɪs/,place,llm,false
+12,minster,v,c2,nhà thờ lớn,/ˈmɪnstɚ/,place,llm,false
+12,cloister,n,c2,"tu viện, hành lang",/ˈklɔɪstɚ/,place,llm,false
+12,vicinity,n,c2,vùng lân cận,/vɪˈsɪnɪti/,place,llm,false
+12,minefield,n,c2,bãi mìn,/ˈmaɪnˌfild/,place,llm,false
+12,promenade,n,c2,đường đi dạo,/ˈpɹɒm.əˌnɑːd/,place,llm,false
+13,helm,n,c2,bánh lái; quyền lãnh đạo,/hɛlm/,trav,llm,false
+13,hull,n,c2,thân tàu,/hʌl/,trav,llm,false
+13,hitch,v,c2,"buộc, móc; đi nhờ xe",/hɪt͡ʃ/,trav,llm,false
+13,mariner,n,c2,thủy thủ,/ˈmæɹɪnə/,trav,llm,false
+13,hotelier,n,c2,chủ khách sạn,/hoʊˈtɛl.jəɹ/,trav,llm,false
+13,autopilot,n,c2,chế độ lái tự động,/ˈɔtoʊˌpaɪlət/,trav,llm,false
+13,buccaneer,v/n,c2,cướp biển; liều lĩnh,/ˌbʌkəˈnɪɚ/,trav,llm,false
+13,ecotourism,n,c2,du lịch sinh thái,/ˌiːkəʊˈtʊəɹɪz(ə)m/,trav,llm,false
+13,locomotive,n,c2,đầu máy xe lửa,/ˌloʊkəˈmoʊtɪv/,trav,llm,false
+13,circumnavigate,v,c2,đi vòng quanh,/ˌsə.kəmˈnæv.ɪ.ɡeɪt/,trav,llm,false
+14,annex,n/v,c2,nhà phụ; sáp nhập,/ˈænɛks/,work,llm,false
+14,axiom,n,c2,"tiên đề, chân lý",/ˈæk.si.əm/,work,llm,false
+14,graft,n,c2,mảnh ghép; sự tham nhũng,/ɡɹɑːft/,work,llm,false
+14,corpus,n,c2,kho ngữ liệu,/ˈkɔɹpəs/,work,llm,false
+14,jargon,n,c2,biệt ngữ,/ˈd͡ʒɑɹ.ɡən/,work,llm,false
+14,liaise,v,c2,"liên lạc, phối hợp",/liːˈeɪz/,work,llm,false
+14,menial,adj,c2,"tầm thường, hèn mọn",/ˈmiːni.əl/,work,llm,false
+14,counsel,n,c2,lời khuyên; luật sư,/ˈkaʊn.səl/,work,llm,false
+14,kinetic,adj,c2,thuộc động học,/kɪˈnɛtɪk/,work,llm,false
+14,magnate,n,c2,ông trùm,/ˈmæɡneɪt/,work,llm,false
+14,archival,adj,c2,thuộc lưu trữ,/ˌɑɹˈkaɪv(ə)l/,work,llm,false
+14,artifact,n,c2,"đồ tạo tác, hiện vật",/ˈɑɹtɪfækt/,work,llm,false
+15,automate,v,c2,tự động hóa,/ˈɔːtəmeɪt/,work,llm,false
+15,collider,n,c2,máy gia tốc va chạm,/kəˈlaɪdɚ/,work,llm,false
+15,drudgery,n,c2,công việc cực nhọc,/ˈdɹʌd͡ʒəɹi/,work,llm,false
+15,punitive,adj,c2,trừng phạt,/ˈpju.nɪ.tɪv/,work,llm,false
+15,syllabic,adj,c2,thuộc âm tiết,/sɪˈlæb.ɪk/,work,llm,false
+15,electrode,n,c2,điện cực,/əˈlɛk.tɹəʊd/,work,llm,false
+15,facsimile,n,c2,"bản sao, bản fax",/fækˈsɪm.ə.li/,work,llm,false
+15,incumbent,n/adj,c2,đương nhiệm; người đương nhiệm,/ɪnˈkʌmbənt/,work,llm,false
+15,informant,n,c2,người cung cấp tin,/ɪnˈfɔːmənt/,work,llm,false
+15,mediation,n,c2,sự hòa giải,/ˌmidiˈeɪʃən/,work,llm,false
+15,mercenary,n,c2,lính đánh thuê,/ˈmɝ.sə.ˌnɛɹ.i/,work,llm,false
+15,proscribe,v,c2,"cấm, bài trừ",/ˈpɹoʊˌskɹaɪb/,work,llm,false
+16,redundant,adj,c2,"dư thừa, bị sa thải",/ɹɪˈdʌn.dənt/,work,llm,false
+16,scholarly,adj,c2,"uyên bác, học thuật",/skɒ.lə.li/,work,llm,false
+16,solipsism,n,c2,thuyết duy ngã,/ˈsɒlɪpsɪzəm/,work,llm,false
+16,stipulate,v,c2,quy định,/ˈstɪpjuˌleɪt/,work,llm,false
+16,subsidize,v,c2,trợ cấp,/ˈsʌbsɪdaɪz/,work,llm,false
+16,wordsmith,n,c2,người giỏi chữ,/ˈwɝdˌsmɪθ/,work,llm,false
+16,apprentice,v,c2,học việc,/əˈpɹɛntɪs/,work,llm,false
+16,colloquium,n,c2,hội thảo chuyên đề,/kəˈləʊkwiəm/,work,llm,false
+16,combustion,n,c2,sự đốt cháy,/kəmˈbʌs.t͡ʃən/,work,llm,false
+16,forfeiture,n,c2,sự tịch thu,/ˈfɔɹfɪt͡ʃɚ/,work,llm,false
+16,mercantile,adj,c2,thuộc thương mại,/ˈmɜːkənˌtaɪl/,work,llm,false
+16,procedural,adj/n,c2,thuộc thủ tục; phim hình sự,/pɹəˈsiːd͡ʒ(ə)ɹəl/,work,llm,false
+17,redundancy,n,c2,"sự dư thừa, sa thải",/ɹɪˈdʌndən(t)si/,work,llm,false
+17,rhetorical,adj,c2,thuộc tu từ,/ɹɪˈtɒɹ.ɪ.kəl/,work,llm,false
+17,telescopic,adj,c2,thuộc kính viễn vọng,/tɛlɪˈskɒpɪk/,work,llm,false
+17,vocational,adj,c2,thuộc hướng nghiệp,/vəʊˈkeɪʃənəl/,work,llm,false
+17,attributive,adj,c2,thuộc ngữ,/əˈtɹɪb.jə.tɪv/,work,llm,false
+17,consignment,n,c2,lô hàng gửi,/kənˈsaɪnmənt/,work,llm,false
+17,contractual,adj,c2,theo hợp đồng,/kənˈtɹæk.t͡ʃ(u)əl/,work,llm,false
+17,declination,n,c2,"độ lệch, sự từ chối",/ˌdɛklɪˈneɪʃən/,work,llm,false
+17,egalitarian,adj/n,c2,bình đẳng; người theo bình quyền,/ɪˌɡæl.ɪˈtɛə.ɹi.ən/,work,llm,false
+17,proprietary,adj,c2,"độc quyền, sở hữu",/pɹəˈpɹaɪ.əˌtɛɹ.i/,work,llm,false
+17,qualitative,adj,c2,định tính,/ˈkwɑ.ləˌteɪ.tɪv/,work,llm,false
+17,requisition,n,c2,sự trưng dụng,/ˌɹɛkwɪˈzɪʃən/,work,llm,false
+18,stipulation,n,c2,điều khoản quy định,/ˌstɪp.jəˈleɪ.ʃən/,work,llm,false
+18,testimonial,n,c2,lời chứng thực,/tɛstɪˈmoʊni.əl/,work,llm,false
+18,conglomerate,n,c2,tập đoàn đa ngành,/kənˈɡlɑ.mɚ.ət/,work,llm,false
+18,distillation,n,c2,sự chưng cất,/dɪstɪˈleɪʃən/,work,llm,false
+18,intermediary,n,c2,người trung gian,/ˌɪntə(ɹ)ˈmiːdi.əɹi/,work,llm,false
+18,polysyllabic,adj,c2,đa âm tiết,/ˌpɑ.li.sɪˈlæb.ɪk/,work,llm,false
+18,prescriptive,adj,c2,mang tính quy định,/pɹəˈskɹɪptɪv/,work,llm,false
+18,proscription,n,c2,sự cấm đoán,/pɹəˈskɹɪp.ʃən/,work,llm,false
+18,gravitational,adj,c2,thuộc trọng lực,/ˌɡɹævɪˈteɪʃənəl/,work,llm,false
+18,interrogation,n,c2,sự thẩm vấn,/ɪnˌteɹ.əˈɡeɪ.ʃən/,work,llm,false
+18,profitability,n,c2,khả năng sinh lời,/ˌpɹɑ.fɪ.təˈbɪl.ɪ.ti/,work,llm,false
+18,methodological,adj,c2,thuộc phương pháp luận,/ˌmɛθ.ə.dəˈlɑ.d͡ʒɪ.kəl/,work,llm,false
+19,bout,n,c2,"cơn, hiệp đấu",/ˈbaʊt/,fun,llm,false
+19,fete,n,c2,"hội chợ, lễ hội",/feɪt/,fun,llm,false
+19,romp,v,c2,nô đùa,/ɹɒmp/,fun,llm,false
+19,blurb,n,c2,lời giới thiệu sách,/blɝ(ː)b/,fun,llm,false
+19,gambit,n,c2,"nước cờ, mưu kế",/ˈɡæmbɪt/,fun,llm,false
+19,reverb,n,c2,tiếng vang,/ˈɹiːvɜːb/,fun,llm,false
+19,baroque,adj,c2,kiểu ba-rốc,/bæˈɹɒk/,fun,llm,false
+19,curator,n,c2,người phụ trách bảo tàng,/kjʊəˈɹeɪtɚ/,fun,llm,false
+19,etching,n,c2,tranh khắc,/ˈɛt͡ʃ.ɪŋ/,fun,llm,false
+19,lyrical,adj,c2,trữ tình,/ˈlɪɹɪkəl/,fun,llm,false
+20,parable,n,c2,truyện ngụ ngôn,/ˈpaɹəbəl/,fun,llm,false
+20,allegory,n,c2,truyện ngụ ngôn,/ˈæləˌɡɔɹi/,fun,llm,false
+20,lyricist,n,c2,người viết lời bài hát,/ˈlɪɹ.ɪsɪst/,fun,llm,false
+20,virtuoso,n,c2,bậc thầy nghệ thuật,/ˌvɜ.tʃuˈəʊ.səʊ/,fun,llm,false
+20,vocalist,n,c2,ca sĩ,/ˈvoʊkəlɪst/,fun,llm,false
+20,acrobatic,adj,c2,thuộc nhào lộn,/ˌækɹəˈbætɪk/,fun,llm,false
+20,anthology,n,c2,tuyển tập,/ænˈθɒlədʒi/,fun,llm,false
+20,interlude,n,c2,"khoảng nghỉ, khúc chuyển",/ˈɪntə(ɹ)luːd/,fun,llm,false
+20,melodious,adj,c2,du dương,/məˈloʊdi.əs/,fun,llm,false
+20,soliloquy,n,c2,lời độc thoại,/səˈlɪləkwi/,fun,llm,false
+21,buffoonery,n,c2,trò hề,/bəˈfuːnəɹi/,fun,llm,false
+21,impresario,n,c2,ông bầu,/ˌɪmpɹɪˈsɑːɹɪəʊ/,fun,llm,false
+21,recitation,n,c2,"sự ngâm thơ, đọc thuộc",/ˌɹɛsəˈteɪʃən/,fun,llm,false
+21,surrealism,n,c2,chủ nghĩa siêu thực,/səˈɹiː(.ə)l.ɪz.əm/,fun,llm,false
+21,virtuosity,n,c2,tài nghệ điêu luyện,/ˌvɜː(ɹ)tjuˈɒsɪti/,fun,llm,false
+21,allegorical,adj,c2,ngụ ngôn,/ˌæl.ɪˈɡɔɹ.ɪ.kəl/,fun,llm,false
+21,athleticism,n,c2,năng lực thể thao,/æθˈlɛtɪsɪzəm/,fun,llm,false
+21,portraiture,n,c2,nghệ thuật chân dung,/ˈpɔː(ɹ)tɹɪtjʊə(ɹ)/,fun,llm,false
+21,choreography,n,c2,biên đạo múa,/ˌkɔɹiˈɑɡɹəfi/,fun,llm,false
+21,cinematography,n,c2,nghệ thuật quay phim,/ˌsɪn.ə.məˈtɒɡ.ɹə.fiː/,fun,llm,false
+22,mien,n,c2,"vẻ mặt, dáng vẻ",/miːn/,feel,llm,false
+22,abhor,v,c2,ghê tởm,/æbˈhɔɹ/,feel,llm,false
+22,angst,n,c2,nỗi lo âu,/ˈæŋ(k)st/,feel,llm,false
+22,pluck,n,c2,sự gan dạ,/plʌk/,feel,llm,false
+22,qualm,n,c2,sự áy náy,/kwɑ(l)m/,feel,llm,false
+22,aghast,adj,c2,kinh hoàng,/əˈɡɑːst/,feel,llm,false
+22,angsty,adj,c2,"lo âu, u sầu",/ˈæŋ(k)sti/,feel,llm,false
+22,averse,adj,c2,"không thích, ghét",/əˈvɜː(ɹ)s/,feel,llm,false
+22,bereft,adj,c2,"mất mát, thiếu vắng",/bəˈɹɛft/,feel,llm,false
+22,elated,adj,c2,"phấn khởi, hân hoan",/ɪˈleɪtɪd/,feel,llm,false
+22,gauche,adj,c2,vụng về,/ɡaʊʃ/,feel,llm,false
+22,lament,v,c2,"than khóc, than vãn",/ləˈmɛnt/,feel,llm,false
+22,malice,n,c2,ác ý,/ˈmælɪs/,feel,llm,false
+23,prissy,adj,c2,"kiểu cách, õng ẹo",/ˈpɹɪsi/,feel,llm,false
+23,tedium,n,c2,sự buồn tẻ,/ˈtiː.di.əm/,feel,llm,false
+23,tetchy,adj,c2,dễ cáu,/ˈtɛt͡ʃi/,feel,llm,false
+23,callous,adj,c2,"nhẫn tâm, vô cảm",/ˈkæləs/,feel,llm,false
+23,elation,n,c2,sự phấn khởi,/ɪˈleɪʃən/,feel,llm,false
+23,enthuse,v,c2,"hăng hái nói, phấn khích",/ɛnˈθjuːz/,feel,llm,false
+23,equable,adj,c2,"điềm đạm, ôn hòa",/ˈɛk.wə.bəl/,feel,llm,false
+23,flighty,adj,c2,"đỏng đảnh, hay thay đổi",/ˈflaɪti/,feel,llm,false
+23,forlorn,adj,c2,"đơn độc, tuyệt vọng",/fɚˈlɔɹn/,feel,llm,false
+23,haughty,adj,c2,"kiêu ngạo, ngạo mạn",/ˈhɔti/,feel,llm,false
+23,ingrate,n,c2,kẻ vô ơn,/ˈɪnɡɹeɪt/,feel,llm,false
+23,rapture,n,c2,sự sung sướng ngây ngất,/ˈɹæpt͡ʃɚ/,feel,llm,false
+24,unnerve,v,c2,làm mất bình tĩnh,/ʌnˈnɜː(ɹ)v/,feel,llm,false
+24,wayward,adj,c2,bướng bỉnh,/ˈweɪwə(ɹ)d/,feel,llm,false
+24,wistful,adj,c2,"bâng khuâng, buồn bã",/ˈwɪstfəl/,feel,llm,false
+24,aptitude,n,c2,năng khiếu,/ˈæptɪˌtud/,feel,llm,false
+24,depraved,adj,c2,đồi bại,/dɪˈpɹeɪvd/,feel,llm,false
+24,derision,n,c2,sự chế nhạo,/dɪˈɹɪʒən/,feel,llm,false
+24,derisive,adj,c2,chế nhạo,/dɪˈɹaɪ.sɪv/,feel,llm,false
+24,diligent,adj,c2,"siêng năng, cần cù",/ˈdɪlɪdʒənt/,feel,llm,false
+24,euphoria,n,c2,sự hưng phấn,/juˈfo.ɹi.ə/,feel,llm,false
+24,euphoric,adj,c2,"hưng phấn, phởn phơ",/juˈfɔɹɪk/,feel,llm,false
+24,ferocity,n,c2,sự hung dữ,/fəˈɹɑsɪti/,feel,llm,false
+24,hysteria,n,c2,sự cuồng loạn,/hɪˈstɛɹiə/,feel,llm,false
+25,indolent,adj,c2,lười biếng,/ˈɪn.də.lənt/,feel,llm,false
+25,maverick,n,c2,người độc lập khác người,/ˈmævəɹɪk/,feel,llm,false
+25,mutinous,adj,c2,"nổi loạn, bất tuân",/ˈmjuːtɪnəs/,feel,llm,false
+25,perverse,adj,c2,"ngang ngược, trái khoáy",/pɚˈvɝs/,feel,llm,false
+25,prurient,adj,c2,"dâm dục, tò mò bẩn",/ˈpɹʊɹ.i.ənt/,feel,llm,false
+25,snobbery,n,c2,thói trưởng giả,/ˈsnɔbəɹɪj/,feel,llm,false
+25,solitary,adj/n,c2,đơn độc; người ẩn dật,/ˈsɑlɪˌtɛɹi/,feel,llm,false
+25,solitude,n,c2,sự cô độc,/ˈsɑlɪˌtud/,feel,llm,false
+25,stoicism,n,c2,sự nhẫn nại,/ˈstəʊɪsɪzəm/,feel,llm,false
+25,taciturn,adj,c2,ít nói,/ˈtæsɪtɜːn/,feel,llm,false
+25,tenacity,n,c2,sự kiên trì,/təˈnæsəti/,feel,llm,false
+25,timidity,n,c2,tính nhút nhát,/tɪˈmɪdɪti/,feel,llm,false
+26,abhorrent,adj,c2,đáng ghê tởm,/æbˈhɔɹənt/,feel,llm,false
+26,depravity,n,c2,sự đồi bại,/dəˈpɹævɪti/,feel,llm,false
+26,diligence,n,c2,sự siêng năng,/ˈdɪlɪd͡ʒəns/,feel,llm,false
+26,fractious,adj,c2,"cáu kỉnh, khó bảo",/ˈfɹæk.ʃəs/,feel,llm,false
+26,grievance,n,c2,"lời than phiền, bất bình",/ˈɡɹiː.vəns/,feel,llm,false
+26,indignant,adj,c2,phẫn nộ,/ɪnˈdɪɡ.nənt/,feel,llm,false
+26,indolence,n,c2,sự lười biếng,/ˈɪndl̩əns/,feel,llm,false
+26,ingenuous,adj,c2,"ngây thơ, chân thật",/ɪnˈd͡ʒɛn.ju.əs/,feel,llm,false
+26,malicious,adj,c2,"độc hại, ác ý",/məˈlɪʃəs/,feel,llm,false
+26,nostalgia,n,c2,nỗi hoài niệm,/nɑˈstæld͡ʒə/,feel,llm,false
+26,parochial,adj,c2,"hẹp hòi, thuộc giáo xứ",/pəˈɹəʊkɪəl/,feel,llm,false
+26,prurience,n,c2,tính dâm dục,/ˈpɹʊəɹiəns/,feel,llm,false
+27,rapturous,adj,c2,"say mê, cuồng nhiệt",/ˈɹæp.t͡ʃəɹ.əs/,feel,llm,false
+27,reclusive,adj,c2,ẩn dật,/ɹɪˈkluːsɪv/,feel,llm,false
+27,revulsion,n,c2,sự ghê tởm,/ɹɪˈvʌlʃən/,feel,llm,false
+27,tenacious,adj,c2,"kiên trì, bền bỉ",/təˈneɪʃəs/,feel,llm,false
+27,treachery,n,c2,sự phản bội,/ˈtɹɛt͡ʃəɹi/,feel,llm,false
+27,unnerving,adj,c2,đáng lo ngại,/ˈʌnˈnɜːvɪŋ/,feel,llm,false
+27,derisively,adv,c2,một cách chế nhạo,/dɪˈɹaɪsɪvli/,feel,llm,false
+27,diligently,adv,c2,một cách siêng năng,/ˈdɪləd͡ʒən(t)li/,feel,llm,false
+27,disdainful,adj,c2,khinh khỉnh,/dɪsˈdeɪn.fəl/,feel,llm,false
+27,histrionic,adj,c2,"kịch tính, cường điệu",/ˌhɪs.triˈɑ.nɪk/,feel,llm,false
+27,hysterical,adj,c2,"cuồng loạn, kích động",/hɪˈstɛɹɪkəl/,feel,llm,false
+27,indulgence,n,c2,sự nuông chiều,/ɪnˈdʌl.d͡ʒəns/,feel,llm,false
+28,melancholy,n/adj,c2,u sầu; nỗi u sầu,/ˈmɛlənkəli/,feel,llm,false
+28,meticulous,adj,c2,"tỉ mỉ, kỹ lưỡng",/mɪˈtɪkjɪlɪs/,feel,llm,false
+28,nonchalant,adj,c2,"thờ ơ, điềm nhiên",/ˈnɒn.ʃəl.ənt/,feel,llm,false
+28,perversity,n,c2,tính ngang ngược,/pə(ɹ)ˈvɜː(ɹ)sɪti/,feel,llm,false
+28,precocious,adj,c2,sớm phát triển,/pɹəˈkəʊʃəs/,feel,llm,false
+28,remorseful,adj,c2,"ăn năn, hối hận",/ɹɪˈmɔː(ɹ)sfʊl/,feel,llm,false
+28,rumination,n,c2,sự suy ngẫm,/ˌɹuːmɪˈneɪʃən/,feel,llm,false
+28,ruminative,adj,c2,trầm ngâm,/ˈruməˌneɪdɪv/,feel,llm,false
+28,affectation,n,c2,"sự giả tạo, điệu bộ",/ˌæf.ɛkˈteɪ.ʃən/,feel,llm,false
+28,belligerent,adj,c2,hiếu chiến,/bəˈlɪd͡ʒ.ɚ.ənt/,feel,llm,false
+28,ingenuously,adv,c2,một cách ngây thơ,/ɪnˈdʒɛnjuːəsli/,feel,llm,false
+28,lamentation,n,c2,sự than khóc,/ˌlæm.ənˈteɪ.ʃən/,feel,llm,false
+29,magnanimity,n,c2,sự cao thượng,/ˌmæɡnəˈnɪmɪti/,feel,llm,false
+29,magnanimous,adj,c2,"cao thượng, hào hiệp",/mæɡˈnæn.ɪ.məs/,feel,llm,false
+29,munificence,n,c2,sự hào phóng,/mjuːˈnɪfɪsəns/,feel,llm,false
+29,painstaking,adj,c2,"cần cù, tỉ mỉ",/ˈpeɪnˌsteɪkɪŋ/,feel,llm,false
+29,puritanical,adj,c2,"khắt khe, khổ hạnh",/pjʊəɹ.ɪˈtæn.ɪ.kəl/,feel,llm,false
+29,spontaneity,n,c2,tính tự phát,/ˈspɒn.tə.neɪ.ə.ti/,feel,llm,false
+29,tenaciously,adv,c2,một cách bền bỉ,/təˈneɪʃəsli/,feel,llm,false
+29,treacherous,adj,c2,"phản bội, nguy hiểm",/ˈtɹɛt͡ʃəɹəs/,feel,llm,false
+29,unnervingly,adv,c2,một cách đáng sợ,/ˈʌnˈnɜːvɪŋlɪ/,feel,llm,false
+29,blandishment,n,c2,lời nịnh bợ,/ˈblæn.dɪʃ.mənt/,feel,llm,false
+29,contemptuous,adj,c2,khinh miệt,/kənˈtɛm(p).tʃu.əs/,feel,llm,false
+29,eccentricity,n,c2,tính lập dị,/ˌɛk.sɛnˈtɹɪs.ɪ.ti/,feel,llm,false
+30,idiosyncrasy,n,c2,đặc điểm riêng,/ˌɪdiəˈsɪŋkɹəsi/,feel,llm,false
+30,indiscretion,n,c2,sự thiếu thận trọng,/ˌɪndɪsˈkɹɛʃən/,feel,llm,false
+30,philanthropy,n,c2,lòng từ thiện,/fəˈlæn.θɹə.pi/,feel,llm,false
+30,predilection,n,c2,"sự thiên vị, sở thích",/ˌpɹiː.dəˈlɛk.ʃn̩/,feel,llm,false
+30,solitariness,n,c2,sự cô độc,/ˈsɒlɪt(ə)ɹɪnəs/,feel,llm,false
+30,consternation,n,c2,"sự kinh hoàng, sửng sốt",/ˌkɒn.stəˈneɪ.ʃən/,feel,llm,false
+30,exhibitionist,n,c2,người thích phô trương,/ɛksɪˈbɪʃənɪst/,feel,llm,false
+30,magnanimously,adv,c2,một cách cao thượng,/mæɡˈnænɪməsli/,feel,llm,false
+30,materialistic,adj,c2,"thực dụng, ham vật chất",/məˌtɪəɹ.i.əˈlɪs.tɪk/,feel,llm,false
+30,philanthropic,adj,c2,"nhân đức, từ thiện",/ˌfɪl.ənˈθɹɑ.pɪk/,feel,llm,false
+30,preoccupation,n,c2,mối bận tâm,/ˌpɹiɑkjʊˈpeɪʃən/,feel,llm,false
+30,contemptuously,adv,c2,một cách khinh miệt,/kənˈtɛmp.tʃu.əs.li/,feel,llm,false
+31,ebb,v,c2,"rút xuống, suy giảm",/ɛb/,verb,llm,false
+31,wax,v,c2,"tròn dần, tăng lên",/waks/,verb,llm,false
+31,brim,v,c2,tràn đầy,/bɹɪm/,verb,llm,false
+31,coax,v,c2,dỗ dành,/kəʊks/,verb,llm,false
+31,cull,v,c2,"tiêu hủy, chọn lọc",/kʌl/,verb,llm,false
+31,etch,v,c2,"khắc, khắc axit",/ɛt͡ʃ/,verb,llm,false
+31,flit,v,c2,"bay vụt, lướt qua",/flɪt/,verb,llm,false
+31,idle,v,c2,"chạy không tải, ngồi không",/ˈaɪd(ə)l/,verb,llm,false
+31,laud,v,c2,ca ngợi,/lɔd/,verb,llm,false
+31,mesh,v,c2,"ăn khớp, hòa hợp",/mɛʃ/,verb,llm,false
+31,skew,v,c2,làm lệch,/skju/,verb,llm,false
+31,skim,v,c2,"hớt váng, đọc lướt",/skɪm/,verb,llm,false
+32,teem,v,c2,"đầy rẫy, nhung nhúc",/tiːm/,verb,llm,false
+32,wane,v,c2,"suy yếu, khuyết dần",/weɪn/,verb,llm,false
+32,whir,v,c2,kêu vù vù,/weː/,verb,llm,false
+32,adorn,v,c2,"tô điểm, trang trí",/əˈdɔɹn/,verb,llm,false
+32,allot,v,c2,"phân bổ, chia",/əˈlɑt/,verb,llm,false
+32,daunt,v,c2,làm nản chí,/dɔːnt/,verb,llm,false
+32,dwarf,v,c2,làm lu mờ,/dwɔɹf/,verb,llm,false
+32,edify,v,c2,"khai sáng, giáo hóa",/ˈɛdɪfaɪ/,verb,llm,false
+32,exude,v,c2,"toát ra, rỉ ra",/ɪɡˈzjuːd/,verb,llm,false
+32,feign,v,c2,giả vờ,/feɪn/,verb,llm,false
+32,glint,v/n,c2,tia sáng; lấp lánh,/ɡlɪnt/,verb,llm,false
+32,hoist,v,c2,"kéo lên, nâng lên",/hɔɪst/,verb,llm,false
+33,hover,v,c2,"bay lượn, lơ lửng",/ˈhʌvɚ/,verb,llm,false
+33,poise,v,c2,giữ thăng bằng,/pɔɪz/,verb,llm,false
+33,posit,v,c2,đặt giả thiết,/ˈpɑzɪt/,verb,llm,false
+33,prise,v,c2,"nạy, cạy",/pɹaɪz/,verb,llm,false
+33,quirk,v,c2,"uốn cong, nhếch",/kwɝk/,verb,llm,false
+33,singe,v,c2,làm cháy sém,/sɪnd͡ʒ/,verb,llm,false
+33,utter,adj/v,c2,hoàn toàn; thốt ra,/ˈʌtəɹ/,verb,llm,false
+33,wrack,v,c2,"tàn phá, giày vò",/ɹæk/,verb,llm,false
+33,accrue,v,c2,tích lũy,/əˈkɹuː/,verb,llm,false
+33,allude,v,c2,ám chỉ,/əˈlud/,verb,llm,false
+33,babble,v,c2,nói lảm nhảm,/ˈbæb.(ə)l/,verb,llm,false
+33,banish,v,c2,"trục xuất, xua đuổi",/ˈbænɪʃ/,verb,llm,false
+34,clinch,v,c2,"giành được, chốt",/klɪnt͡ʃ/,verb,llm,false
+34,cocoon,v,c2,bao bọc,/kəˈkuːn/,verb,llm,false
+34,cordon,v,c2,phong tỏa,/ˈkɔː(ɹ)dən/,verb,llm,false
+34,cosset,v,c2,nuông chiều,/ˈkɑsɪt/,verb,llm,false
+34,curate,v,c2,"tuyển chọn, quản lý",/ˈkjʊɹɪt/,verb,llm,false
+34,dampen,v,c2,làm ẩm; làm giảm,/ˈdæmpən/,verb,llm,false
+34,deaden,v,c2,"làm giảm, làm tê",/ˈdɛdən/,verb,llm,false
+34,denote,v,c2,biểu thị,/dɪˈnoʊt/,verb,llm,false
+34,frolic,v,c2,nô đùa,/ˈfɹɑlɪk/,verb,llm,false
+34,hamper,v,c2,cản trở,/ˈhæm.pɚ/,verb,llm,false
+34,herald,v/n,c2,sứ giả; báo hiệu,/ˈhɛɹəld/,verb,llm,false
+34,hinder,v,c2,cản trở,/ˈhɪndɚ/,verb,llm,false
+35,huddle,v/n,c2,đám túm tụm; túm tụm,/ˈhʌdəl/,verb,llm,false
+35,incise,v,c2,"khắc, rạch",/ɪnˈsaɪz/,verb,llm,false
+35,leaven,v,c2,làm men; làm sinh động,/ˈlɛv.ən/,verb,llm,false
+35,loiter,v,c2,lảng vảng,/ˈlɔɪtə(ɹ)/,verb,llm,false
+35,mangle,v,c2,"làm nát, làm hỏng",/ˈmæŋ.ɡ(ə)l/,verb,llm,false
+35,ordain,v,c2,"phong chức, ban hành",/ɔɹˈdeɪn/,verb,llm,false
+35,quiver,v/n,c2,ống tên; run rẩy,/ˈkwɪvɚ/,verb,llm,false
+35,ravish,v,c2,"làm say mê, cưỡng đoạt",/ˈɹæ.vɪʃ/,verb,llm,false
+35,rebuke,v/n,c2,lời quở trách; quở trách,/ɹiˈbjuːk/,verb,llm,false
+35,repose,v/n,c2,sự nghỉ ngơi; nằm nghỉ,/ɹəˈpoʊz/,verb,llm,false
+35,revile,v,c2,chửi rủa,/ɹəˈvaɪl/,verb,llm,false
+35,squirm,v,c2,"quằn quại, bồn chồn",/skwɝm/,verb,llm,false
+36,swivel,v,c2,xoay,/ˈswɪvəl/,verb,llm,false
+36,temper,v,c2,"làm dịu, tôi luyện",/ˈtɛmpə/,verb,llm,false
+36,topple,v,c2,"lật đổ, ngã nhào",/ˈtɑpl̩/,verb,llm,false
+36,totter,v,c2,đi lảo đảo,/ˈtɑtɚ/,verb,llm,false
+36,wallow,v,c2,"đắm mình, lăn lộn",/ˈwɒ.ləʊ/,verb,llm,false
+36,besiege,v,c2,bao vây,/bəˈsiːd͡ʒ/,verb,llm,false
+36,collide,v,c2,"va chạm, đâm vào nhau",/kəˈlaɪd/,verb,llm,false
+36,condone,v,c2,"dung túng, bỏ qua",/kənˈdoʊn/,verb,llm,false
+36,connote,v,c2,hàm ý,/kəˈnəʊt/,verb,llm,false
+36,consign,v,c2,"gửi, giao phó",/kənˈsaɪn/,verb,llm,false
+36,detract,v,c2,làm giảm giá trị,/dɪˈtɹækt/,verb,llm,false
+36,diffuse,adj/v,c2,khuếch tán; lan tỏa,/dɪˈfjuːz/,verb,llm,false
+37,dribble,v/n,c2,"nước dãi; nhỏ giọt, rê bóng",/ˈdɹɪ.bəl/,verb,llm,false
+37,emulate,v,c2,"noi gương, mô phỏng",/ˈɛm.jə.leɪt/,verb,llm,false
+37,grumble,v,c2,càu nhàu,/ˈɡɹʌmbl̩/,verb,llm,false
+37,mediate,v,c2,"hòa giải, làm trung gian",/ˈmidieɪt/,verb,llm,false
+37,overlay,v,c2,phủ lên,/ˌoʊvɚˈleɪ/,verb,llm,false
+37,posture,v,c2,"làm bộ, ra vẻ",/ˈpɑst͡ʃɚ/,verb,llm,false
+37,prolong,v,c2,kéo dài,/pɹoʊˈlɑŋ/,verb,llm,false
+37,rebound,v/n,c2,sự bật lại; bật lại,/ˈɹi.baʊnd/,verb,llm,false
+37,resound,v,c2,vang dội,/ɹəˈzaʊnd/,verb,llm,false
+37,shamble,v,c2,đi lê bước,/ˈʃæmbəl/,verb,llm,false
+37,slither,v,c2,trườn,/ˈslɪðɚ/,verb,llm,false
+37,solicit,v,c2,"nài xin, gạ gẫm",/səˈlɪsɪt/,verb,llm,false
+38,subsist,v,c2,"sống sót, tồn tại",/səbˈsɪst/,verb,llm,false
+38,succumb,v,c2,"khuất phục, chịu thua",/səˈkʌm/,verb,llm,false
+38,suffuse,v,c2,"lan tỏa, tràn ngập",/səˈfjuːz/,verb,llm,false
+38,unravel,v,c2,"tháo gỡ, làm sáng tỏ",/ˌʌnˈɹævəl/,verb,llm,false
+38,brandish,v,c2,"vung, khua",/ˈbɹændɪʃ/,verb,llm,false
+38,contrive,v,c2,"xoay xở, bày đặt",/kənˈtɹaɪv/,verb,llm,false
+38,disperse,v,c2,"giải tán, phân tán",/dɪˈspɝs/,verb,llm,false
+38,emulsify,v,c2,nhũ hóa,/ɪˈmʊlsɪfaɪ/,verb,llm,false
+38,encumber,v,c2,"cản trở, đè nặng",/ɪnˈkʌmbə(ɹ)/,verb,llm,false
+38,engender,v,c2,"gây ra, sinh ra",/ɪnˈdʒɛn.də/,verb,llm,false
+38,envisage,v,c2,"hình dung, dự tính",/ɪnˈvɪzɪd͡ʒ/,verb,llm,false
+38,protrude,v,c2,"nhô ra, lồi ra",/pɹəˈtɹud/,verb,llm,false
+39,relegate,v,c2,"giáng cấp, đẩy xuống",/ˈɹɛlɪˌɡeɪt/,verb,llm,false
+39,reproach,v,c2,trách móc,/ɹɪˈpɹəʊtʃ/,verb,llm,false
+39,ruminate,v,c2,"suy ngẫm, nhai lại",/ˈɹumɪneɪt/,verb,llm,false
+39,splinter,v,c2,làm vỡ vụn,/ˈsplɪn.tɚ/,verb,llm,false
+39,stultify,v,c2,làm mất hứng thú,/ˈstʌltɪfaɪ/,verb,llm,false
+39,apprehend,v,c2,"bắt giữ, hiểu",/ˌæpɹɪˈhɛnd/,verb,llm,false
+39,demystify,v,c2,làm sáng tỏ,/diːˈmɪstɪfaɪ/,verb,llm,false
+39,deprecate,v,c2,"phản đối, chê bai",/ˈdɛp.rɪˌkeɪt/,verb,llm,false
+39,disparage,v,c2,"chê bai, gièm pha",/dɪsˈpæɹɪd͡ʒ/,verb,llm,false
+39,dissemble,v,c2,"che giấu, giả vờ",/dɪˈsɛmbəl/,verb,llm,false
+39,fabricate,v,c2,bịa đặt; chế tạo,/ˈfæb.ɹɪ.keɪt/,verb,llm,false
+40,fluctuate,v,c2,"dao động, biến động",/ˈflʌkt͡ʃu.eɪt/,verb,llm,false
+40,gravitate,v,c2,bị thu hút về,/ˈɡɹævɪteɪt/,verb,llm,false
+40,preoccupy,v,c2,làm bận tâm,/pɹiˈɑkjupaɪ/,verb,llm,false
+40,reconcile,v,c2,"hòa giải, dung hòa",/ˈɹɛkənˌsaɪl/,verb,llm,false
+40,vandalize,v,c2,phá hoại,/ˈvændəlaɪz/,verb,llm,false
+40,vindicate,v,c2,minh oan,/ˈvɪndɪˌkeɪ̯t/,verb,llm,false
+40,adulterate,v,c2,"pha trộn, làm giả",/əˈdʌltəɹət/,verb,llm,false
+40,assimilate,v,c2,"đồng hóa, tiếp thu",/əˈsɪm.ɪ.leɪt/,verb,llm,false
+40,ingratiate,v,c2,lấy lòng,/ɪnˈɡɹeɪ.ʃi.eɪt/,verb,llm,false
+40,interweave,v,c2,đan xen,/ˌɪntəɹˈwiv/,verb,llm,false
+40,pressurize,v,c2,"gây áp lực, điều áp",/ˈpɹɛʃəɹaɪz/,verb,llm,false
+41,presuppose,v,c2,giả định trước,/ˌpɹiːsəˈpəʊz/,verb,llm,false
+41,relinquish,v,c2,từ bỏ,/ɹɪˈlɪŋkwɪʃ/,verb,llm,false
+41,confabulate,v,c2,"bịa chuyện, tán gẫu",/kənˈfæbjʊleɪt/,verb,llm,false
+41,disseminate,v,c2,"phổ biến, truyền bá",/dɪˈsɛmɪˌneɪt/,verb,llm,false
+41,hypothesize,v,c2,đưa ra giả thuyết,/haɪˈpɑ.θəˌsaɪz/,verb,llm,false
+41,interrogate,v,c2,thẩm vấn,/ɪnˈtɛɹəɡeɪt/,verb,llm,false
+41,intersperse,v,c2,"rải rác, xen kẽ",/ˌɪntəˈspɜːs/,verb,llm,false
+41,proliferate,v,c2,"sinh sôi, tăng nhanh",/pɹəˈlɪf.əɹ.eɪt/,verb,llm,false
+41,remonstrate,v,c2,"phản đối, khuyên can",/ˈɹɛ.mən.stɹeɪt/,verb,llm,false
+41,reverberate,v,c2,vang dội,/ɹəˈvɜɹbəˌɹeɪt/,verb,llm,false
+41,substantiate,v,c2,chứng minh,/səbˈstænʃiˌeɪt/,verb,llm,false
+42,plum,adj,c2,béo bở,/plʌm/,adj,llm,false
+42,rife,adj,c2,đầy rẫy,/ɹaɪf/,adj,llm,false
+42,adept,adj/n,c2,thành thạo; người lão luyện,/əˈdɛpt/,adj,llm,false
+42,agile,adj,c2,nhanh nhẹn,/ˈæd͡ʒ.aɪl/,adj,llm,false
+42,bogus,adj,c2,giả mạo,/ˈboʊ̯ɡəs/,adj,llm,false
+42,inert,adj,c2,"trơ, bất động",/ɪnˈɜːt/,adj,llm,false
+42,lurid,adj,c2,ghê rợn; sặc sỡ,/ˈlʊɹɪd/,adj,llm,false
+42,prone,adj,c2,"dễ bị, nằm sấp",/pɹoʊn/,adj,llm,false
+42,seedy,adj,c2,"tồi tàn, nhếch nhác",/ˈsiːdi/,adj,llm,false
+42,tacit,adj,c2,"ngầm, mặc nhiên",/ˈtæsɪt/,adj,llm,false
+42,abject,adj,c2,"khốn khổ, hèn hạ",/ˈæbˌd͡ʒɛkt/,adj,llm,false
+42,arcane,adj,c2,"bí ẩn, khó hiểu",/ɑɹˈkeɪn/,adj,llm,false
+43,cogent,adj,c2,thuyết phục,/ˈkəʊd͡ʒn̩t/,adj,llm,false
+43,extant,adj,c2,còn tồn tại,/ˈɛk.stənt/,adj,llm,false
+43,glitzy,adj,c2,hào nhoáng,/ˈɡlɪtsi/,adj,llm,false
+43,myriad,adj,c2,vô số,/ˈmɪɹi.æd/,adj,llm,false
+43,opaque,adj,c2,"mờ đục, khó hiểu",/oʊˈpeɪk/,adj,llm,false
+43,ornate,adj,c2,trang trí công phu,/ɔɹˈneɪt/,adj,llm,false
+43,patchy,adj,c2,"loang lổ, không đều",/ˈpæt͡ʃi/,adj,llm,false
+43,angular,adj,c2,có góc cạnh,/ˈæŋ.ɡjə.lɚ/,adj,llm,false
+43,arduous,adj,c2,"gian khổ, khó nhọc",/ˈɑɹ.d͡ʒu.əs/,adj,llm,false
+43,austere,adj,c2,"khắc khổ, giản dị",/ɔˈstiɹ/,adj,llm,false
+43,deviant,n/adj,c2,lệch chuẩn; kẻ lệch lạc,/ˈdiː.vi.ənt/,adj,llm,false
+43,eminent,adj,c2,"xuất chúng, lỗi lạc",/ˈɛmɪnənt/,adj,llm,false
+44,exalted,adj,c2,"cao quý, cao sang",/ɪɡˈzɔːltɪd/,adj,llm,false
+44,hapless,adj,c2,"bất hạnh, xui xẻo",/ˈhæplɪs/,adj,llm,false
+44,insular,adj,c2,"hẹp hòi, biệt lập",/ˈɪnsjələ/,adj,llm,false
+44,nascent,adj,c2,mới hình thành,/ˈneɪ.sənt/,adj,llm,false
+44,oblique,adj,c2,"xiên, gián tiếp",/ɑbˈlaɪk/,adj,llm,false
+44,rickety,adj,c2,ọp ẹp,/ˈɹɪk.ɪ.ti/,adj,llm,false
+44,spatial,adj,c2,thuộc không gian,/ˈspeɪ.ʃəl/,adj,llm,false
+44,squirmy,adj,c2,ngọ nguậy,/ˈskwɝmi/,adj,llm,false
+44,totemic,adj,c2,mang tính biểu tượng,/təʊˈtɛmɪk/,adj,llm,false
+44,uncanny,adj,c2,"kỳ lạ, khó hiểu",/ʌnˈkæni/,adj,llm,false
+44,abundant,adj,c2,dồi dào,/əˈbʌn.dənt/,adj,llm,false
+44,anarchic,adj,c2,"vô chính phủ, hỗn loạn",/əˈnɑː.kɪk/,adj,llm,false
+45,cogently,adv,c2,một cách thuyết phục,/ˈkəʊ.dʒn̩t.li/,adj,llm,false
+45,converse,adj/n,c2,ngược lại; điều ngược lại,/kənˈvɜːs/,adj,llm,false
+45,daunting,adj,c2,"đáng nản, khó khăn",/ˈdɔntɪŋ/,adj,llm,false
+45,derelict,adj/n,c2,bỏ hoang; kẻ vô gia cư,/ˈdɛɹəˌlɪk(t)/,adj,llm,false
+45,farcical,adj,c2,"lố bịch, như trò hề",/ˈfɑː(ɹ)sɪkəl/,adj,llm,false
+45,flagging,adj,c2,suy yếu dần,/ˈflæɡɪŋ/,adj,llm,false
+45,hermetic,adj,c2,kín hơi,/hə(ɹ)ˈmɛtɪk/,adj,llm,false
+45,inchoate,adj,c2,"mới chớm, chưa rõ",/ɪnˈkoʊət/,adj,llm,false
+45,infernal,adj,c2,thuộc địa ngục,/ɪnˈfɜː(ɹ)nəl/,adj,llm,false
+45,menacing,adj,c2,đầy đe dọa,/ˈmɛnɪsɪŋ/,adj,llm,false
+45,mesmeric,adj,c2,"mê hoặc, thôi miên",/mɛzˈmɛɹɪk/,adj,llm,false
+45,moribund,adj,c2,"hấp hối, suy tàn",/ˈmɔːɹɪbʌnd/,adj,llm,false
+46,residual,adj,c2,còn sót lại,/ɹɪˈzɪd͡ʒ.u.əl/,adj,llm,false
+46,spurious,adj,c2,"giả mạo, sai lạc",/ˈspjʊə.ɹi.əs/,adj,llm,false
+46,verbatim,adj/adv,c2,nguyên văn,/vəɹˈbeɪ.tɪm/,adj,llm,false
+46,virginal,adj,c2,trinh nguyên,/ˈvɜː(ɹ)d͡ʒɪnəl/,adj,llm,false
+46,amorphous,adj,c2,vô định hình,/əˈmɔ(ɹ)fəs/,adj,llm,false
+46,austerely,adv,c2,một cách khắc khổ,/ɔˈstiɹli/,adj,llm,false
+46,axiomatic,adj,c2,hiển nhiên,/ˌæk.si.əˈmæt.ɪk/,adj,llm,false
+46,capacious,adj,c2,rộng rãi,/kəˈpeɪʃəs/,adj,llm,false
+46,deficient,adj,c2,thiếu hụt,/dɪˈfɪʃənt/,adj,llm,false
+46,dubiously,adv,c2,một cách ngờ vực,/ˈdub.i.əs.li/,adj,llm,false
+46,ephemeral,adj,c2,"phù du, chóng tàn",/ɛˈfɛ.mə.ɹəl/,adj,llm,false
+46,haphazard,adj,c2,"bừa bãi, tùy tiện",/(ˌ)hæpˈhæz.əd/,adj,llm,false
+47,idiomatic,adj,c2,mang tính thành ngữ,/ˌɪd.i.əˈmæt.ɪk/,adj,llm,false
+47,incipient,adj,c2,"chớm nở, ban đầu",/ɪnˈsɪp.i.ənt/,adj,llm,false
+47,intrinsic,adj,c2,"nội tại, vốn có",/ɪnˈtɹɪn.zɪk/,adj,llm,false
+47,laudatory,adj,c2,"ca ngợi, tán dương",/ˈlɔːdətɹi/,adj,llm,false
+47,malleable,adj,c2,"dễ uốn, dễ bảo",/ˈmæl.iː.ə.bəl/,adj,llm,false
+47,paramount,adj,c2,tối quan trọng,/ˈpæɹəˌmaʊnt/,adj,llm,false
+47,pervasive,adj,c2,"lan tràn, phổ biến",/pɚˈveɪ.sɪv/,adj,llm,false
+47,ponderous,adj,c2,"nặng nề, chậm chạp",/ˈpɒn.dəɹ.əs/,adj,llm,false
+47,stringent,adj,c2,nghiêm ngặt,/ˈstɹɪn.d͡ʒənt/,adj,llm,false
+47,summarily,adv,c2,"ngay lập tức, tóm tắt",/səˈmɛɹɪli/,adj,llm,false
+47,veritable,adj,c2,thật sự,/ˈvɛ.ɹɪ.tə.bl/,adj,llm,false
+47,abundantly,adv,c2,"dồi dào, rất",/əˈbʌn.dn̩t.li/,adj,llm,false
+48,archetypal,adj,c2,điển hình,/ˈɑɹkɪtaɪpəl/,adj,llm,false
+48,autonomous,adj,c2,"tự trị, tự chủ",/ɔˈtɑnəməs/,adj,llm,false
+48,burgeoning,adj,c2,đang phát triển nhanh,/ˈbɝ.d͡ʒə.nɪŋ/,adj,llm,false
+48,calamitous,adj,c2,tai hại,/kəˈlæmɪtəs/,adj,llm,false
+48,colloquial,adj,c2,"thông tục, khẩu ngữ",/kəˈloʊ.kwi.əl/,adj,llm,false
+48,figurative,adj,c2,nghĩa bóng,/ˈfɪɡəɹətɪv/,adj,llm,false
+48,formidable,adj,c2,"đáng gờm, ghê gớm",/ˈfɔɹmɪdəbəl/,adj,llm,false
+48,formidably,adv,c2,một cách đáng gờm,/ˈfɔːɹ.mɪ.dəb.li/,adj,llm,false
+48,impeccable,adj,c2,"hoàn hảo, không tì vết",/ɪmˈpɛkəbəl/,adj,llm,false
+48,impeccably,adv,c2,một cách hoàn hảo,/ɪmˈpɛk.ə.bli/,adj,llm,false
+48,indiscrete,adj,c2,không tách rời,/ˌɪn.dɪsˈkɹit/,adj,llm,false
+48,inexorable,adj,c2,không thể ngăn cản,/ɪnˈɛksɚəb(ə)l/,adj,llm,false
+49,inexorably,adv,c2,không thể cưỡng lại,/ɪnˈɛk.sə.ɹə.bli/,adj,llm,false
+49,infallible,adj,c2,không thể sai,/ɪnˈfælɪbəl/,adj,llm,false
+49,infallibly,adv,c2,không bao giờ sai,/ɪnˈfæl.ɪ.bli/,adj,llm,false
+49,ostensible,adj,c2,"bề ngoài, có vẻ",/ɒˈstɛns.ɪ.bəl/,adj,llm,false
+49,ostensibly,adv,c2,bề ngoài thì,/ɒˈstɛn.sɪ.bli/,adj,llm,false
+49,pedestrian,adj,c2,"tầm thường, buồn tẻ",/pəˈdɛstɹiən/,adj,llm,false
+49,preeminent,adj,c2,"xuất chúng, ưu việt",/pɹiːˈɛmɪnənt/,adj,llm,false
+49,proverbial,adj,c2,như tục ngữ,/pɹəˈvɜɹb.iː.əl/,adj,llm,false
+49,resounding,adj,c2,vang dội,/ɹɪˈzaʊn.dɪŋ/,adj,llm,false
+49,tantamount,adj,c2,tương đương với,/ˈtæntəˌmaʊnt/,adj,llm,false
+49,unfeasible,adj,c2,không khả thi,/ʌnˈfi.zə.bəl/,adj,llm,false
+49,venomously,adv,c2,một cách cay độc,/ˈvɛnəməsli/,adj,llm,false
+50,abhorrently,adv,c2,một cách ghê tởm,/æbˈhɔɹ.ənt.li/,adj,llm,false
+50,constrained,adj,c2,"bị gò bó, hạn chế",/kənˈstɹeɪnd/,adj,llm,false
+50,deficiently,adv,c2,một cách thiếu hụt,/dɪˈfɪʃəntli/,adj,llm,false
+50,disparaging,adj,c2,gièm pha,/dɪsˈpæɹɪdʒɪŋ(ɡ)/,adj,llm,false
+50,elephantine,adj,c2,"to lớn, nặng nề",/ɛl.əˈfæn.tin/,adj,llm,false
+50,euphemistic,adj,c2,mang tính uyển ngữ,/ˌjuːfəˈmɪstɪk/,adj,llm,false
+50,haphazardly,adv,c2,một cách bừa bãi,/hæpˈhæzədli/,adj,llm,false
+50,ignominious,adj,c2,nhục nhã,/ɪɡ.nəˈmɪ.ni.əs/,adj,llm,false
+50,incongruous,adj,c2,"không hợp, lạc lõng",/ɪnˈkɒn.ɡɹʊu.ʌs/,adj,llm,false
+50,inscrutable,adj,c2,"khó hiểu, bí ẩn",/ˌɪnˈskɹuːtəbl̩/,adj,llm,false
+50,irrevocable,adj,c2,không thể thay đổi,/ɪˈɹɛvəkəbəl/,adj,llm,false
+50,irrevocably,adv,c2,không thể đảo ngược,/ɪˈɹɛ.və.kə.bli/,adj,llm,false
+51,notoriously,adv,c2,"nổi tiếng là, khét tiếng",/nəˈtɔ.ɹi.əs.li/,adj,llm,false
+51,paradoxical,adj,c2,nghịch lý,/ˌpɛɹəˈdɑːksɪkəl/,adj,llm,false
+51,superfluous,adj,c2,thừa thãi,/suˈpɝflu.əs/,adj,llm,false
+51,unequivocal,adj,c2,"rõ ràng, dứt khoát",/ˌʌnɪˈkwɪvəkəl/,adj,llm,false
+51,unobtrusive,adj,c2,kín đáo,/ˌʌnəbˈtɹusɪv/,adj,llm,false
+51,utilitarian,adj,c2,thực dụng,/juˌtɪləˈtɛɹi.ən/,adj,llm,false
+51,advantageous,adj,c2,có lợi,/ˌædvənˈteɪd͡ʒ(i)əs/,adj,llm,false
+51,antediluvian,adj,c2,cổ lỗ sĩ,/ˌæn.ti.dəˈlu.vi.ən/,adj,llm,false
+51,antithetical,adj,c2,đối lập,/ˌæntɪˈθɛtɪkəl/,adj,llm,false
+51,catastrophic,adj,c2,thảm khốc,/ˌkætəˈstɹɑfɪk/,adj,llm,false
+51,colloquially,adv,c2,theo lối thông tục,/kəˈloʊ.kwi.əli/,adj,llm,false
+51,commensurate,adj,c2,tương xứng,/kəˈmɛnsəɹət/,adj,llm,false
+52,conciliatory,adj,c2,mang tính hòa giải,/kənˈsɪl.i.əˌtɔɹ.i/,adj,llm,false
+52,hypothetical,adj,c2,giả định,/ˌhaɪpəˈθɛtɪkəl/,adj,llm,false
+52,resoundingly,adv,c2,một cách vang dội,/ɹɪˈzaʊndɪŋli/,adj,llm,false
+52,unencumbered,adj,c2,không vướng bận,/ˌʌnɪnˈkʌmbɚd/,adj,llm,false
+52,idiosyncratic,adj,c2,"đặc thù, khác thường",/ˌɪd.i.oʊ.sɪŋˈkɹæt.ɪk/,adj,llm,false
+52,ignominiously,adv,c2,một cách nhục nhã,/ˌɪɡ.nəˈmɪ.ni.əs.li/,adj,llm,false
+52,interrogative,adj,c2,nghi vấn,/ˌɪn.təˈɹɒɡ.ə.tɪv/,adj,llm,false
+52,painstakingly,adv,c2,một cách tỉ mỉ,/ˈpeɪnˌsteɪkɪŋli/,adj,llm,false
+52,surreptitious,adj,c2,lén lút,/ˌsʌɹɪpˈtɪʃəs/,adj,llm,false
+52,unequivocally,adv,c2,một cách dứt khoát,/ˌʌnɪˈkwɪvək(ə)li/,adj,llm,false
+52,unexceptional,adj,c2,bình thường,/ˌʌnɪkˈsɛpʃənəl/,adj,llm,false
+52,unobtrusively,adv,c2,một cách kín đáo,/ˌʌn.əbˈtɹuː.sɪv.li/,adj,llm,false
+53,nigh,adv,c2,gần,/naɪ/,func,llm,false
+53,verily,adv,c2,quả thật,/ˈvɛɹ.əl.i/,func,llm,false
+53,hitherto,adv,c2,cho đến nay,/ˈhɪðəɹˌtu/,func,llm,false
+53,paradoxically,adv,c2,nghịch lý thay,/ˌpaɹəˈdɒksɪkli/,func,llm,false
+53,pyre,n,c2,giàn hỏa thiêu,/ˈpaɪɚ/,misc,llm,false
+53,rift,n,c2,"vết nứt, sự rạn nứt",/ɹɪft/,misc,llm,false
+53,blitz,v/n,c2,cuộc tấn công chớp nhoáng,/blɪts/,misc,llm,false
+53,brink,n,c2,bờ vực,/ˈbɹɪŋk/,misc,llm,false
+53,ethos,n,c2,"đặc tính, tinh thần",/ˈiːθɒs/,misc,llm,false
+53,glitz,n,c2,vẻ hào nhoáng,/ɡlɪts/,misc,llm,false
+53,knack,n,c2,"sở trường, mẹo",/næk/,misc,llm,false
+53,behest,n,c2,"lệnh, yêu cầu",/bɪˈhɛst/,misc,llm,false
+54,legion,n,c2,quân đoàn; vô số,/ˈli.d͡ʒən/,misc,llm,false
+54,marvel,n,c2,điều kỳ diệu,/ˈmɑɹvəl/,misc,llm,false
+54,menace,n,c2,mối đe dọa,/ˈmɛnɪs/,misc,llm,false
+54,milieu,n,c2,"môi trường, giới",/mɪlˈju/,misc,llm,false
+54,repute,n,c2,danh tiếng,/ɹɪˈpjuːt/,misc,llm,false
+54,trifle,n/v,c2,chuyện vặt; đùa cợt,/ˈtɹaɪfəl/,misc,llm,false
+54,truism,n,c2,chân lý hiển nhiên,/tɹuːizəm/,misc,llm,false
+54,brevity,n,c2,sự ngắn gọn,/ˈbɹɛvɪti/,misc,llm,false
+54,conduit,n,c2,"ống dẫn, kênh truyền",/ˈkɒnd(j)ʊɪt/,misc,llm,false
+54,fallacy,n,c2,"ngụy biện, ý sai lầm",/ˈfæl.ə.si/,misc,llm,false
+54,opacity,n,c2,độ mờ đục,/oʊˈpæsɪti/,misc,llm,false
+54,phantom,n,c2,bóng ma,/ˈfæntəm/,misc,llm,false
+55,snippet,n,c2,đoạn trích,/ˈsnɪpɪt/,misc,llm,false
+55,adhesion,n,c2,"sự dính, bám",/ˌædˈhiː.ʒən/,misc,llm,false
+55,allusion,n,c2,sự ám chỉ,/əˈlu.ʒən/,misc,llm,false
+55,artifice,n,c2,"mưu mẹo, sự khéo léo",/ˈɑː(ɹ)tɪfɪs/,misc,llm,false
+55,brouhaha,n,c2,sự ồn ào,/ˈbɹuː.hɑː.hɑː/,misc,llm,false
+55,calamity,n,c2,tai họa,/kəˈlæmɪti/,misc,llm,false
+55,eminence,n,c2,"sự nổi tiếng, danh vọng",/ˈɛmɪnəns/,misc,llm,false
+55,ephemera,n,c2,đồ dùng nhất thời,/ɪˈfɛməɹə/,misc,llm,false
+55,exorcism,n,c2,sự trừ tà,/ˈɛk.sɔː.sɪ.zəm/,misc,llm,false
+55,fruition,n,c2,sự thành hiện thực,/fɹuˈɪʃən/,misc,llm,false
+55,innuendo,n,c2,lời ám chỉ,/ˌɪnjuˈɛndəʊ/,misc,llm,false
+55,monastic,adj,c2,thuộc tu viện,/məˈnæstɪk/,misc,llm,false
+56,mystique,n,c2,vẻ huyền bí,/mɪˈstiːk/,misc,llm,false
+56,recourse,n,c2,sự cầu viện,/ˈɹiːkɔɹs/,misc,llm,false
+56,allotment,n,c2,"sự phân bổ, mảnh đất",/əˈlɔt.mɛnt/,misc,llm,false
+56,anonymity,n,c2,sự ẩn danh,/ænəˈnɪmɪti/,misc,llm,false
+56,archetype,n,c2,nguyên mẫu,/ˈɑɹkɪtaɪp/,misc,llm,false
+56,attrition,n,c2,sự hao mòn,/əˈtɹɪʃən/,misc,llm,false
+56,deterrent,n,c2,biện pháp răn đe,/dɪˈtɝənt/,misc,llm,false
+56,emulation,n,c2,"sự noi gương, mô phỏng",/ˌɛm.juˈleɪ̯.ʃən/,misc,llm,false
+56,euphemism,n,c2,uyển ngữ,/ˈjuː.fəˌmɪz.əm/,misc,llm,false
+56,hindrance,n,c2,sự cản trở,/ˈhɪndɹəns/,misc,llm,false
+56,hindsight,n,c2,sự nhận thức muộn,/ˈhaɪn(d)saɪt/,misc,llm,false
+56,mundanity,n,c2,sự tầm thường,/mʌnˈdænɪti/,misc,llm,false
+57,notoriety,n,c2,tai tiếng,/nəʊ.təˈɹaɪ.ə.ti/,misc,llm,false
+57,aberration,n,c2,sự lệch lạc,/ˌæb.əˈɹeɪ.ʃn̩/,misc,llm,false
+57,antithesis,n,c2,sự đối lập,/ænˈtɪθ.ɪ.sɪs/,misc,llm,false
+57,attainment,n,c2,"sự đạt được, thành tựu",/əˈteɪnmənt/,misc,llm,false
+57,banishment,n,c2,sự trục xuất,/ˈbænɪʃmənt/,misc,llm,false
+57,conjecture,v/n,c2,sự phỏng đoán; phỏng đoán,/kənˈd͡ʒɛkt͡ʃɚ/,misc,llm,false
+57,denotation,n,c2,nghĩa biểu thị,/ˌdiː.noʊˈteɪ.ʃən/,misc,llm,false
+57,dissension,n,c2,sự bất đồng,/dɪˈsɛnʃən/,misc,llm,false
+57,divination,n,c2,thuật bói toán,/ˌdɪvɪˈneɪʃən/,misc,llm,false
+57,elasticity,n,c2,tính đàn hồi,/ɪ.læsˈtɪs.ɪ.ti/,misc,llm,false
+57,imposition,n,c2,sự áp đặt,/ˌɪm.pəˈzɪʃ.ən/,misc,llm,false
+57,inducement,n,c2,"sự khích lệ, mồi chài",/ɪnˈdusmənt/,misc,llm,false
+58,mediocrity,n,c2,sự tầm thường,/miː.dɪˈɒk.ɹɪ.ti/,misc,llm,false
+58,protrusion,n,c2,chỗ lồi ra,/pɹəˈtɹuːʒən/,misc,llm,false
+58,smattering,n,c2,kiến thức sơ sài,/ˈsmæ.təɹ.ɪŋ/,misc,llm,false
+58,concurrence,n,c2,"sự đồng tình, trùng hợp",/kənˈkɝ.əns/,misc,llm,false
+58,connotation,n,c2,"hàm ý, nghĩa hàm ẩn",/ˌkɑnəˈteɪʃən/,misc,llm,false
+58,deprivation,n,c2,sự thiếu thốn,/ˌdɛp.ɹɪˈveɪʃən/,misc,llm,false
+58,edification,n,c2,sự khai sáng,/ˌɛdɪfɪˈkeɪʃən/,misc,llm,false
+58,encumbrance,n,c2,"gánh nặng, trở ngại",/ɪnˈkʌm.bɹəns/,misc,llm,false
+58,equilibrium,n,c2,trạng thái cân bằng,/ɛkwɪˈlɪbɹɪəm/,misc,llm,false
+58,fabrication,n,c2,"sự bịa đặt, chế tạo",/fæbɹɪˈkeɪʃən/,misc,llm,false
+58,fluctuation,n,c2,sự dao động,/flʌkt͡ʃuːˈeɪʃən/,misc,llm,false
+58,incongruity,n,c2,sự không phù hợp,/ɪnkɑŋˈɡɹuɪti/,misc,llm,false
+59,materialism,n,c2,chủ nghĩa vật chất,/məˈtɪɹiəlɪzəm/,misc,llm,false
+59,provocation,n,c2,sự khiêu khích,/ˌpɹɑvəˈkeɪʃən/,misc,llm,false
+59,subsistence,n,c2,sự sinh tồn,/səbˈsɪstəns/,misc,llm,false
+59,vindication,n,c2,sự minh oan,/ˌvɪndəˈkeɪʃən/,misc,llm,false
+59,articulation,n,c2,"sự diễn đạt, phát âm",/ɑɹˌtɪk.jəˈleɪ.ʃən/,misc,llm,false
+59,assimilation,n,c2,sự đồng hóa,/əˌsɪməˈleɪʃən/,misc,llm,false
+59,authenticity,n,c2,tính xác thực,/ɑθɛnˈtɪsɪti/,misc,llm,false
+59,denunciation,n,c2,"sự tố cáo, lên án",/dɪˌnʌnsiˈeɪʃən/,misc,llm,false
+59,happenstance,n,c2,sự tình cờ,/ˈhæpənˌstæns/,misc,llm,false
+59,remonstrance,n,c2,lời phản đối,/ɹɪˈmɒnstɹəns/,misc,llm,false
+59,accessibility,n,c2,khả năng tiếp cận,/əkˌsɛs.əˈbɪl.ɪ.ti/,misc,llm,false
+60,confabulation,n,c2,sự bịa chuyện,/kənˌfæbjʊˈleɪʃən/,misc,llm,false
+60,dissemination,n,c2,sự phổ biến,/dɪˌsɛmɪˈneɪʃən/,misc,llm,false
+60,individualism,n,c2,chủ nghĩa cá nhân,/ˌɪn.dɪˈvɪ.dʒu.əˌlɪ.zəm/,misc,llm,false
+60,infallibility,n,c2,tính không thể sai,/ɪnˌfæləˈbɪləti/,misc,llm,false
+60,pervasiveness,n,c2,sự lan tràn,/pɚˈveɪ.sɪv.nɪs/,misc,llm,false
+60,preconception,n,c2,định kiến,/ˌpɹikənˈsɛpʃən/,misc,llm,false
+60,proliferation,n,c2,sự gia tăng nhanh,/pɹəˌlɪf.əˈɹeɪ.ʃən/,misc,llm,false
+60,reverberation,n,c2,tiếng vang dội,/ɹiˈvɜː(ɹ)bəɹeɪʃən/,misc,llm,false
+60,presupposition,n,c2,tiền giả định,/pɹiː.sʌ.pəˈzɪ.ʃ(ə)n/,misc,llm,false
+60,reconciliation,n,c2,sự hòa giải,/ˌɹɛkənˌsɪliˈeɪʃ(ə)n/,misc,llm,false
+60,verisimilitude,n,c2,tính chân thực,/vɛɹɪsɪˈmɪlɪtjuːd/,misc,llm,false

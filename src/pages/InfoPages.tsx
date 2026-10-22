@@ -6,8 +6,16 @@ export function AboutPage() {
       <h1 className="t-lg t-bold text-gold uppercase">Nguồn dữ liệu</h1>
       <PixelPanel className="flex flex-col gap-3 text-haze [&_a]:text-gold [&_a:hover]:text-snow [&_b]:text-snow">
         <p>
-          Danh sách từ ở các bộ A1 và A2 được chọn theo mức độ CEFR của danh sách từ phổ biến. Chỉ
-          từ gốc và cấp độ được dùng; nghĩa tiếng Việt do máy dịch và đang chờ duyệt thủ công.
+          Danh sách từ ở các bộ A1 đến C1 được chọn theo mức độ CEFR của danh sách từ phổ biến. Chỉ
+          từ gốc và cấp độ được dùng; nghĩa tiếng Việt và câu ví dụ do máy viết và đang chờ duyệt
+          thủ công.
+        </p>
+        <p>
+          Bộ C2 lấy từ{" "}
+          <a href="https://github.com/openlanguageprofiles/olp-en-cefrj">
+            Octanove Vocabulary Profile C1/C2
+          </a>{" "}
+          (Octanove Labs, giấy phép CC BY-SA 4.0).
         </p>
         <p>
           Phiên âm IPA lấy từ <a href="https://en.wiktionary.org/">Wiktionary</a> (giấy phép CC

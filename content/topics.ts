@@ -28,4 +28,6 @@ export const SETS = [
   { id: 2, slug: "a2", name: "Bộ A2", cefr: "a2", sortOrder: 2 },
   { id: 3, slug: "b1", name: "Bộ B1", cefr: "b1", sortOrder: 3 },
   { id: 4, slug: "b2", name: "Bộ B2", cefr: "b2", sortOrder: 4 },
+  { id: 5, slug: "c1", name: "Bộ C1", cefr: "c1", sortOrder: 5 },
+  { id: 6, slug: "c2", name: "Bộ C2", cefr: "c2", sortOrder: 6 },
 ] as const;

@@ -1,6 +1,8 @@
 /**
- * Builds content/sets/{a1,a2,b1,b2}.csv from:
- *  - content/raw/oxford_3000.csv      (lemma, part of speech, CEFR level only)
+ * Builds content/sets/{a1,a2,b1,b2,c1,c2}.csv from:
+ *  - content/raw/oxford_3000.csv      (lemma, part of speech, CEFR level only): A1–B2
+ *  - content/raw/oxford_5000.csv      (same columns): C1 words not already in A1–B2
+ *  - content/raw/octanove_c1c2.csv    (Octanove profile, CC BY-SA 4.0): C2 words not in Oxford 5000
  *  - content/raw/kaikki/*.jsonl       (IPA + Vietnamese translations from Wiktionary)
  *  - content/meanings-vi.txt          (machine-written Vietnamese meaning + topic, reviewed=false)
  * Definitions/examples from the Oxford file are intentionally NOT used (copyright).
@@ -39,6 +41,7 @@ const POS_ABBR: Record<string, string> = {
   "linking verb": "link",
   "definite article": "art",
   "infinitive marker": "to",
+  vern: "v", // typo in the Octanove list
 };
 
 interface Wikt {
@@ -138,6 +141,31 @@ function main() {
       if (p && !pos.includes(p)) pos.push(p);
     }
     byLemma.set(key, { lemma: es[0]?.lemma ?? key, pos, cefr });
+  }
+
+  // C1: the Oxford 5000 additions. C2: Octanove's C2 list minus anything Oxford rates lower.
+  // Only words with an English Wiktionary entry are kept, which drops typos in the sources.
+  const hasWiktionary = (lemma: string) => readWiktionary(lemma).ipa !== "";
+  const addUpper = (lemma: string, type: string, cefr: string) => {
+    const key = lemma.toLowerCase();
+    if (!/^[A-Za-z]{2,14}$/.test(lemma)) return;
+    const w = byLemma.get(key);
+    if (w && w.cefr !== cefr) return;
+    const p = POS_ABBR[type] ?? type;
+    if (w) {
+      if (p && !w.pos.includes(p)) w.pos.push(p);
+    } else if (hasWiktionary(lemma)) byLemma.set(key, { lemma, pos: p ? [p] : [], cefr });
+  };
+  const oxford5000 = parseCsv(readText(join(RAW_DIR, "oxford_5000.csv")));
+  const inOxford = new Set(oxford5000.map((r) => (r.word ?? "").trim().toLowerCase()));
+  for (const r of oxford5000) {
+    if (r.cefr === "c1") addUpper((r.word ?? "").trim(), (r.type ?? "").trim(), "c1");
+  }
+  for (const r of parseCsv(readText(join(RAW_DIR, "octanove_c1c2.csv")))) {
+    const lemma = (r.headword ?? "").trim();
+    if (r.CEFR === "C2" && !inOxford.has(lemma.toLowerCase())) {
+      addUpper(lemma, (r.pos ?? "").trim(), "c2");
+    }
   }
 
   let fromLlm = 0;
