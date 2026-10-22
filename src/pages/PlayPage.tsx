@@ -11,6 +11,7 @@ import { toast } from "../components/ui/Toast";
 import { Round as RaceRound } from "../games/ghost-race/Round";
 import { gameById } from "../games/registry";
 import { Round as TrainRound } from "../games/sentence-express/Round";
+import { Round as SpellRound } from "../games/spell-dungeon/Round";
 import { ApiError } from "../lib/api";
 import {
   finishSession,
@@ -28,7 +29,12 @@ const BlasterRound = lazy(() =>
   import("../games/word-blaster/Round").then((m) => ({ default: m.Round })),
 );
 
-type Config = GameConfig & { sessionId: string | null; sentences: Sentence[]; ghosts: Ghost[] };
+type Config = GameConfig & {
+  sessionId: string | null;
+  sentences: Sentence[];
+  ghosts: Ghost[];
+  dueWordIds: number[];
+};
 
 export function PlayPage() {
   const params = useParams();
@@ -85,6 +91,7 @@ function Play({ gameId }: { gameId: NonNullable<ReturnType<typeof gameById>>["id
         words: s.words,
         sentences: s.sentences,
         ghosts: s.ghosts,
+        dueWordIds: s.dueWordIds ?? [],
       };
     }
     const guestData = sentenceGame
@@ -99,6 +106,7 @@ function Play({ gameId }: { gameId: NonNullable<ReturnType<typeof gameById>>["id
         words: guestData.words,
         sentences: guestData.sentences,
         ghosts: [],
+        dueWordIds: [],
       };
     }
     return null;
@@ -177,6 +185,15 @@ function Play({ gameId }: { gameId: NonNullable<ReturnType<typeof gameById>>["id
     <div className="flex h-screen w-screen items-center justify-center overflow-hidden bg-void">
       {gameId === "ghost-race" ? (
         <RaceRound
+          key={config.sessionId ?? "guest"}
+          config={config}
+          unitIdx={unit?.idx ?? 0}
+          unitTitle={unit?.titleVi ?? ""}
+          onFinish={finish}
+          onExit={exit}
+        />
+      ) : gameId === "spell-dungeon" ? (
+        <SpellRound
           key={config.sessionId ?? "guest"}
           config={config}
           unitIdx={unit?.idx ?? 0}

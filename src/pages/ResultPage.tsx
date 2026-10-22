@@ -46,13 +46,22 @@ export function ResultPage() {
             accuracy,
             { v: formatTime(result.durationMs), l: "Thời gian", c: "text-orange" },
           ]
-        : [score, wpm, accuracy, combo];
+        : round.gameId === "spell-dungeon"
+          ? [
+              score,
+              accuracy,
+              combo,
+              { v: `${4 - result.livesLost}/4`, l: "Mạng còn lại", c: "text-berry" },
+            ]
+          : [score, wpm, accuracy, combo];
   const doneLabel =
     round.gameId === "sentence-express"
       ? "Từ khoá đã xếp"
       : round.gameId === "ghost-race"
         ? "Từ đã gõ"
-        : "Từ đã bắn hạ";
+        : round.gameId === "spell-dungeon"
+          ? "Từ đã đánh vần"
+          : "Từ đã bắn hạ";
 
   const saveReview = async () => {
     try {
@@ -73,7 +82,17 @@ export function ResultPage() {
               : `Mốc ${round.unitIdx} · ${round.unitTitle}`}
           </span>
           <h1 className={`${won ? "t-gold" : "t-ice"} text-[72px] leading-[80px] uppercase`}>
-            {train ? (won ? "Hết giờ!" : "Hết than!") : won ? "Hoàn thành!" : "Thua rồi!"}
+            {train
+              ? won
+                ? "Hết giờ!"
+                : "Hết than!"
+              : round.gameId === "spell-dungeon"
+                ? won
+                  ? "Hạ boss!"
+                  : "Hết mạng!"
+                : won
+                  ? "Hoàn thành!"
+                  : "Thua rồi!"}
           </h1>
           <StarRow stars={result.stars} size={44} big />
         </div>

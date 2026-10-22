@@ -61,10 +61,16 @@ const trainEvent = z.discriminatedUnion("type", [
   }),
   z.object({ t: z.number(), type: z.literal("hint"), sentenceId: z.number().int() }),
 ]);
+const spellEvent = z.object({
+  t: z.number(),
+  type: z.enum(["correct", "wrong", "reveal", "done", "hurt"]),
+  wordId: z.number().int(),
+});
 const finishBodies = {
   "word-blaster": z.object({ events: z.array(blasterEvent).max(20000) }),
   "ghost-race": z.object({ events: z.array(raceEvent).max(20000) }),
   "sentence-express": z.object({ events: z.array(trainEvent).max(2000) }),
+  "spell-dungeon": z.object({ events: z.array(spellEvent).max(20000) }),
 } satisfies Record<GameId, z.ZodType>;
 
 /** How many review items may join a round of `n` unit items: at most MAX_DUE_RATIO of the round. */

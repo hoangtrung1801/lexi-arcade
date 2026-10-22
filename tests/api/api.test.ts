@@ -15,7 +15,7 @@ import type {
   VocabResponse,
 } from "@shared/api";
 import { sentenceParts } from "@shared/sentence";
-import type { GameEvent, GameWord, RaceEvent, TrainEvent } from "@shared/types";
+import type { GameEvent, GameWord, RaceEvent, SpellEvent, TrainEvent } from "@shared/types";
 import { describe, expect, it } from "vitest";
 
 const BASE = process.env.API_BASE ?? "http://localhost:5173";
@@ -362,6 +362,57 @@ describe("api", () => {
         "/api/leaderboard?period=week&game=sentence-express",
       );
       expect(lb.status).toBe(200);
+    },
+    40000,
+  );
+  it.skipIf(!up)(
+    "spell dungeon clears a floor, opens the next one and refuses untyped words",
+    async () => {
+      const c = new Client();
+      await c.req("POST", "/api/dev/login", { name: `Spell${Date.now() % 100000}` });
+      const start = await c.req<StartSessionResponse>("POST", "/api/sessions", {
+        gameId: "spell-dungeon",
+        unitId: 1001,
+        difficulty: "normal",
+      });
+      expect(start.status).toBe(200);
+      expect(start.json.gameId).toBe("spell-dungeon");
+      const events: SpellEvent[] = [];
+      let t = 100;
+      for (const w of start.json.words) {
+        for (let i = 0; i < w.lemma.length; i++) {
+          events.push({ t, type: "correct", wordId: w.id });
+          t += 80;
+        }
+        events.push({ t: t - 80, type: "done", wordId: w.id });
+      }
+      // a word finished without its letters is a forgery (and burns that session)
+      const other = await c.req<StartSessionResponse>("POST", "/api/sessions", {
+        gameId: "spell-dungeon",
+        unitId: 1001,
+        difficulty: "normal",
+      });
+      const first = other.json.words[0] as GameWord;
+      const forged = await c.req<{ reason: string }>(
+        "POST",
+        `/api/sessions/${other.json.sessionId}/finish`,
+        { events: [{ t: 100, type: "done", wordId: first.id }] },
+      );
+      expect(forged.status).toBe(422);
+      expect(forged.json.reason).toBe("done-without-typing");
+
+      await new Promise((r) => setTimeout(r, Math.min(t, 15000)));
+      const fin = await c.req<FinishSessionResponse>(
+        "POST",
+        `/api/sessions/${start.json.sessionId}/finish`,
+        { events },
+      );
+      if (fin.status !== 200) throw new Error(`spell: ${JSON.stringify(fin.json)}`);
+      expect(fin.json.result.status).toBe("won");
+      expect(fin.json.result.stars).toBe(3);
+      expect(fin.json.rewards.unlockedUnitId).toBe(1002);
+      const units = await c.req<UnitsResponse>("GET", "/api/sets/a1/units?game=spell-dungeon");
+      expect(units.json.units[1]?.state).toBe("open");
     },
     40000,
   );

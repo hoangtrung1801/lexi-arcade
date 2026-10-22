@@ -6,6 +6,7 @@ export * from "./rounds";
 export * from "./rules";
 export * from "./scoring";
 export * from "./sentence";
+export * from "./spell";
 export * from "./srs";
 export * from "./types";
 export * from "./validate";

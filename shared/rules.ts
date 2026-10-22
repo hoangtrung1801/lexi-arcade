@@ -58,6 +58,28 @@ export const TRAIN_POOL = 80;
 /** sentences solved for 1, 2 and 3 stars */
 export const TRAIN_STAR_SENTENCES = [5, 10, 16] as const;
 
+/** Spell Dungeon: a floor (unit) is 4 doors to spell, waves of monsters, then a boss. */
+export const SPELL_HEARTS = 4;
+export const SPELL_DOORS = 4;
+export const SPELL_BOSS_HP = 6;
+export const SPELL_WAVE = 3;
+/** time between two monsters of a wave setting off */
+export const SPELL_MOB_STAGGER_MS = 1500;
+export const SPELL_BOSS_BONUS = 300;
+export const SPELL_HEART_BONUS = 100;
+/**
+ * How long a monster takes to reach the hero and the boss to wind up a blow, plus some time for
+ * every letter of the word. Easy shows each word's first letter; hard has no hint button.
+ */
+export const SPELL: Record<
+  Difficulty,
+  { mobMs: number; bossMs: number; perLetterMs: number; firstLetter: boolean; hints: boolean }
+> = {
+  easy: { mobMs: 12000, bossMs: 10000, perLetterMs: 700, firstLetter: true, hints: true },
+  normal: { mobMs: 9000, bossMs: 8000, perLetterMs: 550, firstLetter: false, hints: true },
+  hard: { mobMs: 6500, bossMs: 6000, perLetterMs: 420, firstLetter: false, hints: false },
+};
+
 export const DAILY_QUESTS = [
   { key: "play_3", title: "Chơi 3 ván", target: 3, reward: 15 },
   { key: "hit_30", title: "Đúng 30 từ (mọi game)", target: 30, reward: 20 },

@@ -8,6 +8,16 @@ declare global {
       typed: string;
     };
     __ghostRace?: { status: string; current?: { lemma: string }; typed: string };
+    __spellDungeon?: {
+      status: string;
+      stage: string;
+      busy: boolean;
+      typed: string;
+      targetId: number | null;
+      current?: { lemma: string };
+      mobs: { alive: boolean; startAt: number; word: { id: number; lemma: string } }[];
+      elapsed(): number;
+    };
     __sentenceExpress?: {
       status: string;
       departing: boolean;
@@ -136,6 +146,36 @@ test("guest races Ghost Race unit 1 to the finish", async ({ page }) => {
   }
   await expect(page.getByRole("heading", { name: "HOÀN THÀNH!" })).toBeVisible({ timeout: 10_000 });
   await expect(page.getByText("Thời gian")).toBeVisible();
+});
+
+test("guest clears Spell Dungeon floor 1: doors, monsters and the boss", async ({ page }) => {
+  await page.goto("/");
+  await page.getByRole("link", { name: /SPELL DUNGEON/ }).click();
+  await page.getByRole("button", { name: /Mốc 1:/ }).click();
+  await page.getByRole("button", { name: /VÀO HẦM/i }).click();
+  await page.waitForFunction(() => window.__spellDungeon?.status === "playing", null, {
+    timeout: 20_000,
+  });
+  const deadline = Date.now() + 120_000;
+  while (Date.now() < deadline) {
+    const s = await page.evaluate(() => {
+      const g = window.__spellDungeon;
+      if (g?.status !== "playing" || g.busy) return { status: g?.status, rest: "" };
+      if (g.stage !== "mob") {
+        return { status: g.status, rest: g.current?.lemma.slice(g.typed.length) ?? "" };
+      }
+      const mob =
+        g.mobs.find((m) => m.alive && m.word.id === g.targetId) ??
+        g.mobs.find((m) => m.alive && g.elapsed() >= m.startAt);
+      const typed = mob?.word.id === g.targetId ? g.typed.length : 0;
+      return { status: g.status, rest: mob?.word.lemma.slice(typed) ?? "" };
+    });
+    if (s.status === "over") break;
+    if (s.rest) await page.keyboard.type(s.rest.slice(0, 1));
+    await page.waitForTimeout(60);
+  }
+  await expect(page.getByRole("heading", { name: "HẠ BOSS!" })).toBeVisible({ timeout: 10_000 });
+  await expect(page.getByText("Mạng còn lại")).toBeVisible();
 });
 
 test("guest picks a set in Sentence Express and plays until the coal runs out", async ({

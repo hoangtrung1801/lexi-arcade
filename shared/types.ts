@@ -28,6 +28,16 @@ export type RaceEvent =
   | { t: number; type: "reveal"; wordId: number } // the game showed the next letter
   | { t: number; type: "done"; wordId: number };
 
+/**
+ * Spell Dungeon log. Keys are filed under the word being typed (for monsters: the one the typed
+ * letters point at). "hurt" is a heart lost to that word's monster or the boss.
+ */
+export interface SpellEvent {
+  t: number;
+  type: "correct" | "wrong" | "reveal" | "done" | "hurt";
+  wordId: number;
+}
+
 /** A Sentence Express sentence. `en` is the full sentence, punctuation included. */
 export interface Sentence {
   id: number;

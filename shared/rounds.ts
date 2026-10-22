@@ -2,6 +2,7 @@ import type { GameId } from "./games";
 import { computeRaceResult, validateRace } from "./race";
 import { computeResult } from "./scoring";
 import { computeTrainResult, validateTrain } from "./sentence";
+import { computeSpellResult, validateSpell } from "./spell";
 import type {
   Difficulty,
   GameEvent,
@@ -9,6 +10,7 @@ import type {
   RaceEvent,
   RoundResult,
   Sentence,
+  SpellEvent,
   TrainEvent,
 } from "./types";
 import { type ValidationResult, validateEvents } from "./validate";
@@ -21,7 +23,7 @@ export interface RoundContext {
 }
 
 /** Each game's log type; the server parses it with the matching schema before calling these. */
-export type AnyEvent = GameEvent | RaceEvent | TrainEvent;
+export type AnyEvent = GameEvent | RaceEvent | TrainEvent | SpellEvent;
 
 export function validateRound(
   game: GameId,
@@ -32,6 +34,8 @@ export function validateRound(
   if (game === "ghost-race") return validateRace(events as RaceEvent[], ctx.words, elapsedWallMs);
   if (game === "sentence-express")
     return validateTrain(events as TrainEvent[], ctx.sentences, elapsedWallMs);
+  if (game === "spell-dungeon")
+    return validateSpell(events as SpellEvent[], ctx.words, elapsedWallMs);
   return validateEvents(events as GameEvent[], ctx.words, elapsedWallMs);
 }
 
@@ -43,5 +47,6 @@ export function scoreRound(
   if (game === "ghost-race")
     return computeRaceResult(events as RaceEvent[], ctx.words, ctx.difficulty);
   if (game === "sentence-express") return computeTrainResult(events as TrainEvent[], ctx.sentences);
+  if (game === "spell-dungeon") return computeSpellResult(events as SpellEvent[], ctx.words);
   return computeResult(events as GameEvent[], ctx.words);
 }
