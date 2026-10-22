@@ -197,13 +197,19 @@ export function Round({ config, unitIdx, unitCount, setName, onFinish, onExit }:
         </div>
         <div className="flex flex-col items-center gap-1">
           <div
-            className="hb-panel flex h-[64px] min-w-[300px] max-w-[460px] items-center justify-center gap-3 px-3"
+            className="hb-panel flex h-[64px] min-w-[300px] max-w-[680px] items-center justify-center gap-3 px-3"
             data-testid="prompt"
           >
-            <span className="hb-chip-gold t-sm shrink-0 px-1 text-[#3a1a18] uppercase">Nghĩa</span>
+            <span className="hb-chip-gold t-md shrink-0 px-2.5 text-[#3a1a18]">Nghĩa</span>
             <span
               key={prompt?.id ?? "none"}
-              className={`t-xl t-bold truncate ${prompt ? "anim-pop text-gold" : "text-slate"}`}
+              className={`t-bold truncate ${prompt ? "anim-pop text-gold" : "text-slate"} ${
+                (prompt?.meaningVi.length ?? 0) > 22
+                  ? "t-md"
+                  : (prompt?.meaningVi.length ?? 0) > 14
+                    ? "t-lg"
+                    : "t-xl"
+              }`}
             >
               {prompt?.meaningVi ?? "…"}
             </span>

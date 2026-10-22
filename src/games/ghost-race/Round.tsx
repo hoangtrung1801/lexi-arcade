@@ -345,7 +345,10 @@ export function Round({ config, unitIdx, unitTitle, onFinish, onExit }: Props) {
         </div>
 
         {/* prompt */}
-        <div className="absolute inset-x-0 top-[430px] flex items-start justify-center gap-6">
+        <div
+          className="absolute inset-x-0 flex items-start justify-center gap-6"
+          style={{ top: 148 + laneH * lanes.length + 12 }}
+        >
           <div className="flex w-[210px] flex-col items-end gap-1 pt-2">
             <span className="font-px t-sm text-mist">ĐÃ QUA</span>
             {done.map((w) => (
@@ -356,13 +359,19 @@ export function Round({ config, unitIdx, unitTitle, onFinish, onExit }: Props) {
           </div>
           <div
             key={shake}
-            className={`hb-panel flex w-[600px] flex-col items-center gap-3 px-5 py-4 ${shake ? "anim-shake" : ""}`}
+            className={`hb-panel flex w-[600px] flex-col items-center gap-2.5 px-5 py-3.5 ${shake ? "anim-shake" : ""}`}
           >
-            <div className="flex items-center gap-3" data-testid="race-prompt">
-              <span className="hb-chip-gold t-sm shrink-0 px-1 text-[#3a1a18] uppercase">
+            <div className="flex max-w-full flex-col items-center gap-2" data-testid="race-prompt">
+              {/* Galmuri11 regular: the only pixel cut here with every Vietnamese capital */}
+              <span className="hb-chip-gold t-md shrink-0 px-2.5 whitespace-nowrap text-[#3a1a18]">
                 Nghĩa {Math.min(engine.idx + 1, engine.words.length)}/{engine.words.length}
               </span>
-              <span key={word?.id} className="t-xl t-bold anim-pop truncate text-gold">
+              <span
+                key={word?.id}
+                className={`t-bold anim-pop line-clamp-2 max-w-full text-center break-words text-gold ${
+                  (word?.meaningVi.length ?? 0) > 18 ? "t-lg" : "t-xl"
+                }`}
+              >
                 {word?.meaningVi ?? "…"}
               </span>
             </div>
