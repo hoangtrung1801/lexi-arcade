@@ -1,4 +1,11 @@
-import { TRAIN_LIVES, TRAIN_MIN_MS_PER_WORD, TRAIN_POINTS_PER_WORD } from "./rules";
+import {
+  TRAIN_BONUS_MS,
+  TRAIN_LIVES,
+  TRAIN_MIN_MS_PER_WORD,
+  TRAIN_POINTS_PER_WORD,
+  TRAIN_RUN_MS,
+  TRAIN_STAR_SENTENCES,
+} from "./rules";
 import { comboMultiplier } from "./scoring";
 import type { RoundResult, Sentence, TrainEvent } from "./types";
 import { checkTimeline, type ValidationResult } from "./validate";
@@ -19,10 +26,22 @@ function sameWords(a: readonly string[], b: readonly string[]): boolean {
   return x.every((w, i) => w === y[i]);
 }
 
+/** When a run ends if `solved` sentences have been solved so far. */
+export function trainTimeLimit(solved: number): number {
+  return TRAIN_RUN_MS + solved * TRAIN_BONUS_MS;
+}
+
+export function trainStars(solved: number): RoundResult["stars"] {
+  const [one, two, three] = TRAIN_STAR_SENTENCES;
+  return solved >= three ? 3 : solved >= two ? 2 : solved >= one ? 1 : 0;
+}
+
 /**
- * Replays a Sentence Express round. A train sent off in the wrong order costs a lump of coal (a
- * life) and breaks the combo; running out of coal ends the round. A sentence solved with a hint
- * scores half and breaks the combo. The round is won when every sentence is solved.
+ * Replays a Sentence Express run: a race against the clock over a whole word set. Each solved
+ * sentence adds time; a train sent off in the wrong order costs a lump of coal (a life) and breaks
+ * the combo. A sentence solved with a hint scores half and breaks the combo. The run ends when the
+ * time is up (events after it do not count), the coal runs out ("lost") or the sentences run out.
+ * Stars come from the number of sentences solved.
  */
 export function computeTrainResult(
   events: readonly TrainEvent[],
@@ -45,6 +64,10 @@ export function computeTrainResult(
 
   for (const ev of events) {
     if (status) break;
+    if (ev.t > trainTimeLimit(solved.size)) {
+      status = "won";
+      break;
+    }
     const item = byId.get(ev.sentenceId);
     if (!item || solved.has(ev.sentenceId)) continue;
     lastT = ev.t;
@@ -72,12 +95,12 @@ export function computeTrainResult(
     }
   }
 
-  const finalStatus = status ?? "lost";
+  // time ran out with coal left
+  const finalStatus = status ?? "won";
   const livesLost = TRAIN_LIVES - Math.max(lives, 0);
   const submits = goodSubmits + badSubmits;
   const accuracy = submits === 0 ? 0 : goodSubmits / submits;
-  const stars: RoundResult["stars"] =
-    finalStatus !== "won" ? 0 : livesLost === 0 && hinted.size === 0 ? 3 : livesLost <= 1 ? 2 : 1;
+  const stars = trainStars(solved.size);
   const keyword = (id: number) => byId.get(id)?.s.wordId ?? 0;
   const solvedIds = [...solved];
 

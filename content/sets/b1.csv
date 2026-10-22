@@ -1,0 +1,690 @@
+unit,lemma,pos,cefr,meaning_vi,ipa,topic,source,reviewed
+1,kiss,n/v,b1,nụ hôn; hôn,/kɪs/,fam,llm,false
+1,bride,n,b1,cô dâu,/bɹaɪd/,fam,llm,false
+1,enemy,n,b1,kẻ thù,/ˈɛnəmi/,fam,llm,false
+1,youth,n,b1,"tuổi trẻ, thanh niên",/juθ/,fam,llm,false
+1,native,adj/n,b1,bản địa; người bản xứ,/ˈneɪtəv/,fam,llm,false
+1,prince,n,b1,hoàng tử,/pɹɪns/,fam,llm,false
+1,victim,n,b1,nạn nhân,/ˈvɪktɪm/,fam,llm,false
+1,engaged,adj,b1,đã đính hôn; bận,/ɪnˈɡeɪd͡ʒd/,fam,llm,false
+1,servant,n,b1,người hầu,/ˈsɝvənt/,fam,llm,false
+1,marriage,n,b1,hôn nhân,/ˈmæɹɪd͡ʒ/,fam,llm,false
+2,princess,n,b1,công chúa,/pɹɪnˈsɛs/,fam,llm,false
+2,relation,n,b1,mối quan hệ,/ɹɪˈleɪʃ(ə)n/,fam,llm,false
+2,relative,adj/n,b1,tương đối; họ hàng,/ˈɹɛl.ə.tɪv/,fam,llm,false
+2,stranger,n,b1,người lạ,/ˈstɹeɪnd͡ʒɚ/,fam,llm,false
+2,childhood,n,b1,thời thơ ấu,/ˈtʃaɪld.hʊd/,fam,llm,false
+2,gentleman,n,b1,quý ông,/ˈd͡ʒɛn.təl.mən/,fam,llm,false
+2,immigrant,n,b1,người nhập cư,/ˈɪmɪɡɹənt/,fam,llm,false
+2,friendship,n,b1,tình bạn,/ˈfɹɛn(d)ʃɪp/,fam,llm,false
+2,generation,n,b1,thế hệ,/ˌd͡ʒɛnəˈɹeɪʃən/,fam,llm,false
+3,lip,n,b1,môi,/lɪp/,body,llm,false
+3,sex,n,b1,giới tính; tình dục,/ˈsɛks/,body,llm,false
+3,toe,n,b1,ngón chân,/toʊ/,body,llm,false
+3,nail,n,b1,móng tay; cái đinh,/neɪl/,body,llm,false
+3,chest,n,b1,ngực,/t͡ʃɛst/,body,llm,false
+3,sight,n,b1,thị lực; cảnh tượng,/saɪt/,body,llm,false
+3,breath,n,b1,hơi thở,/bɹɛθ/,body,llm,false
+3,injure,v,b1,làm bị thương,/ˈɪn.d͡ʒɚ/,body,llm,false
+3,mental,adj,b1,thuộc tinh thần,/ˈmɛn.təl/,body,llm,false
+3,muscle,n,b1,cơ bắp,/ˈmʌs.əl/,body,llm,false
+3,sexual,adj,b1,thuộc tình dục,/sɛk.ʃu.əl/,body,llm,false
+4,throat,n,b1,cổ họng,/ˈθɹoʊt/,body,llm,false
+4,tongue,n,b1,lưỡi,/tʌŋ/,body,llm,false
+4,breathe,v,b1,thở,/bɹið/,body,llm,false
+4,fitness,n,b1,thể lực,/ˈfɪt.nəs/,body,llm,false
+4,injured,adj,b1,bị thương,/ˈɪnd͡ʒɚd/,body,llm,false
+4,painful,adj,b1,đau đớn,/ˈpeɪn.fl̩/,body,llm,false
+4,symptom,n,b1,triệu chứng,/ˈsɪm(p)təm/,body,llm,false
+4,strength,n,b1,sức mạnh,/ˈstɹɛŋθ/,body,llm,false
+4,breathing,n,b1,sự thở,/ˈbɹiðɪŋ/,body,llm,false
+4,operation,n,b1,"ca phẫu thuật, hoạt động",/ˌɑ.pəˈɹeɪ.ʃən/,body,llm,false
+4,treatment,n,b1,sự điều trị,/ˈtɹiːtmənt/,body,llm,false
+5,fry,v,b1,"chiên, rán",/fɹaɪ/,food,llm,false
+5,mix,n/v,b1,hỗn hợp; trộn,/ˈmɪks/,food,llm,false
+5,tin,n,b1,hộp thiếc; thiếc,/tɪn/,food,llm,false
+5,bake,v,b1,nướng (bánh),/beɪk/,food,llm,false
+5,flour,n,b1,bột mì,/ˈflaʊ.ɚ/,food,llm,false
+5,grain,n,b1,hạt ngũ cốc,/ɡɹeɪn/,food,llm,false
+5,slice,n/v,b1,lát; cắt lát,/slaɪs/,food,llm,false
+5,spicy,adj,b1,cay,/ˈspaɪsi/,food,llm,false
+5,frozen,adj,b1,đông lạnh,/ˈfɹəʊzən/,food,llm,false
+5,alcohol,n,b1,"rượu, cồn",/ˈæl.kə.hɔl/,food,llm,false
+5,alcoholic,adj,b1,có cồn,/ˌæl.kəˈhɔ.lɪk/,food,llm,false
+5,ingredient,n,b1,nguyên liệu,/ɪnˈɡɹiːdi.ənt/,food,llm,false
+6,pan,n,b1,cái chảo,/pæn/,home,llm,false
+6,pin,n/v,b1,ghim; ghim lại,/pɪn/,home,llm,false
+6,pot,n,b1,"cái nồi, chậu",/pɒt/,home,llm,false
+6,bell,n,b1,cái chuông,/bɛl/,home,llm,false
+6,dirt,n,b1,bụi bẩn,/dɝt/,home,llm,false
+6,dust,n,b1,bụi,/dʌst/,home,llm,false
+6,iron,n/v,b1,"sắt, bàn là; là quần áo",/ˈaɪ.ɚn/,home,llm,false
+6,mess,n,b1,sự bừa bộn,/mɛs/,home,llm,false
+6,pipe,n,b1,"ống nước, tẩu",/ˈpaɪp/,home,llm,false
+6,rent,n/v,b1,tiền thuê; thuê,/ˈɹɛnt/,home,llm,false
+6,rope,n,b1,dây thừng,/ɹoʊp/,home,llm,false
+6,tape,n,b1,băng dính; băng ghi âm,/teɪ̯p/,home,llm,false
+7,tube,n,b1,ống,/tuːb/,home,llm,false
+7,yard,n,b1,sân; thước Anh,/ˈjɑɹd/,home,llm,false
+7,alarm,n/v,b1,chuông báo động,/əˈlɑɹm/,home,llm,false
+7,chain,n/v,b1,"dây xích, chuỗi",/ˈt͡ʃeɪn/,home,llm,false
+7,fence,n,b1,hàng rào,/fɛns/,home,llm,false
+7,frame,n/v,b1,khung; đóng khung,/ˈfɹeɪ̯m/,home,llm,false
+7,robot,n,b1,người máy,/ˈɹoʊ.bɑt/,home,llm,false
+7,shelf,n,b1,"cái kệ, giá sách",/ʃɛlf/,home,llm,false
+7,garage,n,b1,"nhà để xe, gara",/ɡ(ə)ˈɹæ(d)ʒ/,home,llm,false
+7,indoor,adj,b1,trong nhà,/ˈɪndoɹ/,home,llm,false
+7,needle,n,b1,cây kim,/ˈniː.dəl/,home,llm,false
+7,powder,n,b1,bột,/ˈpaʊ.də(ɹ)/,home,llm,false
+8,string,n,b1,sợi dây,/stɹɪŋ/,home,llm,false
+8,battery,n,b1,pin,/ˈbæt.(ə)ɹi/,home,llm,false
+8,ceiling,n,b1,trần nhà,/ˈsilɪŋ/,home,llm,false
+8,cottage,n,b1,"nhà tranh, nhà nhỏ",/ˈkɑt.ɪd͡ʒ/,home,llm,false
+8,curtain,n,b1,rèm cửa,/ˈkɜɹt(ə)n/,home,llm,false
+8,heating,n,b1,hệ thống sưởi,/ˈhiːtɪŋ/,home,llm,false
+8,indoors,adv,b1,ở trong nhà,/ɪnˈdɔɹz/,home,llm,false
+8,package,n/v,b1,"gói hàng, bưu kiện",/ˈpæk.ɪd͡ʒ/,home,llm,false
+8,decorate,v,b1,trang trí,/ˈdɛkəɹeɪt/,home,llm,false
+8,property,n,b1,"tài sản, bất động sản",/ˈpɹɑ.pɚ.ti/,home,llm,false
+8,container,n,b1,"đồ đựng, thùng chứa",/kənˈteɪ.nəɹ/,home,llm,false
+9,cap,n,b1,mũ lưỡi trai,/kæp/,cloth,llm,false
+9,coin,n,b1,đồng xu,/ˈkoɪ̯n/,cloth,llm,false
+9,wool,n,b1,len,/wʊl/,cloth,llm,false
+9,brand,n/v,b1,nhãn hiệu,/ˈbɹænd/,cloth,llm,false
+9,cloth,n,b1,vải,/klɔθ/,cloth,llm,false
+9,glove,n,b1,găng tay,/ɡlʌv/,cloth,llm,false
+9,goods,n,b1,hàng hóa,/ɡʊdz/,cloth,llm,false
+9,label,n/v,b1,nhãn; dán nhãn,/ˈleɪ.bəl/,cloth,llm,false
+9,tight,adj,b1,"chật, chặt",/taɪt/,cloth,llm,false
+9,afford,v,b1,đủ khả năng chi trả,/əˈfoɹd/,cloth,llm,false
+9,charge,n/v,b1,"phí; tính phí, sạc",/ˈt͡ʃɑɹd͡ʒ/,cloth,llm,false
+9,cotton,n,b1,vải bông,/ˈkɑt.n̩/,cloth,llm,false
+10,luxury,adj/n,b1,sang trọng; sự xa xỉ,/ˈlʌɡ.ʒə.ɹi/,cloth,llm,false
+10,costume,n,b1,trang phục,/ˈkɑsˌt(j)um/,cloth,llm,false
+10,diamond,n,b1,kim cương,/ˈdaɪ.ə.mənd/,cloth,llm,false
+10,dressed,adj,b1,mặc quần áo,/ˈdɹɛst/,cloth,llm,false
+10,leather,n,b1,da thuộc,/ˈlɛðɚ/,cloth,llm,false
+10,payment,n,b1,sự thanh toán,/ˈpeɪmənt/,cloth,llm,false
+10,receipt,n,b1,"hóa đơn, biên lai",/ɹɪˈsit/,cloth,llm,false
+10,consumer,n,b1,người tiêu dùng,/kənˈsumɚ/,cloth,llm,false
+10,discount,n/v,b1,sự giảm giá,/dɪˈskaʊnt/,cloth,llm,false
+10,spending,n,b1,sự chi tiêu,/ˈspɛndɪŋ/,cloth,llm,false
+10,underwear,n,b1,đồ lót,/ˈʌndɚˌwɛɹ/,cloth,llm,false
+10,fashionable,adj,b1,hợp thời trang,/ˈfæʃənəbl̩/,cloth,llm,false
+11,bee,n,b1,con ong,/ˈbiː/,nat,llm,false
+11,fur,n,b1,lông thú,/fɝ/,nat,llm,false
+11,mud,n,b1,bùn,/mʌd/,nat,llm,false
+11,coal,n,b1,than đá,/koʊl/,nat,llm,false
+11,flow,n/v,b1,dòng chảy; chảy,/ˈfloʊ̯/,nat,llm,false
+11,hunt,n/v,b1,săn bắt,/hʌnt/,nat,llm,false
+11,leaf,n,b1,chiếc lá,/liːf/,nat,llm,false
+11,sand,n,b1,cát,/sænd/,nat,llm,false
+11,seed,n,b1,hạt giống,/siːd/,nat,llm,false
+12,soil,n,b1,đất,/sɔɪl/,nat,llm,false
+12,tail,n,b1,cái đuôi,/ˈteɪ̯l/,nat,llm,false
+12,wing,n,b1,cánh,/wɪŋ/,nat,llm,false
+12,shell,n,b1,"vỏ sò, vỏ",/ʃɛl/,nat,llm,false
+12,branch,n,b1,cành cây; chi nhánh,/bɹɑːnt͡ʃ/,nat,llm,false
+12,poisonous,adj,b1,có độc,/ˈpɔɪzənəs/,nat,llm,false
+12,atmosphere,n,b1,bầu không khí,/ˈatməsˌfɛː/,nat,llm,false
+12,earthquake,n,b1,động đất,/ˈɝθkweɪk/,nat,llm,false
+12,environmental,adj,b1,thuộc môi trường,/ɪnˌvaɪ.ɹə(n)ˈmɛn.təl/,nat,llm,false
+13,pale,adj,b1,"nhợt nhạt, nhạt",/peɪl/,wthr,llm,false
+13,flood,n/v,b1,lũ lụt; làm ngập,/flʌd/,wthr,llm,false
+13,freeze,v,b1,đóng băng,/ˈfɹiːz/,wthr,llm,false
+13,coloured,adj,b1,có màu,/ˈkʌl.əd/,wthr,llm,false
+13,hurricane,n,b1,bão lớn,/ˈhʌɹɪkeɪn/,wthr,llm,false
+13,aged,adj,b1,ở độ tuổi,/eɪdʒd/,time,llm,false
+13,total,adj/n,b1,toàn bộ; tổng số,/ˈtoʊ.tl̩/,time,llm,false
+13,decade,n,b1,thập kỷ,/ˈdɛkeɪd/,time,llm,false
+14,length,n,b1,"chiều dài, độ dài",/lɛŋ(k)θ/,time,llm,false
+14,current,adj/n,b1,hiện tại,/ˈkʌɹɪnt/,time,llm,false
+14,forever,adv,b1,mãi mãi,/fəˈɹɛvɚ/,time,llm,false
+14,occasion,n,b1,"dịp, cơ hội",/əˈkeɪ̯ʒən/,time,llm,false
+14,currently,adv,b1,hiện nay,/ˈkʌɹ.ənt.li/,time,llm,false
+14,statistic,n,b1,số liệu thống kê,/stəˈtɪs.tɪk/,time,llm,false
+14,percentage,n,b1,tỷ lệ phần trăm,/pə(ɹ)ˈsɛntɪd͡ʒ/,time,llm,false
+14,appointment,n,b1,cuộc hẹn,/əˈpɔɪnt.mɛnt/,time,llm,false
+15,mall,n,b1,trung tâm mua sắm,/mɔːl/,place,llm,false
+15,path,n,b1,con đường mòn,/pɑːθ/,place,llm,false
+15,block,n/v,b1,"khối, dãy nhà; chặn",/blɑk/,place,llm,false
+15,court,n,b1,tòa án; sân (thể thao),/ˈkɔɹt/,place,llm,false
+15,queue,n/v,b1,hàng người; xếp hàng,/kju/,place,llm,false
+15,nation,n,b1,"quốc gia, dân tộc",/ˈneɪʃən/,place,llm,false
+15,remote,adj,b1,"xa xôi, hẻo lánh",/ɹəˈməʊt̞/,place,llm,false
+15,statue,n,b1,bức tượng,/ˈstæt͡ʃu/,place,llm,false
+15,central,adj,b1,trung tâm,/ˈsɛntɹ(ə)l/,place,llm,false
+16,eastern,adj,b1,thuộc phía đông,/ˈiː.stən/,place,llm,false
+16,located,adj,b1,"nằm ở, tọa lạc",/ˈloʊkeɪtɪd/,place,llm,false
+16,western,adj,b1,thuộc phương tây,/ˈwɛstɚn/,place,llm,false
+16,entrance,n,b1,lối vào,/ɛnˈtɹɑːns/,place,llm,false
+16,location,n,b1,"vị trí, địa điểm",/loʊˈkeɪʃən/,place,llm,false
+16,northern,adj,b1,thuộc phía bắc,/ˈnɔɹ.ðɚn/,place,llm,false
+16,southern,adj,b1,thuộc phía nam,/ˈsʌðɚn/,place,llm,false
+16,countryside,n,b1,vùng nông thôn,/ˈkʌn.tɹiˌsaɪd/,place,llm,false
+16,neighbourhood,n,b1,"khu phố, hàng xóm",/ˈneɪbə.hʊd/,place,llm,false
+17,fuel,n/v,b1,nhiên liệu,/ˈfjuːəl/,trav,llm,false
+17,port,n,b1,cảng,/poɹt/,trav,llm,false
+17,tent,n,b1,cái lều,/tɛnt/,trav,llm,false
+17,tyre,n,b1,lốp xe,/taɪə(ɹ)/,trav,llm,false
+17,border,n/v,b1,biên giới,/ˈbɔɹ.dɚ/,trav,llm,false
+17,sailor,n,b1,thủy thủ,/ˈseɪ.lɚ/,trav,llm,false
+17,arrival,n,b1,sự đến nơi,/əˈɹaɪ.vl̩/,trav,llm,false
+17,explore,v,b1,khám phá,/ɪkˈsploɹ/,trav,llm,false
+18,currency,n,b1,tiền tệ,/ˈkʌɹ.ən.si/,trav,llm,false
+18,departure,n,b1,sự khởi hành,/dɪˈpɑː(ɹ)tjə(ɹ)/,trav,llm,false
+18,attraction,n,b1,sức hút; điểm tham quan,/əˈtɹækʃn̩/,trav,llm,false
+18,expedition,n,b1,cuộc thám hiểm,/ɛkspəˈdɪʃən/,trav,llm,false
+18,helicopter,n,b1,trực thăng,/ˈhɛlɪˌkɑptɜɹ/,trav,llm,false
+18,destination,n,b1,điểm đến,/dɛstɪˈneɪʃən/,trav,llm,false
+18,reservation,n,b1,sự đặt chỗ,/ˌɹɛz.ɚˈveɪ.ʃən/,trav,llm,false
+18,accommodation,n,b1,chỗ ở,/əˌkɒm.əˈdeɪ.ʃən/,trav,llm,false
+19,tax,n/v,b1,thuế; đánh thuế,/tæks/,work,llm,false
+19,duty,n,b1,"nhiệm vụ, bổn phận",/ˈdjuː.ti/,work,llm,false
+19,file,n/v,b1,"tập tin, hồ sơ",/faɪl/,work,llm,false
+19,hire,n/v,b1,thuê,/ˈhaɪɹ/,work,llm,false
+19,poet,n,b1,nhà thơ,/ˈpəʊ.ɪt/,work,llm,false
+19,agent,n,b1,"đại lý, người đại diện",/ˈeɪ̯d͡ʒənt/,work,llm,false
+19,grade,n/v,b1,"điểm, lớp",/ɡɹeɪd/,work,llm,false
+19,guard,n/v,b1,người bảo vệ; canh gác,/ɡɑɹd/,work,llm,false
+19,judge,n/v,b1,thẩm phán; đánh giá,/d͡ʒʌd͡ʒ/,work,llm,false
+19,shift,n/v,b1,ca làm việc; sự thay đổi,/ˈʃɪft/,work,llm,false
+19,staff,n,b1,nhân viên,/stɑːf/,work,llm,false
+19,trade,n/v,b1,thương mại; buôn bán,/tɹeɪd/,work,llm,false
+19,union,n,b1,"liên minh, công đoàn",/ˈjuː.njən/,work,llm,false
+20,campus,n,b1,khuôn viên trường,/ˈkæmpəs/,work,llm,false
+20,clause,n,b1,mệnh đề,/klɔz/,work,llm,false
+20,client,n,b1,khách hàng,/ˈklaɪ.ənt/,work,llm,false
+20,editor,n,b1,biên tập viên,/ˈɛd.ɪ.təɹ/,work,llm,false
+20,export,n/v,b1,hàng xuất khẩu; xuất khẩu,/ˈɛks.pɔɹt/,work,llm,false
+20,import,n/v,b1,hàng nhập khẩu; nhập khẩu,/ˈɪm.pɔɹt/,work,llm,false
+20,invest,v,b1,đầu tư,/ɪnˈvɛst/,work,llm,false
+20,priest,n,b1,linh mục,/ˈpɹiːst/,work,llm,false
+20,profit,n,b1,lợi nhuận,/ˈpɹɑfɪt/,work,llm,false
+20,retire,v,b1,nghỉ hưu,/ɹəˈtaɪɹ/,work,llm,false
+20,revise,v,b1,"ôn tập, sửa lại",/ɹɪˈvaɪz/,work,llm,false
+20,studio,n,b1,"phòng thu, xưởng",/ˈstudi.oʊ/,work,llm,false
+20,theory,n,b1,lý thuyết,/ˈθɪ.ɹi/,work,llm,false
+21,account,n/v,b1,tài khoản,/əˈkaʊnt/,work,llm,false
+21,chapter,n,b1,chương (sách),/ˈt͡ʃæptə(r)/,work,llm,false
+21,diagram,n,b1,"biểu đồ, sơ đồ",/ˈdaɪ.ə.ɡɹæm/,work,llm,false
+21,educate,v,b1,giáo dục,/ˈɛd͡ʒ.əˌkeɪt/,work,llm,false
+21,journal,n,b1,"tạp chí, nhật ký",/ˈd͡ʒɝnəl/,work,llm,false
+21,retired,adj,b1,đã nghỉ hưu,/ɹɪˈtaɪəd/,work,llm,false
+21,summary,n,b1,bản tóm tắt,/ˈsʌm.ə.ɹi/,work,llm,false
+21,academic,adj/n,b1,thuộc học thuật,/ˌæk.əˈdɛm.ɪk/,work,llm,false
+21,analysis,n,b1,sự phân tích,/əˈnælɪsɪs/,work,llm,false
+21,campaign,n/v,b1,chiến dịch; vận động,/kæmˈpeɪn/,work,llm,false
+21,chemical,adj/n,b1,thuộc hóa học; hóa chất,/ˈkɛm.ɪ.kəl/,work,llm,false
+21,graduate,n/v,b1,người tốt nghiệp; tốt nghiệp,/ˈɡɹæd͡ʒuɪt/,work,llm,false
+21,keyboard,n,b1,bàn phím,/ˈkiːbɔːd/,work,llm,false
+22,planning,n,b1,sự lập kế hoạch,/ˈplænɪŋ/,work,llm,false
+22,printing,n,b1,sự in ấn,/ˈpɹɪntɪŋ/,work,llm,false
+22,producer,n,b1,nhà sản xuất,/pɹəˈdusɚ/,work,llm,false
+22,software,n,b1,phần mềm,/ˈsɔf(t)ˌwɛɹ/,work,llm,false
+22,candidate,n,b1,ứng viên,/ˈkæn.dɪ.dɪt/,work,llm,false
+22,financial,adj,b1,thuộc tài chính,/faɪˈnæn.ʃəl/,work,llm,false
+22,marketing,n,b1,tiếp thị,/ˈmɑːkɪtɪŋ/,work,llm,false
+22,organizer,n,b1,người tổ chức,/ˈɔɹɡənaɪzɚ/,work,llm,false
+22,qualified,adj,b1,đủ trình độ,/ˈkwɑ.lɪ.faɪd/,work,llm,false
+22,summarize,v,b1,tóm tắt,/ˈsʌməˌɹaɪz/,work,llm,false
+22,technical,adj,b1,thuộc kỹ thuật,/ˈtɛk.nɪk.əl/,work,llm,false
+22,technique,n,b1,kỹ thuật,/tɛkˈniːk/,work,llm,false
+23,translate,v,b1,dịch,/tɹænzˈleɪt/,work,llm,false
+23,volunteer,n/v,b1,tình nguyện viên; tình nguyện,/ˌvɑlənˈtɪɹ/,work,llm,false
+23,assignment,n,b1,"bài tập, nhiệm vụ",/əˈsaɪn.mənt/,work,llm,false
+23,commercial,adj/n,b1,thương mại; quảng cáo,/kəˈmɝ.ʃəl/,work,llm,false
+23,definition,n,b1,định nghĩa,/ˌdɛf.ɪˈnɪʃ.ən/,work,llm,false
+23,employment,n,b1,việc làm,/ɪmˈplɔɪmənt/,work,llm,false
+23,laboratory,n,b1,phòng thí nghiệm,/ləˈbɒɹət(ə)ɹi/,work,llm,false
+23,literature,n,b1,văn học,/ˈlɪt.(ə.)ɹə.t͡ʃə(ɹ)/,work,llm,false
+23,management,n,b1,sự quản lý,/ˈmæn.ɪdʒ.mənt/,work,llm,false
+23,politician,n,b1,chính trị gia,/ˌpɑ.ləˈtɪʃ.ən/,work,llm,false
+23,production,n,b1,sự sản xuất,/pɹəˈdʌkʃən/,work,llm,false
+23,profession,n,b1,nghề nghiệp,/pɹəˈfɛʃ.ən/,work,llm,false
+24,scientific,adj,b1,thuộc khoa học,/ˌsaɪ.ənˈtɪf.ɪk/,work,llm,false
+24,unemployed,adj,b1,thất nghiệp,/ˌʌnɪmˈplɔɪd/,work,llm,false
+24,application,n,b1,đơn xin; ứng dụng,/ˌæp.lɪˈkeɪ.ʃən/,work,llm,false
+24,educational,adj,b1,mang tính giáo dục,/ˌɛd͡ʒ.ʊˈkeɪ.ʃə.nəl/,work,llm,false
+24,engineering,n,b1,ngành kỹ thuật,/ˌɛn.d͡ʒɪˈnɪ(ə)ɹ.ɪŋ/,work,llm,false
+24,experienced,adj,b1,có kinh nghiệm,/ɪkˈspɪɹ.i.ənst/,work,llm,false
+24,translation,n,b1,bản dịch,/tɹænzˈleɪʃən/,work,llm,false
+24,photographer,n,b1,nhiếp ảnh gia,/fəˈtɑ.ɡɹə.fɚ/,work,llm,false
+24,presentation,n,b1,bài thuyết trình,/ˌpɹɛzn̩ˈteɪʃn̩/,work,llm,false
+24,unemployment,n,b1,nạn thất nghiệp,/ʌn.ɪmˈplɔɪ.mənt/,work,llm,false
+24,qualification,n,b1,"bằng cấp, trình độ",/ˌkwɑlɪfɪˈkeɪʃən/,work,llm,false
+24,responsibility,n,b1,trách nhiệm,/ɹɪˌspɑn.səˈbɪl.ə.ti/,work,llm,false
+25,ad,n,b1,quảng cáo,/æd/,fun,llm,false
+25,net,n,b1,cái lưới,/nɛt/,fun,llm,false
+25,drum,n,b1,cái trống,/ˈdɹʌm/,fun,llm,false
+25,folk,adj/n,b1,dân gian; người ta,/foʊk/,fun,llm,false
+25,host,n/v,b1,"chủ nhà, người dẫn",/hoʊst/,fun,llm,false
+25,kick,n/v,b1,cú đá; đá,/kɪk/,fun,llm,false
+25,plot,n/v,b1,cốt truyện,/plɑt/,fun,llm,false
+25,poem,n,b1,bài thơ,/pɔɪm/,fun,llm,false
+25,album,n,b1,album,/ˈælbəm/,fun,llm,false
+25,ghost,n,b1,con ma,/ɡoʊst/,fun,llm,false
+25,magic,adj/n,b1,kỳ diệu; phép thuật,/ˈmad͡ʒɪk/,fun,llm,false
+25,rugby,n,b1,bóng bầu dục,/ˈɹʌɡbi/,fun,llm,false
+25,horror,n,b1,sự kinh hoàng,/ˈhoɹɚ/,fun,llm,false
+26,poetry,n,b1,thơ ca,/ˈpoʊ.ə.tɹi/,fun,llm,false
+26,racing,n,b1,cuộc đua,/ˈɹeɪsɪŋ/,fun,llm,false
+26,script,n,b1,kịch bản,/skɹɪpt/,fun,llm,false
+26,viewer,n,b1,người xem,/ˈvju.ɚ/,fun,llm,false
+26,captain,n,b1,"thuyền trưởng, đội trưởng",/ˈkæp.tɪn/,fun,llm,false
+26,channel,n,b1,kênh,/ˈt͡ʃænəl/,fun,llm,false
+26,episode,n,b1,tập phim,/ˈɛp.ə.soʊd/,fun,llm,false
+26,leisure,n,b1,thời gian rảnh rỗi,/ˈlɛʒə(ɹ)/,fun,llm,false
+26,outdoor,adj,b1,ngoài trời,/aʊtˈdɔː/,fun,llm,false
+26,stadium,n,b1,sân vận động,/ˈsteɪ.di.əm/,fun,llm,false
+26,ceremony,n,b1,nghi lễ,/ˈsɛɹ.əˌmoʊ.ni/,fun,llm,false
+26,champion,n,b1,nhà vô địch,/ˈt͡ʃæm.pi.ən/,fun,llm,false
+26,headline,n,b1,tiêu đề báo,/ˈhɛd.laɪn/,fun,llm,false
+27,portrait,n,b1,bức chân dung,/ˈpɔɹtɹət/,fun,llm,false
+27,entertain,v,b1,"giải trí, tiếp đãi",/ˌɛntɚˈteɪn/,fun,llm,false
+27,narrative,adj/n,b1,tường thuật; câu chuyện,/ˈnɛɹ.ə.tɪv/,fun,llm,false
+27,sculpture,n,b1,tác phẩm điêu khắc,/ˈskʌlpt͡ʃɚ/,fun,llm,false
+27,supporter,n,b1,người ủng hộ,/səˈpɔɹ.tɚ/,fun,llm,false
+27,collection,n,b1,bộ sưu tập,/kəˈlɛkʃən/,fun,llm,false
+27,competitor,n,b1,đối thủ,/kəmˈpɛt.ɪ.tɚ/,fun,llm,false
+27,exhibition,n,b1,cuộc triển lãm,/ɛksɪˈbɪʃən/,fun,llm,false
+27,celebration,n,b1,lễ kỷ niệm,/ˌsɛl.ɪˈbɹeɪ.ʃən/,fun,llm,false
+27,documentary,n,b1,phim tài liệu,/ˌdɑ.kjəˈmɛn.tə.ɹi/,fun,llm,false
+27,performance,n,b1,"màn trình diễn, hiệu suất",/pɚˈfɔɹ.mən(t)s/,fun,llm,false
+27,photography,n,b1,nhiếp ảnh,/fəˈtɑ.ɡɹə.fi/,fun,llm,false
+27,entertainment,n,b1,sự giải trí,/ˌɛn.(t)ɚˈteɪn.mənt/,fun,llm,false
+28,mad,adj,b1,"điên, tức giận",/ˈmæd/,feel,llm,false
+28,shy,adj,b1,nhút nhát,/ʃaɪ/,feel,llm,false
+28,calm,adj/n/v,b1,bình tĩnh; làm dịu,/kɑm/,feel,llm,false
+28,glad,adj,b1,vui mừng,/ɡlæd/,feel,llm,false
+28,mood,n,b1,tâm trạng,/muːd/,feel,llm,false
+28,annoy,v,b1,làm phiền,/əˈnoɪ̯/,feel,llm,false
+28,doubt,n/v,b1,sự nghi ngờ; nghi ngờ,/daʊt/,feel,llm,false
+28,proud,adj,b1,tự hào,/ˈpɹaʊ̯d/,feel,llm,false
+28,upset,adj/v,b1,buồn bã; làm buồn,/ʌpˈsɛt/,feel,llm,false
+28,admire,v,b1,ngưỡng mộ,/ədˈmaɪɹ/,feel,llm,false
+28,amazed,adj,b1,kinh ngạc,/əˈmeɪzd/,feel,llm,false
+29,belief,n,b1,niềm tin,/bɪˈliːf/,feel,llm,false
+29,guilty,adj,b1,có tội; áy náy,/ˈɡɪl.ti/,feel,llm,false
+29,lonely,adj,b1,cô đơn,/ˈloʊnli/,feel,llm,false
+29,annoyed,adj,b1,bực mình,/əˈnɔɪd/,feel,llm,false
+29,dislike,n/v,b1,sự không thích; không thích,/dɪsˈlaɪk/,feel,llm,false
+29,emotion,n,b1,cảm xúc,/ɪˈmoʊ.ʃən/,feel,llm,false
+29,passion,n,b1,niềm đam mê,/ˈpæʃən/,feel,llm,false
+29,relaxed,adj,b1,thư thái,/ɹɪˈlækst/,feel,llm,false
+29,respect,n/v,b1,sự tôn trọng; tôn trọng,/ɹɪˈspɛkt/,feel,llm,false
+29,ambition,n,b1,"hoài bão, tham vọng",/æmˈbɪʃ.ən/,feel,llm,false
+29,annoying,adj,b1,gây khó chịu,/əˈnɔɪ.ɪŋ/,feel,llm,false
+30,attitude,n,b1,thái độ,/ˈætɪt͡ʃuːd/,feel,llm,false
+30,cheerful,adj,b1,vui vẻ,/ˈt͡ʃɪɹfl̩/,feel,llm,false
+30,confused,adj,b1,bối rối,/kənˈfjuzd/,feel,llm,false
+30,frighten,v,b1,làm sợ hãi,/ˈfɹaɪ.tən/,feel,llm,false
+30,grateful,adj,b1,biết ơn,/ˈɡɹeɪtf(ə)l/,feel,llm,false
+30,pleasure,n,b1,"niềm vui, sự hài lòng",/ˈplɛʒɚ/,feel,llm,false
+30,relaxing,adj,b1,thư giãn,,feel,llm,false
+30,romantic,adj,b1,lãng mạn,/ɹoʊˈmæn(t)ɪk/,feel,llm,false
+30,confident,adj,b1,tự tin,/ˈkɑnfɪdənt/,feel,llm,false
+30,happiness,n,b1,niềm hạnh phúc,/ˈhæpinɪs/,feel,llm,false
+30,appreciate,v,b1,"trân trọng, cảm kích",/əˈpɹiː.ʃi.eɪt/,feel,llm,false
+31,determined,adj,b1,quyết tâm,/dɪˈtɝmɪnd/,feel,llm,false
+31,excitement,n,b1,sự phấn khích,/ɪkˈsaɪtmənt/,feel,llm,false
+31,frightened,adj,b1,sợ hãi,/ˈfɹaɪtn̩d/,feel,llm,false
+31,unpleasant,adj,b1,khó chịu,/ʌnˈplɛzn̩t/,feel,llm,false
+31,embarrassed,adj,b1,"xấu hổ, ngượng",/ɪmˈbɛɹ.əst/,feel,llm,false
+31,frightening,adj,b1,đáng sợ,/ˈfɹaɪtənɪŋ/,feel,llm,false
+31,disappointed,adj,b1,thất vọng,/ˌdɪsəˈpɔɪntɪd/,feel,llm,false
+31,embarrassing,adj,b1,đáng xấu hổ,/ɪmˈbæɹ.ə.sɪŋ/,feel,llm,false
+31,disappointing,adj,b1,gây thất vọng,,feel,llm,false
+31,uncomfortable,adj,b1,không thoải mái,/ʌnˈkʌm.fɚ.tə.bl̩/,feel,llm,false
+32,lay,v,b1,"đặt, để",/leɪ/,verb,llm,false
+32,set,n/v,b1,"bộ; đặt, thiết lập",/sɛt/,verb,llm,false
+32,bend,n/v,b1,khúc cua; uốn cong,/bɛnd/,verb,llm,false
+32,bite,n/v,b1,vết cắn; cắn,/baɪt/,verb,llm,false
+32,bury,v,b1,chôn cất,/ˈbɛɹi/,verb,llm,false
+32,fold,n/v,b1,"gấp, gập",/foʊld/,verb,llm,false
+32,hang,v,b1,treo,/hæŋ/,verb,llm,false
+32,pour,v,b1,"rót, đổ",/poɹ/,verb,llm,false
+32,pray,v,b1,cầu nguyện,/pɹeɪ/,verb,llm,false
+32,quit,v,b1,"bỏ, từ bỏ",/kwɪt/,verb,llm,false
+32,roll,n/v,b1,cuộn; lăn,/ɹoʊl/,verb,llm,false
+32,scan,v,b1,"quét, đọc lướt",/skæn/,verb,llm,false
+32,sink,v,b1,chìm,/ˈsɪŋk/,verb,llm,false
+33,tend,v,b1,có xu hướng,/ˈtɛnd/,verb,llm,false
+33,vote,n/v,b1,lá phiếu; bỏ phiếu,/voʊt/,verb,llm,false
+33,warn,v,b1,cảnh báo,/woɹn/,verb,llm,false
+33,admit,v,b1,thừa nhận,/ədˈmɪt/,verb,llm,false
+33,cheat,n/v,b1,kẻ gian lận; gian lận,/ˈt͡ʃiːt/,verb,llm,false
+33,claim,n/v,b1,lời khẳng định; tuyên bố,/kleɪm/,verb,llm,false
+33,click,n/v,b1,tiếng tách; nhấp chuột,/klɪk/,verb,llm,false
+33,hurry,n/v,b1,sự vội vàng; vội vã,/ˈhɝ.i/,verb,llm,false
+33,occur,v,b1,xảy ra,/əˈkɝ/,verb,llm,false
+33,press,n/v,b1,"báo chí; ấn, nhấn",/pɹɛs/,verb,llm,false
+33,prove,v,b1,chứng minh,/ˈpɹuv/,verb,llm,false
+33,quote,n/v,b1,lời trích dẫn; trích dẫn,/kwəʊt/,verb,llm,false
+33,shine,v,b1,"chiếu sáng, tỏa sáng",/ʃaɪn/,verb,llm,false
+34,shoot,v,b1,bắn; quay phim,/ʃut/,verb,llm,false
+34,stick,n/v,b1,"que, gậy; dính, dán",/stɪk/,verb,llm,false
+34,treat,v,b1,đối xử; chữa trị,/tɹiːt/,verb,llm,false
+34,waste,adj/n/v,b1,sự lãng phí; lãng phí,/ˈweɪ̯st/,verb,llm,false
+34,weigh,v,b1,"cân, nặng",/weɪ/,verb,llm,false
+34,advise,v,b1,khuyên,/ədˈvaɪz/,verb,llm,false
+34,assist,v,b1,hỗ trợ,/əˈsɪst/,verb,llm,false
+34,attach,v,b1,"gắn, đính kèm",/əˈtæt͡ʃ/,verb,llm,false
+34,bother,v,b1,làm phiền,/ˈbɑðɚ/,verb,llm,false
+34,commit,v,b1,"phạm (tội), cam kết",/kəˈmɪt/,verb,llm,false
+34,define,v,b1,định nghĩa,/dɪˈfaɪn/,verb,llm,false
+34,divide,n/v,b1,"chia, phân chia",/dɪˈvaɪd/,verb,llm,false
+34,donate,v,b1,"quyên góp, hiến tặng",/də(ʊ)ˈneɪt/,verb,llm,false
+35,escape,n/v,b1,sự trốn thoát; trốn thoát,/ɪˈskeɪp/,verb,llm,false
+35,expand,v,b1,mở rộng,/ɪkˈspænd/,verb,llm,false
+35,fasten,v,b1,"buộc, cài chặt",/ˈfæsn̩/,verb,llm,false
+35,gather,v,b1,"tụ tập, thu thập",/ˈɡæðɚ/,verb,llm,false
+35,ignore,v,b1,phớt lờ,/ɪɡˈnoɹ/,verb,llm,false
+35,intend,v,b1,dự định,/ɪnˈtɛnd/,verb,llm,false
+35,locate,v,b1,"định vị, xác định vị trí",/lə(ʊ)ˈkeɪt/,verb,llm,false
+35,punish,v,b1,trừng phạt,/ˈpʌnɪʃ/,verb,llm,false
+35,reject,v,b1,"từ chối, bác bỏ",/ɹɪˈd͡ʒɛkt/,verb,llm,false
+35,relate,v,b1,"liên quan, liên hệ",/ɹɪˈleɪt/,verb,llm,false
+35,remain,v,b1,vẫn còn,/ɹɪˈmeɪn/,verb,llm,false
+35,remind,v,b1,nhắc nhở,/ɹəˈmaɪnd/,verb,llm,false
+36,spread,n/v,b1,lan rộng; phết,/spɹid/,verb,llm,false
+36,suffer,v,b1,"chịu đựng, đau khổ",/ˈsʌfə/,verb,llm,false
+36,switch,n/v,b1,"chuyển đổi, bật tắt",/swɪt͡ʃ/,verb,llm,false
+36,update,n/v,b1,bản cập nhật; cập nhật,/ˈʌp.deɪt/,verb,llm,false
+36,wonder,n/v,b1,điều kỳ diệu; tự hỏi,/ˈwʌndɚ/,verb,llm,false
+36,analyse,v,b1,phân tích,,verb,llm,false
+36,attract,v,b1,thu hút,/əˈtɹækt/,verb,llm,false
+36,combine,v,b1,kết hợp,/kəmˈbaɪn/,verb,llm,false
+36,confirm,v,b1,xác nhận,/kənˈfɝm/,verb,llm,false
+36,confuse,v,b1,làm bối rối,/kənˈfjuz/,verb,llm,false
+36,consist,v,b1,bao gồm,/kənˈsɪst/,verb,llm,false
+36,consume,v,b1,tiêu thụ,/kənˈsɪʊm/,verb,llm,false
+37,deliver,v,b1,giao hàng,/dɪˈlɪv.ɚ/,verb,llm,false
+37,examine,v,b1,"kiểm tra, khám",/ɪɡˈzæmɪn/,verb,llm,false
+37,explode,v,b1,nổ,/ɪkˈspləʊd/,verb,llm,false
+37,measure,n/v,b1,biện pháp; đo lường,/ˈmɛʒ.ɚ/,verb,llm,false
+37,pretend,v,b1,giả vờ,/pɹəˈtɛnd/,verb,llm,false
+37,promote,v,b1,"thúc đẩy, thăng chức",/pɹəˈmoʊt/,verb,llm,false
+37,qualify,v,b1,đủ điều kiện,/ˈkwɑ.lɪ.faɪ/,verb,llm,false
+37,reflect,v,b1,"phản chiếu, phản ánh",/ɹɪˈflɛkt/,verb,llm,false
+37,release,n/v,b1,"sự phát hành; thả, phát hành",/ɹəˈliːs/,verb,llm,false
+37,require,v,b1,"yêu cầu, cần",/ɹɪˈkwaɪɹ/,verb,llm,false
+37,survive,v,b1,sống sót,/səˈvaɪv/,verb,llm,false
+37,announce,v,b1,thông báo,/əˈnaʊns/,verb,llm,false
+38,conclude,v,b1,kết luận,/kənˈkluːd/,verb,llm,false
+38,convince,v,b1,thuyết phục,/kənˈvɪns/,verb,llm,false
+38,exchange,n/v,b1,sự trao đổi; trao đổi,/ɛksˈt͡ʃeɪnd͡ʒ/,verb,llm,false
+38,indicate,v,b1,"chỉ ra, cho biết",/ˈɪndɪˌkeɪt/,verb,llm,false
+38,persuade,v,b1,thuyết phục,/pə(ɹ)ˈsweɪd/,verb,llm,false
+38,apologize,v,b1,xin lỗi,/əˈpɑləˌd͡ʒaɪz/,verb,llm,false
+38,determine,v,b1,"xác định, quyết định",/dɪˈtɜː(ɹ).mɪn/,verb,llm,false
+38,encourage,v,b1,khuyến khích,/ɪnˈkʌɹ.ɪd͡ʒ/,verb,llm,false
+38,represent,v,b1,"đại diện, tượng trưng",/ˌɹɛpɹɪˈzɛnt/,verb,llm,false
+38,concentrate,v,b1,tập trung,/ˈkɒn.sən.tɹeɪt/,verb,llm,false
+38,investigate,v,b1,điều tra,/ɪnˈvɛs.tə.ɡeɪt/,verb,llm,false
+38,participate,v,b1,tham gia,/pɑɹˈtɪs.əˌpeɪt/,verb,llm,false
+39,due,adj,b1,"đến hạn, dự kiến",/djuː/,adj,llm,false
+39,odd,adj,b1,"kỳ lạ, lẻ",/ɑd/,adj,llm,false
+39,keen,adj,b1,"hăng hái, say mê",/kin/,adj,llm,false
+39,mild,adj,b1,"nhẹ, ôn hòa",/ˈmaɪld/,adj,llm,false
+39,rare,adj,b1,hiếm,/ɹɛɚ/,adj,llm,false
+39,tiny,adj,b1,nhỏ xíu,/ˈtaɪni/,adj,llm,false
+39,ugly,adj,b1,xấu xí,/ˈʌɡli/,adj,llm,false
+39,used,adj,b1,đã qua sử dụng,/juːzd/,adj,llm,false
+39,aware,adj,b1,nhận thức được,/əˈwɛɚ/,adj,llm,false
+39,basic,adj,b1,cơ bản,/ˈbeɪsɪk/,adj,llm,false
+39,brave,adj,b1,dũng cảm,/bɹeɪv/,adj,llm,false
+39,cruel,adj,b1,tàn nhẫn,/ˈkɹuːəl/,adj,llm,false
+40,drunk,adj,b1,say rượu,/dɹʌŋk/,adj,llm,false
+40,equal,adj/n/v,b1,bằng nhau; bằng,/ˈiːkwəl/,adj,llm,false
+40,fancy,adj/v,b1,sang trọng; thích,/ˈfæn.si/,adj,llm,false
+40,fixed,adj,b1,cố định,/fɪkst/,adj,llm,false
+40,giant,adj/n,b1,khổng lồ; người khổng lồ,/ˈd͡ʒaɪ.ənt/,adj,llm,false
+40,legal,adj,b1,"hợp pháp, thuộc pháp luật",/ˈliː.ɡəl/,adj,llm,false
+40,rough,adj,b1,"thô ráp, gồ ghề",/ɹʌf/,adj,llm,false
+40,royal,adj,b1,thuộc hoàng gia,/ˈɹɔɪ̯.əl/,adj,llm,false
+40,sharp,adj,b1,"sắc, nhọn",/ʃɑɹp/,adj,llm,false
+40,shiny,adj,b1,sáng bóng,/ˈʃaɪ.ni/,adj,llm,false
+40,silly,adj,b1,ngớ ngẩn,/ˈsɪl.i/,adj,llm,false
+40,smart,adj,b1,thông minh,/smɑɹt/,adj,llm,false
+41,solid,adj/n,b1,"rắn, chắc; chất rắn",/ˈsɑ.lɪd/,adj,llm,false
+41,worth,adj/n,b1,đáng giá,/wɝθ/,adj,llm,false
+41,gentle,adj,b1,"nhẹ nhàng, hiền lành",/ˈd͡ʒɛn.tl̩/,adj,llm,false
+41,global,adj,b1,toàn cầu,/ˈɡloʊ.bəl/,adj,llm,false
+41,honest,adj,b1,trung thực,/ˈɑ.nɪst/,adj,llm,false
+41,latest,adj/n,b1,mới nhất,/ˈleɪ.tɪst/,adj,llm,false
+41,medium,adj/n,b1,"trung bình, vừa",/ˈmiː.di.əm/,adj,llm,false
+41,proper,adj,b1,"đúng đắn, thích hợp",/ˈpɹɑpɚ/,adj,llm,false
+41,silent,adj,b1,im lặng,/ˈsaɪ̯lənt/,adj,llm,false
+41,smooth,adj,b1,"mịn, trơn tru",/smuːð/,adj,llm,false
+41,spoken,adj,b1,"nói, khẩu ngữ",/ˈspəʊ.k(ə)n/,adj,llm,false
+41,sudden,adj,b1,đột ngột,/ˈsʌd.ən/,adj,llm,false
+42,unable,adj,b1,không thể,/ʌnˈeɪbl̩/,adj,llm,false
+42,unfair,adj,b1,không công bằng,/ʌnˈfɛɚ/,adj,llm,false
+42,complex,adj/n,b1,phức tạp,/kɑmˈplɛks/,adj,llm,false
+42,covered,adj,b1,"được phủ, che",/ˈkʌvə(ɹ)d/,adj,llm,false
+42,illegal,adj,b1,bất hợp pháp,/ɪˈliːɡəl/,adj,llm,false
+42,leading,adj,b1,"hàng đầu, dẫn đầu",/ˈlidɪŋ/,adj,llm,false
+42,nuclear,adj,b1,thuộc hạt nhân,/ˈnjuː.klɪə(ɹ)/,adj,llm,false
+42,obvious,adj,b1,"rõ ràng, hiển nhiên",/ˈɑb.vi.əs/,adj,llm,false
+42,primary,adj,b1,"chính, tiểu học",/ˈpɹaɪˌmɛɹ.i/,adj,llm,false
+42,private,adj,b1,"riêng tư, tư nhân",/ˈpɹaɪ.vɪt/,adj,llm,false
+42,related,adj,b1,có liên quan,/ɹɪˈleɪtɪd/,adj,llm,false
+42,various,adj,b1,"khác nhau, đa dạng",/ˈvɛəɹi.əs/,adj,llm,false
+43,violent,adj,b1,bạo lực,/ˈvaɪ.ə.lənt/,adj,llm,false
+43,written,adj,b1,bằng văn bản,/ˈɹɪ.tn̩/,adj,llm,false
+43,advanced,adj,b1,"tiên tiến, nâng cao",/ədˈvɑːnst/,adj,llm,false
+43,careless,adj,b1,bất cẩn,/kɛɹ.ləs/,adj,llm,false
+43,cultural,adj,b1,thuộc văn hóa,/ˈkʌl.tʃ(ə.)ɹəl/,adj,llm,false
+43,definite,adj,b1,"chắc chắn, rõ ràng",/ˈdɛfɪnɪt/,adj,llm,false
+43,economic,adj,b1,thuộc kinh tế,/ˌɛkəˈnɑmɪk/,adj,llm,false
+43,educated,adj,b1,có học thức,/ˈɛd͡ʒəkeɪtɪd/,adj,llm,false
+43,expected,adj,b1,được mong đợi,/ɪkˈspɛk.tɪd/,adj,llm,false
+43,familiar,adj,b1,quen thuộc,/fəˈmɪl.jəɹ/,adj,llm,false
+43,generous,adj,b1,hào phóng,/ˈd͡ʒɛn(ə)ɹəs/,adj,llm,false
+43,historic,adj,b1,có tính lịch sử,/hɪˈstoɹɪk/,adj,llm,false
+44,horrible,adj,b1,kinh khủng,/ˈhɑɹ.ɪ.bəl/,adj,llm,false
+44,indirect,adj,b1,gián tiếp,/ˌɪn.dɪˈɹɛkt/,adj,llm,false
+44,innocent,adj,b1,"vô tội, ngây thơ",/ˈɪnəsənt/,adj,llm,false
+44,involved,adj,b1,có liên quan,/ɪnˈvɑlvd/,adj,llm,false
+44,official,adj/n,b1,chính thức,/əˈfɪʃəl/,adj,llm,false
+44,peaceful,adj,b1,yên bình,/ˈpiːsfl̩/,adj,llm,false
+44,pleasant,adj,b1,dễ chịu,/ˈplɛz.ənt/,adj,llm,false
+44,powerful,adj,b1,"mạnh mẽ, quyền lực",/ˈpaʊɚfl̩/,adj,llm,false
+44,prepared,adj,b1,"sẵn sàng, đã chuẩn bị",/pɹɪˈpɛɹd/,adj,llm,false
+44,previous,adj,b1,trước đó,/ˈpɹi.vi.əs/,adj,llm,false
+44,reliable,adj,b1,đáng tin cậy,/ɹɪˈlaɪəbl̩/,adj,llm,false
+44,repeated,adj,b1,lặp đi lặp lại,/ɹɪˈpiːtɪd/,adj,llm,false
+45,sensible,adj,b1,"hợp lý, khôn ngoan",/ˈsɛn.sə.bəl/,adj,llm,false
+45,suitable,adj,b1,phù hợp,,adj,llm,false
+45,talented,adj,b1,có tài,/ˈtæləntɪd/,adj,llm,false
+45,unlikely,adj,b1,khó xảy ra,/ʌnˈlaɪkli/,adj,llm,false
+45,valuable,adj,b1,"có giá trị, quý giá",/ˈvælju(ə)bl̩/,adj,llm,false
+45,ambitious,adj,b1,có tham vọng,/æmˈbɪʃ.əs/,adj,llm,false
+45,effective,adj,b1,hiệu quả,/ɪˈfɛktɪv/,adj,llm,false
+45,essential,adj,b1,thiết yếu,/ɪˈsɛn.ʃəl/,adj,llm,false
+45,imaginary,adj,b1,tưởng tượng,/ɪˈmæd͡ʒɪˌn(ɛ)ɹi/,adj,llm,false
+45,immediate,adj,b1,ngay lập tức,/ɪˈmi.di.ɪt/,adj,llm,false
+45,organized,adj,b1,"có tổ chức, ngăn nắp",/ˈɔɹɡənaɪzd/,adj,llm,false
+45,political,adj,b1,thuộc chính trị,/pəˈlɪt.ɪ.kəl/,adj,llm,false
+46,practical,adj,b1,"thực tế, thiết thực",/ˈpɹæk.tɪ.kəl/,adj,llm,false
+46,religious,adj,b1,thuộc tôn giáo,/ɹɪˈlɪd͡ʒəs/,adj,llm,false
+46,secondary,adj,b1,thứ yếu; trung học,/ˈsɛkənd(ə)ɹɪ/,adj,llm,false
+46,worldwide,adj/adv,b1,toàn cầu; khắp thế giới,/ˈwɝldˌwaɪd/,adj,llm,false
+46,continuous,adj,b1,liên tục,/kənˈtɪn.juː.əs/,adj,llm,false
+46,convenient,adj,b1,thuận tiện,/kənˈvi.njənt/,adj,llm,false
+46,historical,adj,b1,thuộc lịch sử,/hɪˈstɔɹɪkəl/,adj,llm,false
+46,impressive,adj,b1,ấn tượng,/ɪmˈpɹɛsɪv/,adj,llm,false
+46,competitive,adj,b1,cạnh tranh,/kəmˈpɛt.ə.tɪv/,adj,llm,false
+46,fascinating,adj,b1,"hấp dẫn, thú vị",/ˈfæsɪˌneɪtɪŋ/,adj,llm,false
+46,responsible,adj,b1,có trách nhiệm,/ɹɪˈspɑn.sə.bəl/,adj,llm,false
+46,unnecessary,adj,b1,không cần thiết,/ʌnˈnɛs.ə.s(ə)ɹɪ/,adj,llm,false
+47,nor,adv/conj,b1,cũng không,/nɔɹ/,func,llm,false
+47,ours,pron,b1,của chúng tôi,/ˈaʊɚz/,func,llm,false
+47,plus,adj/conj/n/prep,b1,"cộng, thêm",/ˈplʌs/,func,llm,false
+47,till,conj/prep,b1,cho đến khi; đến,/tɪl/,func,llm,false
+47,upon,prep,b1,"trên, khi",/əˈpɑn/,func,llm,false
+47,ahead,adv,b1,phía trước,/əˈhɛd/,func,llm,false
+47,apart,adv,b1,"cách nhau, riêng ra",/əˈpɑɹt/,func,llm,false
+47,ought,modal,b1,"nên, phải",/ɔt/,func,llm,false
+47,fairly,adv,b1,khá; công bằng,/ˈfɛɹ.li/,func,llm,false
+47,hardly,adv,b1,hầu như không,/ˈhɑɹdli/,func,llm,false
+47,highly,adv,b1,"rất, hết sức",/ˈhaɪli/,func,llm,false
+47,indeed,adv,b1,"thực vậy, quả thật",/ɪnˈdid/,func,llm,false
+48,mainly,adv,b1,chủ yếu,/ˈmeɪnli/,func,llm,false
+48,plenty,pron,b1,"nhiều, dư dả",/ˈplɛnti/,func,llm,false
+48,rarely,adv,b1,hiếm khi,/ɹeə.liː/,func,llm,false
+48,simply,adv,b1,"đơn giản, chỉ",/ˈsɪmpli/,func,llm,false
+48,surely,adv,b1,chắc chắn,/ˈʃɔːli/,func,llm,false
+48,theirs,pron,b1,của họ,/ðiəz/,func,llm,false
+48,though,adv/conj,b1,tuy nhiên; mặc dù,/ðoʊ/,func,llm,false
+48,unless,conj,b1,trừ khi,/ənˈlɛs/,func,llm,false
+48,unlike,prep,b1,không giống,/ʌnˈlaɪk/,func,llm,false
+48,within,prep,b1,"trong vòng, bên trong",/wɪðˈɪn/,func,llm,false
+48,despite,prep,b1,mặc dù,/dɪˈspaɪt/,func,llm,false
+48,equally,adv,b1,như nhau,/ˈiːkwəli/,func,llm,false
+49,heavily,adv,b1,"nặng nề, rất nhiều",/ˈhɛvɪli/,func,llm,false
+49,totally,adv,b1,hoàn toàn,/ˈtoʊ.tə.li/,func,llm,false
+49,whether,conj,b1,"liệu, có hay không",/ˈwɛðə(ɹ)/,func,llm,false
+49,directly,adv,b1,trực tiếp,/dɪˈɹɛk(t).li/,func,llm,false
+49,outdoors,adv,b1,ở ngoài trời,/aʊtˈdɔː(ɹ)z/,func,llm,false
+49,possibly,adv,b1,có lẽ,/ˈpɑ.sɪ.bli/,func,llm,false
+49,properly,adv,b1,đúng cách,/ˈpɹɑpɚli/,func,llm,false
+49,slightly,adv,b1,"hơi, một chút",/ˈslaɪtli/,func,llm,false
+49,strongly,adv,b1,mạnh mẽ,/ˈstɹɔŋli/,func,llm,false
+49,whatever,det/pron,b1,bất cứ thứ gì,/wʌtˈɛv.ɚ/,func,llm,false
+49,whenever,conj,b1,bất cứ khi nào,/wəˈnɛvɚ/,func,llm,false
+49,backwards,adv,b1,về phía sau,/ˈbækwɜɹdz/,func,llm,false
+50,generally,adv,b1,nói chung,/ˈd͡ʒɛn.ɚ.li/,func,llm,false
+50,meanwhile,adv,b1,trong khi đó,/ˈmiːnwaɪl/,func,llm,false
+50,naturally,adv,b1,một cách tự nhiên,/ˈnæt͡ʃ.(ə.)ɹə.li/,func,llm,false
+50,obviously,adv,b1,rõ ràng là,/ˈɑ(b).vi(.)əs.li/,func,llm,false
+50,perfectly,adv,b1,một cách hoàn hảo,/ˈpɝ.fɪk(t).li/,func,llm,false
+50,regularly,adv,b1,thường xuyên,/ˈɹɛɡ.jə.lɚ.li/,func,llm,false
+50,seriously,adv,b1,"nghiêm túc, nghiêm trọng",/ˈsɪə.ɹi.əs.li/,func,llm,false
+50,similarly,adv,b1,tương tự,/ˈsɪmə.lɚ.li/,func,llm,false
+50,therefore,adv,b1,vì vậy,/ˈðɛɹ.fɔɹ/,func,llm,false
+50,typically,adv,b1,"thường, điển hình",/ˈtɪp.ɪ.kli/,func,llm,false
+50,absolutely,adv,b1,"hoàn toàn, tuyệt đối",/ˌæb.səˈlut.li/,func,llm,false
+50,eventually,adv,b1,cuối cùng,/ɪˈvɛn.t͡ʃuː.ə.li/,func,llm,false
+51,frequently,adv,b1,thường xuyên,/ˈfɹiː.kwənt.li/,func,llm,false
+51,incredibly,adv,b1,cực kỳ,/ɪŋˈkɹɛdɪbli/,func,llm,false
+51,originally,adv,b1,"ban đầu, vốn dĩ",/əˈɹɪd͡ʒ.ɪ.nə.li/,func,llm,false
+51,personally,adv,b1,"cá nhân tôi, đích thân",/ˈpɝ.sə.nə.li/,func,llm,false
+51,previously,adv,b1,trước đây,/ˈpɹivi.əsli/,func,llm,false
+51,throughout,adv/prep,b1,khắp; suốt,/θɹuːˈaʊt/,func,llm,false
+51,effectively,adv,b1,một cách hiệu quả,/ɪˈfɛktɪvli/,func,llm,false
+51,necessarily,adv,b1,nhất thiết,/ˌnɛs.əˈsɛɹ.ə.li/,func,llm,false
+51,particularly,adv,b1,đặc biệt là,/pɚˈtɪkjəlɚli/,func,llm,false
+51,specifically,adv,b1,cụ thể là,/spɪˈsɪf.ɪ.kli/,func,llm,false
+51,successfully,adv,b1,thành công,/səkˈsɛs.fə.li/,func,llm,false
+51,approximately,adv,b1,"khoảng, xấp xỉ",/əˈpɹɑk.sɪ.mət.li/,func,llm,false
+52,aim,n/v,b1,mục tiêu; nhắm tới,/eɪm/,misc,llm,false
+52,ban,n/v,b1,lệnh cấm; cấm,/ˈbæːn/,misc,llm,false
+52,row,n,b1,"hàng, dãy",/ɹaʊ/,misc,llm,false
+52,base,n/v,b1,nền tảng; dựa vào,/beɪs/,misc,llm,false
+52,bomb,n/v,b1,quả bom; đánh bom,/bɒm/,misc,llm,false
+52,clue,n,b1,manh mối,/kluː/,misc,llm,false
+52,edge,n,b1,"mép, cạnh",/ɛd͡ʒ/,misc,llm,false
+52,flag,n,b1,lá cờ,/flæɡ/,misc,llm,false
+52,lack,n/v,b1,sự thiếu; thiếu,/læk/,misc,llm,false
+52,loss,n,b1,"sự mất mát, thua lỗ",/lɔs/,misc,llm,false
+52,risk,n/v,b1,"rủi ro; liều, mạo hiểm",/ɹɪsk/,misc,llm,false
+52,spot,n/v,b1,"chỗ, điểm; vết",/spɒt/,misc,llm,false
+52,basis,n,b1,"cơ sở, nền tảng",/ˈbeɪ.sɪs/,misc,llm,false
+53,entry,n,b1,"sự đi vào, lối vào",/ˈɛntɹi/,misc,llm,false
+53,force,n/v,b1,sức mạnh; ép buộc,/foɹs/,misc,llm,false
+53,issue,n/v,b1,vấn đề,/ˈɪʃ(j)u/,misc,llm,false
+53,layer,n,b1,lớp,/ˈleɪ̯ɚ/,misc,llm,false
+53,limit,n/v,b1,giới hạn; hạn chế,/ˈlɪm.ɪt/,misc,llm,false
+53,range,n/v,b1,"phạm vi, loạt",/ˈɹeɪnd͡ʒ/,misc,llm,false
+53,stuff,n/v,b1,"đồ đạc, thứ",/stʌf/,misc,llm,false
+53,theme,n,b1,chủ đề,/θiːm/,misc,llm,false
+53,trend,n,b1,xu hướng,/tɹɛnd/,misc,llm,false
+53,trick,n/v,b1,"mẹo, trò lừa; lừa",/ˈtɹɪk/,misc,llm,false
+53,truth,n,b1,sự thật,/tɹuθ/,misc,llm,false
+53,value,n/v,b1,giá trị,/ˈvæl.juː/,misc,llm,false
+54,access,n/v,b1,sự tiếp cận; truy cập,/ˈækˌsɛs/,misc,llm,false
+54,arrest,n/v,b1,sự bắt giữ; bắt giữ,/əˈɹɛst/,misc,llm,false
+54,battle,n/v,b1,trận chiến,/ˈbætl̩/,misc,llm,false
+54,beauty,n,b1,vẻ đẹp,/ˈbjuti/,misc,llm,false
+54,bubble,n,b1,bong bóng,/ˈbʌbəl/,misc,llm,false
+54,custom,n,b1,phong tục,/ˈkʌstəm/,misc,llm,false
+54,damage,n/v,b1,thiệt hại; làm hư hại,/ˈdæmɪd͡ʒ/,misc,llm,false
+54,effort,n,b1,nỗ lực,/ˈɛf.ɚt/,misc,llm,false
+54,favour,n/v,b1,"sự giúp đỡ, ân huệ",,misc,llm,false
+54,growth,n,b1,sự tăng trưởng,/ɡɹoʊθ/,misc,llm,false
+54,impact,n/v,b1,tác động; tác động đến,/ˈɪmpækt/,misc,llm,false
+54,liquid,adj/n,b1,lỏng; chất lỏng,/ˈlɪk.wɪd/,misc,llm,false
+55,living,adj/n,b1,còn sống; sinh kế,/ˈlɪvɪŋ/,misc,llm,false
+55,murder,n/v,b1,vụ giết người; giết,/ˈmɝ.dɚ/,misc,llm,false
+55,poison,n/v,b1,chất độc; đầu độc,/ˈpɔɪ.zən/,misc,llm,false
+55,policy,n,b1,chính sách,/ˈpɑ.lə.si/,misc,llm,false
+55,prayer,n,b1,lời cầu nguyện,/pɹɛɚ/,misc,llm,false
+55,safety,n,b1,sự an toàn,/ˈseɪfti/,misc,llm,false
+55,sample,n/v,b1,mẫu,/ˈsæm.pəl/,misc,llm,false
+55,signal,n/v,b1,tín hiệu; ra hiệu,/ˈsɪɡnəl/,misc,llm,false
+55,spirit,n,b1,"tinh thần, linh hồn",/ˈspɪɹɪt/,misc,llm,false
+55,supply,n/v,b1,nguồn cung; cung cấp,/səˈplaɪ/,misc,llm,false
+55,talent,n,b1,tài năng,/ˈtæl.ənt/,misc,llm,false
+55,weapon,n,b1,vũ khí,/ˈwɛp.ən/,misc,llm,false
+56,balance,n/v,b1,sự cân bằng; giữ thăng bằng,/ˈbæləns/,misc,llm,false
+56,contact,n/v,b1,sự liên lạc; liên hệ,/ˈkɑntækt/,misc,llm,false
+56,content,n,b1,nội dung,/ˈkɑn.tɛnt/,misc,llm,false
+56,economy,n,b1,nền kinh tế,/iˈkɑ.nə.mi/,misc,llm,false
+56,element,n,b1,"yếu tố, nguyên tố",/ˈɛləmənt/,misc,llm,false
+56,killing,n,b1,vụ giết người,/ˈkɪl.ɪŋ/,misc,llm,false
+56,mixture,n,b1,hỗn hợp,/ˈmɪkst͡ʃɚ/,misc,llm,false
+56,mystery,n,b1,điều bí ẩn,/ˈmɪs.t(ə.)ɹi/,misc,llm,false
+56,poverty,n,b1,sự nghèo đói,/ˈpɑːvɚti/,misc,llm,false
+56,protest,n/v,b1,cuộc biểu tình; phản đối,/pɹəˈtɛst/,misc,llm,false
+56,reality,n,b1,thực tế,/ɹiˈæləti/,misc,llm,false
+56,setting,n,b1,"bối cảnh, khung cảnh",/ˈsɛtɪŋ/,misc,llm,false
+57,surface,n,b1,bề mặt,/ˈsɜː.fɪs/,misc,llm,false
+57,version,n,b1,phiên bản,/ˈvɝʒən/,misc,llm,false
+57,warning,n,b1,lời cảnh báo,/ˈwoɹnɪŋ/,misc,llm,false
+57,addition,n,b1,sự thêm vào,/əˈdɪʃ.ən/,misc,llm,false
+57,category,n,b1,"loại, hạng mục",/ˈkæt.ɪˌɡoɹ.i/,misc,llm,false
+57,contrast,n/v,b1,sự tương phản; đối chiếu,/kənˈtɹɑːst/,misc,llm,false
+57,election,n,b1,cuộc bầu cử,/ɪˈlɛkʃ(ə)n/,misc,llm,false
+57,fighting,n,b1,cuộc chiến đấu,/ˈfʌɪ.tɪŋ/,misc,llm,false
+57,function,n/v,b1,chức năng,/ˈfʌŋ(k)ʃən/,misc,llm,false
+57,identity,n,b1,danh tính,/aɪˈdɛn(t)ɪti/,misc,llm,false
+57,politics,n,b1,chính trị,/ˈpɑ.lɪ.tɪks/,misc,llm,false
+57,pressure,n,b1,áp lực,/ˈpɹɛʃɚ/,misc,llm,false
+58,prisoner,n,b1,tù nhân,/ˈpɹɪzənɚ/,misc,llm,false
+58,reaction,n,b1,phản ứng,/ɹiˈækʃən/,misc,llm,false
+58,religion,n,b1,tôn giáo,/ɹɪˈlɪd͡ʒ.ən/,misc,llm,false
+58,resource,n,b1,"tài nguyên, nguồn lực",/ˈɹi(ː)so(ː)ɹs/,misc,llm,false
+58,security,n,b1,"an ninh, sự bảo mật",/səˈkjʊɹ.ɪti/,misc,llm,false
+58,standard,adj/n,b1,chuẩn; tiêu chuẩn,/ˈstændɚd/,misc,llm,false
+58,agreement,n,b1,"sự đồng ý, thỏa thuận",/əˈɡɹiːmənt/,misc,llm,false
+58,authority,n,b1,"quyền lực, chính quyền",/ɔːˈθɒɹəti/,misc,llm,false
+58,challenge,n/v,b1,thử thách,/ˈt͡ʃæl.ɪnd͡ʒ/,misc,llm,false
+58,complaint,n,b1,lời phàn nàn,/kəmˈpleɪnt/,misc,llm,false
+58,emergency,n,b1,tình trạng khẩn cấp,/ɪˈmɜː(ɹ).dʒən.si/,misc,llm,false
+58,explosion,n,b1,vụ nổ,/ɪkˈspləʊ.ʒən/,misc,llm,false
+59,highlight,n/v,b1,điểm nổi bật; làm nổi bật,/ˈhaɪlaɪt/,misc,llm,false
+59,influence,n/v,b1,ảnh hưởng; ảnh hưởng đến,/ˈɪn.flu.əns/,misc,llm,false
+59,intention,n,b1,ý định,/ɪnˈtɛnʃn̩/,misc,llm,false
+59,quotation,n,b1,"trích dẫn, báo giá",/kwoʊˈteɪʃn̩/,misc,llm,false
+59,reference,n,b1,sự tham khảo,/ˈɹɛf.(ə.)ɹəns/,misc,llm,false
+59,substance,n,b1,chất,/ˈsʌbstəns/,misc,llm,false
+59,comparison,n,b1,sự so sánh,/kəmˈpæɹ.ɪ.sən/,misc,llm,false
+59,conclusion,n,b1,kết luận,/kənˈkluːʒən/,misc,llm,false
+59,connection,n,b1,sự kết nối,/kəˈnɛkʃ(ə)n/,misc,llm,false
+59,difficulty,n,b1,khó khăn,/ˈdɪfɪkəlti/,misc,llm,false
+59,importance,n,b1,tầm quan trọng,/ɪmˈpoɹtəns/,misc,llm,false
+59,impression,n,b1,ấn tượng,/ɪmˈpɹɛʃn̩/,misc,llm,false
+60,prediction,n,b1,sự dự đoán,/pɹɪˈdɪkʃən/,misc,llm,false
+60,punishment,n,b1,sự trừng phạt,/ˈpʌnɪʃmənt/,misc,llm,false
+60,similarity,n,b1,sự giống nhau,/ˌsɪm.əˈlæɹ.ə.ti/,misc,llm,false
+60,achievement,n,b1,thành tựu,/əˈt͡ʃiːv.mənt/,misc,llm,false
+60,consequence,n,b1,hậu quả,/ˈkɑn.sɪ.kwəns/,misc,llm,false
+60,development,n,b1,sự phát triển,/dɪˈvɛl.əp.mənt/,misc,llm,false
+60,improvement,n,b1,sự cải thiện,/ɪmˈpɹuːvmənt/,misc,llm,false
+60,announcement,n,b1,lời thông báo,/əˈnaʊns.mənt/,misc,llm,false
+60,disadvantage,n,b1,bất lợi,/ˌdɪsədˈvæntɪd͡ʒ/,misc,llm,false
+60,intelligence,n,b1,trí thông minh,/ɪnˈtɛl.ɪ.d͡ʒəns/,misc,llm,false
+60,communication,n,b1,sự giao tiếp,/kəˌmju.nɪˈkeɪ.ʃən/,misc,llm,false
+60,recommendation,n,b1,"lời khuyên, đề xuất",/ˌɹɛkəmɛnˈdeɪʃən/,misc,llm,false

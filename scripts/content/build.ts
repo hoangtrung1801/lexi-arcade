@@ -1,9 +1,10 @@
 /**
- * Builds content/sets/{a1,a2}.csv from:
+ * Builds content/sets/{a1,a2,b1,b2}.csv from:
  *  - content/raw/oxford_3000.csv      (lemma, part of speech, CEFR level only)
  *  - content/raw/kaikki/*.jsonl       (IPA + Vietnamese translations from Wiktionary)
  *  - content/meanings-vi.txt          (machine-written Vietnamese meaning + topic, reviewed=false)
  * Definitions/examples from the Oxford file are intentionally NOT used (copyright).
+ * Existing set files are kept (they may hold manual reviews); --force rebuilds them too.
  * Usage: pnpm content:build [--force]
  */
 import { existsSync } from "node:fs";
@@ -109,37 +110,44 @@ function chunkSizes(n: number, target = 12): number[] {
 
 function main() {
   const force = process.argv.includes("--force");
-  for (const s of SETS) {
-    if (existsSync(join(SETS_DIR, `${s.slug}.csv`)) && !force) {
-      console.error(
-        `content/sets/${s.slug}.csv already exists (may contain manual reviews). Use --force to overwrite.`,
-      );
-      process.exit(1);
-    }
-  }
 
   const meanings = readMeanings();
   const idsPath = join(ROOT, "content", "ids.json");
   const ids: Record<string, number> = existsSync(idsPath) ? JSON.parse(readText(idsPath)) : {};
   let nextId = Math.max(0, ...Object.values(ids)) + 1;
 
-  const byLemma = new Map<string, { lemma: string; pos: string[]; cefr: string }>();
+  // A word belongs to its easiest level. Its parts of speech come from the A entries when it
+  // has any (A1/A2 words keep the senses learners meet first), else from the B entries.
+  const LEVELS = ["a1", "a2", "b1", "b2"];
+  const entries = new Map<string, { lemma: string; cefr: string; type: string }[]>();
   for (const r of parseCsv(readText(join(RAW_DIR, "oxford_3000.csv")))) {
-    const cefr = r.cefr;
-    if (cefr !== "a1" && cefr !== "a2") continue;
+    const cefr = r.cefr ?? "";
+    if (!LEVELS.includes(cefr)) continue;
     const lemma = (r.word ?? "").trim();
-    if (!/^[A-Za-z]{2,}$/.test(lemma)) continue;
-    const e = byLemma.get(lemma.toLowerCase()) ?? { lemma, pos: [], cefr };
-    const pos = POS_ABBR[(r.type ?? "").trim()] ?? (r.type ?? "").trim();
-    if (pos && !e.pos.includes(pos)) e.pos.push(pos);
-    if (cefr === "a1") e.cefr = "a1";
-    byLemma.set(lemma.toLowerCase(), e);
+    if (!/^[A-Za-z]{2,14}$/.test(lemma)) continue;
+    const key = lemma.toLowerCase();
+    entries.set(key, [...(entries.get(key) ?? []), { lemma, cefr, type: (r.type ?? "").trim() }]);
+  }
+  const byLemma = new Map<string, { lemma: string; pos: string[]; cefr: string }>();
+  for (const [key, es] of entries) {
+    const cefr = LEVELS.find((l) => es.some((e) => e.cefr === l)) ?? "b2";
+    const group = cefr.startsWith("a") ? "a" : "b";
+    const pos: string[] = [];
+    for (const e of es.filter((x) => x.cefr.startsWith(group))) {
+      const p = POS_ABBR[e.type] ?? e.type;
+      if (p && !pos.includes(p)) pos.push(p);
+    }
+    byLemma.set(key, { lemma: es[0]?.lemma ?? key, pos, cefr });
   }
 
   let fromLlm = 0;
   let fromWikt = 0;
   let missing = 0;
   for (const set of SETS) {
+    if (existsSync(join(SETS_DIR, `${set.slug}.csv`)) && !force) {
+      console.log(`${set.slug}: kept existing content/sets/${set.slug}.csv`);
+      continue;
+    }
     const words = [...byLemma.values()].filter((w) => w.cefr === set.cefr);
     const rows: Omit<SetRow, "unit">[] = words.map((w) => {
       const wikt = readWiktionary(w.lemma);

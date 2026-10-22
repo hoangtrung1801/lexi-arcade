@@ -26,6 +26,7 @@ export function ResultPage() {
     ]),
   ].flatMap((id) => byId.get(id) ?? []);
   const won = result.status === "won";
+  const train = round.gameId === "sentence-express";
   const score = { v: result.score.toLocaleString("vi-VN"), l: "Điểm", c: "text-gold" };
   const accuracy = { v: `${Math.round(result.accuracy * 100)}%`, l: "Chính xác", c: "text-lime" };
   const combo = { v: `x${result.maxCombo}`, l: "Combo cao nhất", c: "text-orange" };
@@ -34,7 +35,7 @@ export function ResultPage() {
     round.gameId === "sentence-express"
       ? [
           score,
-          { v: `${result.hitWordIds.length}/${words.length}`, l: "Câu đúng", c: "text-cyan" },
+          { v: String(result.hitWordIds.length), l: "Câu đúng", c: "text-cyan" },
           accuracy,
           combo,
         ]
@@ -67,10 +68,12 @@ export function ResultPage() {
       <PixelPanel variant="ornate" className="flex w-full flex-col gap-5 px-8 py-6">
         <div className="flex flex-col items-center gap-3">
           <span className="hb-chip-dark t-sm px-2 text-cyan uppercase">
-            Mốc {round.unitIdx} · {round.unitTitle}
+            {train
+              ? `Sentence Express · ${round.unitTitle}`
+              : `Mốc ${round.unitIdx} · ${round.unitTitle}`}
           </span>
           <h1 className={`${won ? "t-gold" : "t-ice"} text-[72px] leading-[80px] uppercase`}>
-            {won ? "Hoàn thành!" : "Thua rồi!"}
+            {train ? (won ? "Hết giờ!" : "Hết than!") : won ? "Hoàn thành!" : "Thua rồi!"}
           </h1>
           <StarRow stars={result.stars} size={44} big />
         </div>
@@ -167,12 +170,18 @@ export function ResultPage() {
           )}
           <PixelButton
             tone="blue"
-            onClick={() => nav(`${base}/play/${round.unitId}?set=${round.setSlug}`)}
+            onClick={() =>
+              nav(
+                round.gameId === "sentence-express"
+                  ? `${base}/play/${round.setSlug}`
+                  : `${base}/play/${round.unitId}?set=${round.setSlug}`,
+              )
+            }
           >
             Chơi lại
           </PixelButton>
           <PixelButton tone="gold" className="hb-glow" onClick={() => nav(base)}>
-            Bản đồ ▸
+            {train ? "Chọn bộ ▸" : "Bản đồ ▸"}
           </PixelButton>
         </div>
       </PixelPanel>

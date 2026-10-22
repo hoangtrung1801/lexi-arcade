@@ -10,6 +10,7 @@ import { type GameEntry, gameById } from "../games/registry";
 import { orb, spriteUrl } from "../lib/pixelart";
 import { useMe, useSets, useUnits, useUnitWords } from "../lib/queries";
 import { useSettings } from "../store/settings";
+import { TrainSetsPage } from "./TrainSetsPage";
 
 const PAGE = 20;
 /** word chips shown for the selected unit (keeps the panel short enough for 720p) */
@@ -164,6 +165,7 @@ function Brackets({ size }: { size: number }) {
 export function MapPage() {
   const game = gameById(useParams().gameId);
   if (!game?.map) return <Navigate to="/" replace />;
+  if (game.id === "sentence-express") return <TrainSetsPage />;
   return <UnitMap key={game.id} game={game} />;
 }
 

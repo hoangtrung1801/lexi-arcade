@@ -4,10 +4,11 @@ import type {
   LeaderboardResponse,
   MeResponse,
   QuestsResponse,
+  SetSentencesResponse,
   SetSummary,
   StartSessionRequest,
   StartSessionResponse,
-  UnitSentencesResponse,
+  TrainSetsResponse,
   UnitsResponse,
   UnitWordsResponse,
   VocabResponse,
@@ -41,13 +42,21 @@ export const useUnitWords = (unitId: number | null, game: GameId = "word-blaster
     retry: false,
   });
 
-export const useUnitSentences = (unitId: number | null) =>
+/** a guest's Sentence Express run: random sentences from the whole set */
+export const useSetSentences = (slug: string | null, attempt: string) =>
   useQuery({
-    queryKey: ["unit-sentences", unitId],
-    queryFn: () => api<UnitSentencesResponse>(`/units/${unitId}/sentences`),
-    enabled: unitId !== null,
-    staleTime: 5 * 60_000,
+    queryKey: ["set-sentences", slug, attempt],
+    queryFn: () => api<SetSentencesResponse>(`/sets/${slug}/sentences`),
+    enabled: slug !== null,
+    staleTime: Number.POSITIVE_INFINITY,
+    gcTime: 0,
     retry: false,
+  });
+
+export const useTrainSets = () =>
+  useQuery({
+    queryKey: ["units", "train-sets"],
+    queryFn: () => api<TrainSetsResponse>("/train/sets"),
   });
 
 export const useVocab = (filter: "learned" | "due" | "saved", enabled = true) =>

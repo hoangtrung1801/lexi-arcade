@@ -49,6 +49,14 @@ export const RACE: Record<Difficulty, { parWpm: number; revealMs: number }> = {
 export const TRAIN_LIVES = 3;
 export const TRAIN_MIN_MS_PER_WORD = 120;
 export const TRAIN_POINTS_PER_WORD = 20;
+/** Sentence Express is a timed run over a whole word set */
+export const TRAIN_RUN_MS = 90_000;
+/** time added for every sentence solved */
+export const TRAIN_BONUS_MS = 5_000;
+/** sentences dealt for one run (more than anyone can solve in time) */
+export const TRAIN_POOL = 80;
+/** sentences solved for 1, 2 and 3 stars */
+export const TRAIN_STAR_SENTENCES = [5, 10, 16] as const;
 
 export const DAILY_QUESTS = [
   { key: "play_3", title: "Chơi 3 ván", target: 3, reward: 15 },

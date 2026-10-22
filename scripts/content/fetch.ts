@@ -46,7 +46,7 @@ async function main() {
   const lemmas = [
     ...new Set(
       parseCsv(readText(oxfordPath))
-        .filter((r) => r.cefr === "a1" || r.cefr === "a2")
+        .filter((r) => ["a1", "a2", "b1", "b2"].includes(r.cefr ?? ""))
         .map((r) => (r.word ?? "").trim())
         .filter((w) => /^[A-Za-z]{2,}$/.test(w))
         .map((w) => w.toLowerCase()),

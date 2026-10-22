@@ -2,7 +2,10 @@ import {
   computeTrainResult,
   type Sentence,
   sentenceParts,
+  TRAIN_BONUS_MS,
+  TRAIN_RUN_MS,
   type TrainEvent,
+  trainStars,
   validateTrain,
 } from "@shared/index";
 import { describe, expect, it } from "vitest";
@@ -28,10 +31,16 @@ describe("sentence parts", () => {
 });
 
 describe("sentence express scoring", () => {
-  it("a clean run wins with 3 stars", () => {
+  it("stars come from the number of sentences solved", () => {
+    expect(trainStars(0)).toBe(0);
+    expect(trainStars(5)).toBe(1);
+    expect(trainStars(10)).toBe(2);
+    expect(trainStars(40)).toBe(3);
+  });
+
+  it("solving every sentence ends the run", () => {
     const r = computeTrainResult([ok(1, 3000), ok(2, 7000)], sentences);
     expect(r.status).toBe("won");
-    expect(r.stars).toBe(3);
     expect(r.hitWordIds).toEqual([10, 20]);
     expect(r.cleanWordIds).toEqual([10, 20]);
   });
@@ -47,9 +56,19 @@ describe("sentence express scoring", () => {
     const clean = computeTrainResult([ok(1, 3000), ok(2, 7000)], sentences);
     const r = computeTrainResult([wrong, ok(1, 3000), hint, ok(2, 7000)], sentences);
     expect(r.livesLost).toBe(1);
-    expect(r.stars).toBe(2);
     expect(r.score).toBeLessThan(clean.score);
     expect(r.cleanWordIds).toEqual([]);
+  });
+
+  it("answers after the clock ran out do not count; each solve adds time", () => {
+    const late = computeTrainResult([ok(1, TRAIN_RUN_MS + 1)], sentences);
+    expect(late.score).toBe(0);
+    expect(late.status).toBe("won");
+    const inBonus = computeTrainResult(
+      [ok(1, 3000), ok(2, TRAIN_RUN_MS + TRAIN_BONUS_MS - 1)],
+      sentences,
+    );
+    expect(inBonus.hitWordIds).toEqual([10, 20]);
   });
 
   it("three wrong trains end the round", () => {
@@ -123,8 +142,20 @@ describe("train engine", () => {
     }
     const r = e.result();
     expect(r.status).toBe("won");
-    expect(r.stars).toBe(3);
+    expect(r.maxCombo).toBe(2);
+    expect(e.combo).toBe(2);
     expect(validateTrain(e.events, sentences, t + 1000)).toEqual({ ok: true });
+  });
+
+  it("keeps the dealt order and ends when the time is up", () => {
+    const { e, at } = setup();
+    expect(e.sentences.map((x) => x.id)).toEqual([1, 2]);
+    at(TRAIN_RUN_MS - 1);
+    e.tick();
+    expect(e.status).toBe("playing");
+    at(TRAIN_RUN_MS);
+    e.tick();
+    expect(e.status).toBe("over");
   });
 
   it("a wrong train marks the wrong wagons and costs coal", () => {

@@ -16,7 +16,7 @@ import {
   finishSession,
   startSession,
   useMe,
-  useUnitSentences,
+  useSetSentences,
   useUnits,
   useUnitWords,
 } from "../lib/queries";
@@ -38,8 +38,12 @@ export function PlayPage() {
 }
 
 function Play({ gameId }: { gameId: NonNullable<ReturnType<typeof gameById>>["id"] }) {
-  const unitId = Number(useParams().unitId);
-  const slug = useSearchParams()[0].get("set") ?? "a1";
+  const sentenceGame = gameId === "sentence-express";
+  // Sentence Express plays a whole set: its URL names the set instead of a unit
+  const target = useParams().unitId ?? "";
+  const querySet = useSearchParams()[0].get("set") ?? "a1";
+  const slug = sentenceGame ? target : querySet;
+  const unitId = sentenceGame ? 0 : Number(target);
   const nav = useNavigate();
   const attempt = useLocation().key;
   const qc = useQueryClient();
@@ -48,7 +52,7 @@ function Play({ gameId }: { gameId: NonNullable<ReturnType<typeof gameById>>["id
   // frozen at mount: changing the setting must not restart a round in progress
   const [difficulty] = useState(() => useSettings.getState().difficulty);
   const setRound = useLastRound((s) => s.setRound);
-  const unitsQ = useUnits(slug, gameId);
+  const unitsQ = useUnits(slug, sentenceGame ? "word-blaster" : gameId);
   const unit = unitsQ.data?.units.find((u) => u.id === unitId);
   const base = `/games/${gameId}`;
 
@@ -57,16 +61,18 @@ function Play({ gameId }: { gameId: NonNullable<ReturnType<typeof gameById>>["id
   // Logged-in players start a server session (server picks words + seed); guests play locally.
   const sessionQ = useQuery({
     queryKey: ["session-start", gameId, unitId, attempt, difficulty],
-    queryFn: () => startSession({ gameId, unitId, difficulty }),
+    queryFn: () =>
+      startSession(
+        sentenceGame ? { gameId, setSlug: slug, difficulty } : { gameId, unitId, difficulty },
+      ),
     enabled: meQ.isSuccess && !!user,
     staleTime: Number.POSITIVE_INFINITY,
     gcTime: 0,
     retry: false,
   });
   const guest = meQ.isSuccess && !user;
-  const sentenceGame = gameId === "sentence-express";
   const guestWords = useUnitWords(guest && !sentenceGame ? unitId : null, gameId);
-  const guestSentences = useUnitSentences(guest && sentenceGame ? unitId : null);
+  const guestSentences = useSetSentences(guest && sentenceGame ? slug : null, attempt);
 
   const config: Config | null = useMemo(() => {
     if (sessionQ.data) {
@@ -112,7 +118,7 @@ function Play({ gameId }: { gameId: NonNullable<ReturnType<typeof gameById>>["id
         gameId,
         unitId,
         unitIdx: unit?.idx ?? 0,
-        unitTitle: unit?.titleVi ?? "",
+        unitTitle: (sentenceGame ? unitsQ.data?.set.name : unit?.titleVi) ?? "",
         setSlug: slug,
         difficulty: config.difficulty,
         words,
@@ -139,7 +145,7 @@ function Play({ gameId }: { gameId: NonNullable<ReturnType<typeof gameById>>["id
         }
       }
     },
-    [config, nav, qc, setRound, slug, unit, unitId, gameId, base],
+    [config, nav, qc, setRound, slug, unit, unitId, gameId, base, sentenceGame, unitsQ.data],
   );
 
   const loadError = sessionQ.error ?? guestWords.error ?? guestSentences.error;
@@ -182,8 +188,7 @@ function Play({ gameId }: { gameId: NonNullable<ReturnType<typeof gameById>>["id
         <TrainRound
           key={config.sessionId ?? "guest"}
           config={config}
-          unitIdx={unit?.idx ?? 0}
-          unitTitle={unit?.titleVi ?? ""}
+          setName={unitsQ.data?.set.name ?? slug.toUpperCase()}
           onFinish={finish}
           onExit={exit}
         />

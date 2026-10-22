@@ -6,18 +6,21 @@ import type { FinishSessionResponse, StartSessionResponse } from "../../shared/a
 import { GAME_IDS, type GameId } from "../../shared/games";
 import { levelFromXp, nextStreak, roundRewards, vnDate, vnWeek } from "../../shared/progress";
 import { raceGhost } from "../../shared/race";
+import { createRng, shuffle } from "../../shared/rng";
 import { type AnyEvent, scoreRound, validateRound } from "../../shared/rounds";
-import { GUEST_UNIT_LIMIT, MAX_DUE_RATIO } from "../../shared/rules";
+import { GUEST_UNIT_LIMIT, MAX_DUE_RATIO, TRAIN_POOL } from "../../shared/rules";
 import { srsUpdate } from "../../shared/srs";
 import type { GameWord, Ghost, RaceEvent, Sentence } from "../../shared/types";
 import { ensureProfile } from "../auth";
 import {
+  firstUnitId,
   getSentencesByIds,
+  getSetBySlug,
   getUnit,
-  getUnitSentences,
   getUnitWords,
   getWordsByIds,
   isUnitUnlocked,
+  randomSetSentences,
 } from "../content";
 import type { Db } from "../db";
 import { getDb, schema } from "../db";
@@ -27,7 +30,8 @@ import { ensureQuestStatements, questProgressStatement } from "../quests";
 
 const startBody = z.object({
   gameId: z.enum(GAME_IDS).default("word-blaster"),
-  unitId: z.number().int().positive(),
+  unitId: z.number().int().positive().optional(),
+  setSlug: z.string().max(20).optional(),
   difficulty: z.enum(["easy", "normal", "hard"]).default("normal"),
 });
 
@@ -87,15 +91,8 @@ async function dueWordIds(db: Db, userId: string, exclude: number[], limit: numb
   return rows.map((r) => r.wordId);
 }
 
-/** One sentence for each of the most overdue words that have one, outside this unit. */
-async function dueSentences(
-  db: Db,
-  userId: string,
-  unitId: number,
-  exclude: number[],
-  limit: number,
-) {
-  if (limit <= 0) return [];
+/** One sentence for each of the most overdue words of this set that have one. */
+async function dueSentences(db: Db, userId: string, setId: number, limit: number) {
   const rows = await db
     .select({
       id: schema.sentences.id,
@@ -105,13 +102,13 @@ async function dueSentences(
     })
     .from(schema.userWordProgress)
     .innerJoin(schema.sentences, eq(schema.sentences.wordId, schema.userWordProgress.wordId))
+    .innerJoin(schema.units, eq(schema.units.id, schema.sentences.unitId))
     .where(
       and(
         eq(schema.userWordProgress.userId, userId),
         lte(schema.userWordProgress.dueAt, Date.now()),
         sql`${schema.userWordProgress.lastSeenAt} > 0`,
-        ne(schema.sentences.unitId, unitId),
-        notInArray(schema.userWordProgress.wordId, exclude),
+        eq(schema.units.setId, setId),
       ),
     )
     .orderBy(asc(schema.userWordProgress.dueAt))
@@ -125,6 +122,22 @@ async function dueSentences(
     if (out.length >= limit) break;
   }
   return out;
+}
+
+/**
+ * The sentences of a Sentence Express run: random ones from the whole set, with sentences for
+ * words due for review mixed into the first part of the run.
+ */
+async function dealSentences(db: Db, userId: string, setId: number, seed: number) {
+  const due = await dueSentences(db, userId, setId, Math.floor(TRAIN_POOL / 8));
+  const rest = await randomSetSentences(
+    db,
+    setId,
+    due.map((s) => s.id),
+    TRAIN_POOL - due.length,
+  );
+  const head = rest.slice(0, 20);
+  return [...shuffle([...due, ...head], createRng(seed)), ...rest.slice(20)];
 }
 
 /** Ghost Race: the player's fastest finished run here, and the fastest one by anyone else. */
@@ -181,36 +194,37 @@ export const sessions = new Hono<AppEnv>()
   .post("/", async (c) => {
     const parsed = startBody.safeParse(await c.req.json().catch(() => null));
     if (!parsed.success) return c.json({ error: "bad-request" }, 400);
-    const { gameId, unitId, difficulty } = parsed.data;
+    const { gameId, difficulty } = parsed.data;
     const user = c.var.user;
     if (!user) return c.json({ error: "unauthorized" }, 401);
     const db = getDb(c.env);
-
-    const unit = await getUnit(db, unitId);
-    if (!unit) return c.json({ error: "not-found" }, 404);
-    if (!(await isUnitUnlocked(db, user.id, unit, GUEST_UNIT_LIMIT, gameId))) {
-      return c.json({ error: "locked" }, 403);
-    }
-    await ensureProfile(c.env, user.id, user.name);
+    const seed = crypto.getRandomValues(new Uint32Array(1))[0] ?? 1;
 
     // Review items from other units (shared word progress) join every game's round.
+    let unitId: number;
     let words: GameWord[];
     let sentences: Sentence[] = [];
     let dueIds: number[];
     if (gameId === "sentence-express") {
-      const own = await getUnitSentences(db, unitId);
-      if (own.length === 0) return c.json({ error: "empty-unit" }, 409);
-      const due = await dueSentences(
-        db,
-        user.id,
-        unitId,
-        own.map((s) => s.wordId),
-        maxDueFor(own.length),
-      );
-      sentences = [...own, ...due];
-      dueIds = due.map((s) => s.wordId);
+      // a timed run over a whole set: every set is open, there are no units to unlock
+      const set = parsed.data.setSlug ? await getSetBySlug(db, parsed.data.setSlug) : undefined;
+      const first = set && (await firstUnitId(db, set.id));
+      if (!set || !first) return c.json({ error: "not-found" }, 404);
+      unitId = first;
+      await ensureProfile(c.env, user.id, user.name);
+      sentences = await dealSentences(db, user.id, set.id, seed);
+      if (sentences.length === 0) return c.json({ error: "empty-set" }, 409);
+      dueIds = [];
       words = await getWordsByIds(db, [...new Set(sentences.map((s) => s.wordId))]);
     } else {
+      if (!parsed.data.unitId) return c.json({ error: "bad-request" }, 400);
+      unitId = parsed.data.unitId;
+      const unit = await getUnit(db, unitId);
+      if (!unit) return c.json({ error: "not-found" }, 404);
+      if (!(await isUnitUnlocked(db, user.id, unit, GUEST_UNIT_LIMIT, gameId))) {
+        return c.json({ error: "locked" }, 403);
+      }
+      await ensureProfile(c.env, user.id, user.name);
       const unitWords = await getUnitWords(c.env, db, unitId);
       if (unitWords.length === 0) return c.json({ error: "empty-unit" }, 409);
       dueIds = await dueWordIds(
@@ -224,7 +238,6 @@ export const sessions = new Hono<AppEnv>()
     const ghosts = gameId === "ghost-race" ? await findGhosts(db, user.id, unitId) : [];
 
     const sessionId = crypto.randomUUID();
-    const seed = crypto.getRandomValues(new Uint32Array(1))[0] ?? 1;
     await db.insert(schema.gameSessions).values({
       id: sessionId,
       userId: user.id,
@@ -343,7 +356,10 @@ export const sessions = new Hono<AppEnv>()
     const newCoins = (profile?.coins ?? 0) + reward.coins;
     const today = vnDate(now);
     const streak = nextStreak(profile?.streakDays ?? 0, profile?.lastActiveDate ?? null, today);
-    const unlockedUnitId = result.stars >= 1 && bestStars === 0 ? (nextUnit?.id ?? null) : null;
+    const unlockedUnitId =
+      gameId !== "sentence-express" && result.stars >= 1 && bestStars === 0
+        ? (nextUnit?.id ?? null)
+        : null;
 
     const statements: BatchItem<"sqlite">[] = [
       db

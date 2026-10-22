@@ -1,16 +1,24 @@
-import { and, asc, count, eq, gt, lte } from "drizzle-orm";
+import { and, asc, count, eq, gt, lte, min, sum } from "drizzle-orm";
 import { Hono } from "hono";
 import type {
+  SetSentencesResponse,
   SetSummary,
-  UnitSentencesResponse,
+  TrainSetsResponse,
   UnitState,
   UnitSummary,
   UnitsResponse,
   UnitWordsResponse,
 } from "../../shared/api";
 import { type GameId, isGameId } from "../../shared/games";
-import { GUEST_UNIT_LIMIT } from "../../shared/rules";
-import { getUnit, getUnitSentences, getUnitWords, getWordsByIds, isUnitUnlocked } from "../content";
+import { GUEST_UNIT_LIMIT, TRAIN_POOL } from "../../shared/rules";
+import {
+  getSetBySlug,
+  getUnit,
+  getUnitWords,
+  getWordsByIds,
+  isUnitUnlocked,
+  randomSetSentences,
+} from "../content";
 import { getDb, schema } from "../db";
 import type { AppEnv } from "../env";
 
@@ -120,18 +128,81 @@ export const content = new Hono<AppEnv>()
     const body: UnitWordsResponse = { unitId: id, words };
     return c.json(body);
   })
-  .get("/units/:id/sentences", async (c) => {
+  .get("/sets/:slug/sentences", async (c) => {
+    // Guest runs of Sentence Express: nothing is saved, so any set is open.
     const db = getDb(c.env);
-    const id = Number(c.req.param("id"));
-    if (!Number.isInteger(id)) return c.json({ error: "bad-request" }, 400);
-    const unit = await getUnit(db, id);
-    if (!unit) return c.json({ error: "not-found" }, 404);
+    const set = await getSetBySlug(db, c.req.param("slug"));
+    if (!set) return c.json({ error: "not-found" }, 404);
+    const sentences = await randomSetSentences(db, set.id, [], TRAIN_POOL);
+    const words = await getWordsByIds(db, [...new Set(sentences.map((x) => x.wordId))]);
+    const unitCount = await db
+      .select({ n: count() })
+      .from(schema.units)
+      .where(eq(schema.units.setId, set.id))
+      .get();
+    const body: SetSentencesResponse = {
+      set: {
+        id: set.id,
+        slug: set.slug,
+        name: set.name,
+        cefr: set.cefr,
+        unitCount: unitCount?.n ?? 0,
+      },
+      sentences,
+      words,
+    };
+    return c.json(body);
+  })
+  .get("/train/sets", async (c) => {
+    const db = getDb(c.env);
     const userId = c.var.user?.id ?? null;
-    if (!(await isUnitUnlocked(db, userId, unit, GUEST_UNIT_LIMIT, "sentence-express"))) {
-      return c.json({ error: userId ? "locked" : "login-required" }, userId ? 403 : 401);
-    }
-    const sentences = await getUnitSentences(db, id);
-    const words = await getWordsByIds(db, [...new Set(sentences.map((s) => s.wordId))]);
-    const body: UnitSentencesResponse = { unitId: id, sentences, words };
+    const [sets, units, sentences] = await Promise.all([
+      db.select().from(schema.wordSets).orderBy(asc(schema.wordSets.sortOrder)),
+      db
+        .select({
+          setId: schema.units.setId,
+          first: min(schema.units.id),
+          words: sum(schema.units.wordCount),
+        })
+        .from(schema.units)
+        .groupBy(schema.units.setId),
+      db
+        .select({ setId: schema.units.setId, n: count() })
+        .from(schema.sentences)
+        .innerJoin(schema.units, eq(schema.units.id, schema.sentences.unitId))
+        .groupBy(schema.units.setId),
+    ]);
+    const best = userId
+      ? await db
+          .select()
+          .from(schema.userUnitProgress)
+          .where(
+            and(
+              eq(schema.userUnitProgress.userId, userId),
+              eq(schema.userUnitProgress.gameId, "sentence-express"),
+            ),
+          )
+      : [];
+    const unitsBySet = new Map(units.map((u) => [u.setId, u]));
+    const sentencesBySet = new Map(sentences.map((r) => [r.setId, r.n]));
+    const bestByUnit = new Map(best.map((r) => [r.unitId, r]));
+    const body: TrainSetsResponse = {
+      sets: sets
+        .filter((s) => (sentencesBySet.get(s.id) ?? 0) > 0)
+        .map((s) => {
+          const u = unitsBySet.get(s.id);
+          const b = u?.first ? bestByUnit.get(u.first) : undefined;
+          return {
+            slug: s.slug,
+            name: s.name,
+            cefr: s.cefr,
+            wordCount: Number(u?.words ?? 0),
+            sentenceCount: sentencesBySet.get(s.id) ?? 0,
+            bestScore: b?.bestScore ?? 0,
+            bestStars: b?.bestStars ?? 0,
+            plays: b?.plays ?? 0,
+          };
+        }),
+    };
     return c.json(body);
   });

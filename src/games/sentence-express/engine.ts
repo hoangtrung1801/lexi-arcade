@@ -1,6 +1,6 @@
 import { createRng, shuffle } from "@shared/rng";
 import { TRAIN_LIVES } from "@shared/rules";
-import { computeTrainResult, sentenceParts } from "@shared/sentence";
+import { computeTrainResult, sentenceParts, trainTimeLimit } from "@shared/sentence";
 import type { GameConfig, RoundResult, Sentence, TrainEvent } from "@shared/types";
 import { Clock } from "../common/Stage";
 
@@ -23,7 +23,9 @@ export function crateKey(text: string): string {
 }
 
 /**
- * Sentence Express rules, independent of rendering. Each station shows a sentence in Vietnamese;
+ * Sentence Express rules, independent of rendering. A run is timed (see trainTimeLimit): the
+ * sentences come in the order the server dealt them, and each one solved adds time.
+ * Each station shows a sentence in Vietnamese;
  * its English words lie shuffled in the yard as crates. Crates are loaded onto the train in order
  * (click, or type the word); a full train is sent off. In the wrong order it costs one lump of
  * coal and the wrong wagons are marked; a hint fixes the start of the train and loads the next
@@ -42,6 +44,9 @@ export class TrainEngine {
   /** the current sentence was solved; the train is leaving */
   departing = false;
   lives = TRAIN_LIVES;
+  /** sentences solved in a row without a mistake or hint */
+  combo = 0;
+  private hinted = false;
   buffer = "";
   private readonly clock: Clock;
   private listeners = new Set<(n: TrainNotice) => void>();
@@ -50,7 +55,7 @@ export class TrainEngine {
     private config: GameConfig & { sentences: Sentence[] },
     now?: () => number,
   ) {
-    this.sentences = shuffle(config.sentences, createRng(config.seed));
+    this.sentences = config.sentences;
     this.clock = new Clock(now);
     this.load();
   }
@@ -90,6 +95,17 @@ export class TrainEngine {
     return this.clock.elapsed();
   }
 
+  /** ms left in the run (solved sentences have added time) */
+  timeLeft() {
+    if (this.status === "ready") return trainTimeLimit(0);
+    return Math.max(0, trainTimeLimit(this.solvedCount) - this.elapsed());
+  }
+
+  /** Called every frame: ends the run when the time is up. */
+  tick() {
+    if (this.status === "playing" && this.timeLeft() <= 0) this.end();
+  }
+
   private load() {
     const s = this.current;
     if (!s) return;
@@ -107,6 +123,7 @@ export class TrainEngine {
     this.wrongSlots = new Set();
     this.buffer = "";
     this.departing = false;
+    this.hinted = false;
   }
 
   start() {
@@ -223,16 +240,22 @@ export class TrainEngine {
     const s = this.current;
     if (!this.canEdit || !s || !this.full) return;
     const t = this.elapsed();
+    if (t > trainTimeLimit(this.solvedCount)) {
+      this.end();
+      return;
+    }
     const answer = this.answer();
     this.events.push({ t, type: "submit", sentenceId: s.id, answer });
     const words = this.parts.words;
     if (answer.join(" ") === words.join(" ")) {
+      this.combo = this.hinted ? 0 : this.combo + 1;
       this.departing = true;
       this.buffer = "";
       this.emit({ kind: "solved" });
       return;
     }
     this.lives--;
+    this.combo = 0;
     this.wrongSlots = new Set(answer.flatMap((w, i) => (w === words[i] ? [] : [i])));
     this.emit({ kind: "wrong" });
     if (this.lives <= 0) this.end();
@@ -248,6 +271,8 @@ export class TrainEngine {
     while (k < answer.length && answer[k] === words[k]) k++;
     if (k >= words.length) return;
     this.events.push({ t: this.elapsed(), type: "hint", sentenceId: s.id });
+    this.hinted = true;
+    this.combo = 0;
     const keep = this.placed.slice(0, k);
     const pick = this.crates.find((c) => !keep.includes(c.id) && c.text === words[k]);
     this.placed = pick ? [...keep, pick.id] : keep;
@@ -270,6 +295,7 @@ export class TrainEngine {
   }
 
   private end() {
+    this.departing = false;
     this.status = "over";
     this.clock.pause();
     this.emit({ kind: "end" });

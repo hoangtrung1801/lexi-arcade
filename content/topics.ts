@@ -26,4 +26,6 @@ export const TOPIC_TITLE: Record<string, string> = Object.fromEntries(
 export const SETS = [
   { id: 1, slug: "a1", name: "Bộ A1", cefr: "a1", sortOrder: 1 },
   { id: 2, slug: "a2", name: "Bộ A2", cefr: "a2", sortOrder: 2 },
+  { id: 3, slug: "b1", name: "Bộ B1", cefr: "b1", sortOrder: 3 },
+  { id: 4, slug: "b2", name: "Bộ B2", cefr: "b2", sortOrder: 4 },
 ] as const;

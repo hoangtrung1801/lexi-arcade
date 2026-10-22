@@ -51,15 +51,34 @@ export interface UnitWordsResponse {
   words: GameWord[];
 }
 
-export interface UnitSentencesResponse {
-  unitId: number;
+/** Sentence Express: a guest run's sentences, dealt from the whole set */
+export interface SetSentencesResponse {
+  set: SetSummary;
   sentences: Sentence[];
   words: GameWord[];
 }
 
+/** Sentence Express: the sets to pick from, with the player's best run in each */
+export interface TrainSet {
+  slug: string;
+  name: string;
+  cefr: string;
+  wordCount: number;
+  sentenceCount: number;
+  bestScore: number;
+  bestStars: number;
+  plays: number;
+}
+export interface TrainSetsResponse {
+  sets: TrainSet[];
+}
+
 export interface StartSessionRequest {
   gameId?: GameId;
-  unitId: number;
+  /** every game but Sentence Express */
+  unitId?: number;
+  /** Sentence Express */
+  setSlug?: string;
   difficulty: Difficulty;
 }
 export interface StartSessionResponse {

@@ -1,5 +1,5 @@
 import { createRng } from "@shared/rng";
-import { TRAIN_LIVES } from "@shared/rules";
+import { TRAIN_BONUS_MS, TRAIN_LIVES, TRAIN_RUN_MS } from "@shared/rules";
 import type { GameConfig, RoundResult, Sentence } from "@shared/types";
 import { useCallback, useEffect, useMemo, useReducer, useRef, useState } from "react";
 import { Modal } from "../../components/ui/Modal";
@@ -13,8 +13,7 @@ import { TrainEngine } from "./engine";
 
 interface Props {
   config: GameConfig & { sentences: Sentence[] };
-  unitIdx: number;
-  unitTitle: string;
+  setName: string;
   onFinish: (
     result: RoundResult,
     events: TrainEngine["events"],
@@ -25,7 +24,12 @@ interface Props {
 
 type Overlay = "countdown" | "none" | "paused" | "ime" | "finishing";
 
-const DEPART_MS = 1300;
+const DEPART_MS = 900;
+
+function clockText(ms: number) {
+  const s = Math.ceil(ms / 1000);
+  return `${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")}`;
+}
 
 function Loco() {
   return (
@@ -44,7 +48,7 @@ function Loco() {
   );
 }
 
-export function Round({ config, unitIdx, unitTitle, onFinish, onExit }: Props) {
+export function Round({ config, setName, onFinish, onExit }: Props) {
   const [engine] = useState(() => new TrainEngine(config));
   if (import.meta.env.DEV || import.meta.env.VITE_E2E === "1") {
     (window as unknown as { __sentenceExpress?: TrainEngine }).__sentenceExpress = engine;
@@ -53,6 +57,8 @@ export function Round({ config, unitIdx, unitTitle, onFinish, onExit }: Props) {
   const [overlay, setOverlay] = useState<Overlay>("countdown");
   const [count, setCount] = useState(3);
   const [shake, setShake] = useState(0);
+  /** bumps on every solved sentence to replay the "+5s" pop */
+  const [bonus, setBonus] = useState(0);
   const [msg, setMsg] = useState<{ text: string; tone: "good" | "bad" | "info" } | null>(null);
   const sound = useSettings((s) => s.sound);
   const setSettings = useSettings((s) => s.set);
@@ -72,7 +78,11 @@ export function Round({ config, unitIdx, unitTitle, onFinish, onExit }: Props) {
           setShake((s) => s + 1);
         } else if (n.kind === "solved") {
           play("hit");
-          setMsg({ text: "ĐÚNG RỒI! Tàu chạy tới ga tiếp theo", tone: "good" });
+          setMsg({
+            text: `ĐÚNG RỒI! +${TRAIN_BONUS_MS / 1000} giây · câu tiếp theo`,
+            tone: "good",
+          });
+          setBonus((b) => b + 1);
           setTimeout(() => {
             engine.next();
             setMsg(null);
@@ -170,6 +180,18 @@ export function Round({ config, unitIdx, unitTitle, onFinish, onExit }: Props) {
     inputRef.current?.focus();
   }, []);
 
+  // the run clock
+  useEffect(() => {
+    const id = setInterval(() => {
+      if (engine.status !== "playing") return;
+      engine.tick();
+      rerender();
+    }, 100);
+    return () => clearInterval(id);
+  }, [engine]);
+  const left = engine.timeLeft();
+  const low = left < 10_000;
+
   const s = engine.current;
   const { words, end } = engine.parts;
   const key = s ? keyword.get(s.wordId) : undefined;
@@ -226,22 +248,30 @@ export function Round({ config, unitIdx, unitTitle, onFinish, onExit }: Props) {
             <div className="hb-hud flex flex-col px-3 py-0.5">
               <span className="font-px t-sm text-gold">SENTENCE EXPRESS</span>
               <span className="t-sm text-mist">
-                Mốc {unitIdx} · {unitTitle}
+                {setName} · câu {engine.solvedCount + 1}
+                {engine.combo > 0 ? ` · combo ${engine.combo}` : ""}
               </span>
             </div>
           </div>
-          <div className="hb-hud flex items-center gap-2 px-3 py-1.5">
-            <span className="font-px t-sm mr-1">
-              GA {Math.min(engine.idx + 1, engine.sentences.length)}/{engine.sentences.length}
+          <div
+            className="hb-hud flex items-center gap-3 px-3 py-1.5"
+            role="timer"
+            aria-label={`Còn ${clockText(left)}`}
+          >
+            <span className={`font-px t-md ${low ? "anim-pulse text-berry" : "text-gold"}`}>
+              {clockText(left)}
             </span>
-            {engine.sentences.map((x, i) => (
-              <span
-                key={x.id}
-                className={`h-3.5 w-3.5 shadow-[0_0_0_2px_#0d0e18] ${
-                  i < engine.solvedCount ? "bg-green" : i === engine.idx ? "bg-gold" : "bg-steel"
-                }`}
+            <div className="h-3.5 w-[220px] bg-steel shadow-[0_0_0_2px_#0d0e18]">
+              <div
+                className={`h-full ${low ? "bg-berry" : "bg-gold"}`}
+                style={{ width: `${Math.min(100, (left / TRAIN_RUN_MS) * 100)}%` }}
               />
-            ))}
+            </div>
+            {bonus > 0 && (
+              <span key={bonus} className="font-px t-sm anim-pop text-lime">
+                +{TRAIN_BONUS_MS / 1000}s
+              </span>
+            )}
           </div>
           <div className="flex items-center gap-3">
             <span className="hb-hud font-px t-md px-3 py-1 text-gold">
@@ -432,11 +462,14 @@ export function Round({ config, unitIdx, unitTitle, onFinish, onExit }: Props) {
               {count}
             </div>
             <div className="hb-panel hb-lift flex max-w-[700px] flex-col items-center gap-1 px-5 py-3 text-center">
-              <p className="t-md">Xếp các từ thành câu đúng nghĩa trên bảng ga để tàu chạy.</p>
+              <p className="t-md">Xếp càng nhiều câu càng tốt trong {TRAIN_RUN_MS / 1000} giây!</p>
               <p className="t-sm text-haze">
                 Bấm vào thùng hàng hoặc gõ từ để chất lên toa, Backspace để dỡ, Enter để xuất phát.
               </p>
-              <p className="t-sm text-mist">Sai thứ tự mất 1 cục than. Hết than là dừng tàu.</p>
+              <p className="t-sm text-mist">
+                Mỗi câu đúng +{TRAIN_BONUS_MS / 1000} giây. Sai thứ tự mất 1 cục than, hết than là
+                dừng tàu.
+              </p>
             </div>
           </div>
         )}
@@ -444,7 +477,7 @@ export function Round({ config, unitIdx, unitTitle, onFinish, onExit }: Props) {
         {overlay === "finishing" && (
           <div className="absolute inset-0 flex items-center justify-center bg-void/70">
             <div className="t-gold text-[72px] leading-[80px]">
-              {engine.lives > 0 ? "TỚI GA CUỐI!" : "HẾT THAN!"}
+              {engine.lives <= 0 ? "HẾT THAN!" : left <= 0 ? "HẾT GIỜ!" : "HẾT CÂU!"}
             </div>
           </div>
         )}

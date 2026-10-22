@@ -10,6 +10,7 @@ import type {
   MeResponse,
   QuestsResponse,
   StartSessionResponse,
+  TrainSetsResponse,
   UnitsResponse,
   VocabResponse,
 } from "@shared/api";
@@ -302,13 +303,14 @@ describe("api", () => {
       const best = race2.json.ghosts.find((g) => g.kind === "best");
       expect(best?.points.at(-1)?.[1]).toBe(1);
 
-      // Sentence Express: load every sentence in order
+      // Sentence Express: a timed run over a whole set
       const train = await c.req<StartSessionResponse>("POST", "/api/sessions", {
         gameId: "sentence-express",
-        unitId: 1001,
+        setSlug: "b1",
       });
       expect(train.status).toBe(200);
-      expect(train.json.sentences.length).toBeGreaterThanOrEqual(4);
+      expect(train.json.sentences.length).toBe(80);
+      expect(new Set(train.json.sentences.map((s) => s.id)).size).toBe(80);
       const trainEvents: TrainEvent[] = train.json.sentences.map((s, i) => ({
         t: 3000 * (i + 1),
         type: "submit",
@@ -326,9 +328,9 @@ describe("api", () => {
 
       const train2 = await c.req<StartSessionResponse>("POST", "/api/sessions", {
         gameId: "sentence-express",
-        unitId: 1001,
+        setSlug: "a1",
       });
-      const events2: TrainEvent[] = train2.json.sentences.map((s, i) => ({
+      const events2: TrainEvent[] = train2.json.sentences.slice(0, 6).map((s, i) => ({
         t: 1000 * (i + 1),
         type: "submit",
         sentenceId: s.id,
@@ -342,7 +344,14 @@ describe("api", () => {
       );
       if (trainFin.status !== 200) throw new Error(`train: ${JSON.stringify(trainFin.json)}`);
       expect(trainFin.json.result.status).toBe("won");
-      expect(trainFin.json.result.stars).toBe(3);
+      expect(trainFin.json.result.stars).toBe(1);
+      expect(trainFin.json.rewards.unlockedUnitId).toBeNull();
+
+      // the set page shows the best run
+      const sets = await c.req<TrainSetsResponse>("GET", "/api/train/sets");
+      const a1 = sets.json.sets.find((s) => s.slug === "a1");
+      expect(a1?.bestScore).toBe(trainFin.json.result.score);
+      expect(sets.json.sets.map((s) => s.slug)).toEqual(["a1", "a2", "b1", "b2"]);
 
       // vocab is shared: keywords from both games are in the same notebook
       const learned = await c.req<VocabResponse>("GET", "/api/vocab?filter=learned");

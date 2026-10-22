@@ -1,4 +1,4 @@
-import { and, asc, eq, inArray } from "drizzle-orm";
+import { and, asc, eq, inArray, notInArray, sql } from "drizzle-orm";
 import type { GameId } from "../shared/games";
 import type { GameWord, Sentence } from "../shared/types";
 import type { Db } from "./db";
@@ -64,12 +64,40 @@ const sentenceCols = {
   vi: schema.sentences.vi,
 };
 
-export async function getUnitSentences(db: Db, unitId: number): Promise<Sentence[]> {
+export async function getSetBySlug(db: Db, slug: string) {
+  return db.select().from(schema.wordSets).where(eq(schema.wordSets.slug, slug)).get();
+}
+
+/**
+ * Sentence Express plays a whole set, but sessions and best scores are filed under a unit: the
+ * set's first one.
+ */
+export async function firstUnitId(db: Db, setId: number): Promise<number | undefined> {
+  const row = await db
+    .select({ id: schema.units.id })
+    .from(schema.units)
+    .where(eq(schema.units.setId, setId))
+    .orderBy(asc(schema.units.idx))
+    .limit(1)
+    .get();
+  return row?.id;
+}
+
+/** `limit` random sentences of a set, leaving out the given ids. */
+export async function randomSetSentences(
+  db: Db,
+  setId: number,
+  exclude: number[],
+  limit: number,
+): Promise<Sentence[]> {
+  if (limit <= 0) return [];
   return db
     .select(sentenceCols)
     .from(schema.sentences)
-    .where(eq(schema.sentences.unitId, unitId))
-    .orderBy(asc(schema.sentences.sortOrder));
+    .innerJoin(schema.units, eq(schema.units.id, schema.sentences.unitId))
+    .where(and(eq(schema.units.setId, setId), notInArray(schema.sentences.id, exclude)))
+    .orderBy(sql`random()`)
+    .limit(limit);
 }
 
 export async function getSentencesByIds(db: Db, ids: number[]): Promise<Sentence[]> {
